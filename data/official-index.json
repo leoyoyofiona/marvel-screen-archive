@@ -1,0 +1,1247 @@
+{
+  "cutoff": "2026-08-31",
+  "collectedAt": "2026-08-31T13:15:29.915Z",
+  "sources": [
+    {
+      "scope": "Marvel official movies index",
+      "url": "https://www.marvel.com/movies"
+    },
+    {
+      "scope": "Marvel official television and season index",
+      "url": "https://www.marvel.com/tv-shows"
+    },
+    {
+      "scope": "Marvel official digital series and podcast index",
+      "url": "https://www.marvel.com/watch"
+    }
+  ],
+  "movies": [
+    {
+      "alt": "Marvel Studios' Avengers: Doomsday Movie Poster",
+      "href": "/movies/avengers-doomsday",
+      "image": "https://cdn.marvel.com/content/1x/avengersdoomsday_lob_crd_03.webp",
+      "title": "Avengers: Doomsday"
+    },
+    {
+      "alt": "Spider-Man: Brand New Day Movie Poster",
+      "href": "/movies/spider-man-brand-new-day",
+      "image": "https://cdn.marvel.com/content/1x/spidermanbrandnewday_lob_crd_02.webp",
+      "title": "Spider-Man: Brand New Day"
+    },
+    {
+      "alt": "Marvel Studios' The Fantastic Four: First Steps Movie Poster",
+      "href": "/movies/the-fantastic-four-first-steps",
+      "image": "https://cdn.marvel.com/content/1x/thefantasticfourfirststeps_lob_crd_03.webp",
+      "title": "The Fantastic Four: First Steps"
+    },
+    {
+      "alt": "Marvel Studios' The New Avengers Thunderbolts* Movie Poster",
+      "href": "/movies/thunderbolts",
+      "image": "https://cdn.marvel.com/content/1x/thenewavengers_lob_crd_01.webp",
+      "title": "Thunderbolts*"
+    },
+    {
+      "alt": "Marvel Studios' Captain America: Brave New World Movie Poster",
+      "href": "/movies/captain-america-brave-new-world",
+      "image": "https://cdn.marvel.com/content/1x/captainamericabravenewworld_lob_crd_05.webp",
+      "title": "Captain America: Brave New World"
+    },
+    {
+      "alt": "Marvel Studios' Deadpool & Wolverine Deadpool 3 Movie Poster",
+      "href": "/movies/deadpool-and-wolverine",
+      "image": "https://cdn.marvel.com/content/1x/deadpoolandwolverine_lob_crd_03.webp",
+      "title": "Deadpool & Wolverine"
+    },
+    {
+      "alt": "Marvel Studios' Black Panther 3 Movie Logo on Black",
+      "href": "/movies/black-panther-3",
+      "image": "https://cdn.marvel.com/content/1x/blackpanther3_lob_crd_01.webp",
+      "title": "Black Panther 3"
+    },
+    {
+      "alt": "Marvel Studios' Ghost Rider",
+      "href": "/movies/ghost-rider",
+      "image": "https://cdn.marvel.com/content/1x/ghostrider_lob_crd_01.webp",
+      "title": "Ghost Rider"
+    },
+    {
+      "alt": "Marvel Studios' Avengers: Secret Wars Movie Logo on Black",
+      "href": "/movies/avengers-secret-wars",
+      "image": "https://cdn.marvel.com/content/1x/avengerssecretwars_lob_crd_02.webp",
+      "title": "Avengers: Secret Wars"
+    },
+    {
+      "alt": "Blade Movie Logo On Black",
+      "href": "/movies/blade",
+      "image": "https://cdn.marvel.com/content/1x/blade_lob_crd_01.webp",
+      "title": "Blade"
+    },
+    {
+      "alt": "Marvel Studios' The Marvels Movie Poster",
+      "href": "/movies/the-marvels",
+      "image": "https://cdn.marvel.com/content/1x/themarvels_lob_crd_05.webp",
+      "title": "The Marvels"
+    },
+    {
+      "alt": "Guardians of the Galaxy Vol. 3 Movie Poster",
+      "href": "/movies/guardians-of-the-galaxy-volume-3",
+      "image": "https://cdn.marvel.com/content/1x/guardiansofthegalaxyvolume3_lob_crd_03.webp",
+      "title": "Guardians of the Galaxy Vol. 3"
+    },
+    {
+      "alt": "Marvel Studios' Ant-Man and The Wasp: Quantumania Ant-Man 3 Movie Poster",
+      "href": "/movies/ant-man-and-the-wasp-quantumania",
+      "image": "https://cdn.marvel.com/content/1x/antmanandthewaspquantumania_lob_crd_03.webp",
+      "title": "Ant-Man and The Wasp: Quantumania"
+    },
+    {
+      "alt": "Marvel Studios' Black Panther: Wakanda Forever Black Panther 2 Movie Poster",
+      "href": "/movies/black-panther-wakanda-forever",
+      "image": "https://cdn.marvel.com/content/1x/blackpantherwakandaforever_lob_crd_06.webp",
+      "title": "Black Panther: Wakanda Forever"
+    },
+    {
+      "alt": "Marvel Studios' Thor: Love and Thunder Thor 4 Movie Poster",
+      "href": "/movies/thor-love-and-thunder",
+      "image": "https://cdn.marvel.com/content/1x/thorloveandthunder_lob_crd_04.webp",
+      "title": "Thor: Love and Thunder"
+    },
+    {
+      "alt": "Marvel Studios' Doctor Strange in the Multiverse of Madness",
+      "href": "/movies/doctor-strange-in-the-multiverse-of-madness",
+      "image": "https://cdn.marvel.com/content/1x/doctorstrangeinthemultiverseofmadness_lob_crd_02_3.webp",
+      "title": "Doctor Strange in the Multiverse of Madness"
+    },
+    {
+      "alt": "Spider-Man: No Way Home Movie Poster",
+      "href": "/movies/spider-man-no-way-home",
+      "image": "https://cdn.marvel.com/content/1x/spider-mannowayhome_lob_crd_03.webp",
+      "title": "Spider-Man: No Way Home"
+    },
+    {
+      "alt": "Marvel Studios' Eternals Movie Poster",
+      "href": "/movies/eternals",
+      "image": "https://cdn.marvel.com/content/1x/eternals_lob_crd_06.webp",
+      "title": "Eternals"
+    },
+    {
+      "alt": "Marvel Studios' Shang-Chi and The Legend of The Ten Rings Movie Poster",
+      "href": "/movies/shang-chi-and-the-legend-of-the-ten-rings",
+      "image": "https://cdn.marvel.com/content/1x/shangchi_lob_crd_07.webp",
+      "title": "Shang-Chi and The Legend of The Ten Rings"
+    },
+    {
+      "alt": "Marvel Studios' Black Widow Movie Poster",
+      "href": "/movies/black-widow",
+      "image": "https://cdn.marvel.com/content/1x/blackwidow_lob_crd_06.webp",
+      "title": "Black Widow"
+    },
+    {
+      "alt": "Spider-Man: Far From Home Movie Poster",
+      "href": "/movies/spider-man-far-from-home",
+      "image": "https://cdn.marvel.com/content/1x/spider-manfarfromhome_lob_crd_04_3.webp",
+      "title": "Spider-Man: Far From Home"
+    },
+    {
+      "alt": "Avengers: Endgame Movie Poster Avengers 4",
+      "href": "/movies/avengers-endgame",
+      "image": "https://cdn.marvel.com/content/1x/avengersendgame_lob_crd_05_2.webp",
+      "title": "Avengers: Endgame"
+    },
+    {
+      "alt": "Captain Marvel Movie Poster",
+      "href": "/movies/captain-marvel",
+      "image": "https://cdn.marvel.com/content/1x/captainmarvel_lob_crd_06.webp",
+      "title": "Captain Marvel"
+    },
+    {
+      "alt": "Ant-Man and the Wasp",
+      "href": "/movies/ant-man-and-the-wasp",
+      "image": "https://cdn.marvel.com/content/1x/ant-manthewasp_lob_crd_01.webp",
+      "title": "Ant-Man and The Wasp"
+    },
+    {
+      "alt": "Avengers: Infinity War",
+      "href": "/movies/avengers-infinity-war",
+      "image": "https://cdn.marvel.com/content/1x/avengersinfinitywar_lob_crd_02_1.webp",
+      "title": "Avengers: Infinity War"
+    },
+    {
+      "alt": "Black Panther",
+      "href": "/movies/black-panther",
+      "image": "https://cdn.marvel.com/content/1x/blackpanther_lob_crd_01_4.webp",
+      "title": "Black Panther"
+    },
+    {
+      "alt": "Thor: Ragnarok",
+      "href": "/movies/thor-ragnarok",
+      "image": "https://cdn.marvel.com/content/1x/thorragnarok_lob_crd_03.webp",
+      "title": "Thor: Ragnarok"
+    },
+    {
+      "alt": "Spider-Man: Homecoming Movie Poster",
+      "href": "/movies/spider-man-homecoming",
+      "image": "https://cdn.marvel.com/content/1x/spider-manhomecoming_lob_crd_02.webp",
+      "title": "Spider-Man: Homecoming"
+    },
+    {
+      "alt": "Guardians of the Galaxy Vol. 2",
+      "href": "/movies/guardians-of-the-galaxy-vol-2",
+      "image": "https://cdn.marvel.com/content/1x/guardiansofthegalaxyvol.2_lob_crd_01.webp",
+      "title": "Guardians of the Galaxy Vol. 2"
+    },
+    {
+      "alt": "Doctor Strange",
+      "href": "/movies/doctor-strange",
+      "image": "https://cdn.marvel.com/content/1x/doctorstrange_lob_crd_01_6.webp",
+      "title": "Doctor Strange"
+    },
+    {
+      "alt": "Captain America: Civil War",
+      "href": "/movies/captain-america-civil-war",
+      "image": "https://cdn.marvel.com/content/1x/captainamericacivilwar_lob_crd_01_9.webp",
+      "title": "Captain America: Civil War"
+    },
+    {
+      "alt": "Ant-Man",
+      "href": "/movies/ant-man",
+      "image": "https://cdn.marvel.com/content/1x/ant-man_lob_crd_01_8.webp",
+      "title": "Ant-Man"
+    },
+    {
+      "alt": "Avengers: Age of Ultron",
+      "href": "/movies/avengers-age-of-ultron",
+      "image": "https://cdn.marvel.com/content/1x/avengersageofultron_lob_crd_03.webp",
+      "title": "Avengers: Age of Ultron"
+    },
+    {
+      "alt": "Guardians of the Galaxy",
+      "href": "/movies/guardians-of-the-galaxy",
+      "image": "https://cdn.marvel.com/content/1x/guardiansofthegalaxy_lob_crd_03.webp",
+      "title": "Guardians of the Galaxy"
+    },
+    {
+      "alt": "Captain America: The Winter Soldier",
+      "href": "/movies/captain-america-the-winter-soldier",
+      "image": "https://cdn.marvel.com/content/1x/captainamericathewintersoldier_lob_crd_01_1.webp",
+      "title": "Captain America: The Winter Soldier"
+    },
+    {
+      "alt": "Thor: The Dark World Movie Poster",
+      "href": "/movies/thor-the-dark-world",
+      "image": "https://cdn.marvel.com/content/1x/thorthedarkworld_lob_crd_02_1.webp",
+      "title": "Thor: The Dark World"
+    },
+    {
+      "alt": "X-Men: Dark Phoenix Movie Poster",
+      "href": "/movies/x-men-dark-phoenix",
+      "image": "https://cdn.marvel.com/content/1x/darkphoenix_lob_crd_01.webp",
+      "title": "X-Men: Dark Phoenix"
+    },
+    {
+      "alt": "Venom Movie Poster",
+      "href": "/movies/venom",
+      "image": "https://cdn.marvel.com/content/1x/venom_lob_crd_01.webp",
+      "title": "Venom"
+    },
+    {
+      "alt": "Deadpool 2 Movie Poster",
+      "href": "/movies/deadpool-2",
+      "image": "https://cdn.marvel.com/content/1x/deadpool2_lob_crd_02.webp",
+      "title": "Deadpool 2"
+    },
+    {
+      "alt": "Logan Movie Poster",
+      "href": "/movies/logan",
+      "image": "https://cdn.marvel.com/content/1x/logan_lob_crd_02.webp",
+      "title": "Logan"
+    },
+    {
+      "alt": "X-Men: Apocalypse Movie Poster",
+      "href": "/movies/x-men-apocalypse",
+      "image": "https://cdn.marvel.com/content/1x/fox_x-menapocalypse_lob_crd_01.webp",
+      "title": "X-Men: Apocalypse"
+    },
+    {
+      "alt": "Deadpool Movie Poster",
+      "href": "/movies/deadpool",
+      "image": "https://cdn.marvel.com/content/1x/deadpool_lob_crd_02.webp",
+      "title": "Deadpool"
+    },
+    {
+      "alt": "X-Men: Days of Future Past Movie Poster",
+      "href": "/movies/x-men-days-of-future-past",
+      "image": "https://cdn.marvel.com/content/1x/fox_x-mendaysoffuturepast_lob_crd_01.webp",
+      "title": "X-Men: Days of Future Past"
+    },
+    {
+      "alt": "The Amazing Spider-Man Movie Poster",
+      "href": "/movies/the-amazing-spider-man",
+      "image": "https://cdn.marvel.com/content/1x/theamazingspider-man_lob_crd_01.webp",
+      "title": "The Amazing Spider-Man"
+    },
+    {
+      "alt": "Spider-Man 3 Movie Poster",
+      "href": "/movies/spider-man-3",
+      "image": "https://cdn.marvel.com/content/1x/spider-man3_lob_crd_01.webp",
+      "title": "Spider-Man 3"
+    },
+    {
+      "alt": "Spider-Man 2 Movie Poster",
+      "href": "/movies/spider-man-2",
+      "image": "https://cdn.marvel.com/content/1x/spider-man2_lob_crd_01.webp",
+      "title": "Spider-Man 2"
+    },
+    {
+      "alt": "Spider-Man Movie Poster",
+      "href": "/movies/spider-man",
+      "image": "https://cdn.marvel.com/content/1x/spider-man_lob_crd_01.webp",
+      "title": "Spider-Man"
+    }
+  ],
+  "tvSeasons": [
+    {
+      "alt": "Marvel Television's VisionQuest Disney+ TV Show Season 1 Poster",
+      "href": "/tv-shows/visionquest/1",
+      "image": "https://cdn.marvel.com/content/1x/visionquest_lob_crd_02.webp",
+      "title": "VisionQuest"
+    },
+    {
+      "alt": "Marvel Animation's X-Men ’97 Season 2 Teaser Poster",
+      "href": "/tv-shows/animation/x-men-97/2",
+      "image": "https://cdn.marvel.com/content/1x/xmen97s2_lob_crd_02_0.webp",
+      "title": "X-Men '97 | Season 2"
+    },
+    {
+      "alt": "A Marvel Television Special Presentation: The Punisher: One Last Kill Disney+ TV Show Season 1 Poster",
+      "href": "/tv-shows/the-punisher-one-last-kill/1",
+      "image": "https://cdn.marvel.com/content/1x/thepunisheronelastkill_lob_crd_01.webp",
+      "title": "The Punisher: One Last Kill"
+    },
+    {
+      "alt": "Marvel Television's Daredevil: Born Again Disney+ Disney Plus TV Show Season 2 Poster",
+      "href": "/tv-shows/daredevil-born-again/2",
+      "image": "https://cdn.marvel.com/content/1x/daredevilbornagains2_lob_crd_01.webp",
+      "title": "Daredevil: Born Again | Season 2"
+    },
+    {
+      "alt": "Marvel Television's Wonder Man Disney+ TV Show Season 1 Poster",
+      "href": "/tv-shows/wonder-man/1",
+      "image": "https://cdn.marvel.com/content/1x/wonderman_lob_crd_03.webp",
+      "title": "Wonder Man"
+    },
+    {
+      "alt": "Marvel Animation's Marvel Zombies Disney+ TV Show Season 1 Poster",
+      "href": "/tv-shows/animation/marvel-zombies/1",
+      "image": "https://cdn.marvel.com/content/1x/marvelzombies_lob_crd_03.webp",
+      "title": "Marvel Zombies | Season 1"
+    },
+    {
+      "alt": "Marvel Television's Daredevil: Born Again Disney+ TV Show Season 3 Logo on Black",
+      "href": "/tv-shows/daredevil-born-again/3",
+      "image": "https://cdn.marvel.com/content/1x/daredevilbornagain_lob_crd_02.webp",
+      "title": "Daredevil: Born Again | Season 3"
+    },
+    {
+      "alt": "Marvel Animation's Your Friendly Neighborhood Spider-Man Disney+ TV Show Season 2 Logo on Black",
+      "href": "/tv-shows/animation/your-friendly-neighborhood-spider-man/2",
+      "image": "https://cdn.marvel.com/content/1x/yourfriendlyneighborhoodspidermans2_lob_crd_01.webp",
+      "title": "Your Friendly Neighborhood Spider-Man | Season 2"
+    },
+    {
+      "alt": "Marvel Animation's Eyes of Wakanda Disney+ TV Show Season 1 Poster",
+      "href": "/tv-shows/animation/eyes-of-wakanda/1",
+      "image": "https://cdn.marvel.com/content/1x/eyesofwakanda_lob_crd_02.webp",
+      "title": "Eyes of Wakanda"
+    },
+    {
+      "alt": "Marvel Television's Ironheart Disney+ TV Show Season 1 Poster",
+      "href": "/tv-shows/ironheart/1",
+      "image": "https://cdn.marvel.com/content/1x/ironheart_lob_crd_04.webp",
+      "title": "Ironheart"
+    },
+    {
+      "alt": "Marvel Television's Daredevil: Born Again Disney+ Disney Plus TV Show Season 1 Poster",
+      "href": "/tv-shows/daredevil-born-again/1",
+      "image": "https://cdn.marvel.com/content/1x/daredevilbornagain_lob_crd_03.webp",
+      "title": "Daredevil: Born Again | Season 1"
+    },
+    {
+      "alt": "Marvel Animation's Your Friendly Neighborhood Spider-Man TV Show Disney+ Season 1 Poster",
+      "href": "/tv-shows/animation/your-friendly-neighborhood-spider-man/1",
+      "image": "https://cdn.marvel.com/content/1x/yourfriendlyneighborhoodspiderman_lob_crd_03_0.webp",
+      "title": "Your Friendly Neighborhood Spider-Man | Season 1"
+    },
+    {
+      "alt": "Marvel Animation's What If...? | Season 3",
+      "href": "/tv-shows/animation/what-if/3",
+      "image": "https://cdn.marvel.com/content/1x/whatifs3_lob_crd_01.webp",
+      "title": "What If...? | Season 3"
+    },
+    {
+      "alt": "Marvel Television's Agatha All Along Disney+ TV Show Poster",
+      "href": "/tv-shows/agatha-all-along/1",
+      "image": "https://cdn.marvel.com/content/1x/agathaallalong_lob_crd_02.webp",
+      "title": "Agatha All Along"
+    },
+    {
+      "alt": "Marvel Animation's X-Men '97 Disney+ Plus TV Show Season 1 Poster",
+      "href": "/tv-shows/animation/x-men-97/1",
+      "image": "https://cdn.marvel.com/content/1x/xmen97_lob_crd_02.webp",
+      "title": "X-Men '97 | Season 1"
+    },
+    {
+      "alt": "Marvel Studios' Echo Disney+ Plus TV Show Season 1 Poster",
+      "href": "/tv-shows/echo/1",
+      "image": "https://cdn.marvel.com/content/1x/echo_lob_crd_02.webp",
+      "title": "Echo"
+    },
+    {
+      "alt": "What If...? TV Show Season 2 Poster",
+      "href": "/tv-shows/animation/what-if/2",
+      "image": "https://cdn.marvel.com/content/1x/whatifs2_lob_crd_02.webp",
+      "title": "What If...? | Season 2"
+    },
+    {
+      "alt": "Marvel Studios' Loki Disney+ TV Show Season 2 Show Poster",
+      "href": "/tv-shows/loki/2",
+      "image": "https://cdn.marvel.com/content/1x/lokis2_lob_crd_04.webp",
+      "title": "Loki | Season 2"
+    },
+    {
+      "alt": "Marvel Studios' I Am Groot Disney+ Plus TV Show Season 2 Poster",
+      "href": "/tv-shows/i-am-groot/2",
+      "image": "https://cdn.marvel.com/content/1x/iamgroots2_lob_crd_01.webp",
+      "title": "I Am Groot | Season 2"
+    },
+    {
+      "alt": "Marvel Studios' Secret Invasion Disney+ Plus TV Show Season 1 Poster",
+      "href": "/tv-shows/secret-invasion/1",
+      "image": "https://cdn.marvel.com/content/1x/secretinvasion_lob_crd_04.webp",
+      "title": "Secret Invasion"
+    },
+    {
+      "alt": "Marvel Studios' The Guardians of the Galaxy Holiday Special Disney Plus TV Show Poster",
+      "href": "/tv-shows/guardians-of-the-galaxy-holiday-special/1",
+      "image": "https://cdn.marvel.com/content/1x/theguardiansofthegalaxyholidayspecial_lob_crd_02.webp",
+      "title": "The Guardians of the Galaxy Holiday Special"
+    },
+    {
+      "alt": "Marvel Studios' Werewolf By Night TV Show Poster",
+      "href": "/tv-shows/werewolf-by-night/1",
+      "image": "https://cdn.marvel.com/content/1x/werewolfbynight_lob_crd_01.webp",
+      "title": "Werewolf By Night"
+    },
+    {
+      "alt": "Marvel Studios' She-Hulk: Attorney-at-Law Disney+ Plus TV Show Season 1 Poster",
+      "href": "/tv-shows/she-hulk-attorney-at-law/1",
+      "image": "https://cdn.marvel.com/content/1x/shehulk_lob_crd_04.webp",
+      "title": "She-Hulk: Attorney-at-Law"
+    },
+    {
+      "alt": "Marvel Studios' I Am Groot Disney+ Plus TV Show Season 1 Poster",
+      "href": "/tv-shows/i-am-groot/1",
+      "image": "https://cdn.marvel.com/content/1x/iamgroot_lob_crd_04.webp",
+      "title": "I Am Groot | Season 1"
+    },
+    {
+      "alt": "Marvel Studios' Ms. Marvel Disney+ Plus TV Show Season 1 Poster",
+      "href": "/tv-shows/ms-marvel/1",
+      "image": "https://cdn.marvel.com/content/1x/msmarvel_lob_crd_04.webp",
+      "title": "Ms. Marvel"
+    },
+    {
+      "alt": "Marvel Studios' Moon Knight Disney+ Plus TV Show Poster",
+      "href": "/tv-shows/moon-knight/1",
+      "image": "https://cdn.marvel.com/content/1x/moonknight_lob_crd_05.webp",
+      "title": "Moon Knight"
+    },
+    {
+      "alt": "Marvel Studios' Hawkeye Disney Plus TV Show Season 1 Poster",
+      "href": "/tv-shows/hawkeye/1",
+      "image": "https://cdn.marvel.com/content/1x/hawkeye_lob_crd_04.webp",
+      "title": "Hawkeye"
+    },
+    {
+      "alt": "What If...? TV Show Season 1 Poster",
+      "href": "/tv-shows/animation/what-if/1",
+      "image": "https://cdn.marvel.com/content/1x/whatif_lob_crd_01.webp",
+      "title": "What If...? | Season 1"
+    },
+    {
+      "alt": "Loki TV Show Season 1 Poster",
+      "href": "/tv-shows/loki/1",
+      "image": "https://cdn.marvel.com/content/1x/loki_lob_crd_04.webp",
+      "title": "Loki | Season 1"
+    },
+    {
+      "alt": "The Falcon and The Winter Soldier TV Show Season 1 Poster",
+      "href": "/tv-shows/the-falcon-and-the-winter-soldier/1",
+      "image": "https://cdn.marvel.com/content/1x/falcws_lob_crd_03.webp",
+      "title": "The Falcon and The Winter Soldier"
+    },
+    {
+      "alt": "WandaVision TV Show Season 1 Poster",
+      "href": "/tv-shows/wandavision/1",
+      "image": "https://cdn.marvel.com/content/1x/wandavision_lob_crd_06.webp",
+      "title": "WandaVision"
+    },
+    {
+      "alt": "Marvel Studios: Legends Disney Plus TV Show Logo on Black",
+      "href": "/tv-shows/marvel-studios-legends/1",
+      "image": "https://cdn.marvel.com/content/1x/legends_lob_crd_01.webp",
+      "title": "Marvel Studios: Legends"
+    },
+    {
+      "alt": "Stan Lee Documentary Disney+ TV Show Season 1 Poster",
+      "href": "/tv-shows/stan-lee-documentary/1",
+      "image": "https://cdn.marvel.com/content/1x/stanlee_lob_crd_01.webp",
+      "title": "Stan Lee"
+    },
+    {
+      "alt": "MPower",
+      "href": "/tv-shows/mpower/1",
+      "image": "https://cdn.marvel.com/content/1x/mpower_lob_crd_02.webp",
+      "title": "MPower"
+    },
+    {
+      "alt": "Voices Rising: The Music of Wakanda Forever Disney+ Disney Plus TV Show Season 1 Poster",
+      "href": "/tv-shows/voices-rising-the-music-of-wakanda-forever/1",
+      "image": "https://cdn.marvel.com/content/1x/voicesrisingwf_lob_crd_01.webp",
+      "title": "Voices Rising: The Music of Wakanda Forever"
+    },
+    {
+      "alt": "Marvel Studios Assembled Disney Plus TV Show Season 1 Logo on Black",
+      "href": "/tv-shows/marvel-studios-assembled/1",
+      "image": "https://cdn.marvel.com/content/1x/assembled_lob_crd-01.webp",
+      "title": "Marvel Studios Assembled"
+    },
+    {
+      "alt": "Marvel's Behind the Mask Disney Plus Tv Show Season 1 Poster Art",
+      "href": "/tv-shows/marvel-s-behind-the-mask/1",
+      "image": "https://cdn.marvel.com/content/1x/behindthemask_lob_crd_02.webp",
+      "title": "Marvel's Behind the Mask"
+    },
+    {
+      "alt": "Marvel's 616 TV Show Season 1 Poster",
+      "href": "/tv-shows/marvel-s-616/1",
+      "image": "https://cdn.marvel.com/content/1x/marvel616_lob_crd_02_1.webp",
+      "title": "Marvel's 616"
+    },
+    {
+      "alt": "Marvel's Hero Project TV Show Season 1 Poster",
+      "href": "/tv-shows/marvel-s-hero-project/1",
+      "image": "https://cdn.marvel.com/content/1x/marvelsheroproject_lob_crd_01.webp",
+      "title": "Marvel's Hero Project | Season 1"
+    },
+    {
+      "alt": "Marvel's Daredevil Season 3 Poster",
+      "href": "/tv-shows/marvel-s-daredevil/3",
+      "image": "https://cdn.marvel.com/content/1x/daredevilss3_lob_crd_02.webp",
+      "title": "Marvel's Daredevil"
+    },
+    {
+      "alt": "Marvel's The Defenders Season 1 TV Show Poster",
+      "href": "/tv-shows/marvel-s-the-defenders/1",
+      "image": "https://cdn.marvel.com/content/1x/defenderss1_lob_crd_03.webp",
+      "title": "Marvel's The Defenders"
+    },
+    {
+      "alt": "Marvel's Iron Fist | Season 2",
+      "href": "/tv-shows/marvel-s-iron-fist/2",
+      "image": "https://cdn.marvel.com/content/1x/ironfists2_lob_crd_02.webp",
+      "title": "Marvel's Iron Fist"
+    },
+    {
+      "alt": "Marvel's Jessica Jones | Season 3 TV Show Poster",
+      "href": "/tv-shows/marvel-s-jessica-jones/3",
+      "image": "https://cdn.marvel.com/content/1x/jessicajoness3_lob_crd_04.webp",
+      "title": "Marvel's Jessica Jones"
+    },
+    {
+      "alt": "Marvel's Luke Cage Season 2 TV Show Poster",
+      "href": "/tv-shows/marvel-s-luke-cage/2",
+      "image": "https://cdn.marvel.com/content/1x/lukecages2_lob_crd_03.webp",
+      "title": "Marvel's Luke Cage"
+    },
+    {
+      "alt": "Marvel's The Punisher Season 2 TV Show Poster",
+      "href": "/tv-shows/marvel-s-the-punisher/2",
+      "image": "https://cdn.marvel.com/content/1x/thepunishers2_lob_crd_04.webp",
+      "title": "Marvel's The Punisher"
+    },
+    {
+      "alt": "Marvel's Agent Carter TV Show Season 2 Poster",
+      "href": "/tv-shows/marvel-s-agent-carter/2",
+      "image": "https://cdn.marvel.com/content/1x/agentcarters2_lob_crd_03.webp",
+      "title": "Marvel's Agent Carter"
+    },
+    {
+      "alt": "Marvel's Agents of S.H.I.E.L.D. TV Show Season 7 Poster",
+      "href": "/tv-shows/marvel-s-agents-of-s-h-i-e-l-d/7",
+      "image": "https://cdn.marvel.com/content/1x/agentsofshields7_lob_crd_04.webp",
+      "title": "Marvel's Agents of S.H.I.E.L.D."
+    },
+    {
+      "alt": "Marvel's Inhumans TV Show Season 1 Poster",
+      "href": "/tv-shows/marvel-s-inhumans/1",
+      "image": "https://cdn.marvel.com/content/1x/inhumanss1_lob_crd_02.webp",
+      "title": "Marvel's Inhumans"
+    },
+    {
+      "alt": "Marvel's Hit-Monkey Season 2 Hulu TV Show Poster",
+      "href": "/tv-shows/marvels-hit-monkey/2",
+      "image": "https://cdn.marvel.com/content/1x/marvelshitmonkeys2_lob_crd_01.webp",
+      "title": "Marvel's Hit-Monkey | Season 2"
+    },
+    {
+      "alt": "Marvel's Hit-Monkey Season 1",
+      "href": "/tv-shows/marvels-hit-monkey/1",
+      "image": "https://cdn.marvel.com/content/1x/hitmonkey_lob_crd_02.webp",
+      "title": "Marvel's Hit-Monkey | Season 1"
+    },
+    {
+      "alt": "Marvel's M.O.D.O.K. Hulu TV Show Season 1 Poster",
+      "href": "/tv-shows/marvels-modok",
+      "image": "https://cdn.marvel.com/content/1x/modok_lob_crd-02_1.webp",
+      "title": "Marvel's M.O.D.O.K."
+    },
+    {
+      "alt": "Runaways TV Show Season 3 Poster",
+      "href": "/tv-shows/marvel-s-runaways/3",
+      "image": "https://cdn.marvel.com/content/1x/runaways_s3_lob_crd_03.webp",
+      "title": "Marvel's Runaways | Season 3"
+    },
+    {
+      "alt": "Legion TV Show Season 3 Poster",
+      "href": "/tv-shows/legion/3",
+      "image": "https://cdn.marvel.com/content/1x/legion_lob_crd_04.webp",
+      "title": "Legion | Season 3"
+    },
+    {
+      "alt": "Marvel's Cloak and Dagger TV Show Season 2 Poster",
+      "href": "/tv-shows/marvel-s-cloak-and-dagger/2",
+      "image": "https://cdn.marvel.com/content/1x/cloakanddagger_lob_crd_02_1.webp",
+      "title": "Marvel's Cloak & Dagger | Season 2"
+    },
+    {
+      "alt": "Marvel's Runaways Season 2",
+      "href": "/tv-shows/marvel-s-runaways/2",
+      "image": "https://cdn.marvel.com/content/1x/runaways_lob_crd_02.webp",
+      "title": "Marvel's Runaways | Season 2"
+    },
+    {
+      "alt": "The Gifted Season 2 TV Show Poster",
+      "href": "/tv-shows/the-gifted/2",
+      "image": "https://cdn.marvel.com/content/1x/thegifteds2_lob_crd_01.webp",
+      "title": "The Gifted | Season 2"
+    },
+    {
+      "alt": "Marvel's Cloak and Dagger TV Show Poster",
+      "href": "/tv-shows/marvel-s-cloak-and-dagger/1",
+      "image": "https://cdn.marvel.com/content/1x/cloakanddagger_lob_crd_01.webp",
+      "title": "Marvel's Cloak & Dagger | Season 1"
+    },
+    {
+      "alt": "Legion TV Show Season 2 Poster",
+      "href": "/tv-shows/legion/2",
+      "image": "https://cdn.marvel.com/content/1x/legion_lob_crd_02_1.webp",
+      "title": "Legion | Season 2"
+    },
+    {
+      "alt": "Marvel's Runaways TV Show Poster",
+      "href": "/tv-shows/marvel-s-runaways/1",
+      "image": "https://cdn.marvel.com/content/1x/runaways_lob_crd_01.webp",
+      "title": "Marvel's Runaways | Season 1"
+    },
+    {
+      "alt": "Legion TV Show Season 1 Poster",
+      "href": "/tv-shows/legion/1",
+      "image": "https://cdn.marvel.com/content/1x/legion_lob_crd_01_3.webp",
+      "title": "Legion | Season 1"
+    },
+    {
+      "alt": "Marvel's Avengers: Mightiest Friends TV Show Disney Jr. Disney+ TV Show Season 1 Logo on Black",
+      "href": "/tv-shows/animation/marvels-avengers-mightiest-friends/1",
+      "image": "https://cdn.marvel.com/content/1x/marvelsavengersmightiestfriends_lob_crd_01.webp",
+      "title": "Marvel's Avengers: Mightiest Friends"
+    },
+    {
+      "alt": "LEGO Marvel Avengers: Strange Tails Disney+ TV Show Season 1 Poster",
+      "href": "/tv-shows/animation/lego-marvel-avengers-strange-tails/1",
+      "image": "https://cdn.marvel.com/content/1x/legomarvelavengersstrangetails_lob_crd_02.webp",
+      "title": "LEGO Marvel Avengers: Strange Tails"
+    },
+    {
+      "alt": "Marvel's Iron Man and his Awesome Friends Disney+ Disney Plus TV Show Season 1 Poster",
+      "href": "/tv-shows/animation/marvels-iron-man-and-his-awesome-friends/1",
+      "image": "https://cdn.marvel.com/content/1x/marvelsironmanandhisawesomefriends_lob_crd_01.webp",
+      "title": "Marvel's Iron Man and his Awesome Friends"
+    },
+    {
+      "alt": "LEGO Marvel Avengers: Mission Demolition Disney+ Disney Plus TV Show Season 1 Poster",
+      "href": "/tv-shows/animation/lego-marvel-avengers-mission-demolition/1",
+      "image": "https://cdn.marvel.com/content/1x/legomarvelavengersmissiondemolition_lob_crd_01.webp",
+      "title": "LEGO Marvel Avengers: Mission Demolition"
+    },
+    {
+      "alt": "LEGO Marvel Avengers: Code Red",
+      "href": "/tv-shows/animation/lego-marvel-avengers-code-red/1",
+      "image": "https://cdn.marvel.com/content/1x/legomarvelavengerscodered_lob_crd_01.webp",
+      "title": "LEGO Marvel Avengers: Code Red"
+    },
+    {
+      "alt": "Marvel's Moon Girl and Devil Dinosaur TV Show Season 1 Poster",
+      "href": "/tv-shows/animation/marvels-moon-girl-and-devil-dinosaur/1",
+      "image": "https://cdn.marvel.com/content/1x/moongirlanddevildinosaur_lob_crd_03.webp",
+      "title": "Marvel's Moon Girl and Devil Dinosaur"
+    },
+    {
+      "alt": "Marvel's Spidey and his Amazing Friends",
+      "href": "/tv-shows/animation/marvels-spidey-and-his-amazing-friends/1",
+      "image": "https://cdn.marvel.com/content/1x/spidey_lob_crd_01.webp",
+      "title": "Marvel's Spidey and his Amazing Friends"
+    },
+    {
+      "alt": "Marvel's Avengers Animated TV Show Poster",
+      "href": "/tv-shows/animation/marvel-s-avengers/5",
+      "image": "https://cdn.marvel.com/content/1x/animatedavengers_lob_crd_02.webp",
+      "title": "Marvel's Avengers"
+    },
+    {
+      "alt": "Marvel's Guardians of the Galaxy Animated TV Show Poster",
+      "href": "/tv-shows/animation/marvel-s-guardians-of-the-galaxy/3",
+      "image": "https://cdn.marvel.com/content/1x/animatedgotg_lob_crd_01.webp",
+      "title": "Marvel's Guardians of the Galaxy"
+    },
+    {
+      "alt": "Marvel Rising Animated",
+      "href": "/tv-shows/animation/marvel-rising/1",
+      "image": "https://cdn.marvel.com/content/1x/animatedmarvelrising_lob_crd_01.webp",
+      "title": "Marvel Rising"
+    },
+    {
+      "alt": "Marvel's Spider-Man Animated TV Show Poster",
+      "href": "/tv-shows/animation/marvel-s-spider-man/2",
+      "image": "https://cdn.marvel.com/content/1x/animatedspider-man_lob_crd_01.webp",
+      "title": "Marvel's Spider-Man"
+    }
+  ],
+  "digitalSeries": [
+    {
+      "alt": "Ask Marvel",
+      "description": "Watch the talent from across the Marvel Universe take on your tough questions in Ask Marvel.",
+      "href": "/watch/digital-series/ask-marvel",
+      "image": "https://cdn.marvel.com/content/1x/764x1132_5.webp",
+      "title": "Ask Marvel",
+      "url": "https://www.marvel.com/watch/digital-series/ask-marvel",
+      "total": 50,
+      "firstPublished": "2018-10-11T20:46:49.649Z",
+      "lastObservedPublished": "2023-02-24T22:18:32.922Z",
+      "firstEpisodeUrl": "https://www.marvel.com/watch/digital-series/ask-marvel/venom-artist-ryan-stegman-takes-your-twitter-questions-ask-marvel"
+    },
+    {
+      "alt": "Countdown To Avengers: Doomsday Official Podcast Digital Series Poster",
+      "description": "A video podcast highlighting the significant movies leading up to 'Avengers: Doomsday', hosted by Frank Alvarez and Iman Vellani.",
+      "href": "/watch/digital-series/countdown-to-avengers-doomsday-official-podcast",
+      "image": "https://cdn.marvel.com/content/1x/countdowntoavengersdoomsdayofficialpodcast_lob_crd_03.webp",
+      "title": "Countdown to Avengers: Doomsday Official Podcast",
+      "url": "https://www.marvel.com/watch/digital-series/countdown-to-avengers-doomsday-official-podcast",
+      "total": 0,
+      "firstPublished": null,
+      "lastObservedPublished": null,
+      "firstEpisodeUrl": null
+    },
+    {
+      "alt": "Daredevil: Born Again Official Podcast Poster",
+      "description": "Marvel Television is launching its first official series companion video podcast with the 'Daredevil: Born Again' Season 2 Official Companion Podcast on Disney+.",
+      "href": "/watch/digital-series/daredevil-born-again-official-podcast",
+      "image": "https://cdn.marvel.com/content/1x/daredevilbornagainofficialpodcast_lob_crd_02.webp",
+      "title": "Daredevil: Born Again Official Podcast",
+      "url": "https://www.marvel.com/watch/digital-series/daredevil-born-again-official-podcast",
+      "total": 0,
+      "firstPublished": null,
+      "lastObservedPublished": null,
+      "firstEpisodeUrl": null
+    },
+    {
+      "alt": "Earth's Mightiest Show Digital Series Show Poster",
+      "description": "The Official Marvel web show for fandom, behind-the-scenes, events, and all of the mightiest stuff in the Marvel Universe!",
+      "href": "/watch/digital-series/earth-s-mightiest-show",
+      "image": "https://cdn.marvel.com/content/1x/card_logo_bg_764x1132.webp",
+      "title": "Earth's Mightiest Show",
+      "url": "https://www.marvel.com/watch/digital-series/earth-s-mightiest-show",
+      "total": 309,
+      "firstPublished": "2018-03-08T20:54:24.863Z",
+      "lastObservedPublished": "2021-03-12T21:44:10.319Z",
+      "firstEpisodeUrl": "https://www.marvel.com/watch/digital-series/earth-s-mightiest-show/jr-ramirez-from-marvel-s-jessica-jones-earth-s-mightiest-show"
+    },
+    {
+      "alt": "Eat the Universe Digital Series Show Poster",
+      "description": "Summon the power of Galactus with Eat the Universe! Join celebrity chef Justin Warner as he welcomes a wide-array of guests to cook dishes inspired by Marvel’s rich history.",
+      "href": "/watch/digital-series/eat-the-universe",
+      "image": "https://cdn.marvel.com/content/1x/etu_webbanner764x1132.webp",
+      "title": "Eat the Universe",
+      "url": "https://www.marvel.com/watch/digital-series/eat-the-universe",
+      "total": 51,
+      "firstPublished": "2017-10-04T17:03:48.741Z",
+      "lastObservedPublished": "2020-12-22T18:20:27.655Z",
+      "firstEpisodeUrl": "https://www.marvel.com/watch/digital-series/eat-the-universe/medusa-cheese-ball-marvel-s-eat-the-universe-nycc2017"
+    },
+    {
+      "alt": "Edge of Venomverse",
+      "description": "A visual feast that works in tandem with the VENOMVERSE comics, dive into the murky world of the most notorious alien symbiote in the Marvel Universe with Edge of Venomverse.",
+      "href": "/watch/digital-series/edge-of-venomverse",
+      "image": "https://cdn.marvel.com/content/1x/764x1132_7.webp",
+      "title": "Edge of Venomverse",
+      "url": "https://www.marvel.com/watch/digital-series/edge-of-venomverse",
+      "total": 10,
+      "firstPublished": "2017-09-14T19:59:57.570Z",
+      "lastObservedPublished": "2018-06-28T16:13:42.139Z",
+      "firstEpisodeUrl": "https://www.marvel.com/watch/digital-series/edge-of-venomverse/part-7-venom-meets-poison-spider-man-marvel-s-edge-of-venomverse"
+    },
+    {
+      "alt": "Marvel 101",
+      "description": "Say hello to the Marvel Universe with Marvel 101! These quick episodes give you a crash course on all the must-know information about all things Marvel!",
+      "href": "/watch/digital-series/marvel-101",
+      "image": "https://cdn.marvel.com/content/1x/764x1132_0.webp",
+      "title": "Marvel 101",
+      "url": "https://www.marvel.com/watch/digital-series/marvel-101",
+      "total": 274,
+      "firstPublished": "2017-09-19T16:08:57.059Z",
+      "lastObservedPublished": "2022-07-05T15:11:02.635Z",
+      "firstEpisodeUrl": "https://www.marvel.com/watch/digital-series/marvel-101/triton-marvel-101"
+    },
+    {
+      "alt": "Marvel Becoming",
+      "description": "Join Marvel cosplayers as they share their stories about the inspiration behind their craft with Marvel Becoming! Watch these artisans showcase their Marvel masterpieces!",
+      "href": "/watch/digital-series/marvel-becoming",
+      "image": "https://cdn.marvel.com/content/1x/card_logo_on_bg_764x1132_1.webp",
+      "title": "Marvel Becoming",
+      "url": "https://www.marvel.com/watch/digital-series/marvel-becoming",
+      "total": 71,
+      "firstPublished": "2017-09-19T18:57:31.960Z",
+      "lastObservedPublished": "2021-07-14T18:01:27.228Z",
+      "firstEpisodeUrl": "https://www.marvel.com/watch/digital-series/marvel-becoming/cosplayer-blerd-vision-becomes-sam-wilson-s-captain-america-marvel-becoming"
+    },
+    {
+      "alt": "Marvel By The Numbers",
+      "description": "From big money to love triangles to crazy costumes, By The Numbers breaks down your favorite Marvels shows, comics, & films to bring you enlightening graphics & astounding numbers!",
+      "href": "/watch/digital-series/marvel-by-the-numbers",
+      "image": "https://cdn.marvel.com/content/1x/764x1132_3.webp",
+      "title": "Marvel By The Numbers",
+      "url": "https://www.marvel.com/watch/digital-series/marvel-by-the-numbers",
+      "total": 7,
+      "firstPublished": "2018-06-22T13:21:49.130Z",
+      "lastObservedPublished": "2019-02-14T16:02:18.960Z",
+      "firstEpisodeUrl": "https://www.marvel.com/watch/digital-series/marvel-by-the-numbers/marvel-s-luke-cage-destruction-by-the-numbers-season-1"
+    },
+    {
+      "alt": "Marvel Logo",
+      "description": "Bring the incredible Marvel universe to life in the comfort of your own home!",
+      "href": "/watch/digital-series/marvel-lifestyle",
+      "image": "https://cdn.marvel.com/content/1x/764x1132_15.webp",
+      "title": "Marvel Culture & Lifestyle",
+      "url": "https://www.marvel.com/watch/digital-series/marvel-lifestyle",
+      "total": 0,
+      "firstPublished": null,
+      "lastObservedPublished": null,
+      "firstEpisodeUrl": null
+    },
+    {
+      "alt": "Marvel Gaming: Let's Play",
+      "description": "Get inside the gameplay action as your favorite celebrities engage in interviews while they dive into the latest Marvel video games!",
+      "href": "/watch/digital-series/marvel-gaming-let-s-play",
+      "image": "https://cdn.marvel.com/content/1x/card_logo_on_bg_764x1132.webp",
+      "title": "Marvel Gaming: Let's Play",
+      "url": "https://www.marvel.com/watch/digital-series/marvel-gaming-let-s-play",
+      "total": 57,
+      "firstPublished": "2017-12-07T15:58:10.070Z",
+      "lastObservedPublished": "2022-01-19T18:01:22.489Z",
+      "firstEpisodeUrl": "https://www.marvel.com/watch/digital-series/marvel-gaming-let-s-play/marvel-contest-of-champions-taskmaster-spotlight"
+    },
+    {
+      "alt": "Marvel Live",
+      "description": "Dropping you directly into the action at every premiere, convention, and event, Marvel Live is the number one source for minute-by-minute news and updates as they unfold!",
+      "href": "/watch/digital-series/marvel-live",
+      "image": "https://cdn.marvel.com/content/1x/live_764x1132.webp",
+      "title": "Marvel Live",
+      "url": "https://www.marvel.com/watch/digital-series/marvel-live",
+      "total": 359,
+      "firstPublished": "2018-04-24T01:51:16.528Z",
+      "lastObservedPublished": "2020-05-11T18:38:29.376Z",
+      "firstEpisodeUrl": "https://www.marvel.com/watch/digital-series/marvel-live/sebastian-stan-live-at-the-avengers-infinity-war-premiere"
+    },
+    {
+      "alt": "Marvel Make Me A Hero",
+      "description": "We work with real Marvel fans to create the comic hero of their dreams",
+      "href": "/watch/digital-series/marvel-make-me-a-hero",
+      "image": "https://cdn.marvel.com/content/1x/mmah_764x1132.webp",
+      "title": "Marvel Make Me A Hero",
+      "url": "https://www.marvel.com/watch/digital-series/marvel-make-me-a-hero",
+      "total": 86,
+      "firstPublished": "2018-11-05T15:58:29.006Z",
+      "lastObservedPublished": "2021-10-28T15:22:49.725Z",
+      "firstEpisodeUrl": "https://www.marvel.com/watch/digital-series/marvel-make-me-a-hero/the-power-of-fire-marvel-make-me-a-hero"
+    },
+    {
+      "alt": "Marvel Minute",
+      "description": "Start the clock! Hosted by Lorraine Cink, the Marvel Minute offers a rapid fire view of all the latest news from television, movies, comic books, video games, and more!",
+      "href": "/watch/digital-series/marvel-minute",
+      "image": "https://cdn.marvel.com/content/1x/764x1132_2.webp",
+      "title": "Marvel Minute",
+      "url": "https://www.marvel.com/watch/digital-series/marvel-minute",
+      "total": 156,
+      "firstPublished": "2017-06-27T12:45:59.683Z",
+      "lastObservedPublished": "2024-01-22T15:12:16.574Z",
+      "firstEpisodeUrl": "https://www.marvel.com/watch/digital-series/marvel-minute/spider-man-homecoming-and-more-marvel-minute-2017"
+    },
+    {
+      "alt": "Marvel Presents: The World's Greatest Book Club With Paul Scheer Digital Series Poster",
+      "description": "Join lifelong lover of Marvel Comics, Paul Scheer and special guests for an inside look into some of Marvel's most-read classics and forgotten treasures from the Marvel vault.",
+      "href": "/watch/digital-series/marvel-presents-the-world-s-greatest-book-club-with-paul-scheer",
+      "image": "https://cdn.marvel.com/content/1x/twgbc_lob_crd_01.webp",
+      "title": "Marvel Presents: The World's Greatest Book Club With Paul Scheer",
+      "url": "https://www.marvel.com/watch/digital-series/marvel-presents-the-world-s-greatest-book-club-with-paul-scheer",
+      "total": 7,
+      "firstPublished": "2020-04-30T01:48:39.170Z",
+      "lastObservedPublished": "2020-07-09T15:52:18.903Z",
+      "firstEpisodeUrl": "https://www.marvel.com/watch/digital-series/marvel-presents-the-world-s-greatest-book-club-with-paul-scheer/marvel-presents-the-world-s-greatest-book-club-with-paul-scheer-featuring-damon-lindelof"
+    },
+    {
+      "alt": "Marvel Quickdraw",
+      "description": "Go behind-the-scenes of the artistic process with Marvel’s mightiest artists with Quickdraw!",
+      "href": "/watch/digital-series/marvel-quickdraw",
+      "image": "https://cdn.marvel.com/content/1x/764x1132.webp",
+      "title": "Marvel Quickdraw",
+      "url": "https://www.marvel.com/watch/digital-series/marvel-quickdraw",
+      "total": 72,
+      "firstPublished": "2017-08-28T21:44:01.823Z",
+      "lastObservedPublished": "2019-09-25T13:14:09.178Z",
+      "firstEpisodeUrl": "https://www.marvel.com/watch/digital-series/marvel-quickdraw/spider-man-on-quickdraw"
+    },
+    {
+      "alt": "Marvel TL;DR",
+      "description": "Presenting an easily digestible summation of the finest tales from across the Marvel Universe, learn all you need to know with Marvel TL;DR.",
+      "href": "/watch/digital-series/marvel-tl-dr",
+      "image": "https://cdn.marvel.com/content/1x/764x1132_2.webp",
+      "title": "Marvel TL;DR",
+      "url": "https://www.marvel.com/watch/digital-series/marvel-tl-dr",
+      "total": 35,
+      "firstPublished": "2017-09-14T19:59:57.545Z",
+      "lastObservedPublished": "2019-09-16T20:34:19.478Z",
+      "firstEpisodeUrl": "https://www.marvel.com/watch/digital-series/marvel-tl-dr/runaways-marvel-tl-dr"
+    },
+    {
+      "alt": "Marvel Top 10",
+      "description": "The team behind Marvel.com presents a litany of lists ranking Marvel characters, moments, stories, costumes, and so much more. Count down the best of the best!",
+      "href": "/watch/digital-series/marvel-top-10",
+      "image": "https://cdn.marvel.com/content/1x/764x1132_19.webp",
+      "title": "Marvel Top 10",
+      "url": "https://www.marvel.com/watch/digital-series/marvel-top-10",
+      "total": 0,
+      "firstPublished": null,
+      "lastObservedPublished": null,
+      "firstEpisodeUrl": null
+    },
+    {
+      "alt": "Marvel Ultimate Comics",
+      "description": "Find out what's next in Marvel Ultimate Comics!",
+      "href": "/watch/digital-series/marvel-ultimate-comics",
+      "image": "https://cdn.marvel.com/content/1x/card_logo_bg_764x1132.webp",
+      "title": "Marvel Ultimate Comics",
+      "url": "https://www.marvel.com/watch/digital-series/marvel-ultimate-comics",
+      "total": 7,
+      "firstPublished": "2018-10-09T19:37:10.859Z",
+      "lastObservedPublished": "2019-05-22T14:56:56.507Z",
+      "firstEpisodeUrl": "https://www.marvel.com/watch/digital-series/marvel-ultimate-comics/spider-geddon-spider-man-noir-1"
+    },
+    {
+      "alt": "Marvel University",
+      "description": "Marvel University talks to leading experts to explore the realism behind the characters and storylines from the Marvel Universe.",
+      "href": "/watch/digital-series/marvel-university",
+      "image": "https://cdn.marvel.com/content/1x/764x1132_14.webp",
+      "title": "Marvel University",
+      "url": "https://www.marvel.com/watch/digital-series/marvel-university",
+      "total": 3,
+      "firstPublished": "2018-06-27T20:22:27.065Z",
+      "lastObservedPublished": "2018-08-14T14:28:44.586Z",
+      "firstEpisodeUrl": "https://www.marvel.com/watch/digital-series/marvel-university/ant-man-the-science-of-ants-marvel-university"
+    },
+    {
+      "alt": "Marvel Long Story Short",
+      "description": "Long Story Short is for comic fans who want to get caught up on the entirety of Marvel history as quickly as possible.",
+      "href": "/watch/digital-series/marvel-s-long-story-short",
+      "image": "https://cdn.marvel.com/content/1x/longstoryshort_lob_crd_01.webp",
+      "title": "Marvel's Long Story Short",
+      "url": "https://www.marvel.com/watch/digital-series/marvel-s-long-story-short",
+      "total": 8,
+      "firstPublished": "2020-12-01T21:52:41.860Z",
+      "lastObservedPublished": "2022-11-18T15:02:40.990Z",
+      "firstEpisodeUrl": "https://www.marvel.com/watch/digital-series/marvel-s-long-story-short/is-doc-ock-the-best-spider-man-marvel-s-long-story-short"
+    },
+    {
+      "alt": "Marvel's Playback",
+      "description": "This short documentary series takes you into the homes of bands and musicians to check out their Marvel collections, see their studios, and learn about how Marvel influenced them.",
+      "href": "/watch/digital-series/marvel-s-playback",
+      "image": "https://cdn.marvel.com/content/1x/764x1132_8.webp",
+      "title": "Marvel's Playback",
+      "url": "https://www.marvel.com/watch/digital-series/marvel-s-playback",
+      "total": 3,
+      "firstPublished": "2018-01-25T20:19:03.840Z",
+      "lastObservedPublished": "2018-07-06T20:38:30.468Z",
+      "firstEpisodeUrl": "https://www.marvel.com/watch/digital-series/marvel-s-playback/the-black-eyed-peas-talk-marvel-comics-marvel-s-playback-ep-3"
+    },
+    {
+      "alt": "Marvel's Squirrel Girl: The Unbeatable Radio Show",
+      "description": "Squirrel Girl has taken down Thanos and Doctor Doom – but now she faces something far more terrifying… living authentically.",
+      "href": "/watch/digital-series/marvels-squirrel-girl-the-unbeatable-radio-show",
+      "image": "https://cdn.marvel.com/content/1x/sgpodcast-lob-crd-01.webp",
+      "title": "Marvel's Squirrel Girl: The Unbeatable Radio Show",
+      "url": "https://www.marvel.com/watch/digital-series/marvels-squirrel-girl-the-unbeatable-radio-show",
+      "total": 0,
+      "firstPublished": null,
+      "lastObservedPublished": null,
+      "firstEpisodeUrl": null
+    },
+    {
+      "alt": "Storyboards Card Image",
+      "description": "Storyboards follows Marvel’s Joe Quesada as he drops in on famous storytellers from all walks of life to talk personal origin stories and what drives their passion for storytelling",
+      "href": "/watch/digital-series/marvels-storyboards",
+      "image": "https://cdn.marvel.com/content/1x/marvelstoryboards_lob_crd_01.webp",
+      "title": "Marvel's Storyboards",
+      "url": "https://www.marvel.com/watch/digital-series/marvels-storyboards",
+      "total": 0,
+      "firstPublished": null,
+      "lastObservedPublished": null,
+      "firstEpisodeUrl": null
+    },
+    {
+      "alt": "Marvel's The Pull List Digital Series Show Poster",
+      "description": "Get ready for New Comic Book Day with Marvel’s Pull List! Host Ryan “Agent M” Penagos gives a preview of what’s going on in the pages of the Marvel Universe.",
+      "href": "/watch/digital-series/marvel-s-pull-list",
+      "image": "https://cdn.marvel.com/content/1x/card_logo_on_bg_764x1132_0.webp",
+      "title": "Marvel's The Pull List",
+      "url": "https://www.marvel.com/watch/digital-series/marvel-s-pull-list",
+      "total": 125,
+      "firstPublished": null,
+      "lastObservedPublished": null,
+      "firstEpisodeUrl": null
+    },
+    {
+      "alt": "Marvel's Voices Digital Series Show Poster",
+      "description": "On Marvel’s Voices, host Angélique Roché holds in-depth conversations with diverse storytellers about their creative processes, collaborations, and professional journeys.",
+      "href": "/watch/digital-series/marvel-s-voices",
+      "image": "https://cdn.marvel.com/content/1x/voices_webbanner764x1132.webp",
+      "title": "Marvel's Voices",
+      "url": "https://www.marvel.com/watch/digital-series/marvel-s-voices",
+      "total": 0,
+      "firstPublished": null,
+      "lastObservedPublished": null,
+      "firstEpisodeUrl": null
+    },
+    {
+      "alt": "The History of Marvel Comics: Black Panther Card",
+      "description": "An exploration into the comic book origins of Black Panther via conversations with the creators who have shaped T’Challa’s journey & a celebration of the Afro-Futurism of Wakanda",
+      "href": "/watch/digital-series/the-history-of-marvel-comics-black-panther",
+      "image": "https://cdn.marvel.com/content/1x/homcbp_lob_crd-01.webp",
+      "title": "The History of Marvel Comics: Black Panther",
+      "url": "https://www.marvel.com/watch/digital-series/the-history-of-marvel-comics-black-panther",
+      "total": 1,
+      "firstPublished": "2022-01-31T14:24:16.644Z",
+      "lastObservedPublished": "2022-01-31T14:24:16.644Z",
+      "firstEpisodeUrl": "https://www.marvel.com/watch/digital-series/the-history-of-marvel-comics-black-panther/coming-2-14-the-history-of-marvel-comics-black-panther"
+    },
+    {
+      "alt": "Wakanda Forever: The Official Black Panther Podcast Digital Series Poster",
+      "description": "The groundbreaking success of BLACK PANTHER changed the world. What happened after was unprecedented. This is an intimate look into the making of BLACK PANTHER: WAKANDA FOREVER.",
+      "href": "/watch/digital-series/wakanda-forever-the-official-black-panther-podcast",
+      "image": "https://cdn.marvel.com/content/1x/blackpantherpodcast_lob_crd_01.webp",
+      "title": "Wakanda Forever: The Official Black Panther Podcast",
+      "url": "https://www.marvel.com/watch/digital-series/wakanda-forever-the-official-black-panther-podcast",
+      "total": 0,
+      "firstPublished": null,
+      "lastObservedPublished": null,
+      "firstEpisodeUrl": null
+    },
+    {
+      "alt": "The Official Marvel Podcast Show Poster",
+      "description": "The Official Marvel Podcast. Celebrating all the latest from across the Marvel universe of movies, TV shows, and comics. Directly from Marvel’s mightiest creators.",
+      "href": "/watch/digital-series/the-official-marvel-podcast",
+      "image": "https://cdn.marvel.com/content/1x/theofficialmarvelpodcast_lob_crd_03.webp",
+      "title": "The Official Marvel Podcast",
+      "url": "https://www.marvel.com/watch/digital-series/the-official-marvel-podcast",
+      "total": 0,
+      "firstPublished": null,
+      "lastObservedPublished": null,
+      "firstEpisodeUrl": null
+    },
+    {
+      "alt": "This Week in Marvel Show Poster/Card",
+      "description": "Hosted by Ryan \"Agent M\" Penagos, Lorraine Cink & James Monroe Iglehart, This Week in Marvel is the inside access to all the latest Marvel comics, TV, movies, games, toys & beyond",
+      "href": "/watch/digital-series/this-week-in-marvel",
+      "image": "https://cdn.marvel.com/content/1x/lob-764x1132-twim.webp",
+      "title": "This Week in Marvel",
+      "url": "https://www.marvel.com/watch/digital-series/this-week-in-marvel",
+      "total": 128,
+      "firstPublished": "2018-01-04T19:59:50.376Z",
+      "lastObservedPublished": "2020-12-17T14:37:37.548Z",
+      "firstEpisodeUrl": "https://www.marvel.com/watch/digital-series/this-week-in-marvel/clark-gregg-talks-directing-with-ryan-on-this-week-in-marvel-podcast"
+    },
+    {
+      "alt": "THWIP!",
+      "description": "From the Marvel Archives, THWIP! The Big Marvel Show breaks down the biggest Marvel stories. Hosted by Lorraine Cink and Ryan “Agent M\" Penagos, swing back into the news.",
+      "href": "/watch/digital-series/thwip",
+      "image": "https://cdn.marvel.com/content/1x/764x1132_16.webp",
+      "title": "THWIP!",
+      "url": "https://www.marvel.com/watch/digital-series/thwip",
+      "total": 15,
+      "firstPublished": "2017-05-16T13:30:41.759Z",
+      "lastObservedPublished": "2017-12-18T20:21:00.547Z",
+      "firstEpisodeUrl": "https://www.marvel.com/watch/digital-series/thwip/guardians-makeup-on-thwip-the-big-marvel-show"
+    },
+    {
+      "alt": "Wolverine: The Long Night",
+      "description": "Following a string of mysterious deaths in Burns, Alaska, Special Agents Sally Pierce and Tad Marshall arrive to investigate.",
+      "href": "/watch/digital-series/marvel-s-wolverine",
+      "image": "https://cdn.marvel.com/content/1x/764x1132_4.webp",
+      "title": "Wolverine: The Long Night",
+      "url": "https://www.marvel.com/watch/digital-series/marvel-s-wolverine",
+      "total": 0,
+      "firstPublished": null,
+      "lastObservedPublished": null,
+      "firstEpisodeUrl": null
+    },
+    {
+      "alt": "Women of Marvel",
+      "description": "Hosts Ellie Pyle and Preeti Chhibber are joined by guests for inspiring conversations spotlighting women characters and creators making an impact on the Marvel Universe.",
+      "href": "/watch/digital-series/women-of-marvel",
+      "image": "https://cdn.marvel.com/content/1x/wmnofmrvlpodcast-lob-crd-01.webp",
+      "title": "Women of Marvel",
+      "url": "https://www.marvel.com/watch/digital-series/women-of-marvel",
+      "total": 56,
+      "firstPublished": "2018-02-21T19:21:27.435Z",
+      "lastObservedPublished": "2020-04-09T14:13:58.855Z",
+      "firstEpisodeUrl": "https://www.marvel.com/watch/digital-series/women-of-marvel/jewelry-designer-douriean-fletcher-on-the-women-of-marvel"
+    }
+  ],
+  "podcasts": [
+    {
+      "alt": "Marvel Method Card/Poster",
+      "description": "The ultimate remix of Marvel fandom! Join actor and rapper Method Man as he talks with some of his favorite people about life, fandom, and their favorite Marvel comics.",
+      "href": "/digital-series/podcasts/marvel-method",
+      "image": "https://cdn.marvel.com/content/1x/lob-764x1132-marvelmethod.webp",
+      "title": "Marvel/Method",
+      "url": "https://www.marvel.com/digital-series/podcasts/marvel-method",
+      "total": 0,
+      "firstPublished": null,
+      "lastObservedPublished": null,
+      "firstEpisodeUrl": null
+    },
+    {
+      "alt": "Marvel's Declassified Podcast Digital Series Show Poster",
+      "description": "Marvel’s secrets revealed by those who were there! A nonfiction narrative podcast focusing on the rich, dynamic, and unknown history of Marvel Comics.",
+      "href": "/digital-series/podcasts/marvel-s-declassified",
+      "image": "https://cdn.marvel.com/content/1x/lob-764x1132-declassified.webp",
+      "title": "Marvel’s Declassified",
+      "url": "https://www.marvel.com/digital-series/podcasts/marvel-s-declassified",
+      "total": 0,
+      "firstPublished": null,
+      "lastObservedPublished": null,
+      "firstEpisodeUrl": null
+    },
+    {
+      "alt": "Marvel’s Wastelanders",
+      "description": "Wolverine, Black Widow, Star-Lord, Hawkeye, and Doctor Doom will team up to stop Valeria Richards.",
+      "href": "/digital-series/podcasts/marvels-wastelanders-old-man-star-lord",
+      "image": "https://cdn.marvel.com/content/1x/marvelwastelanderspodcast_lob_crd.webp",
+      "title": "Marvel’s Wastelanders",
+      "url": "https://www.marvel.com/digital-series/podcasts/marvels-wastelanders-old-man-star-lord",
+      "total": 0,
+      "firstPublished": null,
+      "lastObservedPublished": null,
+      "firstEpisodeUrl": null
+    },
+    {
+      "alt": "sized as LOB game (764x934) instead of regular LOB (*764x1132*)",
+      "description": "The official companion podcast for “Marvel’s Cloak & Dagger” Season 2.Listen in and go behind the scenes with stars Olivia Holt and Aubrey Joseph, and the show’s cast and creators!",
+      "href": "/digital-series/podcasts/the-marvel-after-show",
+      "image": "https://cdn.marvel.com/content/1x/themarvelaftershow_lob_crd_02.webp",
+      "title": "The Marvel After Show",
+      "url": "https://www.marvel.com/digital-series/podcasts/the-marvel-after-show",
+      "total": 0,
+      "firstPublished": null,
+      "lastObservedPublished": null,
+      "firstEpisodeUrl": null
+    },
+    {
+      "alt": "The Mighty Marvel Podcast Digital Series Podcast Poster",
+      "description": "Check out the Mighty Marvel Podcast archives for classic interviews with the biggest stars in the comics industry!",
+      "href": "/digital-series/podcasts/the-mighty-marvel-podcast",
+      "image": "https://cdn.marvel.com/content/1x/themightymarvelpodcast_pod_img_0.webp",
+      "title": "The Mighty Marvel Podcast",
+      "url": "https://www.marvel.com/digital-series/podcasts/the-mighty-marvel-podcast",
+      "total": 0,
+      "firstPublished": null,
+      "lastObservedPublished": null,
+      "firstEpisodeUrl": null
+    },
+    {
+      "alt": "This Week in Marvel NOW! Digital Series Podcast Poster",
+      "description": "Access the archives on the This Week in Marvel NOW! podcast for vintage interviews with Marvel's top comics creators!",
+      "href": "/digital-series/podcasts/this-week-in-marvel-now",
+      "image": "https://cdn.marvel.com/content/1x/thisweekinmarvelnow_pod_img_0.webp",
+      "title": "This Week in Marvel NOW!",
+      "url": "https://www.marvel.com/digital-series/podcasts/this-week-in-marvel-now",
+      "total": 0,
+      "firstPublished": null,
+      "lastObservedPublished": null,
+      "firstEpisodeUrl": null
+    },
+    {
+      "alt": "This Week In Marvel's Agent Carter Digital Series Podcast Poster",
+      "description": "This Week in Marvel's Agent Carter takes you behind the scenes of the ABC series, featuring full episode commentary tracks with the series' creators!",
+      "href": "/digital-series/podcasts/this-week-in-marvel-s-agent-carter",
+      "image": "https://cdn.marvel.com/content/1x/thisweekinmarvelsagentcarterpodcast_pod_img_1.webp",
+      "title": "This Week In Marvel's Agent Carter",
+      "url": "https://www.marvel.com/digital-series/podcasts/this-week-in-marvel-s-agent-carter",
+      "total": 0,
+      "firstPublished": null,
+      "lastObservedPublished": null,
+      "firstEpisodeUrl": null
+    },
+    {
+      "alt": "This Week In Marvel's Agents Of S.H.I.E.L.D. Digital Series Podcast Poster",
+      "description": "Go behind-the-scenes of Marvel's Agents of S.H.I.E.L.D. with the official podcast series for the hit show on ABC!",
+      "href": "/digital-series/podcasts/this-week-in-marvel-s-agents-of-s-h-i-e-l-d",
+      "image": "https://cdn.marvel.com/content/1x/thisweekinmarvelsagentsofshield_pod_img_0.webp",
+      "title": "This Week In Marvel's Agents Of S.H.I.E.L.D.",
+      "url": "https://www.marvel.com/digital-series/podcasts/this-week-in-marvel-s-agents-of-s-h-i-e-l-d",
+      "total": 0,
+      "firstPublished": null,
+      "lastObservedPublished": null,
+      "firstEpisodeUrl": null
+    }
+  ],
+  "audit": {
+    "movieIndexEntries": 47,
+    "tvSeasonIndexEntries": 71,
+    "digitalSeriesEntries": 33,
+    "podcastEntries": 8,
+    "officialDigitalEpisodeTotalObserved": 1890,
+    "undatedDigitalSeries": [
+      "Countdown to Avengers: Doomsday Official Podcast",
+      "Daredevil: Born Again Official Podcast",
+      "Marvel Culture & Lifestyle",
+      "Marvel Top 10",
+      "Marvel's Squirrel Girl: The Unbeatable Radio Show",
+      "Marvel's Storyboards",
+      "Marvel's The Pull List",
+      "Marvel's Voices",
+      "Wakanda Forever: The Official Black Panther Podcast",
+      "The Official Marvel Podcast",
+      "Wolverine: The Long Night"
+    ],
+    "notice": "Marvel 官方索引交叉核对结果；不是第三方历史改编全集的唯一来源。数字系列总期数来自官方系列页，单集详情仍分批索引。"
+  }
+}

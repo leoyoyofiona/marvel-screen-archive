@@ -1,0 +1,52 @@
+{
+  "name": "marvel-screen-archive",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 3199",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0 -p ${PORT:-3000}",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.mjs",
+    "catalog:import": "node scripts/import-catalog.mjs",
+    "catalog:enrich": "node scripts/enrich-catalog.mjs",
+    "catalog:build": "node scripts/build-catalogue.mjs",
+    "assets:collect": "node scripts/collect-primary-assets.mjs",
+    "assets:official": "node scripts/collect-official-posters.mjs",
+    "assets:people": "node scripts/collect-person-portraits.mjs",
+    "admin:hash-password": "node scripts/hash-admin-password.mjs",
+    "catalog:validate": "node scripts/validate-catalog.mjs"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "0.5.8",
+    "countries-list": "3.4.1",
+    "d3-force": "3.0.0",
+    "d3-geo": "3.1.1",
+    "lucide-react": "^0.577.0",
+    "next": "16.3.3",
+    "pg": "8.22.0",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "topojson-client": "3.1.0",
+    "world-atlas": "2.0.2"
+  },
+  "devDependencies": {
+    "@types/d3-force": "3.0.10",
+    "@types/d3-geo": "^3.1.1",
+    "@types/node": "^22.0.0",
+    "@types/pg": "^8.20.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/topojson-client": "^3.1.5",
+    "cheerio": "1.2.0",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "16.3.3",
+    "prettier": "^3.6.2",
+    "typescript": "5.9.3"
+  }
+}

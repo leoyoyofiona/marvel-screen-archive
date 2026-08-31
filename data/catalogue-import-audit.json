@@ -1,0 +1,515 @@
+{
+  "cutoff": "2026-08-31",
+  "importedAt": "2026-08-31T11:36:22.515Z",
+  "count": 319,
+  "sourceTables": [
+    {
+      "group": "films",
+      "sections": [
+        "Live-action films",
+        "Feature films"
+      ],
+      "headings": [
+        "Year",
+        "Title",
+        "Studio(s)",
+        "Notes"
+      ],
+      "rows": 78
+    },
+    {
+      "group": "films",
+      "sections": [
+        "Live-action films",
+        "Serials and short films"
+      ],
+      "headings": [
+        "Year",
+        "Title",
+        "Studio(s)",
+        "Originalrelease",
+        "Length",
+        "Notes"
+      ],
+      "rows": 13
+    },
+    {
+      "group": "films",
+      "sections": [
+        "Live-action films",
+        "From Marvel imprints"
+      ],
+      "headings": [
+        "Year",
+        "Title",
+        "Studio(s)",
+        "Notes"
+      ],
+      "rows": 10
+    },
+    {
+      "group": "films",
+      "sections": [
+        "Live-action films",
+        "From Marvel imprints"
+      ],
+      "headings": [
+        "Year",
+        "Title",
+        "Studio(s)",
+        "Notes"
+      ],
+      "rows": 4
+    },
+    {
+      "group": "films",
+      "sections": [
+        "Live-action films",
+        "From Marvel imprints",
+        "Short films"
+      ],
+      "headings": [
+        "Year",
+        "Title",
+        "Studio(s)",
+        "Notes"
+      ],
+      "rows": 2
+    },
+    {
+      "group": "films",
+      "sections": [
+        "Live-action films",
+        "Direct-to-video and television films"
+      ],
+      "headings": [
+        "Year",
+        "Title",
+        "Studio(s)",
+        "Notes"
+      ],
+      "rows": 12
+    },
+    {
+      "group": "films",
+      "sections": [
+        "Live-action films",
+        "Direct-to-video and television films",
+        "Episodes as films"
+      ],
+      "headings": [
+        "Year",
+        "Title",
+        "Series",
+        "Studio(s)",
+        "Notes"
+      ],
+      "rows": 9
+    },
+    {
+      "group": "films",
+      "sections": [
+        "Live-action films",
+        "Direct-to-video and television films",
+        "From Malibu Comics"
+      ],
+      "headings": [
+        "Year",
+        "Title",
+        "Series",
+        "Studio(s)",
+        "Notes"
+      ],
+      "rows": 1
+    },
+    {
+      "group": "films",
+      "sections": [
+        "Animated films",
+        "Feature films",
+        "Theatrical"
+      ],
+      "headings": [
+        "Year",
+        "Title",
+        "Studio(s)",
+        "Notes"
+      ],
+      "rows": 6
+    },
+    {
+      "group": "films",
+      "sections": [
+        "Animated films",
+        "Feature films",
+        "Direct-to-video and television"
+      ],
+      "headings": [
+        "Year",
+        "Title",
+        "Studio(s)",
+        "Notes"
+      ],
+      "rows": 17
+    },
+    {
+      "group": "films",
+      "sections": [
+        "Animated films",
+        "Feature films",
+        "Episodes as films"
+      ],
+      "headings": [
+        "Year",
+        "Title",
+        "Studio(s)",
+        "Notes"
+      ],
+      "rows": 1
+    },
+    {
+      "group": "films",
+      "sections": [
+        "Animated films",
+        "Short films"
+      ],
+      "headings": [
+        "Year",
+        "Title",
+        "Studio(s)",
+        "Notes"
+      ],
+      "rows": 12
+    },
+    {
+      "group": "films",
+      "sections": [
+        "Animated films",
+        "Short films",
+        "Lego short films"
+      ],
+      "headings": [
+        "Year",
+        "Title",
+        "Studio(s)",
+        "Notes"
+      ],
+      "rows": 10
+    },
+    {
+      "group": "films",
+      "sections": [
+        "Animated films",
+        "Short films",
+        "From Icon Comics"
+      ],
+      "headings": [
+        "Year",
+        "Title",
+        "Studio(s)",
+        "Notes"
+      ],
+      "rows": 2
+    },
+    {
+      "group": "television",
+      "sections": [
+        "Live-action"
+      ],
+      "headings": [
+        "Title",
+        "Seasons",
+        "Episodes",
+        "Original broadcast",
+        "Production company(s)",
+        "Network",
+        "Notes / Ref(s)"
+      ],
+      "rows": 38
+    },
+    {
+      "group": "television",
+      "sections": [
+        "Live-action",
+        "Series inspired by Marvel Comics"
+      ],
+      "headings": [
+        "Title",
+        "Seasons",
+        "Episodes",
+        "Original broadcast",
+        "Production company(s)",
+        "Network",
+        "Notes / Ref(s)"
+      ],
+      "rows": 4
+    },
+    {
+      "group": "television",
+      "sections": [
+        "Live-action",
+        "From Marvel imprints",
+        "Malibu Comics"
+      ],
+      "headings": [
+        "Title",
+        "Seasons",
+        "Episodes",
+        "Original broadcast",
+        "Production company(s)",
+        "Network",
+        "Notes / Ref(s)"
+      ],
+      "rows": 2
+    },
+    {
+      "group": "television",
+      "sections": [
+        "Live-action",
+        "From Marvel imprints",
+        "Icon Comics"
+      ],
+      "headings": [
+        "Title",
+        "Seasons",
+        "Episodes",
+        "Original broadcast",
+        "Production company(s)",
+        "Network",
+        "Notes / Ref(s)"
+      ],
+      "rows": 3
+    },
+    {
+      "group": "television",
+      "sections": [
+        "Live-action",
+        "Television specials"
+      ],
+      "headings": [
+        "Title",
+        "Year",
+        "Production company(s)",
+        "Network",
+        "Collection",
+        "Notes / Ref(s)"
+      ],
+      "rows": 3
+    },
+    {
+      "group": "television",
+      "sections": [
+        "Live-action",
+        "Web series"
+      ],
+      "headings": [
+        "Title",
+        "Year",
+        "Seasons",
+        "Episodes",
+        "Production company(s)",
+        "Website(s)",
+        "Notes / Refs"
+      ],
+      "rows": 3
+    },
+    {
+      "group": "television",
+      "sections": [
+        "Live-action",
+        "Pilots"
+      ],
+      "headings": [
+        "Title",
+        "Year",
+        "Production company(s)",
+        "Network",
+        "Notes / Ref(s)"
+      ],
+      "rows": 3
+    },
+    {
+      "group": "television",
+      "sections": [
+        "Live-action",
+        "Unscripted"
+      ],
+      "headings": [
+        "Title",
+        "Seasons",
+        "Episodes",
+        "Original broadcast",
+        "Production company(s)",
+        "Network",
+        "Notes / Ref(s)"
+      ],
+      "rows": 11
+    },
+    {
+      "group": "television",
+      "sections": [
+        "Animated"
+      ],
+      "headings": [
+        "Title",
+        "Seasons",
+        "Episodes",
+        "Original broadcast",
+        "Production company(s)",
+        "Network",
+        "Notes / Ref(s)"
+      ],
+      "rows": 50
+    },
+    {
+      "group": "television",
+      "sections": [
+        "Animated",
+        "From Marvel imprints",
+        "From Malibu Comics"
+      ],
+      "headings": [
+        "Title",
+        "Seasons",
+        "Episodes",
+        "Original broadcast",
+        "Production company(s)",
+        "Network",
+        "Notes / Ref(s)"
+      ],
+      "rows": 2
+    },
+    {
+      "group": "television",
+      "sections": [
+        "Animated",
+        "From Marvel imprints",
+        "From Icon Comics"
+      ],
+      "headings": [
+        "Title",
+        "Seasons",
+        "Episodes",
+        "Original broadcast",
+        "Production company(s)",
+        "Network",
+        "Notes / Ref(s)"
+      ],
+      "rows": 1
+    },
+    {
+      "group": "television",
+      "sections": [
+        "Animated",
+        "Pilots"
+      ],
+      "headings": [
+        "Title",
+        "Original broadcast",
+        "Production company(s)",
+        "Network",
+        "Notes / Ref(s)"
+      ],
+      "rows": 3
+    },
+    {
+      "group": "television",
+      "sections": [
+        "Animated",
+        "Television specials"
+      ],
+      "headings": [
+        "Title",
+        "Year",
+        "Production company(s)",
+        "Network",
+        "Notes / Ref(s)"
+      ],
+      "rows": 4
+    },
+    {
+      "group": "television",
+      "sections": [
+        "Animated",
+        "Direct-to-video and digital series"
+      ],
+      "headings": [
+        "Title",
+        "Original broadcast",
+        "Episodes"
+      ],
+      "rows": 15
+    },
+    {
+      "group": "television",
+      "sections": [
+        "Animated",
+        "Web and shorts series"
+      ],
+      "headings": [
+        "Title",
+        "Original broadcast",
+        "Seasons",
+        "Episodes",
+        "Production company(s)",
+        "Website(s)",
+        "Notes / Ref(s)"
+      ],
+      "rows": 19
+    },
+    {
+      "group": "television",
+      "sections": [
+        "Animated",
+        "Lego series"
+      ],
+      "headings": [
+        "Year",
+        "Title",
+        "Production studio(s)",
+        "Notes"
+      ],
+      "rows": 3
+    },
+    {
+      "group": "television",
+      "sections": [
+        "Animated",
+        "Television blocks"
+      ],
+      "headings": [
+        "Title",
+        "Year",
+        "Production company(s)",
+        "Network",
+        "Notes / Ref(s)"
+      ],
+      "rows": 2
+    }
+  ],
+  "exclusions": [
+    {
+      "title": "Marvel Action Universe",
+      "reason": "电视播映时段包装，不是独立叙事作品",
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/List_of_television_series_based_on_Marvel_Comics_publications",
+        "workUrl": "https://en.wikipedia.org/wiki/Marvel_Action_Universe",
+        "section": "Animated / Television blocks",
+        "retrievedAt": "2026-08-31T11:36:22.502Z",
+        "pageSha256": "b7dd98179ec98b01de593a79b027bc1b1bd43632647e757917b96728ce00afa8"
+      }
+    },
+    {
+      "title": "The Marvel Action Hour",
+      "reason": "电视播映时段包装，不是独立叙事作品",
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/List_of_television_series_based_on_Marvel_Comics_publications",
+        "workUrl": "https://en.wikipedia.org/wiki/The_Marvel_Action_Hour",
+        "section": "Animated / Television blocks",
+        "retrievedAt": "2026-08-31T11:36:22.503Z",
+        "pageSha256": "b7dd98179ec98b01de593a79b027bc1b1bd43632647e757917b96728ce00afa8"
+      }
+    }
+  ],
+  "notice": "Candidate inventory, not proof of full coverage or per-title verification. Facts only; text summaries are not copied."
+}

@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: marvel-screen-archive
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm ci && npm run catalog:validate && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_VERSION
+        value: 24.13.1
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: ADMIN_PASSWORD_HASH
+        sync: false
+      - key: NEXT_PUBLIC_SITE_URL
+        sync: false
