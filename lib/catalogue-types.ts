@@ -69,6 +69,31 @@ export type WatchLink = {
   browserVerified: true;
   lastVerifiedAt: string;
 };
+export type OfficialEpisode = {
+  videoId: string | null;
+  title: string;
+  description?: string | null;
+  detailURL: string;
+  published?: string | null;
+  created?: string | null;
+  durationMs?: number | null;
+  durationText?: string | null;
+  season?: number | null;
+  episode?: number | null;
+  poster?: string | null;
+  posterWidth?: number | null;
+  posterHeight?: number | null;
+  thumbnail?: string | null;
+  thumbnailAlt?: string | null;
+};
+export type OfficialEpisodeSeries = {
+  seriesTitle: string;
+  seriesUrl: string;
+  expectedTotal: number;
+  observedTotal: number;
+  header: string | null;
+  episodes: OfficialEpisode[];
+};
 export type Person = {
   id: string;
   name: string;
@@ -105,6 +130,9 @@ export type Catalogue = {
     officialArtworkCount: number;
     officialDigitalSeriesCount: number;
     officialDigitalEpisodeTotal: number;
+    officialDigitalEpisodeUniquePages: number;
+    officialDigitalEpisodeExactSeries: number;
+    officialDigitalEpisodeMismatchSeries: number;
     personPortraitCount: number;
     personRealPortraitCount: number;
     gaps: string[];

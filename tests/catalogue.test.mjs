@@ -8,6 +8,11 @@ import {
 const data = JSON.parse(
   await readFile(new URL("../data/catalogue.json", import.meta.url), "utf8"),
 );
+const officialEpisodesText = await readFile(
+  new URL("../data/official-episodes.json", import.meta.url),
+  "utf8",
+);
+const officialEpisodes = JSON.parse(officialEpisodesText);
 test("stable unique work IDs and referential integrity", () => {
   const ids = new Set(data.works.map((w) => w.id));
   assert.equal(ids.size, data.works.length);
@@ -66,6 +71,43 @@ test("official Marvel indexes add digital series, podcasts and observed episode 
         w.kind === "podcast",
     ),
   );
+});
+test("official digital episodes are indexed as unique source pages without expiring streams", () => {
+  assert.equal(officialEpisodes.series.length, 23);
+  assert.equal(
+    officialEpisodes.series.reduce(
+      (total, series) => total + series.observedTotal,
+      0,
+    ),
+    1881,
+  );
+  assert.equal(
+    officialEpisodes.series.filter(
+      (series) => series.expectedTotal === series.observedTotal,
+    ).length,
+    17,
+  );
+  for (const series of officialEpisodes.series) {
+    assert.equal(series.observedTotal, series.episodes.length);
+    assert.equal(
+      new Set(series.episodes.map((episode) => episode.detailURL)).size,
+      series.episodes.length,
+    );
+    assert.ok(
+      series.episodes.every(
+        (episode) =>
+          episode.title &&
+          episode.detailURL.startsWith("https://www.marvel.com/"),
+      ),
+    );
+  }
+  assert.doesNotMatch(
+    officialEpisodesText,
+    /fastly_token|manifest\.prod\.boltdns|brightcovecdn/i,
+  );
+  assert.equal(data.audit.officialDigitalEpisodeUniquePages, 1881);
+  assert.equal(data.audit.officialDigitalEpisodeExactSeries, 17);
+  assert.equal(data.audit.officialDigitalEpisodeMismatchSeries, 6);
 });
 test("official artwork and season hierarchy are linked to the correct records", () => {
   assert.ok(data.audit.officialArtworkCount >= 130);

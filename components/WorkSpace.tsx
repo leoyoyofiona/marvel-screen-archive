@@ -14,19 +14,26 @@ import {
   FileText,
   ShieldCheck,
 } from "lucide-react";
-import type { Work, Person } from "@/lib/catalogue-types";
+import type {
+  OfficialEpisodeSeries,
+  Person,
+  Work,
+} from "@/lib/catalogue-types";
 import { kindLabels, statusLabels } from "@/lib/catalogue-types";
 import { Header, Disclaimer, Footer } from "./Chrome";
 import { Poster } from "./Poster";
 import { Comments } from "./Community";
+import { EpisodeArchive } from "./EpisodeArchive";
 export default function WorkSpace({
   work,
   people,
   related,
+  episodeSeries,
 }: {
   work: Work;
   people: Person[];
   related: Work[];
+  episodeSeries: OfficialEpisodeSeries | null;
 }) {
   const [region, setRegion] = useState<"mainland" | "overseas">("mainland"),
     [tab, setTab] = useState("trailer"),
@@ -270,6 +277,7 @@ export default function WorkSpace({
                   ["No. of seasons", "已记录季数"],
                   ["No. of episodes", "已记录集数"],
                   ["Official indexed episodes", "官方索引集数"],
+                  ["Official unique episode pages observed", "唯一官方单集页"],
                   ["Original language", "原始语言"],
                   ["Country of origin", "制作国家"],
                 ].map(([k, label]) =>
@@ -381,6 +389,7 @@ export default function WorkSpace({
               )}
             </aside>
           </div>
+          {episodeSeries && <EpisodeArchive series={episodeSeries} />}
           <section className="work-sources">
             <div>
               <span className="eyebrow">EVIDENCE / NOT WATCH LINKS</span>

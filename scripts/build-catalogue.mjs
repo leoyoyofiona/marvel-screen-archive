@@ -28,6 +28,7 @@ const candidates = await read("catalogue-candidates.json", []),
     podcasts: [],
     audit: {},
   }),
+  officialEpisodes = await read("official-episodes.json", { series: [] }),
   officialArtwork = await read("official-poster-ledger.json", { items: [] }),
   personArtwork = await read("person-portrait-ledger.json", { items: [] });
 const personArtById = new Map(
@@ -173,7 +174,10 @@ const officialDigitalWorks = [
     year = item.firstPublished
       ? Number(item.firstPublished.slice(0, 4))
       : (digitalYearOverrides[item.title] ?? null),
-    kind = isPodcast ? "podcast" : "digital-series";
+    kind = isPodcast ? "podcast" : "digital-series",
+    episodeEntry = officialEpisodes.series.find(
+      (series) => series.seriesUrl === item.url,
+    );
   return {
     id: `official-${slug(item.title)}-${kind}`,
     titleEn: item.title,
@@ -187,6 +191,13 @@ const officialDigitalWorks = [
       "Marvel 官方数字节目索引中的系列档案；首发年份与单集列表仍在复核。",
     rowFacts: {
       "Official indexed episodes": item.total ? String(item.total) : "待核验",
+      ...(episodeEntry
+        ? {
+            "Official unique episode pages observed": String(
+              episodeEntry.observedTotal,
+            ),
+          }
+        : {}),
     },
     verification: "official-index",
     sources: [
@@ -498,6 +509,16 @@ const output = {
     officialDigitalSeriesCount: officialDigitalWorks.length,
     officialDigitalEpisodeTotal:
       officialIndex.audit?.officialDigitalEpisodeTotalObserved ?? 0,
+    officialDigitalEpisodeUniquePages: officialEpisodes.series.reduce(
+      (total, series) => total + series.observedTotal,
+      0,
+    ),
+    officialDigitalEpisodeExactSeries: officialEpisodes.series.filter(
+      (series) => series.expectedTotal === series.observedTotal,
+    ).length,
+    officialDigitalEpisodeMismatchSeries: officialEpisodes.series.filter(
+      (series) => series.expectedTotal !== series.observedTotal,
+    ).length,
     personPortraitCount: [...people.values()].filter(
       (person) => person.portrait,
     ).length,
@@ -508,7 +529,7 @@ const output = {
     untranslated: works.filter((w) => !w.translated).length,
     gaps: [
       "电影与电视主目录已和 Marvel 官方索引交叉核对；历史授权、合作及品牌改编仍需继续逐条核验",
-      "官方数字节目与播客已建立系列级主档案，并记录官方可见的 1,890 集总量；单集级标题、日期和演职员仍在继续索引",
+      "23 个有公开单集列表的 Marvel 官方数字系列已索引 1,881 个唯一详情页；其中 17 个系列与页面标称总数一致，6 个系列保留计数差异待核。无公开单集列表的节目与播客仍只有系列级档案",
       "角色出场为人工整理的首批关系，尚未覆盖全部角色与客串",
       "全部 1,315 位索引人物均有头像节点，其中 348 张为带许可来源的 Wikimedia Commons 真人照片，其余使用明确标注的本地姓名身份头像；历史海报与经典剧照仍需继续补齐",
       "音乐、对白、访谈和大陆／海外两条线路的实际播放核验尚未完成；当前不提供未经验证的播放链接",

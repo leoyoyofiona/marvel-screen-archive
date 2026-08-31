@@ -2260,6 +2260,173 @@ svg {
   height: 100%;
   object-fit: cover;
 }
+.episode-archive {
+  position: relative;
+  padding: clamp(42px, 7vw, 88px) 0;
+  border-top: 1px solid #334154;
+  border-bottom: 1px solid #2c384a;
+}
+.episode-archive::before {
+  content: "";
+  position: absolute;
+  inset: 0 50% auto 0;
+  height: 1px;
+  background: linear-gradient(90deg, #ef4053, transparent);
+  box-shadow: 0 0 26px #ef405399;
+}
+.episode-heading-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 24px;
+}
+.episode-heading-row h2 {
+  margin: 8px 0 7px;
+  font-size: clamp(26px, 3.2vw, 46px);
+  font-weight: 500;
+}
+.episode-heading-row p {
+  margin: 0;
+}
+.episode-search {
+  height: 48px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 0 15px;
+  margin: 22px 0;
+  border: 1px solid #3a4659;
+  background: #0a0f17cc;
+  color: #8391a5;
+}
+.episode-search:focus-within {
+  border-color: #d14a5c;
+  box-shadow: 0 0 0 1px #d14a5c55;
+}
+.episode-search input {
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #f1f3f7;
+  font: inherit;
+}
+.episode-search small {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: #75849a;
+}
+.episode-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.episode-card {
+  position: relative;
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow: hidden;
+  border: 1px solid #303c4e;
+  background:
+    linear-gradient(145deg, #1b2431dd, #0b1018 72%),
+    repeating-linear-gradient(90deg, transparent 0 18px, #ffffff05 18px 19px);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+.episode-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -30% -55% 30%;
+  height: 120px;
+  border-radius: 50%;
+  background: #d52f4540;
+  filter: blur(35px);
+  pointer-events: none;
+}
+.episode-card:hover,
+.episode-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: #c54a5d;
+  box-shadow: 0 20px 55px #0008;
+}
+.episode-number {
+  margin-bottom: 18px;
+  color: #ec5264;
+  font: 600 11px/1 var(--font-mono, monospace);
+  letter-spacing: 0.14em;
+}
+.episode-card strong {
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #f0f2f6;
+}
+.episode-card > p {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  margin: 10px 0 20px;
+  overflow: hidden;
+  color: #8f9db0;
+  font-size: 10px;
+  line-height: 1.75;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.episode-meta {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 13px;
+  margin-top: auto;
+  color: #8190a5;
+  font-size: 9px;
+}
+.episode-meta span,
+.episode-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.episode-source {
+  position: relative;
+  z-index: 1;
+  margin-top: 16px;
+  color: #c08a94;
+  font-size: 8px;
+  letter-spacing: 0.14em;
+}
+.episode-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-top: 25px;
+}
+.episode-pagination > span {
+  min-width: 62px;
+  text-align: center;
+  color: #8d9bb0;
+  font-size: 10px;
+}
+.episode-pagination button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.episode-empty {
+  padding: 42px 20px;
+  text-align: center;
+  border: 1px dashed #38465b;
+  color: #7f8da2;
+}
 .work-comments h2 {
   font-size: 25px;
   font-weight: 500;
@@ -3407,6 +3574,41 @@ svg {
   }
   .credits-list a > svg {
     display: none;
+  }
+  .episode-archive {
+    padding: 40px 0;
+  }
+  .episode-heading-row {
+    display: grid;
+    align-items: start;
+    gap: 16px;
+  }
+  .episode-heading-row h2 {
+    font-size: 24px;
+  }
+  .episode-heading-row p,
+  .episode-archive .editorial-warning {
+    font-size: 10px;
+    line-height: 1.8;
+  }
+  .episode-heading-row .button {
+    width: max-content;
+  }
+  .episode-search {
+    height: 44px;
+  }
+  .episode-grid {
+    grid-template-columns: 1fr;
+  }
+  .episode-card {
+    min-height: 175px;
+    padding: 17px;
+  }
+  .episode-card strong {
+    font-size: 12px;
+  }
+  .episode-pagination {
+    gap: 10px;
   }
   .work-sources {
     display: block;

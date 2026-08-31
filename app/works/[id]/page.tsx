@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { catalogue, getWork } from "@/lib/catalogue";
+import { catalogue, getOfficialEpisodeSeries, getWork } from "@/lib/catalogue";
 import WorkSpace from "@/components/WorkSpace";
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -28,6 +28,7 @@ export default async function WorkPage({
       related={catalogue.works
         .filter((w) => w.id !== id && w.universe === work.universe)
         .slice(0, 5)}
+      episodeSeries={getOfficialEpisodeSeries(work)}
     />
   );
 }
