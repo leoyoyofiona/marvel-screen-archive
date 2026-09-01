@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 400" role="img" aria-label="托尼·斯塔克 · 钢铁侠 identity portrait">
   <defs>
-    <radialGradient id="g" cx="50%" cy="30%" r="80%"><stop stop-color="hsl(NaN 52% 34%)"/><stop offset="1" stop-color="#090d15"/></radialGradient>
+    <radialGradient id="g" cx="50%" cy="30%" r="80%"><stop stop-color="hsl(4 68% 40%)"/><stop offset="1" stop-color="#090d15"/></radialGradient>
     <pattern id="p" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M0 18 18 0" stroke="#fff" stroke-opacity=".035"/></pattern>
   </defs>
   <rect width="320" height="400" fill="url(#g)"/><rect width="320" height="400" fill="url(#p)"/>

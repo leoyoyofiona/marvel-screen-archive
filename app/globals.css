@@ -1201,7 +1201,7 @@ svg {
 }
 .character-card {
   position: relative;
-  min-height: 350px;
+  min-height: 300px;
   padding: 17px 15px 14px;
   text-align: left;
   border: 1px solid #364356;
@@ -1253,8 +1253,8 @@ svg {
 }
 .character-card-art {
   position: relative;
-  height: 230px;
-  flex: 0 0 230px;
+  height: 190px;
+  flex: 0 0 190px;
   margin: 14px -1px 0;
   overflow: hidden;
   border: 1px solid #596a82;
@@ -1267,13 +1267,19 @@ svg {
   display: block;
   object-fit: cover;
   object-position: center 22%;
-  filter: saturate(1.05) contrast(1.06) brightness(1.12);
+  filter: saturate(1.08) contrast(1.08) brightness(1.18);
+  transition: transform 420ms ease, filter 420ms ease;
+}
+.character-card:hover .character-card-art img,
+.character-card:focus-visible .character-card-art img {
+  transform: scale(1.045);
+  filter: saturate(1.12) contrast(1.1) brightness(1.24);
 }
 .character-card-art .character-art-shade {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(180deg, rgba(5, 8, 14, .02), rgba(5, 8, 14, .48) 88%);
+  background: linear-gradient(180deg, rgba(5, 8, 14, .01), rgba(5, 8, 14, .32) 88%);
 }
 .character-card-art .character-art-label {
   position: absolute;
@@ -1318,7 +1324,7 @@ svg {
   background: radial-gradient(circle at 50% 25%, #654c78, #241b31 66%, #110f18);
 }
 .character-card-copy {
-  min-height: 76px;
+  min-height: 62px;
   padding-top: 8px;
 }
 .character-card-copy > small,
@@ -1412,7 +1418,7 @@ svg {
 }
 .armor-card {
   position: relative;
-  min-height: 350px;
+  min-height: 300px;
   padding: 17px 15px 14px;
   border: 1px solid #364356;
   border-radius: 2px;
@@ -1453,65 +1459,62 @@ svg {
 }
 .armor-art {
   position: relative;
-  height: 230px;
-  flex: 0 0 230px;
+  height: 190px;
+  flex: 0 0 190px;
   margin: 14px -1px 0;
   overflow: hidden;
   border: 1px solid #4c5d73;
-  background: radial-gradient(circle at 50% 43%, #303e50, #111923 73%);
+  background: radial-gradient(circle at 50% 43%, #52647a, #111923 73%);
   isolation: isolate;
-}
-.armor-art img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center 24%;
-  filter: saturate(1.04) contrast(1.06) brightness(1.08);
-}
-.armor-art-shade {
-  position: absolute;
-  z-index: 1;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(180deg, rgba(5,8,14,.02), rgba(5,8,14,.45) 90%);
 }
 .armor-art::after {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(135deg, rgba(255,255,255,.08), transparent 35%);
+  background: linear-gradient(135deg, rgba(255,255,255,.12), transparent 35%, rgba(4,7,12,.22));
 }
 .armor-illustration {
   width: 100%;
   height: 100%;
   display: block;
   filter: drop-shadow(0 8px 9px rgba(0,0,0,.45));
+  transition: transform 420ms ease, filter 420ms ease;
+}
+.armor-card:hover .armor-illustration,
+.armor-card:focus-within .armor-illustration {
+  transform: scale(1.045) translateY(-2px);
+  filter: drop-shadow(0 12px 13px rgba(0,0,0,.36)) saturate(1.08);
+}
+.armor-illustration .armor-gridline {
+  fill: none;
+  stroke: #d7e8ff;
+  stroke-opacity: .11;
+  stroke-width: .6;
 }
 .armor-illustration .armor-glow {
-  fill: #ff637522;
+  fill: #ff637544;
 }
 .armor-illustration .armor-helmet,
 .armor-illustration .armor-body,
 .armor-illustration .armor-arm,
 .armor-illustration .armor-leg {
-  fill: #bd3f4c;
+  fill: #d9525f;
   stroke: #f1a3a1;
   stroke-width: 1;
 }
 .armor-illustration .armor-helmet,
 .armor-illustration .armor-body {
-  fill: #b63a47;
+  fill: #cf4656;
 }
 .armor-illustration .armor-neck,
 .armor-illustration .armor-chest {
-  fill: #e1b064;
+  fill: #e9bb69;
   stroke: #f6db9c;
   stroke-width: 1;
 }
 .armor-illustration .armor-visor {
-  fill: #f6d789;
+  fill: #ffe39a;
   stroke: #fff2be;
   stroke-width: 1;
 }
@@ -1545,7 +1548,7 @@ svg {
 .armor-art.tone-dark .armor-leg { fill: #242a35; stroke: #aebbd0; }
 .armor-art.tone-dark .armor-neck,
 .armor-art.tone-dark .armor-chest { fill: #586477; }
-.armor-art.tone-dark .armor-visor { fill: #d1e4ed; }
+.armor-art.tone-dark .armor-visor { fill: #e7f5ff; }
 .armor-art-index {
   position: absolute;
   z-index: 2;
@@ -1752,9 +1755,9 @@ svg {
   .character-card-grid,
   .armor-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
   .character-card,
-  .armor-card { min-height: 290px; }
+  .armor-card { min-height: 270px; }
   .character-card-art,
-  .armor-art { height: 190px; flex-basis: 190px; }
+  .armor-art { height: 170px; flex-basis: 170px; }
   .character-card-copy > strong,
   .armor-card-copy > strong { font-size: 14px; }
   .character-card-intro,

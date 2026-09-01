@@ -59,17 +59,6 @@ const characterPortraits: Record<string, string> = {
   wolverine: "/media/characters/logan-fox.svg",
 };
 
-const armorVisuals = [
-  "/media/wikipedia-posters/iron-man-2008-film.jpg",
-  "/media/wikipedia-posters/iron-man-2-2010-film.jpg",
-  "/media/wikipedia-posters/iron-man-3-2013-film.jpg",
-  "/media/official/avengersageofultron_lob_crd_03-7b64c7bc38.webp",
-  "/media/official/captainamericacivilwar_lob_crd_01_9-70b1766db4.webp",
-  "/media/official/avengersinfinitywar_lob_crd_02_1-1add77cbb9.webp",
-  "/media/official/avengersendgame_lob_crd_05_2-015e26a56a.webp",
-  "/media/official/spider-manhomecoming_lob_crd_02-a43f59f368.webp",
-];
-
 const storylines = [
   { id: "infinity", title: "无限传奇", years: "2008—2019", tone: "一颗颗宝石，把个人英雄故事汇成一场宇宙终局。", items: ["钢铁侠", "复仇者联盟", "美国队长", "银河护卫队", "复仇者联盟4：终局之战"], source: "https://www.marvel.com/articles/movies/marvel-studios-making-of-marvel-cinematic-universe" },
   { id: "multiverse", title: "多元宇宙传奇", years: "2021—至今", tone: "当时间线不再只有一条，选择便会长出新的世界。", items: ["旺达幻视", "洛基", "蜘蛛侠：英雄无归", "奇异博士2", "复仇者联盟：毁灭之日"], source: "https://www.marvel.com/articles/comics/a-guide-to-the-many-marvel-multiverses" },
@@ -83,10 +72,10 @@ function initials(text: string) {
 }
 
 function CardPortrait({ card, poster, large = false }: { card: Card; poster?: string | null; large?: boolean }) {
-  const portrait = characterPortraits[card.id] ?? poster;
+  const portrait = poster ?? characterPortraits[card.id];
   return (
     <div className={`character-card-art${large ? " large" : ""}${portrait ? "" : " fallback"}`}>
-      {portrait ? <img src={portrait} alt={`${card.alias}视觉档案`} /> : <span className="character-avatar">{initials(card.alias)}</span>}
+      {portrait ? <img src={portrait} alt={`${card.alias}人物视觉档案`} /> : <span className="character-avatar">{initials(card.alias)}</span>}
       <span className="character-art-shade" />
       <span className="character-art-label">{card.alias}</span>
       <span className="character-art-caption">VISUAL FILE / {card.universe}</span>
@@ -96,12 +85,26 @@ function CardPortrait({ card, poster, large = false }: { card: Card; poster?: st
 
 function ArmorFigure({ index, name }: { index: number; name: string }) {
   const tone = ["red", "gold", "silver", "blue", "dark"][index % 5];
-  const visual = armorVisuals[index % armorVisuals.length];
   return (
     <div className={`armor-art tone-${tone}`}>
-      <img src={visual} alt={`${name}电影视觉图`} />
-      <span className="armor-art-shade" />
-      <span className="armor-art-index">FILM VISUAL / {String(index + 1).padStart(2, "0")}</span>
+      <svg className="armor-illustration" viewBox="0 0 180 190" role="img" aria-label={`${name}装甲示意图`}>
+        <title>{`${name}装甲示意图`}</title>
+        <path className="armor-gridline" d="M18 25h144M11 51h158M8 77h164M8 103h164M11 129h158M18 155h144M28 12v166M58 8v174M90 6v178M122 8v174M152 12v166" />
+        <path className="armor-glow" d="M90 10c-31 0-47 19-47 43v22c-16 8-28 27-31 55h156c-3-28-15-47-31-55V53C137 29 121 10 90 10Z" />
+        <path className="armor-helmet" d="M62 61V39c0-14 10-25 28-25s28 11 28 25v22l-8 15H70l-8-15Z" />
+        <path className="armor-visor" d="M67 42h46l-5 15H72l-5-15Z" />
+        <path className="armor-neck" d="M75 72h30l6 14H69l6-14Z" />
+        <path className="armor-body" d="M69 81h42l16 15 13 27H40l13-27 16-15Z" />
+        <path className="armor-chest" d="M75 87h30l8 27H67l8-27Z" />
+        <circle className="armor-reactor" cx="90" cy="100" r="9" />
+        <path className="armor-arm" d="M53 97 33 111l-8 28h20l9-23 13-10Z" />
+        <path className="armor-arm" d="m127 97 20 14 8 28h-20l-9-23-13-10Z" />
+        <path className="armor-leg" d="M60 123h26l-4 32H56l-8-12Z" />
+        <path className="armor-leg" d="M94 123h26l12 20-8 12H98l-4-32Z" />
+        <circle className="armor-repulsor" cx="38" cy="137" r="4" />
+        <circle className="armor-repulsor" cx="142" cy="137" r="4" />
+      </svg>
+      <span className="armor-art-index">ARMOR EVOLUTION / {String(index + 1).padStart(2, "0")}</span>
     </div>
   );
 }
@@ -134,7 +137,7 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
         </button>)}
       </div>
       <div className="armor-atlas">
-        <div className="armor-heading"><div><span className="eyebrow">IRON MAN ARMOR INDEX / 装甲谱</span><h3>钢铁侠装甲：从 Mark I 到纳米时代</h3><p>影像与设定索引共 {armorNames.length} 套；每张卡片都用档案化装甲轮廓呈现，名称中带“设定”的条目仍会继续逐条核验。</p></div><Shield size={29} /></div>
+        <div className="armor-heading"><div><span className="eyebrow">IRON MAN ARMOR INDEX / 装甲谱</span><h3>钢铁侠装甲：从 Mark I 到纳米时代</h3><p>影像与设定索引共 {armorNames.length} 套；每张卡片聚焦装甲战衣本身，按电影视觉与型号演变排列，名称中带“设定”的条目仍会继续逐条核验。</p></div><Shield size={29} /></div>
         <div className="armor-grid">{armorNames.map((name, index) => <article className="armor-card" key={`${name}-${index}`}><span className="card-corner">ARMOR FILE</span><ArmorFigure index={index} name={name} /><span className="armor-card-copy"><small>{index < 42 ? "MCU Mark" : "扩展设定"}</small><span className="armor-card-title-line"><strong>{name}</strong><small className="armor-card-note">{index % 3 === 0 ? "能量核心 · 飞行" : index % 3 === 1 ? "模块化 · 战术" : "防护层 · 动力"}</small></span></span></article>)}</div>
         <a className="text-link" href="https://www.marvel.com/watch/digital-series/earth-s-mightiest-show/all-of-the-armor-worn-by-tony-stark-in-the-mcu" target="_blank" rel="noopener noreferrer">查看 Marvel 官方装甲专题 <ArrowUpRight size={14} /></a>
       </div>
