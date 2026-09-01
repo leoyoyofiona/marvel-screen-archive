@@ -1,7 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Disc3, ExternalLink, FileCheck2, Music2 } from "lucide-react";
+import { Disc3, ExternalLink, FileCheck2, Film, Music2, Play } from "lucide-react";
+import Link from "next/link";
+import type { PublicWorkPreview } from "@/lib/catalogue-types";
+import { Poster } from "./Poster";
 
 type Soundtrack = {
   id: string;
@@ -16,8 +19,10 @@ type Soundtrack = {
 
 export default function SoundtrackHall({
   region,
+  works,
 }: {
   region: "mainland" | "overseas";
+  works: PublicWorkPreview[];
 }) {
   const section = useRef<HTMLElement>(null);
   const [items, setItems] = useState<Soundtrack[] | null>(null);
@@ -56,6 +61,9 @@ export default function SoundtrackHall({
   }, [load]);
 
   const available = region === "overseas" ? (items ?? []) : [];
+  const playableWorks = works.filter((work) =>
+    region === "mainland" ? work.hasMainlandMedia : work.hasOverseasMedia,
+  );
 
   return (
     <section
@@ -72,6 +80,50 @@ export default function SoundtrackHall({
           </h2>
         </div>
         <Disc3 size={30} className="silver" />
+      </div>
+      <div className="audiovisual-queue">
+        <div className="audiovisual-queue-heading">
+          <div>
+            <span className="eyebrow">AUDIOVISUAL QUEUE / 放映列表</span>
+            <h3>点一张海报，直接进入作品视听界面</h3>
+          </div>
+          <span className="queue-region">
+            {region === "mainland" ? "中国大陆线路" : "海外线路"} ·{" "}
+            {playableWorks.length} 部已核验
+          </span>
+        </div>
+        {playableWorks.length > 0 ? (
+          <div className="audiovisual-queue-grid">
+            {playableWorks.map((work) => (
+              <Link
+                href={"/works/" + work.id + "#audiovisual-space"}
+                className="audiovisual-queue-card"
+                key={work.id}
+              >
+                <div className="audiovisual-queue-poster">
+                  <Poster work={work} decorative />
+                  <span className="audiovisual-play">
+                    <Play size={14} fill="currentColor" />
+                  </span>
+                </div>
+                <strong>{work.title}</strong>
+                <small>
+                  {work.year ?? "待定"} · 预告／宣传片 · 点击播放
+                </small>
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <div className="audiovisual-queue-empty">
+            <Film size={18} />
+            <span>
+              当前线路还没有完成播放核验的作品；作品档案仍可进入，但不会加载不明播放器。
+            </span>
+          </div>
+        )}
+        <p className="audiovisual-queue-note">
+          这里只列出当前地区已经完成播放器核验的作品。完整目录仍在“作品档案”中；切换右上角地区后，列表会随线路即时更新。
+        </p>
       </div>
       <div className="listening-shell">
         <div className="record-art" aria-hidden="true">

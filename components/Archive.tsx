@@ -603,7 +603,7 @@ export default function Archive({ data }: { data: ArchiveCatalogue }) {
                 ))}
             </div>
           </section>
-          <SoundtrackHall region={region} />
+          <SoundtrackHall region={region} works={data.works} />
           <Community />
           <section className="source-note">
             <FileCheck2 size={19} />

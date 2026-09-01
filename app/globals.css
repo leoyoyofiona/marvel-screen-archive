@@ -1769,6 +1769,115 @@ svg {
   border: 1px solid #373d4b;
   margin-top: 30px;
 }
+.audiovisual-queue {
+  margin-top: 30px;
+  padding: 25px 28px 24px;
+  border: 1px solid #3a4353;
+  background:
+    linear-gradient(120deg, #1b1722 0%, #111722 56%, #121923 100%),
+    #111722;
+}
+.audiovisual-queue-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 22px;
+  margin-bottom: 20px;
+}
+.audiovisual-queue-heading h3 {
+  margin: 10px 0 0;
+  color: #d6deea;
+  font-size: 21px;
+  font-weight: 500;
+}
+.queue-region {
+  flex-shrink: 0;
+  color: #d78a98;
+  font-size: 10px;
+}
+.audiovisual-queue-grid {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 12px;
+}
+.audiovisual-queue-card {
+  min-width: 0;
+  color: #d5ddea;
+}
+.audiovisual-queue-poster {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 2 / 3;
+  border: 1px solid #424d61;
+  background: #0b1019;
+}
+.audiovisual-queue-poster .poster-frame {
+  height: 100%;
+  border: 0;
+}
+.audiovisual-queue-poster .poster-kind,
+.audiovisual-queue-poster .poster-comment-ticker {
+  display: none;
+}
+.audiovisual-queue-poster .poster-shine {
+  opacity: 0.34;
+}
+.audiovisual-play {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 31px;
+  border: 1px solid #ffffff99;
+  border-radius: 50%;
+  color: #fff;
+  background: #9d2c46dd;
+  box-shadow: 0 5px 20px #0008;
+  transition: transform 180ms ease, background 180ms ease;
+}
+.audiovisual-queue-card:hover .audiovisual-play,
+.audiovisual-queue-card:focus-visible .audiovisual-play {
+  transform: scale(1.12);
+  background: #e33d5c;
+}
+.audiovisual-queue-card > strong,
+.audiovisual-queue-card > small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.audiovisual-queue-card > strong {
+  margin-top: 9px;
+  font-size: 10px;
+  font-weight: 500;
+}
+.audiovisual-queue-card > small {
+  margin-top: 4px;
+  color: #78879c;
+  font-size: 8px;
+}
+.audiovisual-queue-empty {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 25px 0;
+  color: #9b8290;
+  font-size: 10px;
+}
+.audiovisual-queue-empty svg {
+  color: #d06c7e;
+  flex: 0 0 auto;
+}
+.audiovisual-queue-note {
+  margin: 17px 0 0;
+  color: #77869c;
+  font-size: 9px;
+  line-height: 1.8;
+}
 .soundtrack-content h3 {
   font-size: 24px;
   font-weight: 500;
@@ -2479,6 +2588,30 @@ svg {
   border: 1px solid #3d4350;
   background: #111722;
 }
+.cinema-panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 58px;
+  padding: 10px 18px;
+  border-bottom: 1px solid #303b4b;
+  background: #131b28;
+}
+.cinema-panel-heading > div {
+  display: grid;
+  gap: 6px;
+}
+.cinema-panel-heading strong {
+  color: #d5deeb;
+  font-size: 11px;
+  font-weight: 500;
+}
+.cinema-panel-heading > span {
+  color: #d47b8c;
+  font-size: 9px;
+  white-space: nowrap;
+}
 .cinema-screen {
   width: 100%;
   aspect-ratio: 16/9;
@@ -2607,6 +2740,15 @@ svg {
   color: #cdd4e0;
   font-weight: 400;
   margin: 0 0 15px;
+}
+.player-empty-title {
+  position: relative;
+  z-index: 1;
+  margin: -3px 0 12px;
+  color: #e2e6ee;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
 }
 .player-empty p {
   font-size: 11px;
@@ -3343,6 +3485,12 @@ svg {
   .work-cinema {
     gap: 22px;
   }
+  .audiovisual-queue {
+    padding: 22px;
+  }
+  .audiovisual-queue-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
   .full-watch > span {
     display: none;
   }
@@ -3471,6 +3619,9 @@ svg {
   }
   .work-cinema {
     grid-template-columns: 1fr 2.7fr;
+  }
+  .audiovisual-queue-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .work-lead {
     grid-template-columns: minmax(0, 1.3fr) minmax(230px, 0.9fr);
@@ -4301,6 +4452,37 @@ svg {
   .work-cinema {
     grid-template-columns: 1fr;
     gap: 23px;
+  }
+  .cinema-panel-heading {
+    min-height: 54px;
+    padding: 9px 13px;
+  }
+  .cinema-panel-heading strong {
+    font-size: 9px;
+  }
+  .cinema-panel-heading > span {
+    font-size: 8px;
+  }
+  .audiovisual-queue {
+    padding: 19px 15px;
+  }
+  .audiovisual-queue-heading {
+    display: grid;
+    gap: 11px;
+    margin-bottom: 15px;
+  }
+  .audiovisual-queue-heading h3 {
+    font-size: 16px;
+  }
+  .queue-region {
+    font-size: 9px;
+  }
+  .audiovisual-queue-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px 11px;
+  }
+  .audiovisual-queue-card > strong {
+    font-size: 9px;
   }
   .work-poster {
     max-width: 190px;

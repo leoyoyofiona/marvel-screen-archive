@@ -18,6 +18,14 @@ const archiveData: ArchiveCatalogue = {
     phase: work.phase,
     poster: work.poster,
     backdrop: work.backdrop,
+    hasMainlandMedia: work.media.some(
+      (media) =>
+        media.region === "mainland" && media.status === "playback-verified",
+    ),
+    hasOverseasMedia: work.media.some(
+      (media) =>
+        media.region === "overseas" && media.status === "playback-verified",
+    ),
   })),
 };
 export default function Home() {

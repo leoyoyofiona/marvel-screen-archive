@@ -242,7 +242,18 @@ export default function WorkSpace({
               <Poster work={work} />
               <p>{work.posterCredit ?? "正式海报正在核验；此处不是剧照。"}</p>
             </div>
-            <div className="cinema-panel">
+            <div className="cinema-panel" id="audiovisual-space">
+              <div className="cinema-panel-heading">
+                <div>
+                  <span className="eyebrow">AUDIOVISUAL INTERFACE / 视听界面</span>
+                  <strong>
+                    {current ? "正在放映已核验公开素材" : "作品视听空间已打开"}
+                  </strong>
+                </div>
+                <span>
+                  {region === "mainland" ? "中国大陆线路" : "海外线路"}
+                </span>
+              </div>
               <div className="cinema-screen">
                 {current?.embedUrl ? (
                   <>
@@ -277,6 +288,7 @@ export default function WorkSpace({
                     <span>
                       {region === "mainland" ? "中国大陆" : "海外"}视听线路
                     </span>
+                    <strong className="player-empty-title">《{work.title}》</strong>
                     <h2>
                       {tab === "stills"
                         ? "剧照资料正在整理"

@@ -70,6 +70,10 @@ export type WorkPreview = Pick<
   | "poster"
   | "backdrop"
 >;
+export type PublicWorkPreview = WorkPreview & {
+  hasMainlandMedia: boolean;
+  hasOverseasMedia: boolean;
+};
 export type WatchLink = {
   url: string;
   provider: string;
@@ -160,7 +164,7 @@ export type Catalogue = {
   };
 };
 export type ArchiveCatalogue = Pick<Catalogue, "cutoff" | "audit"> & {
-  works: WorkPreview[];
+  works: PublicWorkPreview[];
 };
 export const kindLabels: Record<WorkKind, string> = {
   film: "真人电影",
