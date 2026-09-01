@@ -21,7 +21,15 @@ try {
     await readFile(path.join(root, "data/wikipedia-poster-ledger.json"), "utf8"),
   );
 } catch {}
-const existing = new Map((previous.items ?? []).map((item) => [item.workId, item]));
+function isGenericArtwork(value) {
+  return /(?:logo|wordmark|title.?card|ultraverse)/i.test(value ?? "");
+}
+
+const existing = new Map(
+  (previous.items ?? [])
+    .filter((item) => !isGenericArtwork(item.sourceUrl))
+    .map((item) => [item.workId, item]),
+);
 const rows = catalogue.works.filter((work) => {
   const prior = existing.get(work.id);
   return (
@@ -36,6 +44,32 @@ function imageUrlFromPage(html) {
   const $ = load(html);
   const value = $('meta[property="og:image"]').attr("content");
   return cleanImageUrl(value?.replaceAll("&amp;", "&"));
+}
+
+async function imageUrlFromApi(page) {
+  const title = decodeURIComponent(page).replaceAll("_", " ");
+  const endpoint = new URL("https://en.wikipedia.org/w/api.php");
+  endpoint.search = new URLSearchParams({
+    origin: "*",
+    action: "query",
+    format: "json",
+    prop: "pageimages",
+    piprop: "original|thumbnail",
+    pithumbsize: "2000",
+    titles: title,
+  });
+  try {
+    const response = await fetch(endpoint, {
+      headers: { "user-agent": userAgent },
+      signal: AbortSignal.timeout(20000),
+    });
+    if (!response.ok) return null;
+    const data = await response.json();
+    const pageData = Object.values(data?.query?.pages ?? {})[0];
+    return cleanImageUrl(pageData?.original?.source ?? pageData?.thumbnail?.source);
+  } catch {
+    return null;
+  }
 }
 
 function extension(url, contentType) {
@@ -97,6 +131,9 @@ async function collect(work) {
       enrichment[enrichedPage]?.artworkCandidate?.url,
     );
   }
+  if (isGenericArtwork(imageUrl)) imageUrl = null;
+  if (!imageUrl) imageUrl = await imageUrlFromApi(page);
+  if (isGenericArtwork(imageUrl)) imageUrl = null;
   if (!imageUrl) return null;
   for (let attempt = 0; attempt < 3; attempt++) {
     try {

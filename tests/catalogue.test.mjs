@@ -305,6 +305,7 @@ test("Wikipedia poster ledger matches published local artwork", async () => {
     assert.equal(item.publish, true);
     assert.match(item.sourcePage, /^https:\/\/en\.wikipedia\.org\/wiki\//);
     assert.match(item.sourceUrl, /^https:\/\/upload\.wikimedia\.org\//);
+    assert.doesNotMatch(item.sourceUrl, /(?:logo|wordmark|title.?card|ultraverse)/i);
     await access(new URL(`../public${item.local}`, import.meta.url));
   }
 });
