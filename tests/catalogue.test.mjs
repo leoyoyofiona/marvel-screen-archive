@@ -182,6 +182,19 @@ test("every indexed person and curated character has a visible local avatar", ()
     ),
   );
 });
+test("the mainland default route can render every archive image without an external asset host", () => {
+  for (const work of data.works) {
+    for (const asset of [work.poster, work.backdrop].filter(Boolean))
+      assert.ok(asset.startsWith("/"), `${work.id}: ${asset}`);
+    for (const season of work.seasons)
+      if (season.image)
+        assert.ok(season.image.startsWith("/"), `${work.id}: ${season.image}`);
+  }
+  assert.ok(data.people.every((person) => person.portrait.startsWith("/")));
+  assert.ok(
+    data.characters.every((character) => character.portrait.startsWith("/")),
+  );
+});
 test("undated officially listed projects stay undated and announced", () => {
   const blackPanther3 = data.works.find(
     (w) => w.id === "black-panther-3-undated-film",
