@@ -1,8 +1,17 @@
 "use client";
+import type { CSSProperties } from "react";
 import { Film, ArrowUpRight, Bookmark } from "lucide-react";
 import Link from "next/link";
 import type { Work } from "@/lib/catalogue-types";
 import { kindLabels } from "@/lib/catalogue-types";
+
+function posterHue(id: string) {
+  let value = 0;
+  for (const character of id)
+    value = (value * 31 + character.charCodeAt(0)) % 360;
+  return value;
+}
+
 export function Poster({
   work,
   decorative = false,
@@ -10,8 +19,14 @@ export function Poster({
   work: Work;
   decorative?: boolean;
 }) {
+  const archiveStyle = {
+    "--poster-hue": posterHue(work.id),
+  } as CSSProperties;
   return (
-    <div className={"poster-frame " + (!work.poster ? "no-art" : "")}>
+    <div
+      className={"poster-frame " + (!work.poster ? "no-art" : "")}
+      style={work.poster ? undefined : archiveStyle}
+    >
       {work.poster ? (
         <img
           src={work.poster}
@@ -23,13 +38,19 @@ export function Poster({
       ) : (
         <div
           className="archive-frame"
-          aria-label={decorative ? undefined : work.title + "，海报待核验"}
+          aria-label={
+            decorative ? undefined : work.title + "，非官方档案设计海报"
+          }
         >
           <span className="film-perforation" />
+          <span className="archive-nebula" />
+          <span className="archive-orbit" />
+          <span className="archive-silhouette" />
+          <span className="archive-signal" />
           <span className="frame-year">{work.year ?? "TBA"}</span>
           <Film size={30} />
           <strong>{work.title}</strong>
-          <span className="pending-art">海报素材核验中</span>
+          <span className="pending-art">档案设计海报 · 非官方素材</span>
           <span className="frame-code">MARVEL SCREEN ARCHIVE</span>
         </div>
       )}

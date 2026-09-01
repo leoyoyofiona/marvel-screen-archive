@@ -931,6 +931,7 @@ svg {
   padding: 3px 7px;
   backdrop-filter: blur(10px);
   border: 1px solid #ffffff25;
+  z-index: 4;
 }
 .poster-hover {
   position: absolute;
@@ -946,6 +947,7 @@ svg {
     opacity 0.25s,
     transform 0.25s;
   pointer-events: none;
+  z-index: 4;
 }
 .poster-hover > span {
   font-size: 9px;
@@ -965,6 +967,7 @@ svg {
   transform: translateY(0);
 }
 .archive-frame {
+  --poster-hue: 350;
   position: absolute;
   inset: 0;
   display: flex;
@@ -974,51 +977,84 @@ svg {
   text-align: center;
   padding: 30px 17px;
   background:
-    radial-gradient(ellipse at 85% 2%, #63455238, transparent 80%),
-    linear-gradient(135deg, #1c2330, #0f131b);
-  transition: background 0.4s;
+    radial-gradient(
+      ellipse at 82% 0%,
+      hsl(var(--poster-hue) 80% 58% / 0.42),
+      transparent 58%
+    ),
+    radial-gradient(
+      ellipse at 8% 92%,
+      hsl(calc(var(--poster-hue) + 65) 82% 48% / 0.23),
+      transparent 52%
+    ),
+    linear-gradient(
+      145deg,
+      hsl(var(--poster-hue) 26% 19%),
+      #080b11 66%,
+      #030509
+    );
+  transition:
+    filter 0.45s,
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   gap: 16px;
 }
 .archive-frame:before {
   content: "";
   position: absolute;
   inset: 12px;
-  border: 1px solid #64708033;
+  border: 1px solid hsl(var(--poster-hue) 50% 78% / 0.28);
+  box-shadow:
+    inset 0 0 35px #0008,
+    0 0 0 5px #05070b44;
   pointer-events: none;
+  z-index: 2;
 }
 .archive-frame:after {
   content: "";
   position: absolute;
   width: 230%;
   height: 1px;
-  background: #525b6b44;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    hsl(var(--poster-hue) 72% 70% / 0.34),
+    transparent
+  );
   transform: rotate(-48deg);
   pointer-events: none;
+  z-index: 2;
 }
 .archive-frame > svg {
-  color: #686a7b;
+  color: hsl(var(--poster-hue) 76% 76% / 0.8);
   stroke-width: 1;
+  filter: drop-shadow(0 0 12px hsl(var(--poster-hue) 80% 60% / 0.65));
+  z-index: 3;
 }
 .archive-frame strong {
   font-size: clamp(14px, 1.2vw, 19px);
   font-weight: 500;
   line-height: 1.8;
-  color: #c7cfdd;
-  z-index: 1;
+  color: #f3f5f9;
+  text-shadow:
+    0 2px 12px #000,
+    0 0 30px hsl(var(--poster-hue) 78% 52% / 0.45);
+  z-index: 3;
   max-width: 100%;
 }
 .frame-year {
-  color: #768296;
+  color: hsl(var(--poster-hue) 45% 82% / 0.84);
   font-size: 11px;
   letter-spacing: 0.14em;
   position: absolute;
   right: 22px;
   top: 23px;
+  z-index: 3;
 }
 .pending-art {
   font-size: 9px;
   letter-spacing: 0.06em;
-  color: #687589;
+  color: #a1acbc;
+  z-index: 3;
 }
 .frame-code {
   position: absolute;
@@ -1026,8 +1062,9 @@ svg {
   left: 0;
   right: 0;
   font-size: 7px;
-  color: #778194;
+  color: hsl(var(--poster-hue) 36% 76% / 0.68);
   letter-spacing: 0.16em;
+  z-index: 3;
 }
 .film-perforation {
   position: absolute;
@@ -1037,9 +1074,105 @@ svg {
   width: 4px;
   background: repeating-linear-gradient(
     to bottom,
-    #59627466 0 5px,
+    hsl(var(--poster-hue) 54% 75% / 0.45) 0 5px,
     transparent 5px 14px
   );
+  z-index: 3;
+}
+.archive-nebula,
+.archive-orbit,
+.archive-silhouette,
+.archive-signal {
+  position: absolute;
+  pointer-events: none;
+}
+.archive-nebula {
+  width: 96%;
+  aspect-ratio: 1;
+  top: -22%;
+  right: -42%;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 35%, #ffffffcc 0 1px, transparent 2px),
+    radial-gradient(circle at 62% 48%, #fff9 0 1px, transparent 2px),
+    radial-gradient(
+      circle,
+      transparent 42%,
+      hsl(var(--poster-hue) 76% 64% / 0.34) 43% 44%,
+      transparent 45%
+    );
+  box-shadow:
+    inset 22px -18px 50px hsl(var(--poster-hue) 78% 54% / 0.2),
+    0 0 75px hsl(var(--poster-hue) 82% 48% / 0.22);
+  opacity: 0.8;
+  transition: transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.archive-orbit {
+  width: 150%;
+  height: 54%;
+  left: -52%;
+  top: 17%;
+  border: 1px solid hsl(var(--poster-hue) 60% 75% / 0.2);
+  border-radius: 50%;
+  transform: rotate(-34deg);
+  box-shadow: 0 0 25px hsl(var(--poster-hue) 70% 54% / 0.12);
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.archive-silhouette {
+  width: 72%;
+  height: 58%;
+  left: 14%;
+  bottom: 2%;
+  background: linear-gradient(
+    170deg,
+    hsl(var(--poster-hue) 45% 38% / 0.6),
+    #020307 74%
+  );
+  clip-path: polygon(
+    50% 0,
+    64% 20%,
+    88% 34%,
+    72% 48%,
+    94% 100%,
+    6% 100%,
+    28% 48%,
+    12% 34%,
+    36% 20%
+  );
+  filter: drop-shadow(0 -12px 24px hsl(var(--poster-hue) 65% 48% / 0.25));
+  opacity: 0.72;
+  transform: translateY(12%);
+  transition:
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.5s;
+}
+.archive-signal {
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0 6px,
+    #ffffff05 6px 7px
+  );
+  mix-blend-mode: screen;
+  opacity: 0.55;
+}
+.poster-frame:hover .archive-frame,
+.poster-frame:focus-within .archive-frame {
+  filter: saturate(1.18) contrast(1.05);
+  transform: scale(1.035);
+}
+.poster-frame:hover .archive-nebula,
+.poster-frame:focus-within .archive-nebula {
+  transform: translate(-12%, 9%) rotate(18deg) scale(1.08);
+}
+.poster-frame:hover .archive-orbit,
+.poster-frame:focus-within .archive-orbit {
+  transform: rotate(-24deg) translateX(8%);
+}
+.poster-frame:hover .archive-silhouette,
+.poster-frame:focus-within .archive-silhouette {
+  transform: translateY(4%) scale(1.06);
+  opacity: 0.88;
 }
 .work-card-title {
   display: flex;
