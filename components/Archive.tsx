@@ -19,6 +19,7 @@ import type { Catalogue, WorkKind } from "@/lib/catalogue-types";
 import { kindLabels } from "@/lib/catalogue-types";
 import { Header, Disclaimer, Footer } from "./Chrome";
 import { WorkCard } from "./Poster";
+import { ReferenceChecklist } from "./ReferenceChecklist";
 import Timeline from "./Timeline";
 const Relationships = dynamic(() => import("./Relationships"), {
   loading: () => <div className="loading-section">正在打开关系宇宙…</div>,
@@ -296,6 +297,7 @@ export default function Archive({ data }: { data: Catalogue }) {
                 中文名称为整理用译名；未找到可靠中文名的条目保留原名。剧集电影版、历史合作与旗下出版品牌单独标注，不把它们伪装成
                 MCU 正史。
               </p>
+              <ReferenceChecklist />
             </section>
           )}
           <Timeline works={data.works} />

@@ -1,0 +1,75 @@
+{
+  "title": "读者参考图 56 项核对",
+  "description": "这份清单来自建站参考图，混合了 MCU、索尼漫威角色电影与蜘蛛宇宙动画。它只是主流观看顺序的一个子集，不等于本站的全部 365 个系列级项目。季次按同一剧集归档，避免重复计算为新作品。",
+  "checkedAt": "2026-08-31",
+  "groups": [
+    { "label": "英雄起源", "range": "2008–2012", "items": [
+      { "order": 1, "title": "钢铁侠", "year": 2008, "workId": "iron-man-2008-film" },
+      { "order": 2, "title": "无敌浩克", "year": 2008, "workId": "the-incredible-hulk-2008-film" },
+      { "order": 3, "title": "钢铁侠2", "year": 2010, "workId": "iron-man-2-2010-film" },
+      { "order": 4, "title": "雷神", "year": 2011, "workId": "thor-2011-film" },
+      { "order": 5, "title": "美国队长：复仇者先锋", "year": 2011, "workId": "captain-america-the-first-avenger-2011-film" },
+      { "order": 6, "title": "复仇者联盟", "year": 2012, "workId": "the-avengers-2012-film" }
+    ]},
+    { "label": "宇宙扩张", "range": "2013–2015", "items": [
+      { "order": 7, "title": "钢铁侠3", "year": 2013, "workId": "iron-man-3-2013-film" },
+      { "order": 8, "title": "雷神2：黑暗世界", "year": 2013, "workId": "thor-the-dark-world-2013-film" },
+      { "order": 9, "title": "美国队长2：冬日战士", "year": 2014, "workId": "captain-america-the-winter-soldier-2014-film" },
+      { "order": 10, "title": "银河护卫队", "year": 2014, "workId": "guardians-of-the-galaxy-2014-film" },
+      { "order": 11, "title": "复仇者联盟2：奥创纪元", "year": 2015, "workId": "avengers-age-of-ultron-2015-film" },
+      { "order": 12, "title": "蚁人", "year": 2015, "workId": "ant-man-2015-film" }
+    ]},
+    { "label": "无限传奇", "range": "2016–2019", "items": [
+      { "order": 13, "title": "美国队长3：内战", "year": 2016, "workId": "captain-america-civil-war-2016-film" },
+      { "order": 14, "title": "奇异博士", "year": 2016, "workId": "doctor-strange-2016-film" },
+      { "order": 15, "title": "银河护卫队2", "year": 2017, "workId": "guardians-of-the-galaxy-vol-2-2017-film" },
+      { "order": 16, "title": "蜘蛛侠：英雄归来", "year": 2017, "workId": "spider-man-homecoming-2017-film" },
+      { "order": 17, "title": "雷神3：诸神黄昏", "year": 2017, "workId": "thor-ragnarok-2017-film" },
+      { "order": 18, "title": "黑豹", "year": 2018, "workId": "black-panther-2018-film" },
+      { "order": 19, "title": "复仇者联盟3：无限战争", "year": 2018, "workId": "avengers-infinity-war-2018-film" },
+      { "order": 20, "title": "蚁人2：黄蜂女现身", "year": 2018, "workId": "ant-man-and-the-wasp-2018-film" },
+      { "order": 21, "title": "毒液：致命守护者", "year": 2018, "workId": "venom-2018-film", "note": "索尼漫威角色宇宙，不属于 MCU 主线。" },
+      { "order": 22, "title": "蜘蛛侠：平行宇宙", "year": 2018, "workId": "spider-man-into-the-spider-verse-2018-animated-film", "note": "索尼动画蜘蛛宇宙，不属于 MCU 主线。" },
+      { "order": 23, "title": "惊奇队长", "year": 2019, "workId": "captain-marvel-2019-film" },
+      { "order": 24, "title": "复仇者联盟4：终局之战", "year": 2019, "workId": "avengers-endgame-2019-film" },
+      { "order": 25, "title": "蜘蛛侠：英雄远征", "year": 2019, "workId": "spider-man-far-from-home-2019-film" }
+    ]},
+    { "label": "多元宇宙开启", "range": "2021–2023", "items": [
+      { "order": 26, "title": "旺达幻视", "year": 2021, "workId": "wandavision-2021-series" },
+      { "order": 27, "title": "猎鹰与冬兵", "year": 2021, "workId": "the-falcon-and-the-winter-soldier-2021-series" },
+      { "order": 28, "title": "洛基 第一季", "year": 2021, "workId": "loki-2021-series", "note": "按《洛基》同一剧集的季级资料归档。" },
+      { "order": 29, "title": "黑寡妇", "year": 2021, "workId": "black-widow-2021-film" },
+      { "order": 30, "title": "尚气与十环传奇", "year": 2021, "workId": "shang-chi-and-the-legend-of-the-ten-rings-2021-film" },
+      { "order": 31, "title": "毒液2", "year": 2021, "workId": "venom-let-there-be-carnage-2021-film", "note": "索尼漫威角色宇宙，不属于 MCU 主线。" },
+      { "order": 32, "title": "永恒族", "year": 2021, "workId": "eternals-2021-film" },
+      { "order": 33, "title": "鹰眼", "year": 2021, "workId": "hawkeye-2021-series" },
+      { "order": 34, "title": "蜘蛛侠：英雄无归", "year": 2021, "workId": "spider-man-no-way-home-2021-film" },
+      { "order": 35, "title": "月光骑士", "year": 2022, "workId": "moon-knight-2022-series" },
+      { "order": 36, "title": "奇异博士2：疯狂多元宇宙", "year": 2022, "workId": "doctor-strange-in-the-multiverse-of-madness-2022-film" },
+      { "order": 37, "title": "惊奇少女", "year": 2022, "workId": "ms-marvel-2022-series" },
+      { "order": 38, "title": "雷神4：爱与雷霆", "year": 2022, "workId": "thor-love-and-thunder-2022-film" },
+      { "order": 39, "title": "我是格鲁特 第一季", "year": 2022, "workId": "i-am-groot-2022-animated-series", "note": "按《我是格鲁特》同一动画剧集的季级资料归档。" },
+      { "order": 40, "title": "女浩克", "year": 2022, "workId": "she-hulk-attorney-at-law-2022-series" },
+      { "order": 41, "title": "黑豹2：瓦坎达万岁", "year": 2022, "workId": "black-panther-wakanda-forever-2022-film" },
+      { "order": 42, "title": "蚁人与黄蜂女：量子狂潮", "year": 2023, "workId": "ant-man-and-the-wasp-quantumania-2023-film" },
+      { "order": 43, "title": "银河护卫队3", "year": 2023, "workId": "guardians-of-the-galaxy-vol-3-2023-film" },
+      { "order": 44, "title": "秘密入侵", "year": 2023, "workId": "secret-invasion-2023-series" },
+      { "order": 45, "title": "我是格鲁特 第二季", "year": 2023, "workId": "i-am-groot-2022-animated-series", "note": "第二季仍归入同一系列档案，不重复抬高作品总数。" },
+      { "order": 46, "title": "洛基 第二季", "year": 2023, "workId": "loki-2021-series", "note": "第二季已列在《洛基》详情页的季级资料中。" },
+      { "order": 47, "title": "惊奇队长2", "year": 2023, "workId": "the-marvels-2023-film" }
+    ]},
+    { "label": "新秩序", "range": "2024–2025", "items": [
+      { "order": 48, "title": "死侍与金刚狼", "year": 2024, "workId": "deadpool-wolverine-2024-film" },
+      { "order": 49, "title": "毒液：最后一舞", "year": 2024, "workId": "venom-the-last-dance-2024-film", "note": "索尼漫威角色宇宙，不属于 MCU 主线。" },
+      { "order": 50, "title": "美国队长4：勇敢新世界", "year": 2025, "workId": "captain-america-brave-new-world-2025-film" },
+      { "order": 51, "title": "夜魔侠：重生", "year": 2025, "workId": "daredevil-born-again-2025-series" },
+      { "order": 52, "title": "雷霆特攻队*", "year": 2025, "workId": "thunderbolts-2025-film" },
+      { "order": 53, "title": "神奇四侠：初露锋芒", "year": 2025, "workId": "the-fantastic-four-first-steps-2025-film" }
+    ]},
+    { "label": "已定档与后续项目", "range": "2026–2027", "items": [
+      { "order": 54, "title": "蜘蛛侠：崭新之日", "year": 2026, "workId": "spider-man-brand-new-day-2026-film", "note": "Marvel 官方目录列明 2026-07-31。" },
+      { "order": 55, "title": "复仇者联盟：毁灭之日", "year": 2026, "workId": "avengers-doomsday-2026-film", "note": "尚未上映；Marvel 官方目录列明 2026-12-18。" },
+      { "order": 56, "title": "复仇者联盟：秘密战争", "year": 2027, "workId": "avengers-secret-wars-2027-film", "note": "尚未上映；Marvel 官方目录列明 2027-12-17。" }
+    ]}
+  ]
+}

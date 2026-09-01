@@ -8,6 +8,12 @@ import {
 const data = JSON.parse(
   await readFile(new URL("../data/catalogue.json", import.meta.url), "utf8"),
 );
+const referenceChecklist = JSON.parse(
+  await readFile(
+    new URL("../data/reference-checklist.json", import.meta.url),
+    "utf8",
+  ),
+);
 const officialEpisodesText = await readFile(
   new URL("../data/official-episodes.json", import.meta.url),
   "utf8",
@@ -20,6 +26,27 @@ test("stable unique work IDs and referential integrity", () => {
     for (const id of p.workIds) assert.ok(ids.has(id));
   for (const c of data.characters)
     for (const id of c.works) assert.ok(ids.has(id));
+});
+test("all 56 user reference-list items resolve without inflating season counts", () => {
+  const workIds = new Set(data.works.map((work) => work.id));
+  const items = referenceChecklist.groups.flatMap((group) => group.items);
+  assert.equal(items.length, 56);
+  assert.deepEqual(
+    items.map((item) => item.order),
+    Array.from({ length: 56 }, (_, index) => index + 1),
+  );
+  for (const item of items) {
+    assert.ok(workIds.has(item.workId), `missing reference work ${item.workId}`);
+  }
+  assert.equal(
+    items.filter((item) => item.workId === "loki-2021-series").length,
+    2,
+  );
+  assert.equal(
+    items.filter((item) => item.workId === "i-am-groot-2022-animated-series")
+      .length,
+    2,
+  );
 });
 test("distinct universes never gain an MCU phase from a shared year", () => {
   for (const id of [
