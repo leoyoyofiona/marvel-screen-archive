@@ -1,4 +1,4 @@
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import { qualifiedWatchLink } from "../lib/community-validation.mjs";
 const d = JSON.parse(
   await readFile(new URL("../data/catalogue.json", import.meta.url), "utf8"),
@@ -10,6 +10,14 @@ if (ids.size !== d.works.length) errors.push("Duplicate work IDs");
 for (const w of d.works) {
   if (!w.sources.length) errors.push(w.id + ": missing source");
   if (!w.title || !w.titleEn) errors.push(w.id + ": missing title");
+  if (!w.poster) errors.push(w.id + ": missing poster");
+  else if (w.poster.startsWith("/")) {
+    try {
+      await access(new URL("../public" + w.poster, import.meta.url));
+    } catch {
+      errors.push(w.id + ": poster file missing");
+    }
+  }
   if (!w.media.every((m) => m.status !== "candidate"))
     errors.push(w.id + ": unpublished media candidate leaked");
   if (!w.people.every((id) => people.has(id)))

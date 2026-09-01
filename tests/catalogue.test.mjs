@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import {
   qualifiedWatchLink,
   validateComment,
@@ -266,7 +266,7 @@ test("official artwork and season hierarchy are linked to the correct records", 
   assert.equal(whatIf.seasons.length, 3);
   assert.ok(whatIf.seasons.every((season) => season.image));
 });
-test("every work has a local poster asset with an explicit provenance label", () => {
+test("every work has a local poster asset with an explicit provenance label", async () => {
   assert.equal(data.audit.posterCount, data.works.length);
   assert.equal(
     data.audit.officialArtworkCount + data.audit.archiveDesignPosterCount,
@@ -281,6 +281,8 @@ test("every work has a local poster asset with an explicit provenance label", ()
           work.posterCredit.includes("非官方素材")),
     ),
   );
+  for (const work of data.works)
+    await access(new URL(`../public${work.poster}`, import.meta.url));
 });
 test("same-name works never inherit artwork or seasons from another era or format", () => {
   const noOfficialArtwork = [
