@@ -172,6 +172,14 @@ export default function WorkSpace({
                   />
                 ) : (
                   <div className="player-empty">
+                    <div className="cinema-archive-motion" aria-hidden="true">
+                      {work.poster && <img src={work.poster} alt="" />}
+                      <span className="cinema-archive-light" />
+                      <span className="cinema-archive-scan" />
+                      <span className="cinema-archive-stamp">
+                        ARCHIVE FRAME / {work.year ?? "TBA"}
+                      </span>
+                    </div>
                     <Film size={38} />
                     <span>
                       {region === "mainland" ? "中国大陆" : "海外"}视听线路
