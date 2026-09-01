@@ -322,6 +322,34 @@ svg {
   height: 2px;
   background: var(--red);
 }
+.header-meta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: auto;
+}
+.creator-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: #dce4ef;
+  line-height: 1;
+}
+.creator-logo strong {
+  color: #f4d5db;
+  font:
+    700 10px/1 Georgia,
+    serif;
+  letter-spacing: 0.16em;
+}
+.creator-logo small {
+  margin-top: 5px;
+  color: #bd8290;
+  font:
+    7px/1 "Courier New",
+    monospace;
+  letter-spacing: 0.14em;
+}
 .region-switch {
   display: flex;
   align-items: center;
@@ -537,9 +565,17 @@ svg {
   color: #fff0bd;
 }
 .disclaimer-title strong {
-  font-size: 21px;
+  display: grid;
+  gap: 2px;
+  color: #fff4c4;
+  font-size: 17px;
   letter-spacing: 0.08em;
+  line-height: 1.05;
+  text-align: center;
   white-space: nowrap;
+}
+.disclaimer-title strong span {
+  display: block;
 }
 .disclaimer p {
   font-size: 11px;
@@ -3698,6 +3734,9 @@ svg {
     padding: 0;
     border: 0;
     gap: 0;
+  }
+  .creator-logo {
+    display: none;
   }
   .region-switch > svg {
     display: none;

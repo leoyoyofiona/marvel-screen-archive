@@ -41,18 +41,30 @@ export function Header({
           </a>
         ))}
       </nav>
-      <label className="region-switch">
-        <Globe2 size={15} />
-        <span className="sr-only">访问地区</span>
-        <select
-          aria-label="访问地区"
-          value={region}
-          onChange={(e) => onRegion(e.target.value as "mainland" | "overseas")}
+      <div className="header-meta">
+        <a
+          className="creator-logo"
+          href="mailto:leooelcn@gmail.com"
+          aria-label="联系网站创作者 LEOYOYOFIONA"
         >
-          <option value="mainland">中国大陆</option>
-          <option value="overseas">海外地区</option>
-        </select>
-      </label>
+          <strong>LEOYOYOFIONA</strong>
+          <small>CREATOR · CONTACT</small>
+        </a>
+        <label className="region-switch">
+          <Globe2 size={15} />
+          <span className="sr-only">访问地区</span>
+          <select
+            aria-label="访问地区"
+            value={region}
+            onChange={(e) =>
+              onRegion(e.target.value as "mainland" | "overseas")
+            }
+          >
+            <option value="mainland">中国大陆</option>
+            <option value="overseas">海外地区</option>
+          </select>
+        </label>
+      </div>
       <button
         className="mobile-menu icon-button"
         aria-label={open ? "关闭菜单" : "打开菜单"}
@@ -69,14 +81,16 @@ export function Disclaimer() {
     <aside className="disclaimer">
       <div className="disclaimer-title">
         <ShieldCheck size={21} />
-        <strong>免责申明</strong>
+        <strong aria-label="免责申明">
+          <span>免责</span>
+          <span>申明</span>
+        </strong>
       </div>
       <p>
-        这是 LEOYOYOFIONA
-        出于个人爱好整理的影迷网站，与漫威、迪士尼及相关发行方无隶属关系。作品与素材版权归各权利人所有；不提供盗版下载，不以“非商业”代替授权。资料如有错漏或权利问题，请联系指正、处理。
+        本站为影迷基于个人爱好制作的非官方、非商业文化档案，与漫威、迪士尼、索尼及相关发行方无隶属关系。不提供、不存储、不引导访问盗版影视资源；作品名称、海报、剧照、音乐及公开视频等权利归原作者和相关权利人所有。资料如有错漏，或权利人对展示内容有异议，欢迎联系指正，我们将及时核验与处理。
       </p>
       <a href="mailto:leooelcn@gmail.com">
-        联系作者 <ArrowUpRight size={16} />
+        联系 LEOYOYOFIONA · leooelcn@gmail.com <ArrowUpRight size={16} />
       </a>
     </aside>
   );
