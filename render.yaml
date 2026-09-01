@@ -1,3 +1,8 @@
+databases:
+  - name: marvel-screen-archive-db
+    plan: free
+    region: singapore
+
 services:
   - type: web
     name: marvel-screen-archive
@@ -14,7 +19,9 @@ services:
       - key: NODE_ENV
         value: production
       - key: DATABASE_URL
-        sync: false
+        fromDatabase:
+          name: marvel-screen-archive-db
+          property: connectionString
       - key: SESSION_SECRET
         generateValue: true
       - key: ADMIN_PASSWORD_HASH
