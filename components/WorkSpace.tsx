@@ -13,6 +13,8 @@ import {
   Clapperboard,
   FileText,
   ShieldCheck,
+  Volume2,
+  VolumeX,
 } from "lucide-react";
 import type {
   Character,
@@ -44,7 +46,8 @@ export default function WorkSpace({
     [liked, setLiked] = useState(false),
     [likes, setLikes] = useState<number | null>(null),
     [pending, setPending] = useState(false),
-    [message, setMessage] = useState("");
+    [message, setMessage] = useState(""),
+    [audioEnabled, setAudioEnabled] = useState(false);
   const regionTouched = useRef(false);
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
@@ -78,6 +81,7 @@ export default function WorkSpace({
     regionTouched.current = true;
     setRegion(r);
     setActive("");
+    setAudioEnabled(false);
     setMessage(
       r === "mainland"
         ? "已切换到中国大陆播放线路，播放器将优先加载大陆可访问来源。"
@@ -99,6 +103,21 @@ export default function WorkSpace({
   // selecting a media card only changes the active item.
   const current =
     media.find((m) => m.id === active) ?? media[0] ?? regionalMedia[0];
+  const canTogglePlayerAudio = Boolean(
+    current?.embedUrl &&
+      (current.embedUrl.includes("bilibili.com") ||
+        current.embedUrl.includes("youtube")),
+  );
+  const playerSrc = current?.embedUrl
+    ? (() => {
+        const key = current.embedUrl.includes("bilibili.com") ? "muted" : "mute";
+        const value = audioEnabled ? "0" : "1";
+        const pattern = new RegExp(`([?&])${key}=[^&]*`);
+        return pattern.test(current.embedUrl)
+          ? current.embedUrl.replace(pattern, `$1${key}=${value}`)
+          : `${current.embedUrl}${current.embedUrl.includes("?") ? "&" : "?"}${key}=${value}`;
+      })()
+    : "";
   const directorPeople = people.filter((p) =>
     p.departments.includes("director"),
   );
@@ -250,17 +269,29 @@ export default function WorkSpace({
                     {current ? "正在放映已核验公开素材" : "作品视听空间已打开"}
                   </strong>
                 </div>
-                <span>
-                  {region === "mainland" ? "中国大陆线路" : "海外线路"}
-                </span>
+                <div className="cinema-panel-heading-actions">
+                  {canTogglePlayerAudio && (
+                    <button
+                      className="player-audio-toggle"
+                      type="button"
+                      onClick={() => setAudioEnabled((enabled) => !enabled)}
+                      aria-pressed={audioEnabled}
+                      title={audioEnabled ? "关闭播放器声音" : "打开播放器声音"}
+                    >
+                      {audioEnabled ? <Volume2 size={14} /> : <VolumeX size={14} />}
+                      {audioEnabled ? "声音已开启" : "打开声音"}
+                    </button>
+                  )}
+                  <span>{region === "mainland" ? "中国大陆线路" : "海外线路"}</span>
+                </div>
               </div>
               <div className="cinema-screen">
                 {current?.embedUrl ? (
                   <>
                     <iframe
-                      key={current.id + region}
+                      key={current.id + region + (audioEnabled ? "-sound" : "-muted")}
                       title={current.title}
-                      src={current.embedUrl}
+                      src={playerSrc}
                       allow="autoplay; fullscreen; picture-in-picture"
                       allowFullScreen
                       referrerPolicy="strict-origin-when-cross-origin"
@@ -364,7 +395,10 @@ export default function WorkSpace({
                       <button
                         className="button compact"
                         key={m.id}
-                        onClick={() => setActive(m.id)}
+                        onClick={() => {
+                          setActive(m.id);
+                          setAudioEnabled(false);
+                        }}
                       >
                         {m.title} · {m.provider} · {m.kind === "clip" ? "片段" : "预告"}
                       </button>
