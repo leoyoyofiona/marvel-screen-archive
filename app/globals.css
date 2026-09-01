@@ -1920,6 +1920,39 @@ svg {
   padding: 16px 20px;
   border-top: 1px solid #2b3342;
 }
+.community-breakdowns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 14px 20px 0;
+}
+.breakdown-card {
+  padding: 13px 14px;
+  border: 1px solid #303949;
+  background: rgba(14, 19, 29, 0.48);
+  color: #a5afc0;
+  font-size: 10px;
+}
+.breakdown-card h3 {
+  color: #e7eaf0;
+  font-size: 11px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+.breakdown-card > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 5px 0;
+  border-top: 1px solid rgba(70, 80, 96, 0.35);
+}
+.breakdown-card strong {
+  color: #f2b3bb;
+  font-weight: 500;
+}
+.breakdown-card small {
+  color: #77859a;
+}
 .visitor-form {
   padding: 29px 25px;
   background: #131a25;

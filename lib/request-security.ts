@@ -5,9 +5,16 @@ import { database } from "./db";
 export function checkOrigin(request: Request) {
   const origin = request.headers.get("origin");
   const configured = process.env.NEXT_PUBLIC_SITE_URL;
-  const allowed = configured ? [new URL(configured).origin]
-    : process.env.NODE_ENV !== 'production' ? ['http://127.0.0.1:3199','http://localhost:3199'] : [];
-  if (!origin || !allowed.includes(origin)) throw new Error("ORIGIN_REJECTED");
+  const allowed = configured
+    ? [new URL(configured).origin]
+    : process.env.NODE_ENV !== "production"
+      ? ["http://127.0.0.1:3199", "http://localhost:3199"]
+      : [];
+  const localDevelopmentOrigin =
+    process.env.NODE_ENV !== "production" &&
+    /^https?:\/\/(?:127\.0\.0\.1|localhost):\d+$/.test(origin ?? "");
+  if (!origin || (!allowed.includes(origin) && !localDevelopmentOrigin))
+    throw new Error("ORIGIN_REJECTED");
 }
 function secret() {
   const key = process.env.SESSION_SECRET;

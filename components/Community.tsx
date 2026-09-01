@@ -19,6 +19,7 @@ type Stats = {
   total: number;
   recent: number;
   distribution: { country: string; count: number }[];
+  genders: { gender: string; count: number }[];
   mode: string;
   updatedAt: string;
 };
@@ -284,6 +285,23 @@ export default function Community() {
     const point = projection(geoCentroid(f));
     return point ? [{ ...d, x: point[0], y: point[1] }] : [];
   });
+  const continentDistribution = Object.entries(
+    (stats?.distribution ?? []).reduce<Record<string, number>>(
+      (result, item) => {
+        const continent = countries[item.country as TCountryCode]?.continent;
+        if (continent)
+          result[continent] = (result[continent] ?? 0) + item.count;
+        return result;
+      },
+      {},
+    ),
+  ).sort(([, a], [, b]) => b - a);
+  const genderLabels: Record<string, string> = {
+    female: "女",
+    male: "男",
+    other: "其他",
+    undisclosed: "不愿透露",
+  };
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     setPending(true);
@@ -428,6 +446,34 @@ export default function Community() {
           <div className="map-footer">
             <span>地点来自自愿填写，不采集精准定位。</span>
             <span>区域分布示意，不作为国界依据。</span>
+          </div>
+          <div className="community-breakdowns" aria-label="访客自愿统计汇总">
+            <div className="breakdown-card">
+              <h3>按洲</h3>
+              {continentDistribution.length ? (
+                continentDistribution.map(([key, count]) => (
+                  <div key={key}>
+                    <span>{continentNames[key] ?? key}</span>
+                    <strong>{count}</strong>
+                  </div>
+                ))
+              ) : (
+                <small>暂无自愿地区数据</small>
+              )}
+            </div>
+            <div className="breakdown-card">
+              <h3>按性别</h3>
+              {stats?.genders?.length ? (
+                stats.genders.map((item) => (
+                  <div key={item.gender}>
+                    <span>{genderLabels[item.gender] ?? item.gender}</span>
+                    <strong>{item.count}</strong>
+                  </div>
+                ))
+              ) : (
+                <small>暂无自愿性别数据</small>
+              )}
+            </div>
           </div>
           {stats?.mode === "local-development" && (
             <p className="dev-stat-warning">
