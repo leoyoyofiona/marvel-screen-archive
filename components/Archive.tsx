@@ -21,6 +21,7 @@ import { WorkCard } from "./Poster";
 import { ReferenceChecklist } from "./ReferenceChecklist";
 import Timeline from "./Timeline";
 import SoundtrackHall from "./SoundtrackHall";
+import LoreAtlas from "./LoreAtlas";
 const Relationships = dynamic(() => import("./Relationships"), {
   loading: () => <div className="loading-section">正在打开关系宇宙…</div>,
   ssr: false,
@@ -344,10 +345,17 @@ export default function Archive({ data }: { data: ArchiveCatalogue }) {
                   <small>合规全片链接</small>
                 </span>
                 <span>
+                  {data.audit.mediaCount}
+                  <small>
+                    公开素材编目 · 国内 {data.audit.mainlandMediaCount} / 海外{" "}
+                    {data.audit.overseasMediaCount}
+                  </small>
+                </span>
+                <span>
                   {data.audit.playbackVerifiedMediaCount}
                   <small>
-                    已核验预告／片段 · 国内 {data.audit.mainlandMediaCount} / 海外{" "}
-                    {data.audit.overseasMediaCount}
+                    播放器实测可播放 · 国内 {data.audit.mainlandPlaybackVerifiedMediaCount} / 海外{" "}
+                    {data.audit.overseasPlaybackVerifiedMediaCount}
                   </small>
                 </span>
               </div>
@@ -556,6 +564,7 @@ export default function Archive({ data }: { data: ArchiveCatalogue }) {
               </button>
             </nav>
           </section>
+          <LoreAtlas works={data.works} />
           <Relationships />
           <section className="section behind-section">
             <div>

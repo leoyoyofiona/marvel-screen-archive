@@ -21,6 +21,7 @@ const candidates = await read("catalogue-candidates.json", []),
   enriched = await read("enrichment.json", {}),
   assets = await read("primary-assets.json", []),
   media = await read("media-reviewed.json", []),
+  mainlandQueue = await read("media-mainland-queue.json", []),
   officialIndex = await read("official-index.json", {
     movies: [],
     tvSeasons: [],
@@ -404,6 +405,12 @@ function group(w) {
   if (w.kind.includes("animated")) return "其他动画世界";
   return "其他真人世界";
 }
+const mediaRecords = [
+  ...media,
+  ...mainlandQueue.filter(
+    (item) => !media.some((existing) => existing.id === item.id),
+  ),
+];
 const works = items
   .map((w) => {
     const e = enriched[w.sources[0]?.workUrl?.split("#")[0]] ?? {},
@@ -587,7 +594,9 @@ const works = items
           all.findIndex((other) => other.url === season.url) === index,
       ),
       sources,
-      media: media.filter((m) => m.workId === w.id && m.status !== "candidate"),
+      media: mediaRecords.filter(
+        (m) => m.workId === w.id && m.status !== "candidate",
+      ),
       watchLinks: [],
     };
   })
@@ -653,6 +662,24 @@ const output = {
         total + work.media.filter((item) => item.region === "overseas").length,
       0,
     ),
+    mainlandPlaybackVerifiedMediaCount: works.reduce(
+      (total, work) =>
+        total +
+        work.media.filter(
+          (item) =>
+            item.region === "mainland" && item.status === "playback-verified",
+        ).length,
+      0,
+    ),
+    overseasPlaybackVerifiedMediaCount: works.reduce(
+      (total, work) =>
+        total +
+        work.media.filter(
+          (item) =>
+            item.region === "overseas" && item.status === "playback-verified",
+        ).length,
+      0,
+    ),
     watchLinkCount: 0,
     untranslated: works.filter((w) => !w.translated).length,
     gaps: [
@@ -660,7 +687,7 @@ const output = {
       "23 个有公开单集列表的 Marvel 官方数字系列已索引 1,881 个唯一详情页；其中 17 个系列与页面标称总数一致，6 个系列保留计数差异待核。无公开单集列表的节目与播客仍只有系列级档案",
       "角色出场为人工整理的首批关系，尚未覆盖全部角色与客串",
       `全部 ${people.size.toLocaleString("zh-CN")} 位索引人物均有头像节点，其中 ${[...people.values()].filter((person) => person.portraitKind === "wikimedia-commons").length.toLocaleString("zh-CN")} 张为带许可来源的 Wikimedia Commons 真人照片，其余使用明确标注的本地姓名身份头像；${works.filter((work) => work.poster?.startsWith("/media/archive-posters/")).length} 条记录仍使用原创档案设计海报，真实海报与经典剧照需继续逐条核验`,
-      `已接入 ${media.length} 条大陆／海外公开预告与片段，并完成播放器级来源标记；尚未覆盖的作品继续显示无合规媒体状态，不把资料页或搜索页当作播放器`,
+      `已接入 ${mediaRecords.length} 条大陆／海外公开预告与片段索引，其中 ${mediaRecords.filter((item) => item.status === "playback-verified").length} 条完成播放器级来源标记；待核验入口不会在前台显示播放按钮，不把资料页或搜索页当作播放器`,
     ],
   },
 };

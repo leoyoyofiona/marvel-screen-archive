@@ -160,6 +160,8 @@ export type Catalogue = {
     playbackVerifiedMediaCount: number;
     mainlandMediaCount: number;
     overseasMediaCount: number;
+    mainlandPlaybackVerifiedMediaCount: number;
+    overseasPlaybackVerifiedMediaCount: number;
     gaps: string[];
   };
 };

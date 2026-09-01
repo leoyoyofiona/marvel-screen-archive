@@ -1,6 +1,6 @@
 {
   "cutoff": "2026-08-31",
-  "generatedAt": "2026-09-01T16:29:57.619Z",
+  "generatedAt": "2026-09-01T17:38:39.726Z",
   "works": [
     {
       "id": "captain-america-1944-short",
@@ -2359,7 +2359,20 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "mainland-queue-058",
+          "workId": "x-men-the-animated-series-1992-animated-series",
+          "title": "X战警：动画系列 · 公开剧集入口（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩公开页面",
+          "url": "https://www.bilibili.com/bangumi/play/ss343255",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -3535,7 +3548,33 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "x-men-2000-overseas-trailer",
+          "workId": "x-men-2000-film",
+          "title": "X-Men (2000) · Trailer #1",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Rotten Tomatoes Classic Trailers",
+          "url": "https://www.youtube.com/watch?v=VNxwlx6etXI",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/VNxwlx6etXI?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube public trailer page; Rotten Tomatoes Classic Trailers channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-035",
+          "workId": "x-men-2000-film",
+          "title": "X战警 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep785249",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -3873,7 +3912,20 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "mainland-queue-025",
+          "workId": "spider-man-2002-film",
+          "title": "蜘蛛侠 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep446573?theme=movie",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；页面提示正片受限，候选记录不作为可观看承诺"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -3937,7 +3989,33 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "daredevil-2003-overseas-trailer",
+          "workId": "daredevil-2003-film",
+          "title": "Daredevil (2003) · Trailer #1",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Rotten Tomatoes Classic Trailers",
+          "url": "https://www.youtube.com/watch?v=muPX9Oi7-EE",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/muPX9Oi7-EE?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube public trailer page; Rotten Tomatoes Classic Trailers channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-048",
+          "workId": "daredevil-2003-film",
+          "title": "夜魔侠 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ss218526",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -4142,7 +4220,33 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "x2-2003-overseas-trailer",
+          "workId": "x2-2003-film",
+          "title": "X2 (2003) · Trailer #1",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Rotten Tomatoes Classic Trailers",
+          "url": "https://www.youtube.com/watch?v=luHcOYS1HxQ",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/luHcOYS1HxQ?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube public trailer page; Rotten Tomatoes Classic Trailers channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-036",
+          "workId": "x2-2003-film",
+          "title": "X战警2 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep785249",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -4295,6 +4399,18 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "哔哩哔哩电影正版剧集页；页面标注预告；浏览器播放器实际播放检查"
+        },
+        {
+          "id": "mainland-queue-026",
+          "workId": "spider-man-2-2004-film",
+          "title": "蜘蛛侠2 · 预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep446702?theme=movie",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -4491,7 +4607,33 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "fantastic-four-2005-overseas-trailer",
+          "workId": "fantastic-four-2005-film",
+          "title": "Fantastic Four · Official Trailer HD",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "20th Century Studios",
+          "url": "https://www.youtube.com/watch?v=_rRoD28-WgU",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/_rRoD28-WgU?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified 20th Century Studios channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-045",
+          "workId": "fantastic-four-2005-film",
+          "title": "神奇四侠 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ss218526",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -4936,7 +5078,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "x-men-last-stand-overseas-trailer",
+          "workId": "x-men-the-last-stand-2006-film",
+          "title": "X-Men: The Last Stand · Trailer #1",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Rotten Tomatoes Classic Trailers",
+          "url": "https://www.youtube.com/watch?v=ZQ0v5dXbw7M",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/ZQ0v5dXbw7M?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube public trailer page; Rotten Tomatoes Classic Trailers channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -5052,7 +5208,33 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "fantastic-four-rise-overseas-trailer",
+          "workId": "fantastic-four-rise-of-the-silver-surfer-2007-film",
+          "title": "Fantastic Four: Rise of the Silver Surfer · Trailer #1",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Rotten Tomatoes Classic Trailers",
+          "url": "https://www.youtube.com/watch?v=Wiu5eZ_7vSY",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/Wiu5eZ_7vSY?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube public trailer page; Rotten Tomatoes Classic Trailers channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-046",
+          "workId": "fantastic-four-rise-of-the-silver-surfer-2007-film",
+          "title": "神奇四侠2 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ss218526",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -5121,7 +5303,33 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "ghost-rider-overseas-trailer",
+          "workId": "ghost-rider-2007-film",
+          "title": "Ghost Rider · Official Trailer HD",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Sony Pictures Entertainment",
+          "url": "https://www.youtube.com/watch?v=nu6R7ypaz5g",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/nu6R7ypaz5g?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Sony Pictures Entertainment channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-047",
+          "workId": "ghost-rider-2007-film",
+          "title": "灵魂战车 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ss218526",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -5200,7 +5408,20 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "mainland-queue-027",
+          "workId": "spider-man-3-2007-film",
+          "title": "蜘蛛侠3 · 预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep446702?theme=movie",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -5344,6 +5565,30 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube oEmbed title/channel check; direct public trailer page"
+        },
+        {
+          "id": "mainland-queue-001",
+          "workId": "iron-man-2008-film",
+          "title": "钢铁侠 · 大陆公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/media/md28338995",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        },
+        {
+          "id": "mainland-queue-078",
+          "workId": "iron-man-2008-film",
+          "title": "钢铁侠 · 公开片段入口 02（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/media/md28338995",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -5467,7 +5712,33 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "punisher-war-zone-overseas-trailer",
+          "workId": "punisher-war-zone-2008-film",
+          "title": "Punisher: War Zone · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Rotten Tomatoes Classic Trailers",
+          "url": "https://www.youtube.com/watch?v=bTdbeXHMzwg",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/bTdbeXHMzwg?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube public trailer page; Rotten Tomatoes Classic Trailers channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-049",
+          "workId": "punisher-war-zone-2008-film",
+          "title": "惩罚者2 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ss218526",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -5623,7 +5894,20 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "mainland-queue-057",
+          "workId": "the-spectacular-spider-man-2008-animated-series",
+          "title": "神奇蜘蛛侠 · 公开剧集入口（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩番剧",
+          "url": "https://www.bilibili.com/bangumi/play/ep735107",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开番剧页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -5791,7 +6075,20 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "mainland-queue-056",
+          "workId": "iron-man-armored-adventures-2009-animated-series",
+          "title": "钢铁侠：装甲冒险 · 公开剧集入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩公开页面",
+          "url": "https://www.bilibili.com/bangumi/play/ss343255",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -6056,7 +6353,33 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "wolverine-origins-overseas-trailer",
+          "workId": "x-men-origins-wolverine-2009-film",
+          "title": "X-Men Origins: Wolverine · Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "20th Century Studios",
+          "url": "https://www.youtube.com/watch?v=8TQ-gD4UCmI",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/8TQ-gD4UCmI?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified 20th Century Studios channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-050",
+          "workId": "x-men-origins-wolverine-2009-film",
+          "title": "金刚狼 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep785249",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -6195,7 +6518,20 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "mainland-queue-002",
+          "workId": "iron-man-2-2010-film",
+          "title": "钢铁侠2 · 预告花絮入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/media/md28338995",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -6307,7 +6643,21 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "kick-ass-overseas-trailer",
+          "workId": "kick-ass-2010-film",
+          "title": "Kick-Ass · Official Trailer #1",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Lionsgate Movies",
+          "url": "https://www.youtube.com/watch?v=2rpXHqnGDXo",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/2rpXHqnGDXo?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Lionsgate Movies channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -6841,6 +7191,18 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "哔哩哔哩电影正版剧集页；页面标注 PV2 预告；浏览器播放器实际播放检查"
+        },
+        {
+          "id": "mainland-queue-007",
+          "workId": "captain-america-the-first-avenger-2011-film",
+          "title": "美国队长 · PV入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep1198743",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -7106,6 +7468,18 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        },
+        {
+          "id": "mainland-queue-004",
+          "workId": "thor-2011-film",
+          "title": "雷神 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep777053",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -7696,7 +8070,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "men-in-black-3-overseas-trailer",
+          "workId": "men-in-black-3-2012-film",
+          "title": "Men in Black 3 · Official Trailer HD",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Sony Pictures Entertainment",
+          "url": "https://www.youtube.com/watch?v=IyaFEBI_L24",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/IyaFEBI_L24?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Sony Pictures Entertainment channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -7787,6 +8175,18 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "哔哩哔哩电影正版剧集页；页面标注 PV2 预告；浏览器播放器实际播放检查"
+        },
+        {
+          "id": "mainland-queue-028",
+          "workId": "the-amazing-spider-man-2012-film",
+          "title": "超凡蜘蛛侠 · PV2入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep446709",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -7881,6 +8281,30 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        },
+        {
+          "id": "mainland-queue-011",
+          "workId": "the-avengers-2012-film",
+          "title": "复仇者联盟 · PV入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep777157",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        },
+        {
+          "id": "mainland-queue-071",
+          "workId": "the-avengers-2012-film",
+          "title": "复仇者联盟 · 电视预告入口（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ss46055",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -8105,7 +8529,20 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "mainland-queue-060",
+          "workId": "agents-of-s-h-i-e-l-d-2013-series",
+          "title": "神盾局特工 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩公开页面",
+          "url": "https://www.bilibili.com/bangumi/play/ss343255",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -8448,6 +8885,18 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "哔哩哔哩公开视频页；电影频道1905电影网账号发布"
+        },
+        {
+          "id": "mainland-queue-003",
+          "workId": "iron-man-3-2013-film",
+          "title": "钢铁侠3 · 预告花絮入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/video/BV1iN411X7NJ/",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影频道页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -8920,6 +9369,18 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube verified Marvel Entertainment channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-005",
+          "workId": "thor-the-dark-world-2013-film",
+          "title": "雷神2：黑暗世界 · 预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep777053",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -9299,6 +9760,30 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube verified Marvel Australia & New Zealand channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-008",
+          "workId": "captain-america-the-winter-soldier-2014-film",
+          "title": "美国队长2 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep777155",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        },
+        {
+          "id": "mainland-queue-076",
+          "workId": "captain-america-the-winter-soldier-2014-film",
+          "title": "美国队长2 · 花絮入口 02（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep777155",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -9444,6 +9929,18 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        },
+        {
+          "id": "mainland-queue-019",
+          "workId": "guardians-of-the-galaxy-2014-film",
+          "title": "银河护卫队 · PV入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/media/md28337866",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -9546,7 +10043,21 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "kingsman-overseas-trailer",
+          "workId": "kingsman-the-secret-service-2014-film",
+          "title": "Kingsman: The Secret Service · Official Trailer HD",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "20th Century Studios",
+          "url": "https://www.youtube.com/watch?v=m4NCribDx4U",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/m4NCribDx4U?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified 20th Century Studios channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -10001,6 +10512,30 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube verified X-Men Movies / 20th Century Fox channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-037",
+          "workId": "x-men-days-of-future-past-2014-film",
+          "title": "X战警：逆转未来 · 公开页面入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep785249",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        },
+        {
+          "id": "mainland-queue-080",
+          "workId": "x-men-days-of-future-past-2014-film",
+          "title": "X战警：逆转未来 · 片段入口 02（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep785249",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -10163,6 +10698,30 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        },
+        {
+          "id": "mainland-queue-016",
+          "workId": "ant-man-2015-film",
+          "title": "蚁人 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep777112",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        },
+        {
+          "id": "mainland-queue-075",
+          "workId": "ant-man-2015-film",
+          "title": "蚁人 · 花絮入口 02（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep777112",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -10277,6 +10836,30 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "哔哩哔哩电影正版剧集页；页面标注 PV1 预告；浏览器播放器实际播放检查"
+        },
+        {
+          "id": "mainland-queue-012",
+          "workId": "avengers-age-of-ultron-2015-film",
+          "title": "复仇者联盟2 · PV入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep777037",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        },
+        {
+          "id": "mainland-queue-085",
+          "workId": "avengers-age-of-ultron-2015-film",
+          "title": "复仇者联盟2 · 预告入口 02（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep777037",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -10367,7 +10950,20 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "mainland-queue-061",
+          "workId": "daredevil-2015-series",
+          "title": "夜魔侠 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩公开页面",
+          "url": "https://www.bilibili.com/bangumi/play/ss343255",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -10597,7 +11193,33 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "jessica-jones-overseas-trailer",
+          "workId": "jessica-jones-2015-series",
+          "title": "Marvel’s Jessica Jones · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Netflix",
+          "url": "https://www.youtube.com/watch?v=nWHUjuJ8zxE",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/nWHUjuJ8zxE?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Netflix channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "mainland-queue-062",
+          "workId": "jessica-jones-2015-series",
+          "title": "杰西卡·琼斯 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩公开页面",
+          "url": "https://www.bilibili.com/bangumi/play/ss343255",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -11017,6 +11639,18 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        },
+        {
+          "id": "mainland-queue-009",
+          "workId": "captain-america-civil-war-2016-film",
+          "title": "美国队长3 · PV入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep777158",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；页面可能存在地区限制，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -11105,6 +11739,18 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube verified 20th Century Studios channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-038",
+          "workId": "deadpool-2016-film",
+          "title": "死侍 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep1113304",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；页面含受限正片与预告花絮，候选记录不作为可观看承诺"
         }
       ],
       "watchLinks": []
@@ -11206,6 +11852,30 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "哔哩哔哩电影正版剧集页；页面标注 PV1 预告；浏览器播放器实际播放检查"
+        },
+        {
+          "id": "mainland-queue-018",
+          "workId": "doctor-strange-2016-film",
+          "title": "奇异博士 · PV入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep777407?theme=movie",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        },
+        {
+          "id": "mainland-queue-074",
+          "workId": "doctor-strange-2016-film",
+          "title": "奇异博士 · 预告花絮入口 02（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep777407?theme=movie",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -11348,7 +12018,33 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "luke-cage-overseas-trailer",
+          "workId": "luke-cage-2016-series",
+          "title": "Marvel’s Luke Cage · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel UK",
+          "url": "https://www.youtube.com/watch?v=ORa4hPhGrpo",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/ORa4hPhGrpo?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel UK channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "mainland-queue-063",
+          "workId": "luke-cage-2016-series",
+          "title": "卢克·凯奇 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩公开页面",
+          "url": "https://www.bilibili.com/bangumi/play/ss343255",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -11990,6 +12686,31 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube verified Marvel Entertainment channel; browser video element playback check"
+        },
+        {
+          "id": "guardians-vol-2-overseas-sneak-peek",
+          "workId": "guardians-of-the-galaxy-vol-2-2017-film",
+          "title": "Guardians of the Galaxy Vol. 2 · Sneak Peek",
+          "kind": "clip",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=2WhQcK-Zaok",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/2WhQcK-Zaok?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "mainland-queue-020",
+          "workId": "guardians-of-the-galaxy-vol-2-2017-film",
+          "title": "银河护卫队2 · 预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/media/md28337866",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -12227,7 +12948,33 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "iron-fist-overseas-trailer",
+          "workId": "iron-fist-2017-series",
+          "title": "Marvel’s Iron Fist · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Netflix",
+          "url": "https://www.youtube.com/watch?v=f9OKL5no-S0",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/f9OKL5no-S0?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Netflix channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "mainland-queue-064",
+          "workId": "iron-fist-2017-series",
+          "title": "铁拳 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩公开页面",
+          "url": "https://www.bilibili.com/bangumi/play/ss343255",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -12292,7 +13039,21 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "kingsman-golden-overseas-trailer",
+          "workId": "kingsman-the-golden-circle-2017-film",
+          "title": "Kingsman: The Golden Circle · Official Trailer HD",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "20th Century Studios",
+          "url": "https://www.youtube.com/watch?v=6Nxc-3WpMbg",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/6Nxc-3WpMbg?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified 20th Century Studios channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -12517,6 +13278,18 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube verified 20th Century Studios channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-051",
+          "workId": "logan-2017-film",
+          "title": "金刚狼3：殊死一战 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep785249",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -13111,7 +13884,20 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "mainland-queue-059",
+          "workId": "marvel-s-spider-man-2017-animated-series",
+          "title": "漫威蜘蛛侠 · 公开剧集入口（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩公开页面",
+          "url": "https://www.bilibili.com/bangumi/play/ep735107",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开番剧页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -13325,7 +14111,33 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "runaways-overseas-trailer",
+          "workId": "runaways-2017-series",
+          "title": "Marvel’s Runaways · Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "IGN（授权预告媒体）",
+          "url": "https://www.youtube.com/watch?v=y-OJVwUG76k",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/y-OJVwUG76k?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube public trailer page; IGN authorized trailer publisher; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "mainland-queue-066",
+          "workId": "runaways-2017-series",
+          "title": "离家童盟 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩公开页面",
+          "url": "https://www.bilibili.com/bangumi/play/ss343255",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -13431,6 +14243,30 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "哔哩哔哩公开番剧页面；页面标注为《蜘蛛侠：英雄归来》终极预告"
+        },
+        {
+          "id": "mainland-queue-029",
+          "workId": "spider-man-homecoming-2017-film",
+          "title": "蜘蛛侠：英雄归来 · 精彩看点入口（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩番剧",
+          "url": "https://www.bilibili.com/bangumi/play/ep767906",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开番剧页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        },
+        {
+          "id": "mainland-queue-068",
+          "workId": "spider-man-homecoming-2017-film",
+          "title": "蜘蛛侠：英雄归来 · 花絮入口 02（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩番剧",
+          "url": "https://www.bilibili.com/bangumi/play/ep401543",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开番剧页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -13581,7 +14417,46 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "defenders-overseas-trailer",
+          "workId": "the-defenders-2017-series",
+          "title": "Marvel’s The Defenders · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Netflix Malaysia",
+          "url": "https://www.youtube.com/watch?v=jYvHxEEgrPA",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/jYvHxEEgrPA?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Netflix Malaysia channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "defenders-overseas-trailer-2",
+          "workId": "the-defenders-2017-series",
+          "title": "Marvel’s The Defenders · Official UK Trailer 2",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel UK",
+          "url": "https://www.youtube.com/watch?v=MAbjq7ydKDI",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/MAbjq7ydKDI?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel UK channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "mainland-queue-065",
+          "workId": "the-defenders-2017-series",
+          "title": "捍卫者联盟 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩公开页面",
+          "url": "https://www.bilibili.com/bangumi/play/ss343255",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -13882,6 +14757,30 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "哔哩哔哩电影正版剧集页；页面标注 PV1 预告；浏览器播放器实际播放检查"
+        },
+        {
+          "id": "mainland-queue-006",
+          "workId": "thor-ragnarok-2017-film",
+          "title": "雷神3：诸神黄昏 · PV入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep777053",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        },
+        {
+          "id": "mainland-queue-077",
+          "workId": "thor-ragnarok-2017-film",
+          "title": "雷神3 · 花絮入口 02（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep777053",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -14010,6 +14909,18 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube verified Marvel Entertainment channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-017",
+          "workId": "ant-man-and-the-wasp-2018-film",
+          "title": "蚁人2 · 预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep777112",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -14165,6 +15076,30 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "哔哩哔哩电影正版剧集页；页面标注 PV1 预告；浏览器播放器实际播放检查"
+        },
+        {
+          "id": "mainland-queue-013",
+          "workId": "avengers-infinity-war-2018-film",
+          "title": "复仇者联盟3 · PV入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep777038",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        },
+        {
+          "id": "mainland-queue-070",
+          "workId": "avengers-infinity-war-2018-film",
+          "title": "复仇者联盟3 · 电视预告入口（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ss46057",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -14393,6 +15328,30 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "哔哩哔哩电影正版剧集页；页面标注 PV2 预告；浏览器播放器实际播放检查"
+        },
+        {
+          "id": "mainland-queue-022",
+          "workId": "black-panther-2018-film",
+          "title": "黑豹 · PV2入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep1114853",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；页面显示正片受限，候选记录只保留预告入口，尚未完成播放器核验"
+        },
+        {
+          "id": "mainland-queue-073",
+          "workId": "black-panther-2018-film",
+          "title": "黑豹 · 预告花絮入口 02（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep1114853",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -14558,7 +15517,33 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "deadpool-2-overseas-trailer",
+          "workId": "deadpool-2-2018-film",
+          "title": "Deadpool 2 · The Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "20th Century Studios",
+          "url": "https://www.youtube.com/watch?v=D86RtevtfrA",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/D86RtevtfrA?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified 20th Century Studios channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-039",
+          "workId": "deadpool-2-2018-film",
+          "title": "死侍2 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep1113304",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -15081,6 +16066,30 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube verified Sony Pictures Entertainment channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-033",
+          "workId": "spider-man-into-the-spider-verse-2018-animated-film",
+          "title": "蜘蛛侠：平行宇宙 · 公开页面入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep731907",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        },
+        {
+          "id": "mainland-queue-079",
+          "workId": "spider-man-into-the-spider-verse-2018-animated-film",
+          "title": "蜘蛛侠：平行宇宙 · 片段入口 02（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep731907",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -15267,6 +16276,18 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube verified Sony Pictures Entertainment channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-041",
+          "workId": "venom-2018-film",
+          "title": "毒液：致命守护者 · 预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep1113251",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -15465,6 +16486,30 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "哔哩哔哩公开视频页；迪士尼影业账号发布"
+        },
+        {
+          "id": "mainland-queue-014",
+          "workId": "avengers-endgame-2019-film",
+          "title": "复仇者联盟4 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ss46050",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        },
+        {
+          "id": "mainland-queue-069",
+          "workId": "avengers-endgame-2019-film",
+          "title": "复仇者联盟4 · 电视预告入口（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ss46050",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -15601,6 +16646,30 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube official Marvel Entertainment channel result; browser playback check"
+        },
+        {
+          "id": "mainland-queue-023",
+          "workId": "captain-marvel-2019-film",
+          "title": "惊奇队长 · 预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/media/md28224127",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        },
+        {
+          "id": "mainland-queue-083",
+          "workId": "captain-marvel-2019-film",
+          "title": "惊奇队长 · 花絮入口 02（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/media/md28224127",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -16398,6 +17467,30 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube oEmbed title/channel check; Sony Pictures Entertainment official channel"
+        },
+        {
+          "id": "mainland-queue-030",
+          "workId": "spider-man-far-from-home-2019-film",
+          "title": "蜘蛛侠：英雄远征 · PV1入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep732377",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        },
+        {
+          "id": "mainland-queue-067",
+          "workId": "spider-man-far-from-home-2019-film",
+          "title": "蜘蛛侠：英雄远征 · 花絮入口（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep732377",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -16940,6 +18033,30 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube official Marvel Entertainment channel result; browser playback check"
+        },
+        {
+          "id": "mainland-queue-024",
+          "workId": "black-widow-2021-film",
+          "title": "黑寡妇 · 预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/media/md28233778",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        },
+        {
+          "id": "mainland-queue-084",
+          "workId": "black-widow-2021-film",
+          "title": "黑寡妇 · 花絮入口 02（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/media/md28233778",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -17171,7 +18288,34 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "hawkeye-overseas-trailer",
+          "workId": "hawkeye-2021-series",
+          "title": "Hawkeye · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=5VYb3B1ETlk",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/5VYb3B1ETlk?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "hawkeye-overseas-promo",
+          "workId": "hawkeye-2021-series",
+          "title": "Hawkeye · Friends Partners宣传片",
+          "kind": "promo",
+          "region": "overseas",
+          "provider": "IGN（授权预告媒体）",
+          "url": "https://www.youtube.com/watch?v=yu_DFKGxPAs",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/yu_DFKGxPAs?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube public promotional trailer page; IGN authorized publisher; yt-dlp playback-format check at 1080p"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -17389,7 +18533,46 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "loki-overseas-trailer",
+          "workId": "loki-2021-series",
+          "title": "Loki · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=nW948Va-l10",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/nW948Va-l10?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "loki-overseas-trailer-2",
+          "workId": "loki-2021-series",
+          "title": "Loki Season 2 · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=dug56u8NN7g",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/dug56u8NN7g?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "mainland-queue-054",
+          "workId": "loki-2021-series",
+          "title": "洛基 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩公开页面",
+          "url": "https://www.bilibili.com/bangumi/play/ss343255",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -17860,6 +19043,18 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube verified Sony Pictures Entertainment channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-031",
+          "workId": "spider-man-no-way-home-2021-film",
+          "title": "蜘蛛侠：英雄无归 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ss343255",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -18093,7 +19288,34 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "falcon-winter-soldier-overseas-trailer",
+          "workId": "the-falcon-and-the-winter-soldier-2021-series",
+          "title": "The Falcon and the Winter Soldier · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=IWBsDaFWyTE",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/IWBsDaFWyTE?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "falcon-winter-soldier-overseas-trailer-2",
+          "workId": "the-falcon-and-the-winter-soldier-2021-series",
+          "title": "The Falcon and the Winter Soldier · Final Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=ojGHE581lsM",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/ojGHE581lsM?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -18248,6 +19470,18 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube verified Sony Pictures Entertainment channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-042",
+          "workId": "venom-let-there-be-carnage-2021-film",
+          "title": "毒液2 · 预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep1113251",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -18336,7 +19570,46 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "wandavision-overseas-trailer",
+          "workId": "wandavision-2021-series",
+          "title": "WandaVision · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=sj9J2ecsSpo",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/sj9J2ecsSpo?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "wandavision-overseas-trailer-2",
+          "workId": "wandavision-2021-series",
+          "title": "WandaVision · Official Trailer 2",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=UBhlqe2OTt4",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/UBhlqe2OTt4?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "mainland-queue-053",
+          "workId": "wandavision-2021-series",
+          "title": "旺达幻视 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩公开页面",
+          "url": "https://www.bilibili.com/bangumi/play/ss343255",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -18419,7 +19692,46 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "what-if-overseas-trailer",
+          "workId": "what-if-2021-animated-series",
+          "title": "What If…? · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=x9D0uUKJ5KI",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/x9D0uUKJ5KI?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "what-if-overseas-trailer-2",
+          "workId": "what-if-2021-animated-series",
+          "title": "What If…? Season 2 · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=TiEVqZ2Bc_c",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/TiEVqZ2Bc_c?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "mainland-queue-055",
+          "workId": "what-if-2021-animated-series",
+          "title": "假如……？ · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩公开页面",
+          "url": "https://www.bilibili.com/bangumi/play/ss343255",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -18663,6 +19975,18 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube verified Marvel Entertainment channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-052",
+          "workId": "doctor-strange-in-the-multiverse-of-madness-2022-film",
+          "title": "奇异博士2 · 公开预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep777407?theme=movie",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -18907,7 +20231,34 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "moon-knight-overseas-trailer",
+          "workId": "moon-knight-2022-series",
+          "title": "Moon Knight · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=x7Krla_UxRg",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/x7Krla_UxRg?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "moon-knight-overseas-clip",
+          "workId": "moon-knight-2022-series",
+          "title": "Moon Knight · Rise宣传片",
+          "kind": "clip",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=ZPCJvTq9wiU",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/ZPCJvTq9wiU?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -19075,7 +20426,34 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "ms-marvel-overseas-trailer",
+          "workId": "ms-marvel-2022-series",
+          "title": "Ms. Marvel · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=m9EX0f6V11Y",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/m9EX0f6V11Y?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "ms-marvel-overseas-clip",
+          "workId": "ms-marvel-2022-series",
+          "title": "Ms. Marvel · Destiny宣传片",
+          "kind": "clip",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=BaO_h8Z56Tk",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/BaO_h8Z56Tk?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -19168,7 +20546,34 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "she-hulk-overseas-trailer",
+          "workId": "she-hulk-attorney-at-law-2022-series",
+          "title": "She-Hulk: Attorney at Law · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=u7JsKhI2An0",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/u7JsKhI2An0?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "she-hulk-overseas-trailer-2",
+          "workId": "she-hulk-attorney-at-law-2022-series",
+          "title": "She-Hulk: Attorney at Law · Official Trailer 2",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=gim2kprjL50",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/gim2kprjL50?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -19673,6 +21078,43 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube verified Marvel Entertainment channel; browser video element playback check"
+        },
+        {
+          "id": "guardians-vol-3-overseas-trailer-2",
+          "workId": "guardians-of-the-galaxy-vol-3-2023-film",
+          "title": "Guardians of the Galaxy Vol. 3 · New Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=JqcncLPi9zw",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/JqcncLPi9zw?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "mainland-queue-021",
+          "workId": "guardians-of-the-galaxy-vol-3-2023-film",
+          "title": "银河护卫队3 · PV入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ss44678",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        },
+        {
+          "id": "mainland-queue-072",
+          "workId": "guardians-of-the-galaxy-vol-3-2023-film",
+          "title": "银河护卫队3 · 花絮入口（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ss44678",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -19970,7 +21412,34 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "secret-invasion-overseas-trailer",
+          "workId": "secret-invasion-2023-series",
+          "title": "Secret Invasion · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=Tp_YZNqNBhw",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/Tp_YZNqNBhw?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "secret-invasion-overseas-trailer-2",
+          "workId": "secret-invasion-2023-series",
+          "title": "Secret Invasion · Official Trailer 2",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=qZVTkn2NjS0",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/qZVTkn2NjS0?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -20073,6 +21542,18 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube verified Sony Pictures Entertainment channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-032",
+          "workId": "spider-man-across-the-spider-verse-2023-animated-film",
+          "title": "蜘蛛侠：纵横宇宙 · PV2入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep752751",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；页面可能存在会员或地区限制，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -20441,7 +21922,34 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "agatha-overseas-trailer",
+          "workId": "agatha-all-along-2024-series",
+          "title": "Agatha All Along · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=R9pXbNz6Vbw",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/R9pXbNz6Vbw?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "agatha-overseas-teaser",
+          "workId": "agatha-all-along-2024-series",
+          "title": "Agatha All Along · Teaser Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=ARulRbzM7Jw",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/ARulRbzM7Jw?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -20590,6 +22098,30 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube verified Marvel Entertainment channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-040",
+          "workId": "deadpool-wolverine-2024-film",
+          "title": "死侍与金刚狼 · 公开预告入口（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep1113304",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；页面含预告花絮条目，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        },
+        {
+          "id": "mainland-queue-081",
+          "workId": "deadpool-wolverine-2024-film",
+          "title": "死侍与金刚狼 · 花絮入口 02（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep1113304",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -20672,7 +22204,34 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "echo-overseas-trailer",
+          "workId": "echo-2024-series",
+          "title": "Echo · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=AFUKnherhuw",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/AFUKnherhuw?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "echo-overseas-clip",
+          "workId": "echo-2024-series",
+          "title": "Echo · Hurt宣传片",
+          "kind": "clip",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=g0f1o-KGWPM",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/g0f1o-KGWPM?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -21001,6 +22560,30 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "哔哩哔哩电影正版剧集页；页面标注 PV2 预告；浏览器播放器实际播放检查"
+        },
+        {
+          "id": "mainland-queue-043",
+          "workId": "venom-the-last-dance-2024-film",
+          "title": "毒液：最后一舞 · PV2入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep1113251",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        },
+        {
+          "id": "mainland-queue-082",
+          "workId": "venom-the-last-dance-2024-film",
+          "title": "毒液：最后一舞 · 花絮入口 02（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep1113251",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -21097,7 +22680,34 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "x-men-97-overseas-trailer",
+          "workId": "x-men-97-2024-animated-series",
+          "title": "X-Men ’97 · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=pv3Ss8o9gGQ",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/pv3Ss8o9gGQ?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "x-men-97-overseas-trailer-2",
+          "workId": "x-men-97-2024-animated-series",
+          "title": "X-Men ’97 · Final Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=mp1Pax-QHlA",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/mp1Pax-QHlA?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -21196,6 +22806,18 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube verified Marvel Entertainment channel; browser video element playback check"
+        },
+        {
+          "id": "mainland-queue-010",
+          "workId": "captain-america-brave-new-world-2025-film",
+          "title": "美国队长4 · PV2入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep1552700",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -21311,7 +22933,34 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "daredevil-born-again-overseas-trailer",
+          "workId": "daredevil-born-again-2025-series",
+          "title": "Daredevil: Born Again · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=7xALolZzhSM",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/7xALolZzhSM?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "daredevil-born-again-overseas-trailer-2",
+          "workId": "daredevil-born-again-2025-series",
+          "title": "Daredevil: Born Again Season 2 · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=U1MqJBVn8Rk",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/U1MqJBVn8Rk?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -21546,7 +23195,34 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "ironheart-overseas-trailer",
+          "workId": "ironheart-2025-series",
+          "title": "Ironheart · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=WpW36ldAqnM",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/WpW36ldAqnM?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        },
+        {
+          "id": "ironheart-overseas-trailer-2",
+          "workId": "ironheart-2025-series",
+          "title": "Ironheart · Official Trailer 2",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=r6j-wSIqJJ0",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/r6j-wSIqJJ0?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "YouTube verified Marvel Entertainment channel; yt-dlp playback-format check at 1080p"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -21977,6 +23653,18 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "哔哩哔哩电影正版剧集页；页面标注 PV1 预告；浏览器播放器实际播放检查"
+        },
+        {
+          "id": "mainland-queue-044",
+          "workId": "thunderbolts-2025-film",
+          "title": "雷霆特攻队* · PV入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep1693160",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -22181,6 +23869,30 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "哔哩哔哩电影正版剧集页；页面标注 PV1 预告；浏览器播放器检查"
+        },
+        {
+          "id": "mainland-queue-015",
+          "workId": "avengers-doomsday-2026-film",
+          "title": "复仇者联盟5：毁灭之日 · PV1入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep4880235",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        },
+        {
+          "id": "mainland-queue-086",
+          "workId": "avengers-doomsday-2026-film",
+          "title": "复仇者联盟5 · 预告入口 02（待播放核验）",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep4880235",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 公开电影页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
       "watchLinks": []
@@ -22399,7 +24111,20 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "mainland-queue-034",
+          "workId": "spider-man-brand-new-day-2026-film",
+          "title": "蜘蛛侠：崭新之日 · 官方预告入口（待播放核验）",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩番剧",
+          "url": "https://www.bilibili.com/bangumi/play/ss218526",
+          "status": "source-verified",
+          "checkedAt": "2026-09-02",
+          "source": "Bilibili 官方系列页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -46847,10 +48572,12 @@
     "officialDigitalEpisodeMismatchSeries": 6,
     "personPortraitCount": 1315,
     "personRealPortraitCount": 348,
-    "mediaCount": 67,
-    "playbackVerifiedMediaCount": 67,
-    "mainlandMediaCount": 17,
-    "overseasMediaCount": 50,
+    "mediaCount": 203,
+    "playbackVerifiedMediaCount": 117,
+    "mainlandMediaCount": 103,
+    "overseasMediaCount": 100,
+    "mainlandPlaybackVerifiedMediaCount": 17,
+    "overseasPlaybackVerifiedMediaCount": 100,
     "watchLinkCount": 0,
     "untranslated": 0,
     "gaps": [
@@ -46858,7 +48585,7 @@
       "23 个有公开单集列表的 Marvel 官方数字系列已索引 1,881 个唯一详情页；其中 17 个系列与页面标称总数一致，6 个系列保留计数差异待核。无公开单集列表的节目与播客仍只有系列级档案",
       "角色出场为人工整理的首批关系，尚未覆盖全部角色与客串",
       "全部 1,315 位索引人物均有头像节点，其中 348 张为带许可来源的 Wikimedia Commons 真人照片，其余使用明确标注的本地姓名身份头像；95 条记录仍使用原创档案设计海报，真实海报与经典剧照需继续逐条核验",
-      "已接入 67 条大陆／海外公开预告与片段，并完成播放器级来源标记；尚未覆盖的作品继续显示无合规媒体状态，不把资料页或搜索页当作播放器"
+      "已接入 203 条大陆／海外公开预告与片段索引，其中 117 条完成播放器级来源标记；待核验入口不会在前台显示播放按钮，不把资料页或搜索页当作播放器"
     ]
   }
 }

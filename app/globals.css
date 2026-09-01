@@ -1141,6 +1141,397 @@ svg {
     transform: translateX(-42%);
   }
 }
+.lore-section {
+  border-top: 1px solid #2c384a;
+}
+.lore-intro,
+.armor-heading,
+.storyline-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 28px;
+}
+.lore-intro {
+  margin: 25px 0 18px;
+  padding: 20px 0;
+  border-top: 1px solid #2f3b4d;
+  border-bottom: 1px solid #2f3b4d;
+}
+.lore-intro strong,
+.armor-heading h3,
+.storyline-heading h3 {
+  color: #d9e0eb;
+  font-size: 18px;
+  font-weight: 500;
+}
+.lore-intro p,
+.armor-heading p {
+  max-width: 710px;
+  margin: 8px 0 0;
+  color: #8494ab;
+  font-size: 10px;
+  line-height: 1.8;
+}
+.lore-actions {
+  display: flex;
+  gap: 7px;
+  flex-shrink: 0;
+}
+.lore-actions button,
+.storyline-tabs button {
+  border: 1px solid #374457;
+  background: #111925;
+  color: #9cabc0;
+  cursor: pointer;
+  font: inherit;
+  font-size: 10px;
+  padding: 9px 12px;
+}
+.lore-actions button.selected,
+.storyline-tabs button.active {
+  border-color: #e45d73;
+  color: #f2d8dd;
+  background: #231b27;
+}
+.character-card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 13px;
+}
+.character-card {
+  position: relative;
+  min-height: 270px;
+  padding: 17px 15px 14px;
+  text-align: left;
+  border: 1px solid #364356;
+  border-radius: 2px;
+  background: linear-gradient(150deg, #192333, #0f151f 72%);
+  color: #dbe3ee;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+.character-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(135deg, transparent 55%, rgba(255,255,255,.07));
+}
+.character-card:hover,
+.character-card:focus-visible {
+  transform: translateY(-5px);
+  border-color: #e45d73;
+  box-shadow: 0 14px 28px rgba(0,0,0,.24);
+  outline: none;
+}
+.character-card.villain {
+  background: linear-gradient(150deg, #241e2e, #11131e 72%);
+}
+.card-corner {
+  display: block;
+  color: #71829b;
+  font-size: 7px;
+  letter-spacing: .16em;
+}
+.character-avatar {
+  display: grid;
+  place-items: center;
+  width: 67px;
+  height: 67px;
+  margin: 18px 0 14px;
+  border: 1px solid #71819a;
+  border-radius: 50%;
+  color: #f4dfe3;
+  background: radial-gradient(circle at 38% 30%, #e45d73, #5a293d 55%, #161522 56%);
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: .08em;
+}
+.character-card.villain .character-avatar,
+.lore-modal.villain .character-avatar {
+  background: radial-gradient(circle at 38% 30%, #a56de0, #46295c 55%, #161522 56%);
+}
+.character-card > small,
+.character-card > em,
+.lore-modal > small,
+.lore-modal-name {
+  display: block;
+  color: #8e9db2;
+  font-size: 9px;
+  font-style: normal;
+}
+.character-card > strong {
+  display: block;
+  margin: 5px 0 2px;
+  color: #f0f3f7;
+  font-size: 20px;
+  font-weight: 500;
+}
+.character-card-rule {
+  display: block;
+  margin: 15px 0 10px;
+  border-top: 1px solid #38475b;
+}
+.character-card-meta {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 5px 8px;
+  align-items: center;
+}
+.character-card-meta i {
+  color: #74849a;
+  font-size: 8px;
+  font-style: normal;
+}
+.character-card-meta b {
+  color: #e7a1ac;
+  font-size: 10px;
+  font-weight: 500;
+}
+.character-card-move {
+  display: block;
+  margin-top: 11px;
+  color: #b7c3d4;
+  font-size: 9px;
+  line-height: 1.6;
+}
+.armor-atlas,
+.storyline-atlas {
+  margin-top: 32px;
+  padding: 28px 0;
+  border-top: 1px solid #2f3b4d;
+  border-bottom: 1px solid #2f3b4d;
+}
+.armor-heading h3,
+.storyline-heading h3 {
+  margin: 9px 0 0;
+}
+.armor-heading > svg,
+.storyline-heading > svg {
+  flex-shrink: 0;
+  color: #aab8ca;
+}
+.armor-strip {
+  display: flex;
+  gap: 8px;
+  margin-top: 22px;
+  padding-bottom: 7px;
+  overflow-x: auto;
+  scrollbar-color: #4c5a70 #111722;
+}
+.armor-chip {
+  flex: 0 0 142px;
+  min-height: 92px;
+  padding: 11px;
+  border: 1px solid #374457;
+  background: linear-gradient(145deg, #1a2432, #111721);
+}
+.armor-chip > span,
+.armor-chip > small {
+  display: block;
+  color: #7789a3;
+  font-size: 8px;
+}
+.armor-chip > strong {
+  display: block;
+  margin: 12px 0 8px;
+  color: #d8e0ec;
+  font-size: 11px;
+  font-weight: 500;
+}
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 17px;
+  color: #e6929e;
+  font-size: 10px;
+}
+.storyline-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 21px 0 0;
+  overflow-x: auto;
+}
+.storyline-tabs button {
+  min-width: 145px;
+  text-align: left;
+}
+.storyline-tabs small {
+  display: block;
+  margin-top: 8px;
+  color: #76879e;
+  font-size: 8px;
+}
+.storyline-detail {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+  padding: 22px;
+  border: 1px solid #344155;
+  background: #121a26;
+}
+.storyline-number {
+  color: #e45d73;
+  font-size: 11px;
+  letter-spacing: .16em;
+}
+.storyline-detail h4 {
+  margin: 11px 0 9px;
+  color: #edf1f6;
+  font-size: 24px;
+  font-weight: 500;
+}
+.storyline-detail p {
+  max-width: 410px;
+  margin: 0;
+  color: #a8b6c9;
+  font-size: 11px;
+  line-height: 1.9;
+}
+.storyline-detail ol {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.storyline-detail li {
+  border-bottom: 1px solid #2b3749;
+}
+.storyline-detail li a,
+.storyline-detail li span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 42px;
+  color: #ccd6e3;
+  font-size: 10px;
+}
+.lore-modal-backdrop {
+  position: fixed;
+  z-index: 30;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(4, 7, 12, .82);
+}
+.lore-modal {
+  position: relative;
+  width: min(510px, 100%);
+  max-height: min(760px, 90vh);
+  overflow-y: auto;
+  padding: 28px;
+  border: 1px solid #4d5d75;
+  background: linear-gradient(155deg, #1a2637, #0d141e 72%);
+  box-shadow: 0 24px 80px rgba(0,0,0,.42);
+}
+.lore-modal-close {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+}
+.lore-modal .character-avatar.large {
+  width: 88px;
+  height: 88px;
+  margin-top: 24px;
+  font-size: 21px;
+}
+.lore-modal h3 {
+  margin: 8px 0 0;
+  color: #f1f4f8;
+  font-size: 33px;
+  font-weight: 500;
+}
+.lore-modal > p:not(.lore-modal-name) {
+  color: #b7c4d5;
+  font-size: 12px;
+  line-height: 1.9;
+}
+.lore-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  margin: 19px 0;
+}
+.lore-stat-grid span {
+  padding: 13px;
+  border: 1px solid #36465b;
+  background: #111a27;
+}
+.lore-stat-grid b,
+.lore-stat-grid small {
+  display: block;
+}
+.lore-stat-grid b {
+  color: #efabb6;
+  font-size: 20px;
+  font-weight: 500;
+}
+.lore-stat-grid small {
+  margin-top: 5px;
+  color: #7e8fa7;
+  font-size: 8px;
+}
+.lore-move {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 12px;
+  border-left: 2px solid #e45d73;
+  color: #d6deea;
+  background: #131d2b;
+  font-size: 10px;
+}
+.lore-modal h4 {
+  margin: 23px 0 8px;
+  color: #cdd7e5;
+  font-size: 12px;
+  font-weight: 500;
+}
+.lore-modal ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 17px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.lore-modal li {
+  border-bottom: 1px solid #2b3749;
+}
+.lore-modal li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 35px;
+  color: #9dacbf;
+  font-size: 9px;
+}
+
+@media (max-width: 1100px) {
+  .character-card-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  .lore-intro,
+  .armor-heading,
+  .storyline-heading { display: block; }
+  .lore-actions { margin-top: 15px; }
+  .character-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .character-card { min-height: 245px; padding: 13px 11px; }
+  .character-card > strong { font-size: 17px; }
+  .character-avatar { width: 55px; height: 55px; margin: 14px 0 11px; }
+  .storyline-detail { grid-template-columns: 1fr; gap: 20px; padding: 17px; }
+  .storyline-detail h4 { font-size: 21px; }
+  .lore-modal-backdrop { padding: 12px; }
+  .lore-modal { padding: 22px 18px; }
+  .lore-modal h3 { font-size: 27px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .poster-comment-ticker > div {
     animation: none;

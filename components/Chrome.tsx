@@ -5,6 +5,7 @@ import { useState } from "react";
 export const navigation = [
   ["时间长廊", "timeline"],
   ["作品档案", "archive"],
+  ["角色卡牌", "lore"],
   ["关系宇宙", "relationships"],
   ["视听厅", "listening"],
   ["影迷现场", "community"],
