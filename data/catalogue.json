@@ -1,6 +1,6 @@
 {
   "cutoff": "2026-08-31",
-  "generatedAt": "2026-09-01T16:03:22.852Z",
+  "generatedAt": "2026-09-01T16:15:43.547Z",
   "works": [
     {
       "id": "captain-america-1944-short",
@@ -4282,7 +4282,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "spider-man-2-mainland-trailer",
+          "workId": "spider-man-2-2004-film",
+          "title": "蜘蛛侠2 · 预告",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep446702?theme=movie",
+          "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1M3411x7zv&page=1&autoplay=1&high_quality=1&danmaku=0",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "哔哩哔哩电影正版剧集页；页面标注预告；浏览器播放器实际播放检查"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -6800,6 +6814,19 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        },
+        {
+          "id": "captain-america-first-mainland-trailer",
+          "workId": "captain-america-the-first-avenger-2011-film",
+          "title": "美国队长 · PV2预告",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep1198743",
+          "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1SFiiYjEGY&page=1&autoplay=1&high_quality=1&danmaku=0",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "哔哩哔哩电影正版剧集页；页面标注 PV2 预告；浏览器播放器实际播放检查"
         }
       ],
       "watchLinks": []
@@ -7719,7 +7746,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "amazing-spider-man-mainland-trailer",
+          "workId": "the-amazing-spider-man-2012-film",
+          "title": "超凡蜘蛛侠 · PV2预告",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep446709",
+          "embedUrl": "https://player.bilibili.com/player.html?bvid=BV173411x7Ej&page=1&autoplay=1&high_quality=1&danmaku=0",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "哔哩哔哩电影正版剧集页；页面标注 PV2 预告；浏览器播放器实际播放检查"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -8824,7 +8865,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "thor-dark-world-overseas-trailer",
+          "workId": "thor-the-dark-world-2013-film",
+          "title": "Thor: The Dark World · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=npvJ9FTgZbM",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/npvJ9FTgZbM?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified Marvel Entertainment channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -10139,6 +10194,19 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        },
+        {
+          "id": "avengers-age-of-ultron-mainland-trailer",
+          "workId": "avengers-age-of-ultron-2015-film",
+          "title": "复仇者联盟2：奥创纪元 · PV1预告",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep777037",
+          "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1Tz4y1L7tq&page=1&autoplay=1&high_quality=1&danmaku=0",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "哔哩哔哩电影正版剧集页；页面标注 PV1 预告；浏览器播放器实际播放检查"
         }
       ],
       "watchLinks": []
@@ -13803,7 +13871,21 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "ant-man-and-the-wasp-overseas-trailer",
+          "workId": "ant-man-and-the-wasp-2018-film",
+          "title": "Ant-Man and the Wasp · Official Trailer #1",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=8_rTIAOohas",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/8_rTIAOohas?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified Marvel Entertainment channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -15032,7 +15114,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "venom-overseas-trailer",
+          "workId": "venom-2018-film",
+          "title": "Venom · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Sony Pictures Entertainment",
+          "url": "https://www.youtube.com/watch?v=u9Mv98Gr5pY",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/u9Mv98Gr5pY?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified Sony Pictures Entertainment channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -17569,7 +17665,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "spider-man-no-way-home-overseas-trailer",
+          "workId": "spider-man-no-way-home-2021-film",
+          "title": "Spider-Man: No Way Home · Official Teaser Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Sony Pictures Entertainment",
+          "url": "https://www.youtube.com/watch?v=rt-2cxAiPJk",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/rt-2cxAiPJk?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified Sony Pictures Entertainment channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -18257,7 +18367,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "black-panther-wakanda-forever-overseas-trailer",
+          "workId": "black-panther-wakanda-forever-2022-film",
+          "title": "Black Panther: Wakanda Forever · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=_Z3QKkl1WyM",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/_Z3QKkl1WyM?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified Marvel Entertainment channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -18330,7 +18454,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "doctor-strange-multiverse-overseas-trailer",
+          "workId": "doctor-strange-in-the-multiverse-of-madness-2022-film",
+          "title": "Doctor Strange in the Multiverse of Madness · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=aWzlQ2N6qqg",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/aWzlQ2N6qqg?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified Marvel Entertainment channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -19686,7 +19824,34 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "spider-man-across-mainland-trailer",
+          "workId": "spider-man-across-the-spider-verse-2023-animated-film",
+          "title": "蜘蛛侠：纵横宇宙 · PV2预告",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep752751",
+          "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1LP41127F4&page=1&autoplay=1&high_quality=1&danmaku=0",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "哔哩哔哩电影正版剧集页；页面标注 PV2 预告；浏览器播放器实际播放检查"
+        },
+        {
+          "id": "spider-man-across-overseas-trailer",
+          "workId": "spider-man-across-the-spider-verse-2023-animated-film",
+          "title": "Spider-Man: Across the Spider-Verse · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Sony Pictures Entertainment",
+          "url": "https://www.youtube.com/watch?v=cqGjhVJWtEg",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/cqGjhVJWtEg?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified Sony Pictures Entertainment channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -20189,7 +20354,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "deadpool-wolverine-overseas-trailer",
+          "workId": "deadpool-wolverine-2024-film",
+          "title": "Deadpool & Wolverine · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=73_1biulkYk",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/73_1biulkYk?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified Marvel Entertainment channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -20558,7 +20737,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "venom-last-dance-mainland-trailer",
+          "workId": "venom-the-last-dance-2024-film",
+          "title": "毒液：最后一舞 · PV2预告",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep1113251",
+          "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1U71LY1EzM&page=1&autoplay=1&high_quality=1&danmaku=0",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "哔哩哔哩电影正版剧集页；页面标注 PV2 预告；浏览器播放器实际播放检查"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -20726,7 +20919,34 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "captain-america-brave-new-world-mainland-trailer",
+          "workId": "captain-america-brave-new-world-2025-film",
+          "title": "美国队长4：勇敢新世界 · PV2预告",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep1552700",
+          "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1iXrBYjENj&page=1&autoplay=1&high_quality=1&danmaku=0",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "哔哩哔哩电影正版剧集页；页面标注 PV2 预告；浏览器播放器实际播放检查"
+        },
+        {
+          "id": "captain-america-brave-new-world-overseas-trailer",
+          "workId": "captain-america-brave-new-world-2025-film",
+          "title": "Captain America: Brave New World · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=1pHDWnXmK7Y",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/1pHDWnXmK7Y?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified Marvel Entertainment channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -21404,7 +21624,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "fantastic-four-first-steps-overseas-trailer",
+          "workId": "the-fantastic-four-first-steps-2025-film",
+          "title": "The Fantastic Four: First Steps · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=pAsmrKyMqaA",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/pAsmrKyMqaA?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified Marvel Entertainment channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -46362,10 +46596,10 @@
     "officialDigitalEpisodeMismatchSeries": 6,
     "personPortraitCount": 1315,
     "personRealPortraitCount": 348,
-    "mediaCount": 32,
-    "playbackVerifiedMediaCount": 32,
-    "mainlandMediaCount": 10,
-    "overseasMediaCount": 22,
+    "mediaCount": 49,
+    "playbackVerifiedMediaCount": 49,
+    "mainlandMediaCount": 17,
+    "overseasMediaCount": 32,
     "watchLinkCount": 0,
     "untranslated": 0,
     "gaps": [
@@ -46373,7 +46607,7 @@
       "23 个有公开单集列表的 Marvel 官方数字系列已索引 1,881 个唯一详情页；其中 17 个系列与页面标称总数一致，6 个系列保留计数差异待核。无公开单集列表的节目与播客仍只有系列级档案",
       "角色出场为人工整理的首批关系，尚未覆盖全部角色与客串",
       "全部 1,315 位索引人物均有头像节点，其中 348 张为带许可来源的 Wikimedia Commons 真人照片，其余使用明确标注的本地姓名身份头像；95 条记录仍使用原创档案设计海报，真实海报与经典剧照需继续逐条核验",
-      "已接入 32 条大陆／海外公开预告与片段，并完成播放器级来源标记；尚未覆盖的作品继续显示无合规媒体状态，不把资料页或搜索页当作播放器"
+      "已接入 49 条大陆／海外公开预告与片段，并完成播放器级来源标记；尚未覆盖的作品继续显示无合规媒体状态，不把资料页或搜索页当作播放器"
     ]
   }
 }
