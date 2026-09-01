@@ -403,6 +403,26 @@ test("no unreviewed media silently becomes verified playback", () => {
       assert.ok(qualifiedWatchLink(link, new Date("2026-08-31T12:00:00Z")));
   }
 });
+test("reviewed preview media has a direct regional player and source page", () => {
+  assert.ok(data.audit.playbackVerifiedMediaCount > 0);
+  assert.ok(data.audit.mainlandMediaCount > 0);
+  assert.ok(data.audit.overseasMediaCount > 0);
+  for (const work of data.works) {
+    for (const media of work.media) {
+      assert.equal(media.status, "playback-verified");
+      assert.ok(media.checkedAt);
+      const source = new URL(media.url);
+      const embed = new URL(media.embedUrl);
+      if (media.region === "mainland") {
+        assert.equal(source.hostname, "www.bilibili.com");
+        assert.equal(embed.hostname, "player.bilibili.com");
+      } else {
+        assert.equal(source.hostname, "www.youtube.com");
+        assert.equal(embed.hostname, "www.youtube-nocookie.com");
+      }
+    }
+  }
+});
 test("film gate requires every assurance and expires after 30 days", () => {
   const base = {
     url: "https://official.example/movie",

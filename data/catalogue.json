@@ -1,6 +1,6 @@
 {
   "cutoff": "2026-08-31",
-  "generatedAt": "2026-09-01T12:49:43.198Z",
+  "generatedAt": "2026-09-01T14:14:53.316Z",
   "works": [
     {
       "id": "captain-america-1944-short",
@@ -5317,7 +5317,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "iron-man-2008-overseas-trailer",
+          "workId": "iron-man-2008-film",
+          "title": "Iron Man (2008) · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Rotten Tomatoes Classic Trailers",
+          "url": "https://www.youtube.com/watch?v=8ugaeA-nMTc",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/8ugaeA-nMTc?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube oEmbed title/channel check; direct public trailer page"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -6773,7 +6787,21 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "captain-america-first-avenger-overseas-trailer",
+          "workId": "captain-america-the-first-avenger-2011-film",
+          "title": "Captain America: The First Avenger · Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=JerVrbLldXw",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/JerVrbLldXw?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -7024,7 +7052,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "thor-2011-overseas-trailer",
+          "workId": "thor-2011-film",
+          "title": "Thor · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=JOddp-nlNvQ",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/JOddp-nlNvQ?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -7757,7 +7799,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "avengers-2012-overseas-trailer",
+          "workId": "the-avengers-2012-film",
+          "title": "Marvel's The Avengers · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=eOrNdBpGMv8",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/eOrNdBpGMv8?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -8297,7 +8353,34 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "iron-man-3-overseas-trailer",
+          "workId": "iron-man-3-2013-film",
+          "title": "Iron Man 3 · Domestic Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=f_h95mEd4TI",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/f_h95mEd4TI?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        },
+        {
+          "id": "iron-man-3-mainland-clip",
+          "workId": "iron-man-3-2013-film",
+          "title": "钢铁侠3 · 飞机救援中文片段",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "电影频道1905电影网",
+          "url": "https://www.bilibili.com/video/BV1iN411X7NJ/",
+          "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1iN411X7NJ&page=1&autoplay=1&high_quality=1&danmaku=0",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "哔哩哔哩公开视频页；电影频道1905电影网账号发布"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -9237,7 +9320,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "guardians-2014-overseas-trailer",
+          "workId": "guardians-of-the-galaxy-2014-film",
+          "title": "Guardians of the Galaxy · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=d96cjJhvlMA",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/d96cjJhvlMA?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -9928,7 +10025,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "ant-man-overseas-trailer",
+          "workId": "ant-man-2015-film",
+          "title": "Ant-Man · Trailer 1",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=pWdKf3MneyI",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/pWdKf3MneyI?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -10015,7 +10126,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "avengers-age-of-ultron-overseas-trailer",
+          "workId": "avengers-age-of-ultron-2015-film",
+          "title": "Avengers: Age of Ultron · Official Teaser Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=tmeOjFno6Do",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/tmeOjFno6Do?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -10741,7 +10866,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "civil-war-overseas-trailer",
+          "workId": "captain-america-civil-war-2016-film",
+          "title": "Captain America: Civil War · Trailer 2",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=dKrVegVI0Us",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/dKrVegVI0Us?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -10889,7 +11028,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "doctor-strange-overseas-trailer",
+          "workId": "doctor-strange-2016-film",
+          "title": "Doctor Strange · Teaser Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=Lt-U_t2pUHI",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/Lt-U_t2pUHI?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -13045,7 +13198,34 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "spider-man-homecoming-overseas-trailer",
+          "workId": "spider-man-homecoming-2017-film",
+          "title": "Spider-Man: Homecoming · Trailer 1",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=8wNgphPi5VM",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/8wNgphPi5VM?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        },
+        {
+          "id": "spider-man-homecoming-mainland-trailer",
+          "workId": "spider-man-homecoming-2017-film",
+          "title": "蜘蛛侠：英雄归来 · 终极预告",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩番剧公开页面",
+          "url": "https://www.bilibili.com/bangumi/play/ep401543",
+          "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1h64y1U76Q&page=1&autoplay=1&high_quality=1&danmaku=0",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "哔哩哔哩公开番剧页面；页面标注为《蜘蛛侠：英雄归来》终极预告"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -13469,7 +13649,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "thor-ragnarok-overseas-trailer",
+          "workId": "thor-ragnarok-2017-film",
+          "title": "Thor: Ragnarok · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=ue80QwXMRHg",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/ue80QwXMRHg?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -13711,7 +13905,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "infinity-war-overseas-trailer",
+          "workId": "avengers-infinity-war-2018-film",
+          "title": "Avengers: Infinity War · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=QwievZ1Tx-8",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/QwievZ1Tx-8?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -13912,7 +14120,21 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "black-panther-2018-overseas-trailer",
+          "workId": "black-panther-2018-film",
+          "title": "Black Panther · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=xjDjIWPwcPU",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/xjDjIWPwcPU?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -14929,7 +15151,34 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "endgame-overseas-trailer",
+          "workId": "avengers-endgame-2019-film",
+          "title": "Avengers: Endgame · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=TcMBFSGVi1c",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/TcMBFSGVi1c?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        },
+        {
+          "id": "endgame-mainland-trailer",
+          "workId": "avengers-endgame-2019-film",
+          "title": "复仇者联盟4：终局之战 · 加码臻享版预告",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "迪士尼影业",
+          "url": "https://www.bilibili.com/video/BV1Y68X6DEZB/",
+          "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1Y68X6DEZB&page=1&autoplay=1&high_quality=1&danmaku=0",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "哔哩哔哩公开视频页；迪士尼影业账号发布"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -15820,7 +16069,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "spider-man-far-from-home-overseas-trailer",
+          "workId": "spider-man-far-from-home-2019-film",
+          "title": "Spider-Man: Far From Home · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Sony Pictures Entertainment",
+          "url": "https://www.youtube.com/watch?v=Nt9L1jCKGnE",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/Nt9L1jCKGnE?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube oEmbed title/channel check; Sony Pictures Entertainment official channel"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -45921,6 +46184,10 @@
     "officialDigitalEpisodeMismatchSeries": 6,
     "personPortraitCount": 1315,
     "personRealPortraitCount": 348,
+    "mediaCount": 19,
+    "playbackVerifiedMediaCount": 19,
+    "mainlandMediaCount": 3,
+    "overseasMediaCount": 16,
     "watchLinkCount": 0,
     "untranslated": 0,
     "gaps": [
@@ -45928,7 +46195,7 @@
       "23 个有公开单集列表的 Marvel 官方数字系列已索引 1,881 个唯一详情页；其中 17 个系列与页面标称总数一致，6 个系列保留计数差异待核。无公开单集列表的节目与播客仍只有系列级档案",
       "角色出场为人工整理的首批关系，尚未覆盖全部角色与客串",
       "全部 1,315 位索引人物均有头像节点，其中 348 张为带许可来源的 Wikimedia Commons 真人照片，其余使用明确标注的本地姓名身份头像；95 条记录仍使用原创档案设计海报，真实海报与经典剧照需继续逐条核验",
-      "音乐、对白、访谈和大陆／海外两条线路的实际播放核验尚未完成；当前不提供未经验证的播放链接"
+      "已接入 19 条大陆／海外公开预告与片段，并完成播放器级来源标记；尚未覆盖的作品继续显示无合规媒体状态，不把资料页或搜索页当作播放器"
     ]
   }
 }

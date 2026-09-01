@@ -76,11 +76,18 @@ export default function WorkSpace({
       localStorage.setItem("marvel-region", r);
     } catch {}
   };
-  const media = work.media.filter(
-    (m) =>
-      m.region === region && m.kind === tab && m.status === "playback-verified",
+  const regionalMedia = work.media.filter(
+    (m) => m.region === region && m.status === "playback-verified",
   );
-  const current = media.find((m) => m.id === active);
+  const media = regionalMedia.filter(
+    (m) =>
+      m.kind === tab,
+  );
+  const displayMedia = media.length ? media : regionalMedia;
+  // Like the reference Zhou site, the first reviewed item is playable immediately;
+  // selecting a media card only changes the active item.
+  const current =
+    media.find((m) => m.id === active) ?? media[0] ?? regionalMedia[0];
   const officialMediaHubs = work.sources.filter((source, index, all) => {
     if (source.verification !== "editor-reviewed") return false;
     const officialWorkPage =
@@ -162,14 +169,24 @@ export default function WorkSpace({
             <div className="cinema-panel">
               <div className="cinema-screen">
                 {current?.embedUrl ? (
-                  <iframe
-                    key={current.id + region}
-                    title={current.title}
-                    src={current.embedUrl}
-                    allow="autoplay; fullscreen; picture-in-picture"
-                    allowFullScreen
-                    referrerPolicy="strict-origin-when-cross-origin"
-                  />
+                  <>
+                    <iframe
+                      key={current.id + region}
+                      title={current.title}
+                      src={current.embedUrl}
+                      allow="autoplay; fullscreen; picture-in-picture"
+                      allowFullScreen
+                      referrerPolicy="strict-origin-when-cross-origin"
+                    />
+                    <a
+                      className="cinema-open-source"
+                      href={current.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      在 {current.provider} 打开 ↗
+                    </a>
+                  </>
                 ) : (
                   <div className="player-empty">
                     <div className="cinema-archive-motion" aria-hidden="true">
@@ -244,18 +261,24 @@ export default function WorkSpace({
                 </button>
               </div>
               <div role="tabpanel" className="media-panel">
-                {media.length ||
+                {displayMedia.length ||
                 (tab === "trailer" &&
                   region === "overseas" &&
                   officialMediaHubs.length) ? (
                   <div className="media-resource-list">
-                    {media.map((m) => (
+                    {!media.length && displayMedia.length > 0 && (
+                      <small>
+                        本线路暂无“{tab === "trailer" ? "预告" : tab}”分类，先展示已核验的{" "}
+                        {displayMedia[0]?.kind === "clip" ? "片段" : "公开素材"}。
+                      </small>
+                    )}
+                    {displayMedia.map((m) => (
                       <button
                         className="button compact"
                         key={m.id}
                         onClick={() => setActive(m.id)}
                       >
-                        {m.title} · {m.provider}
+                        {m.title} · {m.provider} · {m.kind === "clip" ? "片段" : "预告"}
                       </button>
                     ))}
                     {tab === "trailer" && region === "overseas" &&

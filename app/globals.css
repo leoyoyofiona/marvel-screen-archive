@@ -2427,6 +2427,26 @@ svg {
   border: 0;
   display: block;
 }
+.cinema-open-source {
+  position: absolute;
+  z-index: 2;
+  right: 22px;
+  bottom: 22px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 11px;
+  border: 1px solid #ffffff55;
+  color: #fff;
+  background: #080b12cc;
+  font-size: 10px;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+}
+.cinema-open-source:hover {
+  color: #ff94a0;
+  border-color: #ff5367;
+}
 .player-empty {
   height: 100%;
   display: flex;

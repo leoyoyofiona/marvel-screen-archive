@@ -637,6 +637,22 @@ const output = {
     personRealPortraitCount: [...people.values()].filter(
       (person) => person.portraitKind === "wikimedia-commons",
     ).length,
+    mediaCount: works.reduce((total, work) => total + work.media.length, 0),
+    playbackVerifiedMediaCount: works.reduce(
+      (total, work) =>
+        total + work.media.filter((item) => item.status === "playback-verified").length,
+      0,
+    ),
+    mainlandMediaCount: works.reduce(
+      (total, work) =>
+        total + work.media.filter((item) => item.region === "mainland").length,
+      0,
+    ),
+    overseasMediaCount: works.reduce(
+      (total, work) =>
+        total + work.media.filter((item) => item.region === "overseas").length,
+      0,
+    ),
     watchLinkCount: 0,
     untranslated: works.filter((w) => !w.translated).length,
     gaps: [
@@ -644,7 +660,7 @@ const output = {
       "23 个有公开单集列表的 Marvel 官方数字系列已索引 1,881 个唯一详情页；其中 17 个系列与页面标称总数一致，6 个系列保留计数差异待核。无公开单集列表的节目与播客仍只有系列级档案",
       "角色出场为人工整理的首批关系，尚未覆盖全部角色与客串",
       `全部 ${people.size.toLocaleString("zh-CN")} 位索引人物均有头像节点，其中 ${[...people.values()].filter((person) => person.portraitKind === "wikimedia-commons").length.toLocaleString("zh-CN")} 张为带许可来源的 Wikimedia Commons 真人照片，其余使用明确标注的本地姓名身份头像；${works.filter((work) => work.poster?.startsWith("/media/archive-posters/")).length} 条记录仍使用原创档案设计海报，真实海报与经典剧照需继续逐条核验`,
-      "音乐、对白、访谈和大陆／海外两条线路的实际播放核验尚未完成；当前不提供未经验证的播放链接",
+      `已接入 ${media.length} 条大陆／海外公开预告与片段，并完成播放器级来源标记；尚未覆盖的作品继续显示无合规媒体状态，不把资料页或搜索页当作播放器`,
     ],
   },
 };

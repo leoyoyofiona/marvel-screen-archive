@@ -152,6 +152,10 @@ export type Catalogue = {
     archiveDesignPosterCount: number;
     personPortraitCount: number;
     personRealPortraitCount: number;
+    mediaCount: number;
+    playbackVerifiedMediaCount: number;
+    mainlandMediaCount: number;
+    overseasMediaCount: number;
     gaps: string[];
   };
 };

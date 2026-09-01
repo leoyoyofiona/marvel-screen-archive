@@ -334,6 +334,13 @@ export default function Archive({ data }: { data: ArchiveCatalogue }) {
                   {data.audit.watchLinkCount}
                   <small>合规全片链接</small>
                 </span>
+                <span>
+                  {data.audit.playbackVerifiedMediaCount}
+                  <small>
+                    已核验预告／片段 · 国内 {data.audit.mainlandMediaCount} / 海外{" "}
+                    {data.audit.overseasMediaCount}
+                  </small>
+                </span>
               </div>
               <ul>
                 {data.audit.gaps.map((g) => (
