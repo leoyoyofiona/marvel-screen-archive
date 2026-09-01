@@ -15,9 +15,11 @@ function posterHue(id: string) {
 export function Poster({
   work,
   decorative = false,
+  comment,
 }: {
   work: WorkPreview;
   decorative?: boolean;
+  comment?: { name: string; body: string };
 }) {
   const archiveStyle = {
     "--poster-hue": posterHue(work.id),
@@ -56,6 +58,18 @@ export function Poster({
       )}
       <div className="poster-shine" />
       <span className="poster-kind">{kindLabels[work.kind]}</span>
+      {comment && (
+        <div
+          className="poster-comment-ticker"
+          role="note"
+          aria-label={`影迷留言：${comment.name}：${comment.body}`}
+        >
+          <div>
+            <span>影迷 · {comment.name}</span>
+            <strong>{comment.body}</strong>
+          </div>
+        </div>
+      )}
       <div className="poster-hover">
         <span>{work.universe}</span>
         <strong>
@@ -69,10 +83,12 @@ export function WorkCard({
   work,
   saved,
   onSave,
+  comment,
 }: {
   work: WorkPreview;
   saved: boolean;
   onSave: (id: string) => void;
+  comment?: { name: string; body: string };
 }) {
   return (
     <article className="work-card">
@@ -80,7 +96,7 @@ export function WorkCard({
         href={"/works/" + work.id}
         aria-label={"查看《" + work.title + "》"}
       >
-        <Poster work={work} />
+        <Poster work={work} comment={comment} />
       </Link>
       <div className="work-card-title">
         <Link href={"/works/" + work.id}>

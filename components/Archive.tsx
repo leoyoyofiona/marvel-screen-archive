@@ -42,7 +42,10 @@ export default function Archive({ data }: { data: ArchiveCatalogue }) {
     [page, setPage] = useState(1),
     [saved, setSaved] = useState<string[]>([]),
     [auditOpen, setAuditOpen] = useState(false),
-    [notice, setNotice] = useState("");
+    [notice, setNotice] = useState(""),
+    [posterComments, setPosterComments] = useState<
+      Record<string, { name: string; body: string }>
+    >({});
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
       try {
@@ -68,6 +71,36 @@ export default function Archive({ data }: { data: ArchiveCatalogue }) {
       } catch {}
     });
     return () => cancelAnimationFrame(frame);
+  }, []);
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch("/api/comments?summary=1", {
+      signal: controller.signal,
+      cache: "no-store",
+    })
+      .then((response) => {
+        if (!response.ok) throw new Error("COMMENTS_UNAVAILABLE");
+        return response.json();
+      })
+      .then(
+        (result: {
+          comments?: { work_id: string; name: string; body: string }[];
+        }) => {
+          const next: Record<string, { name: string; body: string }> = {};
+          for (const comment of result.comments ?? []) {
+            if (comment.work_id && comment.name && comment.body)
+              next[comment.work_id] = {
+                name: comment.name,
+                body: comment.body,
+              };
+          }
+          setPosterComments(next);
+        },
+      )
+      .catch((reason) => {
+        if (reason?.name !== "AbortError") setPosterComments({});
+      });
+    return () => controller.abort();
   }, []);
   useEffect(() => {
     try {
@@ -448,6 +481,7 @@ export default function Archive({ data }: { data: ArchiveCatalogue }) {
                     work={w}
                     saved={saved.includes(w.id)}
                     onSave={toggleSaved}
+                    comment={posterComments[w.id]}
                   />
                 ))}
               </div>

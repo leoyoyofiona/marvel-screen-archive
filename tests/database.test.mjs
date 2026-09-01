@@ -23,10 +23,11 @@ test("isolated PostgreSQL schema: unique likes, moderation, consent withdrawal",
       1,
     );
     await db.query(
-      "INSERT INTO marvel_comments(id,visitor_id,name,body) VALUES($1,$2,$3,$4)",
+      "INSERT INTO marvel_comments(id,visitor_id,work_id,name,body) VALUES($1,$2,$3,$4,$5)",
       [
         "test-comment",
         "unit-test-only",
+        "iron-man-2008-film",
         "测试影迷",
         "独立测试记录，不是真实用户评价。",
       ],
@@ -50,6 +51,16 @@ test("isolated PostgreSQL schema: unique likes, moderation, consent withdrawal",
       ).rows[0].n,
       1,
     );
+    const posterComment = await db.query(
+      "SELECT DISTINCT ON (work_id) work_id,name,body FROM marvel_comments WHERE status='approved' AND work_id IS NOT NULL ORDER BY work_id,created_at DESC,id DESC",
+    );
+    assert.deepEqual(posterComment.rows, [
+      {
+        work_id: "iron-man-2008-film",
+        name: "测试影迷",
+        body: "独立测试记录，不是真实用户评价。",
+      },
+    ]);
     await db.query(
       "UPDATE marvel_visitors SET country='CN',gender='undisclosed',profile_consent=true",
     );

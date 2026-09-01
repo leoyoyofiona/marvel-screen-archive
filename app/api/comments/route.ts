@@ -12,7 +12,18 @@ import { getWork } from "@/lib/catalogue";
 export const runtime = "nodejs";
 export async function GET(request: Request) {
   try {
-    const workId = new URL(request.url).searchParams.get("workId");
+    const params = new URL(request.url).searchParams;
+    const workId = params.get("workId");
+    if (params.get("summary") === "1") {
+      const db = await database();
+      const result = await db.query(
+        "SELECT DISTINCT ON (work_id) work_id,name,body,created_at FROM marvel_comments WHERE status='approved' AND work_id IS NOT NULL ORDER BY work_id,created_at DESC,id DESC",
+      );
+      return Response.json(
+        { comments: result.rows },
+        { headers: { "Cache-Control": "no-store" } },
+      );
+    }
     if (workId && !getWork(workId))
       return Response.json({ error: "作品不存在。" }, { status: 404 });
     const db = await database();

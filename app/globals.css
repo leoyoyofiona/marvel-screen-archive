@@ -1062,6 +1062,54 @@ svg {
   border: 1px solid #ffffff25;
   z-index: 4;
 }
+.poster-comment-ticker {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  z-index: 5;
+  overflow: hidden;
+  padding: 7px 0;
+  background: linear-gradient(90deg, #090d15e8, #090d15b8, #090d15e8);
+  border-top: 1px solid #ffffff2b;
+  border-bottom: 1px solid #ffffff1d;
+  pointer-events: none;
+}
+.poster-comment-ticker > div {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  min-width: max-content;
+  padding-right: 28px;
+  color: #e9d7dc;
+  white-space: nowrap;
+  animation: poster-comment-drift 17s linear infinite;
+}
+.poster-comment-ticker span {
+  color: #ff9dab;
+  font-size: 8px;
+  letter-spacing: 0.08em;
+}
+.poster-comment-ticker strong {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 9px;
+  font-weight: 500;
+}
+@keyframes poster-comment-drift {
+  from {
+    transform: translateX(2%);
+  }
+  to {
+    transform: translateX(-42%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .poster-comment-ticker > div {
+    animation: none;
+  }
+}
 .poster-hover {
   position: absolute;
   inset: 55% 0 0;
