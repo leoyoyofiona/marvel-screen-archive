@@ -2,7 +2,7 @@
 import type { CSSProperties } from "react";
 import { Film, ArrowUpRight, Bookmark } from "lucide-react";
 import Link from "next/link";
-import type { Work } from "@/lib/catalogue-types";
+import type { WorkPreview } from "@/lib/catalogue-types";
 import { kindLabels } from "@/lib/catalogue-types";
 
 function posterHue(id: string) {
@@ -16,7 +16,7 @@ export function Poster({
   work,
   decorative = false,
 }: {
-  work: Work;
+  work: WorkPreview;
   decorative?: boolean;
 }) {
   const archiveStyle = {
@@ -70,7 +70,7 @@ export function WorkCard({
   saved,
   onSave,
 }: {
-  work: Work;
+  work: WorkPreview;
   saved: boolean;
   onSave: (id: string) => void;
 }) {

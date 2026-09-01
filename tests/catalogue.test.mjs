@@ -20,6 +20,12 @@ const sourceIndexAudit = JSON.parse(
     "utf8",
   ),
 );
+const relationshipPayload = JSON.parse(
+  await readFile(
+    new URL("../public/data/relationships.json", import.meta.url),
+    "utf8",
+  ),
+);
 const officialEpisodesText = await readFile(
   new URL("../data/official-episodes.json", import.meta.url),
   "utf8",
@@ -96,9 +102,24 @@ test("offline shell stays same-origin and never caches live APIs", async () => {
   );
   assert.match(serviceWorker, /url\.origin !== self\.location\.origin/);
   assert.match(serviceWorker, /url\.pathname\.startsWith\("\/api\/"\)/);
+  assert.match(serviceWorker, /url\.pathname\.startsWith\("\/data\/"\)/);
   assert.doesNotMatch(serviceWorker, /youtube|bilibili|marvel\.com|google/i);
   assert.equal(manifest.start_url, "/");
   assert.ok(manifest.icons.every((icon) => icon.src.startsWith("/")));
+});
+test("relationship graph payload is complete but strips work-detail fields", () => {
+  assert.equal(relationshipPayload.works.length, data.works.length);
+  assert.equal(relationshipPayload.people.length, data.people.length);
+  assert.equal(relationshipPayload.characters.length, data.characters.length);
+  assert.deepEqual(
+    Object.keys(relationshipPayload.works[0]).sort(),
+    ["id", "title", "year"],
+  );
+  assert.ok(
+    relationshipPayload.people.every(
+      (person) => person.portrait?.startsWith("/media/people/"),
+    ),
+  );
 });
 test("distinct universes never gain an MCU phase from a shared year", () => {
   for (const id of [

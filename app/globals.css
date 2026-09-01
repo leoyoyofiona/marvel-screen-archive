@@ -1385,6 +1385,25 @@ svg {
   justify-content: center;
   color: var(--muted);
 }
+.relationship-loading {
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  content-visibility: auto;
+  contain-intrinsic-size: 0 620px;
+}
+.relationship-loading h2 {
+  margin: 12px 0;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 520;
+}
+.relationship-loading p {
+  color: #8d9baf;
+  font-size: 12px;
+  line-height: 1.8;
+}
 .graph-filters {
   display: flex;
   gap: 12px;

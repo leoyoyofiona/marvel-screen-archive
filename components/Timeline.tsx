@@ -2,9 +2,9 @@
 import { useMemo, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import type { Work } from "@/lib/catalogue-types";
+import type { WorkPreview } from "@/lib/catalogue-types";
 import { Poster } from "./Poster";
-export default function Timeline({ works }: { works: Work[] }) {
+export default function Timeline({ works }: { works: WorkPreview[] }) {
   const rail = useRef<HTMLDivElement>(null);
   const drag = useRef<{ x: number; scroll: number } | null>(null);
   const [mode, setMode] = useState("all");

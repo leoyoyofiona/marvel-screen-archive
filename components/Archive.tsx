@@ -15,7 +15,7 @@ import {
   FileCheck2,
   ExternalLink,
 } from "lucide-react";
-import type { Catalogue, WorkKind } from "@/lib/catalogue-types";
+import type { ArchiveCatalogue, WorkKind } from "@/lib/catalogue-types";
 import { kindLabels } from "@/lib/catalogue-types";
 import { Header, Disclaimer, Footer } from "./Chrome";
 import { WorkCard } from "./Poster";
@@ -30,7 +30,7 @@ const Community = dynamic(() => import("./Community"), {
   ssr: false,
 });
 const PAGE_SIZE = 20;
-export default function Archive({ data }: { data: Catalogue }) {
+export default function Archive({ data }: { data: ArchiveCatalogue }) {
   const [region, setRegion] = useState<"mainland" | "overseas">("mainland"),
     [query, setQuery] = useState(""),
     [universe, setUniverse] = useState("all"),
@@ -496,11 +496,7 @@ export default function Archive({ data }: { data: Catalogue }) {
               </button>
             </nav>
           </section>
-          <Relationships
-            works={data.works}
-            people={data.people}
-            characters={data.characters}
-          />
+          <Relationships />
           <section className="section behind-section">
             <div>
               <span className="eyebrow">04 / BEHIND THE FRAME</span>

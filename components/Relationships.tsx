@@ -21,6 +21,12 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import type { Work, Person, Character } from "@/lib/catalogue-types";
+type RelationWork = Pick<Work, "id" | "title" | "year">;
+type RelationshipPayload = {
+  works: RelationWork[];
+  people: Person[];
+  characters: Character[];
+};
 type GraphNode = SimulationNodeDatum & {
   id: string;
   label: string;
@@ -33,12 +39,98 @@ type GraphState = {
   nodes: GraphNode[];
   edges: { source: string; target: string }[];
 };
-export default function Relationships({
+export default function Relationships() {
+  const section = useRef<HTMLElement>(null);
+  const [activated, setActivated] = useState(false);
+  const [payload, setPayload] = useState<RelationshipPayload | null>(null);
+  const [error, setError] = useState(false);
+  const [attempt, setAttempt] = useState(0);
+
+  useEffect(() => {
+    if (new URLSearchParams(window.location.search).has("person")) {
+      const frame = requestAnimationFrame(() => setActivated(true));
+      return () => cancelAnimationFrame(frame);
+    }
+    const node = section.current;
+    if (!node || !("IntersectionObserver" in window)) {
+      const frame = requestAnimationFrame(() => setActivated(true));
+      return () => cancelAnimationFrame(frame);
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setActivated(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "700px 0px" },
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!activated) return;
+    const controller = new AbortController();
+    fetch("/data/relationships.json", { signal: controller.signal })
+      .then((response) => {
+        if (!response.ok) throw new Error("RELATIONSHIP_DATA_UNAVAILABLE");
+        return response.json();
+      })
+      .then((data: RelationshipPayload) => {
+        if (
+          !Array.isArray(data.works) ||
+          !Array.isArray(data.people) ||
+          !Array.isArray(data.characters)
+        )
+          throw new Error("RELATIONSHIP_DATA_INVALID");
+        setPayload(data);
+      })
+      .catch((reason) => {
+        if (reason?.name !== "AbortError") setError(true);
+      });
+    return () => controller.abort();
+  }, [activated, attempt]);
+
+  if (payload) return <RelationshipGraph {...payload} />;
+
+  return (
+    <section
+      ref={section}
+      id="relationships"
+      className="section relationship-section relationship-loading"
+      aria-busy={activated && !error}
+    >
+      <span className="eyebrow">03 / CONNECTED UNIVERSES</span>
+      <h2>关系宇宙</h2>
+      <p>
+        {error
+          ? "关系数据暂时没有载入，其他作品浏览功能不受影响。"
+          : activated
+            ? "正在按需打开 1,315 位演职员与作品关系…"
+            : "继续向下浏览时，再载入完整人物关系数据。"}
+      </p>
+      {error && (
+        <button
+          className="button compact"
+          onClick={() => {
+            setError(false);
+            setAttempt((n) => n + 1);
+          }}
+        >
+          重新载入关系图
+        </button>
+      )}
+    </section>
+  );
+}
+
+function RelationshipGraph({
   works,
   people,
   characters,
 }: {
-  works: Work[];
+  works: RelationWork[];
   people: Person[];
   characters: Character[];
 }) {

@@ -7,7 +7,9 @@ const APP_SHELL = [
 ];
 
 self.addEventListener("install", (event) => {
-  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)));
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)),
+  );
   self.skipWaiting();
 });
 
@@ -18,7 +20,10 @@ self.addEventListener("activate", (event) => {
       .then((keys) =>
         Promise.all(
           keys
-            .filter((key) => key.startsWith("marvel-screen-archive-") && key !== CACHE_NAME)
+            .filter(
+              (key) =>
+                key.startsWith("marvel-screen-archive-") && key !== CACHE_NAME,
+            )
             .map((key) => caches.delete(key)),
         ),
       ),
@@ -46,14 +51,18 @@ self.addEventListener("fetch", (event) => {
           }
           return response;
         })
-        .catch(async () =>
-          (await caches.match(request)) || caches.match("/offline.html"),
+        .catch(
+          async () =>
+            (await caches.match(request)) || caches.match("/offline.html"),
         ),
     );
     return;
   }
 
-  if (["image", "style", "script", "font"].includes(request.destination)) {
+  if (
+    url.pathname.startsWith("/data/") ||
+    ["image", "style", "script", "font"].includes(request.destination)
+  ) {
     event.respondWith(
       caches.match(request).then(
         (cached) =>

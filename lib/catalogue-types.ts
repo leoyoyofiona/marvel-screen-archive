@@ -55,6 +55,21 @@ export type Work = {
   media: Media[];
   watchLinks: WatchLink[];
 };
+export type WorkPreview = Pick<
+  Work,
+  | "id"
+  | "title"
+  | "titleEn"
+  | "translated"
+  | "year"
+  | "yearText"
+  | "kind"
+  | "status"
+  | "universe"
+  | "phase"
+  | "poster"
+  | "backdrop"
+>;
 export type WatchLink = {
   url: string;
   provider: string;
@@ -137,6 +152,9 @@ export type Catalogue = {
     personRealPortraitCount: number;
     gaps: string[];
   };
+};
+export type ArchiveCatalogue = Pick<Catalogue, "cutoff" | "audit"> & {
+  works: WorkPreview[];
 };
 export const kindLabels: Record<WorkKind, string> = {
   film: "真人电影",

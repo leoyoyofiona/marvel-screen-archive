@@ -8,6 +8,7 @@
   },
   "scripts": {
     "dev": "next dev --hostname 127.0.0.1 --port 3199",
+    "prebuild": "node scripts/build-public-data.mjs",
     "build": "next build",
     "start": "next start -H 0.0.0.0 -p ${PORT:-3000}",
     "lint": "eslint .",
@@ -16,6 +17,7 @@
     "catalog:import": "node scripts/import-catalog.mjs",
     "catalog:enrich": "node scripts/enrich-catalog.mjs",
     "catalog:build": "node scripts/build-catalogue.mjs",
+    "catalog:public": "node scripts/build-public-data.mjs",
     "assets:collect": "node scripts/collect-primary-assets.mjs",
     "assets:official": "node scripts/collect-official-posters.mjs",
     "assets:people": "node scripts/collect-person-portraits.mjs",
