@@ -7,6 +7,9 @@ const root = path.resolve(import.meta.dirname, "..");
 const catalogue = JSON.parse(
   await readFile(path.join(root, "data/catalogue.json"), "utf8"),
 );
+const enrichment = JSON.parse(
+  await readFile(path.join(root, "data/enrichment.json"), "utf8"),
+);
 const output = path.join(root, "public/media/wikipedia-posters");
 await mkdir(output, { recursive: true });
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -44,6 +47,18 @@ function extension(url, contentType) {
   return path.extname(new URL(url).pathname).slice(1).toLowerCase() || "jpg";
 }
 
+function cleanImageUrl(value) {
+  if (!value) return null;
+  try {
+    const url = new URL(value);
+    if (url.hostname !== "upload.wikimedia.org") return null;
+    for (const key of [...url.searchParams.keys()]) url.searchParams.delete(key);
+    return url.href;
+  } catch {
+    return null;
+  }
+}
+
 async function collect(work) {
   if (existing.has(work.id)) return existing.get(work.id);
   const raw = work.sources.find((source) => source.url.includes("/wiki/"))?.url;
@@ -59,6 +74,12 @@ async function collect(work) {
       if (response.ok) imageUrl = imageUrlFromPage(await response.text());
     } catch {}
     if (!imageUrl) await sleep(500 * (attempt + 1));
+  }
+  if (!imageUrl) {
+    const enrichedPage = raw?.split("#")[0];
+    imageUrl = cleanImageUrl(
+      enrichment[enrichedPage]?.artworkCandidate?.url,
+    );
   }
   if (!imageUrl) return null;
   for (let attempt = 0; attempt < 3; attempt++) {
