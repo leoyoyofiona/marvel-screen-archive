@@ -1201,7 +1201,7 @@ svg {
 }
 .character-card {
   position: relative;
-  min-height: 420px;
+  min-height: 350px;
   padding: 17px 15px 14px;
   text-align: left;
   border: 1px solid #364356;
@@ -1253,8 +1253,8 @@ svg {
 }
 .character-card-art {
   position: relative;
-  height: 300px;
-  flex: 0 0 300px;
+  height: 230px;
+  flex: 0 0 230px;
   margin: 14px -1px 0;
   overflow: hidden;
   border: 1px solid #596a82;
@@ -1267,13 +1267,13 @@ svg {
   display: block;
   object-fit: cover;
   object-position: center 22%;
-  filter: saturate(.86) contrast(1.08) brightness(.82);
+  filter: saturate(1.05) contrast(1.06) brightness(1.12);
 }
 .character-card-art .character-art-shade {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(180deg, rgba(5, 8, 14, .05), rgba(5, 8, 14, .82) 88%);
+  background: linear-gradient(180deg, rgba(5, 8, 14, .02), rgba(5, 8, 14, .48) 88%);
 }
 .character-card-art .character-art-label {
   position: absolute;
@@ -1318,8 +1318,8 @@ svg {
   background: radial-gradient(circle at 50% 25%, #654c78, #241b31 66%, #110f18);
 }
 .character-card-copy {
-  min-height: 93px;
-  padding-top: 11px;
+  min-height: 76px;
+  padding-top: 8px;
 }
 .character-card-copy > small,
 .character-card-copy > em,
@@ -1330,11 +1330,31 @@ svg {
   font-size: 9px;
   font-style: normal;
 }
-.character-card-copy > strong {
+.character-card-title-line,
+.armor-card-title-line {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  min-width: 0;
+}
+.character-card-intro,
+.armor-card-note {
+  min-width: 0;
+  overflow: hidden;
+  color: #b9c6d7;
+  font-size: 8px;
+  line-height: 1.45;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.character-card-copy > strong,
+.character-card-title-line > strong,
+.armor-card-title-line > strong {
   display: block;
-  margin: 5px 0 2px;
+  flex: 0 0 auto;
+  margin: 4px 0 2px;
   color: #f0f3f7;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
 }
 .character-card-rule {
@@ -1360,10 +1380,13 @@ svg {
 }
 .character-card-move {
   display: block;
-  margin-top: 7px;
+  margin-top: 5px;
   color: #b7c3d4;
   font-size: 9px;
-  line-height: 1.6;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .armor-atlas,
 .storyline-atlas {
@@ -1389,7 +1412,7 @@ svg {
 }
 .armor-card {
   position: relative;
-  min-height: 420px;
+  min-height: 350px;
   padding: 17px 15px 14px;
   border: 1px solid #364356;
   border-radius: 2px;
@@ -1405,8 +1428,8 @@ svg {
   box-shadow: 0 14px 28px rgba(0,0,0,.24);
 }
 .armor-card-copy {
-  min-height: 66px;
-  padding-top: 11px;
+  min-height: 62px;
+  padding-top: 8px;
 }
 .armor-card-copy > small {
   display: block;
@@ -1415,10 +1438,13 @@ svg {
 }
 .armor-card-copy > strong {
   display: block;
-  margin: 5px 0 4px;
+  margin: 4px 0 0;
   color: #d8e0ec;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 500;
+}
+.armor-card-title-line .armor-card-note {
+  color: #d7b5bd;
 }
 .armor-card-spec {
   display: block;
@@ -1427,8 +1453,8 @@ svg {
 }
 .armor-art {
   position: relative;
-  height: 300px;
-  flex: 0 0 300px;
+  height: 230px;
+  flex: 0 0 230px;
   margin: 14px -1px 0;
   overflow: hidden;
   border: 1px solid #4c5d73;
@@ -1441,14 +1467,14 @@ svg {
   display: block;
   object-fit: cover;
   object-position: center 24%;
-  filter: saturate(.9) contrast(1.08) brightness(.78);
+  filter: saturate(1.04) contrast(1.06) brightness(1.08);
 }
 .armor-art-shade {
   position: absolute;
   z-index: 1;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(5,8,14,.05), rgba(5,8,14,.78) 90%);
+  background: linear-gradient(180deg, rgba(5,8,14,.02), rgba(5,8,14,.45) 90%);
 }
 .armor-art::after {
   content: "";
@@ -1726,9 +1752,13 @@ svg {
   .character-card-grid,
   .armor-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
   .character-card,
-  .armor-card { min-height: 350px; }
+  .armor-card { min-height: 290px; }
   .character-card-art,
-  .armor-art { height: 235px; flex-basis: 235px; }
+  .armor-art { height: 190px; flex-basis: 190px; }
+  .character-card-copy > strong,
+  .armor-card-copy > strong { font-size: 14px; }
+  .character-card-intro,
+  .armor-card-note { font-size: 7px; }
   .character-card { min-height: 245px; padding: 13px 11px; }
   .character-card > strong { font-size: 17px; }
   .character-avatar { width: 55px; height: 55px; margin: 14px 0 11px; }

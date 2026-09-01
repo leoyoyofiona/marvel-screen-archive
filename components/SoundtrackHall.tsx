@@ -64,6 +64,14 @@ export default function SoundtrackHall({
   const playableWorks = works.filter((work) =>
     region === "mainland" ? work.hasMainlandMedia : work.hasOverseasMedia,
   );
+  const playableMediaCount = works.reduce(
+    (total, work) =>
+      total +
+      (region === "mainland"
+        ? work.mainlandMediaCount ?? 0
+        : work.overseasMediaCount ?? 0),
+    0,
+  );
 
   return (
     <section
@@ -89,7 +97,7 @@ export default function SoundtrackHall({
           </div>
           <span className="queue-region">
             {region === "mainland" ? "中国大陆线路" : "海外线路"} ·{" "}
-            {playableWorks.length} 部已核验
+            {playableMediaCount} 条视频素材 · 覆盖 {playableWorks.length} 部作品
           </span>
         </div>
         {playableWorks.length > 0 ? (
@@ -122,7 +130,7 @@ export default function SoundtrackHall({
           </div>
         )}
         <p className="audiovisual-queue-note">
-          这里只列出当前地区已经完成播放器核验的作品。完整目录仍在“作品档案”中；切换右上角地区后，列表会随线路即时更新。
+          这里只列出当前地区已经完成播放器核验的视频素材所覆盖的作品；同一部作品可能有多条预告或片段。完整目录仍在“作品档案”中；切换右上角地区后，列表会随线路即时更新。
         </p>
       </div>
       <div className="listening-shell">

@@ -73,6 +73,8 @@ export type WorkPreview = Pick<
 export type PublicWorkPreview = WorkPreview & {
   hasMainlandMedia: boolean;
   hasOverseasMedia: boolean;
+  mainlandMediaCount?: number;
+  overseasMediaCount?: number;
 };
 export type WatchLink = {
   url: string;

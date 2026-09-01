@@ -26,6 +26,14 @@ const archiveData: ArchiveCatalogue = {
       (media) =>
         media.region === "overseas" && media.status === "playback-verified",
     ),
+    mainlandMediaCount: work.media.filter(
+      (media) =>
+        media.region === "mainland" && media.status === "playback-verified",
+    ).length,
+    overseasMediaCount: work.media.filter(
+      (media) =>
+        media.region === "overseas" && media.status === "playback-verified",
+    ).length,
   })),
 };
 export default function Home() {
