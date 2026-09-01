@@ -272,9 +272,13 @@ export default function Archive({ data }: { data: ArchiveCatalogue }) {
             <p>
               已索引 {data.works.length} 个系列级项目，其中含{" "}
               {data.audit.officialDigitalSeriesCount} 个 Marvel
-              官方数字节目／播客；官方页面可见单集总量为{" "}
-              {data.audit.officialDigitalEpisodeTotal.toLocaleString("zh-CN")}。
-              这不等于每一集均已完成资料核验。
+              官方数字节目／播客；当前抓到{" "}
+              {data.audit.officialDigitalEpisodeTotal.toLocaleString("zh-CN")}
+              条单集记录，去重后为{" "}
+              {data.audit.officialDigitalEpisodeUniquePages.toLocaleString(
+                "zh-CN",
+              )}
+              个官方详情页。这不等于每一集均已完成资料核验。
             </p>
             <button
               onClick={() => setAuditOpen(!auditOpen)}
@@ -308,6 +312,12 @@ export default function Archive({ data }: { data: ArchiveCatalogue }) {
                     "zh-CN",
                   )}
                   <small>官方可见单集总量</small>
+                </span>
+                <span>
+                  {data.audit.officialDigitalEpisodeUniquePages.toLocaleString(
+                    "zh-CN",
+                  )}
+                  <small>去重后官方详情页</small>
                 </span>
                 <span>
                   {data.audit.personPortraitCount}
