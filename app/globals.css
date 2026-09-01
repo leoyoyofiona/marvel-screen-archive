@@ -1557,6 +1557,11 @@ svg {
   stroke: #ec2638;
   fill: #321c2a;
 }
+.graph-node.person:hover circle,
+.graph-node.person:focus circle {
+  stroke: #ec2638;
+  filter: drop-shadow(0 0 8px #ec263866);
+}
 .graph-controls {
   position: absolute;
   left: 18px;
@@ -1644,6 +1649,25 @@ svg {
   display: block;
   font-size: 9px;
   color: #9aa7ba;
+}
+.network-summary {
+  display: grid;
+  gap: 7px;
+  margin-top: 15px;
+  padding: 12px;
+  border: 1px solid #3a4352;
+  background: #151d29;
+  color: #9eabbd;
+  font-size: 10px;
+  line-height: 1.7;
+}
+.network-summary strong {
+  color: #e4a56d;
+  font-size: 11px;
+  letter-spacing: .08em;
+}
+.network-summary .button {
+  margin-top: 3px;
 }
 .relation-work-list {
   max-height: 240px;

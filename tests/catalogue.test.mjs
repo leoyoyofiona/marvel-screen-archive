@@ -147,7 +147,14 @@ test("relationship graph payload is complete but strips work-detail fields", () 
   assert.equal(relationshipPayload.characters.length, data.characters.length);
   assert.deepEqual(
     Object.keys(relationshipPayload.works[0]).sort(),
-    ["id", "title", "year"],
+    ["id", "people", "title", "year"],
+  );
+  assert.ok(
+    relationshipPayload.works.every((work) =>
+      work.people.every((personId) =>
+        relationshipPayload.people.some((person) => person.id === personId),
+      ),
+    ),
   );
   assert.ok(
     relationshipPayload.people.every(

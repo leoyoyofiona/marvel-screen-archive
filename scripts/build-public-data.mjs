@@ -10,7 +10,12 @@ await mkdir(outputDirectory, { recursive: true });
 
 const relationships = {
   generatedAt: catalogue.generatedAt,
-  works: catalogue.works.map(({ id, title, year }) => ({ id, title, year })),
+  works: catalogue.works.map(({ id, title, year, people }) => ({
+    id,
+    title,
+    year,
+    people,
+  })),
   people: catalogue.people,
   characters: catalogue.characters,
 };

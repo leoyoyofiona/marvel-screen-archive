@@ -21,7 +21,7 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import type { Work, Person, Character } from "@/lib/catalogue-types";
-type RelationWork = Pick<Work, "id" | "title" | "year">;
+type RelationWork = Pick<Work, "id" | "title" | "year" | "people">;
 type RelationshipPayload = {
   works: RelationWork[];
   people: Person[];
@@ -30,14 +30,19 @@ type RelationshipPayload = {
 type GraphNode = SimulationNodeDatum & {
   id: string;
   label: string;
-  kind: "center" | "work";
+  kind: "center" | "work" | "person";
   workId?: string;
+  personId?: string;
   portrait?: string | null;
   portraitKind?: string | null;
 };
 type GraphState = {
   nodes: GraphNode[];
-  edges: { source: string; target: string }[];
+  edges: {
+    source: string;
+    target: string;
+    kind: "anchor" | "collaboration";
+  }[];
 };
 export default function Relationships() {
   const section = useRef<HTMLElement>(null);
@@ -145,6 +150,7 @@ function RelationshipGraph({
         "",
     ),
     [limit, setLimit] = useState(12),
+    [collaboratorLimit, setCollaboratorLimit] = useState(24),
     [zoom, setZoom] = useState(1),
     [pan, setPan] = useState({ x: 0, y: 0 }),
     [layout, setLayout] = useState<GraphState>({ nodes: [], edges: [] });
@@ -180,15 +186,50 @@ function RelationshipGraph({
   const entityPortraitKind =
     entity && "portraitKind" in entity ? entity.portraitKind : null;
   const entityWorkIds = entity
-      ? "workIds" in entity
-        ? entity.workIds
-        : entity.works
-      : [],
-    allWorks = works.filter((work) => entityWorkIds.includes(work.id));
-  const related = allWorks.filter(
-    (w) =>
-      decade === "all" ||
-      (w.year && Math.floor(w.year / 10) * 10 === Number(decade)),
+    ? "workIds" in entity
+      ? entity.workIds
+      : entity.works
+    : undefined;
+  const allWorks = useMemo(
+    () =>
+      entityWorkIds
+        ? works.filter((work) => entityWorkIds.includes(work.id))
+        : [],
+    [works, entityWorkIds],
+  );
+  const related = useMemo(
+    () =>
+      allWorks.filter(
+        (w) =>
+          decade === "all" ||
+          (w.year && Math.floor(w.year / 10) * 10 === Number(decade)),
+      ),
+    [allWorks, decade],
+  );
+  const relatedIds = useMemo(() => new Set(related.map((work) => work.id)), [related]);
+  const displayedWorkIds = useMemo(
+    () => new Set(related.slice(0, limit).map((work) => work.id)),
+    [related, limit],
+  );
+  const allCollaborators = useMemo(
+    () =>
+      mode === "people"
+        ? people.filter(
+            (person) =>
+              person.id !== selected &&
+              person.workIds.some((workId) => relatedIds.has(workId)),
+          )
+        : [],
+    [mode, people, relatedIds, selected],
+  );
+  const collaborators = useMemo(
+    () =>
+      allCollaborators
+        .filter((person) =>
+          person.workIds.some((workId) => displayedWorkIds.has(workId)),
+        )
+        .slice(0, collaboratorLimit),
+    [allCollaborators, displayedWorkIds, collaboratorLimit],
   );
   const signature = related
     .slice(0, limit)
@@ -231,12 +272,43 @@ function RelationshipGraph({
           y: 220 + Math.sin((i / ids.length) * Math.PI * 2) * 170,
         });
     });
-    const edges = ids.map((id) => ({ source: selected, target: id }));
+    if (mode === "people") {
+      collaborators.forEach((person, i) => {
+        nodes.push({
+          id: person.id,
+          label: person.name,
+          personId: person.id,
+          kind: "person",
+          portrait: person.portrait,
+          portraitKind: person.portraitKind,
+          x: 70 + (i % 7) * 110,
+          y: 55 + Math.floor(i / 7) * 92,
+        });
+      });
+    }
+    const edges: GraphState["edges"] = ids.map((id) => ({
+      source: selected,
+      target: id,
+      kind: "anchor",
+    }));
+    if (mode === "people") {
+      collaborators.forEach((person) => {
+        person.workIds
+          .filter((workId) => ids.includes(workId))
+          .forEach((workId) =>
+            edges.push({
+              source: workId,
+              target: person.id,
+              kind: "collaboration",
+            }),
+          );
+      });
+    }
     const sim = forceSimulation(nodes)
       .force(
         "link",
         forceLink<GraphNode, { source: string; target: string }>(
-          edges.map((e) => ({ ...e })),
+          edges.map(({ source, target }) => ({ source, target })),
         )
           .id((n) => n.id)
           .distance(210),
@@ -268,10 +340,13 @@ function RelationshipGraph({
     entity?.portrait,
     entityPortraitKind,
     works,
+    mode,
+    collaborators,
   ]);
   const choose = (id: string) => {
     setSelected(id);
     setLimit(12);
+    setCollaboratorLimit(24);
     setZoom(1);
     setPan({ x: 0, y: 0 });
   };
@@ -319,7 +394,7 @@ function RelationshipGraph({
         </div>
       </div>
       <p className="section-description">
-        现实人物与虚构角色分别浏览。节点可拖拽，电影票根可打开作品。当前关系为已导入／已整理部分，不代表完整出演或客串名单。
+        现实人物与虚构角色分别浏览。演员、导演、配音与创作者都通过作品节点串联；点击任意人物可继续向外展开其全部已索引作品。节点可拖拽，电影票根可打开作品。当前关系为已导入／已整理部分，不代表完整出演或客串名单。
       </p>
       <div className="graph-filters">
         <label className="search-field">
@@ -390,13 +465,13 @@ function RelationshipGraph({
           <div className="graph-caption">
             <span>
               <i className="node-key" />
-              人物
+              演员／导演／创作者
             </span>
             <span>
               <i className="node-key square" />
               作品
             </span>
-            <small>线条表示参与作品，不代表现实私交</small>
+            <small>人物 — 作品 — 人物，线条只表示共同参与</small>
           </div>
           <svg
             ref={svg}
@@ -467,13 +542,16 @@ function RelationshipGraph({
                   b = layout.nodes.find((n) => n.id === edge.target);
                 return a && b ? (
                   <line
-                    key={edge.target}
+                    key={edge.source + "-" + edge.target}
                     x1={a.x}
                     y1={a.y}
                     x2={b.x}
                     y2={b.y}
-                    stroke="#755361"
-                    strokeWidth=".8"
+                    stroke={edge.kind === "anchor" ? "#a32a3d" : "#755361"}
+                    strokeWidth={edge.kind === "anchor" ? "1.4" : ".8"}
+                    strokeDasharray={
+                      edge.kind === "collaboration" ? "3 4" : undefined
+                    }
                   />
                 ) : null;
               })}
@@ -483,12 +561,25 @@ function RelationshipGraph({
                   data-node={n.id}
                   transform={`translate(${n.x ?? 0} ${n.y ?? 0})`}
                   className={"graph-node " + n.kind}
-                  tabIndex={n.kind === "work" ? 0 : -1}
-                  role={n.kind === "work" ? "link" : undefined}
+                  tabIndex={n.kind === "work" || n.kind === "person" ? 0 : -1}
+                  role={
+                    n.kind === "work"
+                      ? "link"
+                      : n.kind === "person"
+                        ? "button"
+                        : undefined
+                  }
                   aria-label={n.label}
                   onKeyDown={(e) => {
                     if (n.workId && e.key === "Enter")
                       router.push("/works/" + n.workId);
+                    if (n.personId && (e.key === "Enter" || e.key === " ")) {
+                      e.preventDefault();
+                      choose(n.personId);
+                    }
+                  }}
+                  onClick={() => {
+                    if (n.personId) choose(n.personId);
                   }}
                   onDoubleClick={() => {
                     if (n.workId) router.push("/works/" + n.workId);
@@ -546,7 +637,48 @@ function RelationshipGraph({
                             : "头像待核验"}
                       </text>
                     </>
-                  ) : (
+                ) : n.kind === "person" ? (
+                  <>
+                    <circle
+                      r="31"
+                      fill="#171b27"
+                      stroke={
+                        people
+                          .find((person) => person.id === n.personId)
+                          ?.departments.includes("director")
+                          ? "#d59b57"
+                          : "#6e8498"
+                      }
+                      strokeWidth="1.5"
+                    />
+                    {n.portrait && (
+                      <image
+                        href={n.portrait}
+                        x="-28"
+                        y="-28"
+                        width="56"
+                        height="56"
+                        preserveAspectRatio="xMidYMid slice"
+                        clipPath="circle(28px at 28px 28px)"
+                      />
+                    )}
+                    <text textAnchor="middle" y="46" fill="#e5e9f0" fontSize="9">
+                      {n.label.length > 8 ? n.label.slice(0, 7) + "…" : n.label}
+                    </text>
+                    <text textAnchor="middle" y="58" fill="#a4adba" fontSize="8">
+                      {people
+                        .find((person) => person.id === n.personId)
+                        ?.departments.map((department) =>
+                          department === "director"
+                            ? "导演"
+                            : department === "creator"
+                              ? "创作者"
+                              : "演员",
+                        )
+                        .join("／")}
+                    </text>
+                  </>
+                ) : (
                     <>
                       <rect
                         x="-68"
@@ -641,7 +773,7 @@ function RelationshipGraph({
           </div>
           <p className="relationship-note">
             {mode === "people"
-              ? "根据影视条目的演职员资料建立关系，角色归属需要另外核对。"
+              ? "人物与作品按影视条目的演职员资料连接；作品节点会继续串出共同演员、配音、导演和创作者。"
               : "这是虚构角色的银幕出场档案，不与演员的其他角色合并。"}
           </p>
           {entity && "portraitCredit" in entity && entity.portraitCredit && (
@@ -677,6 +809,22 @@ function RelationshipGraph({
               <small>本索引最早年份</small>
             </span>
           </div>
+          {mode === "people" && (
+            <div className="network-summary">
+              <strong>合作网络</strong>
+              <span>
+                当前图中串联 {collaborators.length} 位共同演职员；所选人物在已索引作品中共有 {allCollaborators.length} 位合作人物。
+              </span>
+              {allCollaborators.length > collaboratorLimit && (
+                <button
+                  className="button compact full-width"
+                  onClick={() => setCollaboratorLimit(allCollaborators.length)}
+                >
+                  展开全部合作人物（还有 {allCollaborators.length - collaboratorLimit} 位）
+                </button>
+              )}
+            </div>
+          )}
           <div className="relation-work-list">
             {related.slice(0, limit).map((w) => (
               <Link href={"/works/" + w.id} key={w.id}>
