@@ -15,9 +15,6 @@ await mkdir(output, { recursive: true });
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const userAgent =
   "MarvelScreenArchiveResearch/0.1 (noncommercial catalogue research)";
-const rows = catalogue.works.filter((work) =>
-  work.poster?.startsWith("/media/archive-posters/"),
-);
 let previous = { items: [] };
 try {
   previous = JSON.parse(
@@ -25,17 +22,20 @@ try {
   );
 } catch {}
 const existing = new Map((previous.items ?? []).map((item) => [item.workId, item]));
+const rows = catalogue.works.filter((work) => {
+  const prior = existing.get(work.id);
+  return (
+    (!prior && work.poster?.startsWith("/media/archive-posters/")) ||
+    /\/thumb\//i.test(prior?.sourceUrl ?? "")
+  );
+});
 const items = [...existing.values()];
 let cursor = 0;
 
 function imageUrlFromPage(html) {
   const $ = load(html);
   const value = $('meta[property="og:image"]').attr("content");
-  if (!value) return null;
-  const url = new URL(value.replaceAll("&amp;", "&"));
-  if (url.hostname !== "upload.wikimedia.org") return null;
-  for (const key of [...url.searchParams.keys()]) url.searchParams.delete(key);
-  return url.href;
+  return cleanImageUrl(value?.replaceAll("&amp;", "&"));
 }
 
 function extension(url, contentType) {
@@ -53,18 +53,34 @@ function cleanImageUrl(value) {
     const url = new URL(value);
     if (url.hostname !== "upload.wikimedia.org") return null;
     for (const key of [...url.searchParams.keys()]) url.searchParams.delete(key);
+    const parts = url.pathname.split("/");
+    const thumbIndex = parts.indexOf("thumb");
+    const last = parts.at(-1) ?? "";
+    if (thumbIndex > 0 && /^\d+px-/.test(last)) {
+      return new URL(
+        [...parts.slice(0, thumbIndex), ...parts.slice(thumbIndex + 1, -1)].join(
+          "/",
+        ),
+        url,
+      ).href;
+    }
     return url.href;
   } catch {
     return null;
   }
 }
 
+function isThumbnail(value) {
+  return /\/thumb\/|\/\d+px-[^/]+$/i.test(value ?? "");
+}
+
 async function collect(work) {
-  if (existing.has(work.id)) return existing.get(work.id);
+  const prior = existing.get(work.id);
+  if (prior && !isThumbnail(prior.sourceUrl)) return prior;
   const raw = work.sources.find((source) => source.url.includes("/wiki/"))?.url;
   const page = raw?.split("/wiki/")[1]?.split("#")[0];
   if (!page) return null;
-  let imageUrl;
+  let imageUrl = cleanImageUrl(prior?.sourceUrl);
   for (let attempt = 0; attempt < 3 && !imageUrl; attempt++) {
     try {
       const response = await fetch("https://en.wikipedia.org/wiki/" + page, {
