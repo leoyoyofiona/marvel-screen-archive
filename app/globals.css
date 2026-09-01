@@ -2283,6 +2283,32 @@ svg {
 .media-panel p {
   margin: 0;
 }
+.media-resource-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+}
+.media-hub-link {
+  min-height: 34px;
+  padding: 8px 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #39475a;
+  color: #d9e2ef;
+  background: #111b28;
+  font-size: 10px;
+}
+.media-hub-link:hover {
+  color: #ff7d8c;
+  border-color: #8a4050;
+}
+.media-resource-list > small {
+  width: 100%;
+  color: #75849a;
+  line-height: 1.6;
+}
 .full-watch {
   display: flex;
   align-items: center;

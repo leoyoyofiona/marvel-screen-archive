@@ -81,6 +81,19 @@ export default function WorkSpace({
       m.region === region && m.kind === tab && m.status === "playback-verified",
   );
   const current = media.find((m) => m.id === active);
+  const officialMediaHubs = work.sources.filter((source, index, all) => {
+    if (source.verification !== "editor-reviewed") return false;
+    const officialWorkPage =
+      /^https:\/\/(?:www\.)?marvel\.com\/(?:movies|tv-shows)\//.test(
+        source.url,
+      ) ||
+      /^https:\/\/(?:www\.)?sonypictures\.com\/movies\//.test(source.url) ||
+      /^https:\/\/marvel\.disney\.co\.jp\/movie\//.test(source.url);
+    return (
+      officialWorkPage &&
+      all.findIndex((candidate) => candidate.url === source.url) === index
+    );
+  });
   async function like() {
     if (pending) return;
     setPending(true);
@@ -223,19 +236,46 @@ export default function WorkSpace({
                 </button>
               </div>
               <div role="tabpanel" className="media-panel">
-                {media.length ? (
-                  media.map((m) => (
-                    <button
-                      className="button compact"
-                      key={m.id}
-                      onClick={() => setActive(m.id)}
-                    >
-                      {m.title} · {m.provider}
-                    </button>
-                  ))
+                {media.length ||
+                (tab === "trailer" &&
+                  region === "overseas" &&
+                  officialMediaHubs.length) ? (
+                  <div className="media-resource-list">
+                    {media.map((m) => (
+                      <button
+                        className="button compact"
+                        key={m.id}
+                        onClick={() => setActive(m.id)}
+                      >
+                        {m.title} · {m.provider}
+                      </button>
+                    ))}
+                    {tab === "trailer" && region === "overseas" &&
+                      officialMediaHubs.map((source) => (
+                        <a
+                          className="media-hub-link"
+                          href={source.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          key={source.url}
+                        >
+                          官方作品页 · 预告／花絮资料入口
+                          <ExternalLink size={13} />
+                        </a>
+                      ))}
+                    {officialMediaHubs.length > 0 &&
+                      tab === "trailer" &&
+                      region === "overseas" && (
+                        <small>
+                          外部官方页可能含预告、花絮或剧照；它不是完整正片播放入口，实际内容以权利方页面为准。
+                        </small>
+                      )}
+                  </div>
                 ) : (
                   <p>
-                    本分类暂未有完成实际播放核验的内容。切换地区不会把预告当成完整影片。
+                    {region === "mainland"
+                      ? "暂无已完成浏览器播放核验的中国大陆官方来源；不会自动切换到 YouTube 或版权不明网站。"
+                      : "本分类暂未有完成实际播放核验的内容。切换地区不会把预告当成完整影片。"}
                   </p>
                 )}
               </div>

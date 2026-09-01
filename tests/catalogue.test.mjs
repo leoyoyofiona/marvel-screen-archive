@@ -72,6 +72,17 @@ test("every work has a Chinese archive title while preserving its source title",
     assert.equal(work.translated, true, `untranslated work ${work.id}`);
   }
 });
+test("reviewed official work hubs are available without becoming film links", () => {
+  const officialHub = /^https:\/\/(?:www\.)?(?:marvel\.com\/(?:movies|tv-shows)\/|sonypictures\.com\/movies\/)|^https:\/\/marvel\.disney\.co\.jp\/movie\//;
+  const worksWithHub = data.works.filter((work) =>
+    work.sources.some(
+      (source) =>
+        source.verification === "editor-reviewed" && officialHub.test(source.url),
+    ),
+  );
+  assert.equal(worksWithHub.length, 50);
+  assert.ok(worksWithHub.every((work) => work.watchLinks.length === 0));
+});
 test("distinct universes never gain an MCU phase from a shared year", () => {
   for (const id of [
     "venom-2018-film",
