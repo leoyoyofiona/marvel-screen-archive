@@ -148,6 +148,7 @@ export type Catalogue = {
     officialDigitalEpisodeUniquePages: number;
     officialDigitalEpisodeExactSeries: number;
     officialDigitalEpisodeMismatchSeries: number;
+    archiveDesignPosterCount: number;
     personPortraitCount: number;
     personRealPortraitCount: number;
     gaps: string[];

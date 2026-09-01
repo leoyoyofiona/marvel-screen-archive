@@ -266,6 +266,22 @@ test("official artwork and season hierarchy are linked to the correct records", 
   assert.equal(whatIf.seasons.length, 3);
   assert.ok(whatIf.seasons.every((season) => season.image));
 });
+test("every work has a local poster asset with an explicit provenance label", () => {
+  assert.equal(data.audit.posterCount, data.works.length);
+  assert.equal(
+    data.audit.officialArtworkCount + data.audit.archiveDesignPosterCount,
+    data.works.length,
+  );
+  assert.ok(
+    data.works.every(
+      (work) =>
+        work.poster?.startsWith("/media/") &&
+        work.posterCredit &&
+        (work.poster?.startsWith("/media/official/") ||
+          work.posterCredit.includes("非官方素材")),
+    ),
+  );
+});
 test("same-name works never inherit artwork or seasons from another era or format", () => {
   const noOfficialArtwork = [
     "spider-man-1967-animated-series",
@@ -282,7 +298,8 @@ test("same-name works never inherit artwork or seasons from another era or forma
   for (const id of noOfficialArtwork) {
     const work = data.works.find((candidate) => candidate.id === id);
     assert.ok(work, id);
-    assert.equal(work.poster, null, id);
+    assert.ok(work.poster?.startsWith("/media/archive-posters/"), id);
+    assert.match(work.posterCredit ?? "", /非官方素材/);
     assert.equal(work.seasons.length, 0, id);
   }
   const spiderMan2002 = data.works.find(

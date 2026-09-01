@@ -287,6 +287,76 @@ const officialWorkIdBySource = new Map(
     return [art.sourcePage, matches.length === 1 ? matches[0].id : null];
   }),
 );
+const escapeXml = (value) =>
+  String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&apos;");
+const posterKindLabels = {
+  film: "FEATURE FILM",
+  series: "LIVE ACTION SERIES",
+  "animated-film": "ANIMATED FEATURE",
+  "animated-series": "ANIMATED SERIES",
+  short: "SHORT / SPECIAL",
+  special: "SPECIAL PRESENTATION",
+  serial: "SERIAL",
+  documentary: "DOCUMENTARY",
+  "digital-series": "DIGITAL SERIES",
+  podcast: "PODCAST",
+};
+const primaryPosterWorkIds = new Set(
+  assets
+    .filter((asset) => asset.kind === "poster" && asset.publish)
+    .map((asset) => asset.workId),
+);
+const officialPosterWorkIds = new Set(
+  [...officialWorkIdBySource.values()].filter(Boolean),
+);
+const archivePosterDir = path.join(root, "public", "media", "archive-posters");
+await mkdir(archivePosterDir, { recursive: true });
+const archivePosterById = new Map();
+for (const item of items) {
+  if (primaryPosterWorkIds.has(item.id) || officialPosterWorkIds.has(item.id))
+    continue;
+  const hue = [...item.id].reduce(
+    (total, character) => (total * 31 + character.charCodeAt(0)) % 360,
+    0,
+  );
+  const title = names[item.titleEn] ?? item.titleEn;
+  const year = item.year ?? "TBA";
+  const fileName = `${slug(item.id)}.svg`;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" role="img" aria-labelledby="title description">
+  <title id="title">${escapeXml(title)} · 档案设计海报</title>
+  <desc id="description">Marvel Screen Archive 的原创档案设计海报，非官方素材。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="hsl(${hue} 58% 9%)"/><stop offset="0.58" stop-color="hsl(${(hue + 42) % 360} 70% 22%)"/><stop offset="1" stop-color="hsl(${(hue + 180) % 360} 76% 8%)"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="hsl(${(hue + 28) % 360} 92% 70%)" stop-opacity=".72"/><stop offset="1" stop-color="hsl(${hue} 80% 10%)" stop-opacity="0"/></radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="34"/></filter>
+    <pattern id="grain" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="1" cy="2" r=".7" fill="#fff" opacity=".12"/><circle cx="5" cy="6" r=".5" fill="#fff" opacity=".08"/></pattern>
+  </defs>
+  <rect width="800" height="1200" fill="url(#bg)"/>
+  <circle cx="575" cy="340" r="300" fill="url(#glow)" filter="url(#blur)"/>
+  <path d="M-80 880 C150 600 380 560 880 170" fill="none" stroke="#fff" stroke-opacity=".2" stroke-width="2"/>
+  <path d="M-120 960 C170 640 440 630 920 240" fill="none" stroke="#fff" stroke-opacity=".1" stroke-width="1"/>
+  <circle cx="620" cy="330" r="170" fill="none" stroke="#fff" stroke-opacity=".16" stroke-width="2"/>
+  <circle cx="620" cy="330" r="230" fill="none" stroke="#fff" stroke-opacity=".09"/>
+  <path d="M0 0h800v1200H0z" fill="url(#grain)"/>
+  <rect x="54" y="54" width="692" height="1092" fill="none" stroke="#fff" stroke-opacity=".28"/>
+  <text x="80" y="108" fill="#fff" font-size="22" letter-spacing="5" font-family="Arial, sans-serif">MARVEL SCREEN ARCHIVE</text>
+  <text x="80" y="150" fill="#fff" opacity=".66" font-size="14" letter-spacing="3" font-family="Arial, sans-serif">ARCHIVE EDITION / ${escapeXml(posterKindLabels[item.kind] ?? "SCREEN WORK")}</text>
+  <text x="80" y="790" fill="#fff" opacity=".84" font-size="28" letter-spacing="4" font-family="Arial, sans-serif">${escapeXml(year)}</text>
+  <text x="80" y="865" fill="#fff" font-size="62" font-weight="700" font-family="Arial, PingFang SC, sans-serif">${escapeXml(title)}</text>
+  <text x="80" y="920" fill="#fff" opacity=".8" font-size="22" letter-spacing="2" font-family="Arial, sans-serif">${escapeXml(item.titleEn)}</text>
+  <line x1="80" y1="975" x2="720" y2="975" stroke="#fff" stroke-opacity=".4"/>
+  <text x="80" y="1028" fill="#fff" opacity=".86" font-size="18" letter-spacing="3" font-family="Arial, PingFang SC, sans-serif">档案设计海报 · 非官方素材</text>
+  <text x="80" y="1080" fill="#fff" opacity=".52" font-size="14" letter-spacing="2" font-family="Arial, sans-serif">IDENTIFICATION ARTWORK / NOT AN OFFICIAL POSTER</text>
+</svg>
+`;
+  await writeFile(path.join(archivePosterDir, fileName), svg);
+  archivePosterById.set(item.id, `/media/archive-posters/${fileName}`);
+}
 const people = new Map();
 function group(w) {
   if (w.sourceFamily === "official-digital")
@@ -476,13 +546,16 @@ const works = items
         w.summary ??
         "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       highlights: c.highlights ?? [],
-      poster: poster?.local ?? officialArt?.local ?? null,
+      poster:
+        poster?.local ?? officialArt?.local ?? archivePosterById.get(w.id) ?? null,
       backdrop: backdrop?.local ?? null,
       posterCredit:
         poster?.credit ??
         (officialArt
           ? `Marvel 官方宣传图 · © Marvel/Disney · 低分辨率资料识别用途 · 来源 ${officialArt.sourcePage}`
-          : null),
+          : archivePosterById.has(w.id)
+            ? "档案设计海报 · 非官方素材 · 由本项目原创生成"
+            : null),
       verification: primary ? "primary-partial" : "catalogue-only",
       sourceFamily: w.sourceFamily,
       edition: w.sources.some((s) => s.section?.includes("Episodes as films"))
@@ -523,6 +596,9 @@ const output = {
     officialArtworkCount: works.filter((w) =>
       w.poster?.startsWith("/media/official/"),
     ).length,
+    archiveDesignPosterCount: works.filter((w) =>
+      w.poster?.startsWith("/media/archive-posters/"),
+    ).length,
     officialDigitalSeriesCount: officialDigitalWorks.length,
     officialDigitalEpisodeTotal:
       officialIndex.audit?.officialDigitalEpisodeTotalObserved ?? 0,
@@ -548,7 +624,7 @@ const output = {
       "电影与电视主目录已和 Marvel 官方索引交叉核对；历史授权、合作及品牌改编仍需继续逐条核验",
       "23 个有公开单集列表的 Marvel 官方数字系列已索引 1,881 个唯一详情页；其中 17 个系列与页面标称总数一致，6 个系列保留计数差异待核。无公开单集列表的节目与播客仍只有系列级档案",
       "角色出场为人工整理的首批关系，尚未覆盖全部角色与客串",
-      "全部 1,315 位索引人物均有头像节点，其中 348 张为带许可来源的 Wikimedia Commons 真人照片，其余使用明确标注的本地姓名身份头像；历史海报与经典剧照仍需继续补齐",
+      "全部 1,315 位索引人物均有头像节点，其中 348 张为带许可来源的 Wikimedia Commons 真人照片，其余使用明确标注的本地姓名身份头像；227 条历史／动画记录使用原创档案设计海报，真实海报与经典剧照仍需逐条核验",
       "音乐、对白、访谈和大陆／海外两条线路的实际播放核验尚未完成；当前不提供未经验证的播放链接",
     ],
   },
