@@ -1,6 +1,6 @@
 {
   "cutoff": "2026-08-31",
-  "generatedAt": "2026-09-01T15:53:50.832Z",
+  "generatedAt": "2026-09-01T16:03:22.852Z",
   "works": [
     {
       "id": "captain-america-1944-short",
@@ -11041,6 +11041,19 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        },
+        {
+          "id": "doctor-strange-mainland-trailer",
+          "workId": "doctor-strange-2016-film",
+          "title": "奇异博士 · PV1预告",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep777407?theme=movie",
+          "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1ru411c7qW&page=1&autoplay=1&high_quality=1&danmaku=0",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "哔哩哔哩电影正版剧集页；页面标注 PV1 预告；浏览器播放器实际播放检查"
         }
       ],
       "watchLinks": []
@@ -13662,6 +13675,19 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        },
+        {
+          "id": "thor-ragnarok-mainland-trailer",
+          "workId": "thor-ragnarok-2017-film",
+          "title": "雷神3：诸神黄昏 · PV1预告",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep777053",
+          "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1Kh4y1e76t&page=1&autoplay=1&high_quality=1&danmaku=0",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "哔哩哔哩电影正版剧集页；页面标注 PV1 预告；浏览器播放器实际播放检查"
         }
       ],
       "watchLinks": []
@@ -13918,6 +13944,19 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        },
+        {
+          "id": "avengers-infinity-war-mainland-trailer",
+          "workId": "avengers-infinity-war-2018-film",
+          "title": "复仇者联盟3：无限战争 · PV1预告",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep777038",
+          "embedUrl": "https://player.bilibili.com/player.html?bvid=BV16F411U7xD&page=1&autoplay=1&high_quality=1&danmaku=0",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "哔哩哔哩电影正版剧集页；页面标注 PV1 预告；浏览器播放器实际播放检查"
         }
       ],
       "watchLinks": []
@@ -14133,6 +14172,19 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube oEmbed title/channel check; Marvel Entertainment official channel"
+        },
+        {
+          "id": "black-panther-mainland-trailer",
+          "workId": "black-panther-2018-film",
+          "title": "黑豹 · PV2预告",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep1114853",
+          "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1JiUVYiERw&page=1&autoplay=1&high_quality=1&danmaku=0",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "哔哩哔哩电影正版剧集页；页面标注 PV2 预告；浏览器播放器实际播放检查"
         }
       ],
       "watchLinks": []
@@ -19247,7 +19299,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "guardians-of-the-galaxy-vol-3-mainland-trailer",
+          "workId": "guardians-of-the-galaxy-vol-3-2023-film",
+          "title": "银河护卫队3 · PV1预告",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep777287",
+          "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1fw411Y7nc&page=1&autoplay=1&high_quality=1&danmaku=0",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "哔哩哔哩电影正版剧集页；页面标注 PV1 预告；浏览器播放器实际播放检查"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -21413,7 +21479,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "thunderbolts-mainland-trailer",
+          "workId": "thunderbolts-2025-film",
+          "title": "雷霆特攻队* · PV1预告",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "哔哩哔哩电影",
+          "url": "https://www.bilibili.com/bangumi/play/ep1693160",
+          "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1dzmUY4EBd&page=1&autoplay=1&high_quality=1&danmaku=0",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "哔哩哔哩电影正版剧集页；页面标注 PV1 预告；浏览器播放器实际播放检查"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -46282,9 +46362,9 @@
     "officialDigitalEpisodeMismatchSeries": 6,
     "personPortraitCount": 1315,
     "personRealPortraitCount": 348,
-    "mediaCount": 26,
-    "playbackVerifiedMediaCount": 26,
-    "mainlandMediaCount": 4,
+    "mediaCount": 32,
+    "playbackVerifiedMediaCount": 32,
+    "mainlandMediaCount": 10,
     "overseasMediaCount": 22,
     "watchLinkCount": 0,
     "untranslated": 0,
@@ -46293,7 +46373,7 @@
       "23 个有公开单集列表的 Marvel 官方数字系列已索引 1,881 个唯一详情页；其中 17 个系列与页面标称总数一致，6 个系列保留计数差异待核。无公开单集列表的节目与播客仍只有系列级档案",
       "角色出场为人工整理的首批关系，尚未覆盖全部角色与客串",
       "全部 1,315 位索引人物均有头像节点，其中 348 张为带许可来源的 Wikimedia Commons 真人照片，其余使用明确标注的本地姓名身份头像；95 条记录仍使用原创档案设计海报，真实海报与经典剧照需继续逐条核验",
-      "已接入 26 条大陆／海外公开预告与片段，并完成播放器级来源标记；尚未覆盖的作品继续显示无合规媒体状态，不把资料页或搜索页当作播放器"
+      "已接入 32 条大陆／海外公开预告与片段，并完成播放器级来源标记；尚未覆盖的作品继续显示无合规媒体状态，不把资料页或搜索页当作播放器"
     ]
   }
 }

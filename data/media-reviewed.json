@@ -336,5 +336,83 @@
     "status": "playback-verified",
     "checkedAt": "2026-09-01",
     "source": "哔哩哔哩电影正版剧集页；页面标注 PV1 预告；浏览器播放器检查"
+  },
+  {
+    "id": "avengers-infinity-war-mainland-trailer",
+    "workId": "avengers-infinity-war-2018-film",
+    "title": "复仇者联盟3：无限战争 · PV1预告",
+    "kind": "trailer",
+    "region": "mainland",
+    "provider": "哔哩哔哩电影",
+    "url": "https://www.bilibili.com/bangumi/play/ep777038",
+    "embedUrl": "https://player.bilibili.com/player.html?bvid=BV16F411U7xD&page=1&autoplay=1&high_quality=1&danmaku=0",
+    "status": "playback-verified",
+    "checkedAt": "2026-09-01",
+    "source": "哔哩哔哩电影正版剧集页；页面标注 PV1 预告；浏览器播放器实际播放检查"
+  },
+  {
+    "id": "guardians-of-the-galaxy-vol-3-mainland-trailer",
+    "workId": "guardians-of-the-galaxy-vol-3-2023-film",
+    "title": "银河护卫队3 · PV1预告",
+    "kind": "trailer",
+    "region": "mainland",
+    "provider": "哔哩哔哩电影",
+    "url": "https://www.bilibili.com/bangumi/play/ep777287",
+    "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1fw411Y7nc&page=1&autoplay=1&high_quality=1&danmaku=0",
+    "status": "playback-verified",
+    "checkedAt": "2026-09-01",
+    "source": "哔哩哔哩电影正版剧集页；页面标注 PV1 预告；浏览器播放器实际播放检查"
+  },
+  {
+    "id": "doctor-strange-mainland-trailer",
+    "workId": "doctor-strange-2016-film",
+    "title": "奇异博士 · PV1预告",
+    "kind": "trailer",
+    "region": "mainland",
+    "provider": "哔哩哔哩电影",
+    "url": "https://www.bilibili.com/bangumi/play/ep777407?theme=movie",
+    "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1ru411c7qW&page=1&autoplay=1&high_quality=1&danmaku=0",
+    "status": "playback-verified",
+    "checkedAt": "2026-09-01",
+    "source": "哔哩哔哩电影正版剧集页；页面标注 PV1 预告；浏览器播放器实际播放检查"
+  },
+  {
+    "id": "thor-ragnarok-mainland-trailer",
+    "workId": "thor-ragnarok-2017-film",
+    "title": "雷神3：诸神黄昏 · PV1预告",
+    "kind": "trailer",
+    "region": "mainland",
+    "provider": "哔哩哔哩电影",
+    "url": "https://www.bilibili.com/bangumi/play/ep777053",
+    "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1Kh4y1e76t&page=1&autoplay=1&high_quality=1&danmaku=0",
+    "status": "playback-verified",
+    "checkedAt": "2026-09-01",
+    "source": "哔哩哔哩电影正版剧集页；页面标注 PV1 预告；浏览器播放器实际播放检查"
+  },
+  {
+    "id": "black-panther-mainland-trailer",
+    "workId": "black-panther-2018-film",
+    "title": "黑豹 · PV2预告",
+    "kind": "trailer",
+    "region": "mainland",
+    "provider": "哔哩哔哩电影",
+    "url": "https://www.bilibili.com/bangumi/play/ep1114853",
+    "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1JiUVYiERw&page=1&autoplay=1&high_quality=1&danmaku=0",
+    "status": "playback-verified",
+    "checkedAt": "2026-09-01",
+    "source": "哔哩哔哩电影正版剧集页；页面标注 PV2 预告；浏览器播放器实际播放检查"
+  },
+  {
+    "id": "thunderbolts-mainland-trailer",
+    "workId": "thunderbolts-2025-film",
+    "title": "雷霆特攻队* · PV1预告",
+    "kind": "trailer",
+    "region": "mainland",
+    "provider": "哔哩哔哩电影",
+    "url": "https://www.bilibili.com/bangumi/play/ep1693160",
+    "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1dzmUY4EBd&page=1&autoplay=1&high_quality=1&danmaku=0",
+    "status": "playback-verified",
+    "checkedAt": "2026-09-01",
+    "source": "哔哩哔哩电影正版剧集页；页面标注 PV1 预告；浏览器播放器实际播放检查"
   }
 ]
