@@ -48,6 +48,17 @@ const cards: Card[] = [
 const armorNames = [
   "Mark I", "Mark II", "Mark III", "Mark IV", "Mark V", "Mark VI", "Mark VII", "Mark VIII", "Mark IX", "Mark X", "Mark XI", "Mark XII", "Mark XIII", "Mark XIV", "Mark XV · Sneaky", "Mark XVI · Nightclub", "Mark XVII · Heartbreaker", "Mark XVIII · Casanova", "Mark XIX · Tiger", "Mark XX · Python", "Mark XXI · Midas", "Mark XXII · Hot Rod", "Mark XXIII · Shades", "Mark XXIV · Tank", "Mark XXV · Striker", "Mark XXVI · Gamma", "Mark XXVII · Disco", "Mark XXVIII · Jack", "Mark XXIX · Fiddler", "Mark XXX · Blue Steel", "Mark XXXI · Piston", "Mark XXXII · Romeo", "Mark XXXIII · Silver Centurion", "Mark XXXIV · Southpaw", "Mark XXXV · Red Snapper", "Mark XXXVI · Peacemaker", "Mark XXXVII · Hammerhead", "Mark XXXVIII · Igor", "Mark XXXIX · Gemini", "Mark XL · Shotgun", "Mark XLI · Bones", "Mark XLII · 吸附式", "Hulkbuster · Veronica", "War Machine", "Iron Patriot", "Rescue · Mark XLIX", "Bleeding Edge", "Model-Prime", "Godkiller", "Thorbuster", "Silver Centurion", "Extremis", "Stealth Armor", "Hydro Armor", "Space Armor", "Deep-Space Armor", "Endo-Sym Armor", "Model 70", "Ironheart Armor" ];
 
+const characterPortraits: Record<string, string> = {
+  "iron-man": "/media/characters/tony-stark.svg",
+  "captain-america": "/media/characters/steve-rogers.svg",
+  thor: "/media/characters/thor.svg",
+  "black-widow": "/media/characters/natasha-romanoff.svg",
+  "spider-man": "/media/characters/peter-parker-mcu.svg",
+  "doctor-strange": "/media/characters/stephen-strange.svg",
+  "scarlet-witch": "/media/characters/wanda-maximoff.svg",
+  wolverine: "/media/characters/logan-fox.svg",
+};
+
 const storylines = [
   { id: "infinity", title: "无限传奇", years: "2008—2019", tone: "一颗颗宝石，把个人英雄故事汇成一场宇宙终局。", items: ["钢铁侠", "复仇者联盟", "美国队长", "银河护卫队", "复仇者联盟4：终局之战"], source: "https://www.marvel.com/articles/movies/marvel-studios-making-of-marvel-cinematic-universe" },
   { id: "multiverse", title: "多元宇宙传奇", years: "2021—至今", tone: "当时间线不再只有一条，选择便会长出新的世界。", items: ["旺达幻视", "洛基", "蜘蛛侠：英雄无归", "奇异博士2", "复仇者联盟：毁灭之日"], source: "https://www.marvel.com/articles/comics/a-guide-to-the-many-marvel-multiverses" },
@@ -61,9 +72,10 @@ function initials(text: string) {
 }
 
 function CardPortrait({ card, poster, large = false }: { card: Card; poster?: string | null; large?: boolean }) {
+  const portrait = characterPortraits[card.id] ?? poster;
   return (
-    <div className={`character-card-art${large ? " large" : ""}${poster ? "" : " fallback"}`}>
-      {poster ? <img src={poster} alt={`${card.alias}视觉档案`} /> : <span className="character-avatar">{initials(card.alias)}</span>}
+    <div className={`character-card-art${large ? " large" : ""}${portrait ? "" : " fallback"}`}>
+      {portrait ? <img src={portrait} alt={`${card.alias}视觉档案`} /> : <span className="character-avatar">{initials(card.alias)}</span>}
       <span className="character-art-shade" />
       <span className="character-art-label">{card.alias}</span>
       <span className="character-art-caption">VISUAL FILE / {card.universe}</span>
