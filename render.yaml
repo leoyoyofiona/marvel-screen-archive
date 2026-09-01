@@ -9,7 +9,7 @@ services:
     runtime: node
     plan: free
     region: singapore
-    buildCommand: npm ci && npm run catalog:validate && npm run build
+    buildCommand: npm ci --include=dev && npm run catalog:validate && npm run build
     startCommand: npm start
     healthCheckPath: /api/health
     autoDeployTrigger: commit
