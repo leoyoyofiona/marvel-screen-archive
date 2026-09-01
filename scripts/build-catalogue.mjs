@@ -246,14 +246,31 @@ const manualOfficialWorkIds = new Map([
     "https://www.marvel.com/movies/x-men-dark-phoenix",
     "dark-phoenix-2019-film",
   ],
+  [
+    "https://www.marvel.com/tv-shows/marvel-s-inhumans/1",
+    "inhumans-2017-series",
+  ],
+  [
+    "https://www.marvel.com/tv-shows/animation/marvel-s-spider-man/2",
+    "marvel-s-spider-man-2017-animated-series",
+  ],
 ]);
 const compatibleOfficialArtwork = (art, work) => {
   if (art.kind === "movie")
     return work.kind === "film" || work.kind === "animated-film";
   if (art.kind === "tv-season")
-    return art.sourcePage.includes("/animation/")
-      ? ["animated-series", "animated-film", "short"].includes(work.kind)
-      : ["series", "special", "documentary"].includes(work.kind);
+    // Marvel's TV index does not consistently place animated titles under an
+    // /animation/ path (for example Hit-Monkey and M.O.D.O.K.). Keep both
+    // television branches eligible and let the unique title match below
+    // disambiguate duplicate live-action/animated titles.
+    return [
+      "series",
+      "special",
+      "documentary",
+      "animated-series",
+      "animated-film",
+      "short",
+    ].includes(work.kind);
   if (art.kind === "digital-series") return work.kind === "digital-series";
   if (art.kind === "podcast") return work.kind === "podcast";
   return false;

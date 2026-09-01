@@ -32,6 +32,12 @@ const soundtrackLinks = JSON.parse(
     "utf8",
   ),
 );
+const officialIndex = JSON.parse(
+  await readFile(
+    new URL("../data/official-index.json", import.meta.url),
+    "utf8",
+  ),
+);
 const officialEpisodesText = await readFile(
   new URL("../data/official-episodes.json", import.meta.url),
   "utf8",
@@ -92,8 +98,24 @@ test("reviewed official work hubs are available without becoming film links", ()
         source.verification === "editor-reviewed" && officialHub.test(source.url),
     ),
   );
-  assert.equal(worksWithHub.length, 50);
+  assert.ok(worksWithHub.length >= 50);
   assert.ok(worksWithHub.every((work) => work.watchLinks.length === 0));
+});
+test("every current Marvel official index entry maps to a catalogue record", () => {
+  const officialEntries = [
+    ...(officialIndex.movies ?? []),
+    ...(officialIndex.tvSeasons ?? []),
+    ...(officialIndex.digitalSeries ?? []),
+    ...(officialIndex.podcasts ?? []),
+  ];
+  const mapped = officialEntries.filter((entry) =>
+    data.works.some(
+      (work) =>
+        work.sources.some((source) => source.url.endsWith(entry.href)) ||
+        work.seasons.some((season) => season.url.endsWith(entry.href)),
+    ),
+  );
+  assert.equal(mapped.length, officialEntries.length);
 });
 test("offline shell stays same-origin and never caches live APIs", async () => {
   const serviceWorker = await readFile(

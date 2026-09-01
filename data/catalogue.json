@@ -1,6 +1,6 @@
 {
   "cutoff": "2026-08-31",
-  "generatedAt": "2026-09-01T04:17:54.701Z",
+  "generatedAt": "2026-09-01T10:29:13.184Z",
   "works": [
     {
       "id": "captain-america-1944-short",
@@ -9797,9 +9797,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/official/agentcarters2_lob_crd_03-cffe6bf7c2.webp",
+      "poster": null,
       "backdrop": null,
-      "posterCredit": "Marvel 官方宣传图 · © Marvel/Disney · 低分辨率资料识别用途 · 来源 https://www.marvel.com/tv-shows/marvel-s-agent-carter/2",
+      "posterCredit": null,
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -9838,13 +9838,7 @@
         "p-992f45c4f905"
       ],
       "characters": [],
-      "seasons": [
-        {
-          "label": "Marvel's Agent Carter",
-          "url": "https://www.marvel.com/tv-shows/marvel-s-agent-carter/2",
-          "image": "/media/official/agentcarters2_lob_crd_03-cffe6bf7c2.webp"
-        }
-      ],
+      "seasons": [],
       "sources": [
         {
           "title": "片目索引 · Wikipedia",
@@ -12691,9 +12685,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": null,
+      "poster": "/media/official/animatedspider-man_lob_crd_01-60280d9c26.webp",
       "backdrop": null,
-      "posterCredit": null,
+      "posterCredit": "Marvel 官方宣传图 · © Marvel/Disney · 低分辨率资料识别用途 · 来源 https://www.marvel.com/tv-shows/animation/marvel-s-spider-man/2",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -12736,8 +12730,20 @@
         "p-aa61e8308e52"
       ],
       "characters": [],
-      "seasons": [],
+      "seasons": [
+        {
+          "label": "Marvel's Spider-Man",
+          "url": "https://www.marvel.com/tv-shows/animation/marvel-s-spider-man/2",
+          "image": "/media/official/animatedspider-man_lob_crd_01-60280d9c26.webp"
+        }
+      ],
       "sources": [
+        {
+          "title": "Marvel 官方作品页面",
+          "url": "https://www.marvel.com/tv-shows/animation/marvel-s-spider-man/2",
+          "checkedAt": "2026-08-31",
+          "verification": "editor-reviewed"
+        },
         {
           "title": "片目索引 · Wikipedia",
           "url": "https://en.wikipedia.org/wiki/Spider-Man_(2017_TV_series)",
@@ -16561,9 +16567,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": null,
+      "poster": "/media/official/hitmonkey_lob_crd_02-d14d4dec83.webp",
       "backdrop": null,
-      "posterCredit": null,
+      "posterCredit": "Marvel 官方宣传图 · © Marvel/Disney · 低分辨率资料识别用途 · 来源 https://www.marvel.com/tv-shows/marvels-hit-monkey/1",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -16602,8 +16608,25 @@
         "p-46841cb84872"
       ],
       "characters": [],
-      "seasons": [],
+      "seasons": [
+        {
+          "label": "Marvel's Hit-Monkey | Season 2",
+          "url": "https://www.marvel.com/tv-shows/marvels-hit-monkey/2",
+          "image": "/media/official/marvelshitmonkeys2_lob_crd_01-ad290a1316.webp"
+        },
+        {
+          "label": "Marvel's Hit-Monkey | Season 1",
+          "url": "https://www.marvel.com/tv-shows/marvels-hit-monkey/1",
+          "image": "/media/official/hitmonkey_lob_crd_02-d14d4dec83.webp"
+        }
+      ],
       "sources": [
+        {
+          "title": "Marvel 官方作品页面",
+          "url": "https://www.marvel.com/tv-shows/marvels-hit-monkey/1",
+          "checkedAt": "2026-08-31",
+          "verification": "editor-reviewed"
+        },
         {
           "title": "片目索引 · Wikipedia",
           "url": "https://en.wikipedia.org/wiki/Hit-Monkey_(TV_series)",
@@ -16762,9 +16785,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": null,
+      "poster": "/media/official/modok_lob_crd-02_1-5e85994f5d.webp",
       "backdrop": null,
-      "posterCredit": null,
+      "posterCredit": "Marvel 官方宣传图 · © Marvel/Disney · 低分辨率资料识别用途 · 来源 https://www.marvel.com/tv-shows/marvels-modok",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -16804,8 +16827,20 @@
         "p-c7a275666441"
       ],
       "characters": [],
-      "seasons": [],
+      "seasons": [
+        {
+          "label": "Marvel's M.O.D.O.K.",
+          "url": "https://www.marvel.com/tv-shows/marvels-modok",
+          "image": "/media/official/modok_lob_crd-02_1-5e85994f5d.webp"
+        }
+      ],
       "sources": [
+        {
+          "title": "Marvel 官方作品页面",
+          "url": "https://www.marvel.com/tv-shows/marvels-modok",
+          "checkedAt": "2026-08-31",
+          "verification": "editor-reviewed"
+        },
         {
           "title": "片目索引 · Wikipedia",
           "url": "https://en.wikipedia.org/wiki/M.O.D.O.K._(TV_series)",
@@ -17955,9 +17990,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": null,
+      "poster": "/media/official/iamgroot_lob_crd_04-dd00391504.webp",
       "backdrop": null,
-      "posterCredit": null,
+      "posterCredit": "Marvel 官方宣传图 · © Marvel/Disney · 低分辨率资料识别用途 · 来源 https://www.marvel.com/tv-shows/i-am-groot/1",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -17994,7 +18029,18 @@
         "p-6949f5db60d5"
       ],
       "characters": [],
-      "seasons": [],
+      "seasons": [
+        {
+          "label": "I Am Groot | Season 2",
+          "url": "https://www.marvel.com/tv-shows/i-am-groot/2",
+          "image": "/media/official/iamgroots2_lob_crd_01-a32b38cd2c.webp"
+        },
+        {
+          "label": "I Am Groot | Season 1",
+          "url": "https://www.marvel.com/tv-shows/i-am-groot/1",
+          "image": "/media/official/iamgroot_lob_crd_04-dd00391504.webp"
+        }
+      ],
       "sources": [
         {
           "title": "片目索引 · Wikipedia",
@@ -45864,8 +45910,8 @@
   "audit": {
     "candidateCount": 365,
     "primaryReviewed": 51,
-    "posterCount": 135,
-    "officialArtworkCount": 135,
+    "posterCount": 138,
+    "officialArtworkCount": 138,
     "officialDigitalSeriesCount": 41,
     "officialDigitalEpisodeTotal": 1890,
     "officialDigitalEpisodeUniquePages": 1881,
