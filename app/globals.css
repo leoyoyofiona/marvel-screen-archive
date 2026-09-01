@@ -1201,7 +1201,7 @@ svg {
 }
 .character-card {
   position: relative;
-  min-height: 270px;
+  min-height: 420px;
   padding: 17px 15px 14px;
   text-align: left;
   border: 1px solid #364356;
@@ -1210,6 +1210,8 @@ svg {
   color: #dbe3ee;
   cursor: pointer;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 .character-card::after {
@@ -1251,8 +1253,9 @@ svg {
 }
 .character-card-art {
   position: relative;
-  height: 132px;
-  margin: 14px -1px 11px;
+  height: 300px;
+  flex: 0 0 300px;
+  margin: 14px -1px 0;
   overflow: hidden;
   border: 1px solid #596a82;
   background: radial-gradient(circle at 50% 25%, #536278, #172130 66%, #0c111a);
@@ -1297,6 +1300,7 @@ svg {
 }
 .character-card-art.large {
   height: 164px;
+  flex-basis: 164px;
   margin: 24px 0 16px;
 }
 .character-card-art.large .character-art-label {
@@ -1313,8 +1317,12 @@ svg {
   border-color: #7a5b8e;
   background: radial-gradient(circle at 50% 25%, #654c78, #241b31 66%, #110f18);
 }
-.character-card > small,
-.character-card > em,
+.character-card-copy {
+  min-height: 93px;
+  padding-top: 11px;
+}
+.character-card-copy > small,
+.character-card-copy > em,
 .lore-modal > small,
 .lore-modal-name {
   display: block;
@@ -1322,7 +1330,7 @@ svg {
   font-size: 9px;
   font-style: normal;
 }
-.character-card > strong {
+.character-card-copy > strong {
   display: block;
   margin: 5px 0 2px;
   color: #f0f3f7;
@@ -1331,7 +1339,7 @@ svg {
 }
 .character-card-rule {
   display: block;
-  margin: 15px 0 10px;
+  margin: 8px 0 8px;
   border-top: 1px solid #38475b;
 }
 .character-card-meta {
@@ -1352,7 +1360,7 @@ svg {
 }
 .character-card-move {
   display: block;
-  margin-top: 11px;
+  margin-top: 7px;
   color: #b7c3d4;
   font-size: 9px;
   line-height: 1.6;
@@ -1381,12 +1389,14 @@ svg {
 }
 .armor-card {
   position: relative;
-  min-height: 270px;
+  min-height: 420px;
   padding: 17px 15px 14px;
   border: 1px solid #364356;
   border-radius: 2px;
   background: linear-gradient(150deg, #192333, #0f151f 72%);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 .armor-card:hover {
@@ -1394,12 +1404,16 @@ svg {
   border-color: #e45d73;
   box-shadow: 0 14px 28px rgba(0,0,0,.24);
 }
-.armor-card > small {
+.armor-card-copy {
+  min-height: 66px;
+  padding-top: 11px;
+}
+.armor-card-copy > small {
   display: block;
   color: #7789a3;
   font-size: 8px;
 }
-.armor-card > strong {
+.armor-card-copy > strong {
   display: block;
   margin: 5px 0 4px;
   color: #d8e0ec;
@@ -1413,19 +1427,35 @@ svg {
 }
 .armor-art {
   position: relative;
-  height: 132px;
-  margin: 14px -1px 11px;
+  height: 300px;
+  flex: 0 0 300px;
+  margin: 14px -1px 0;
   overflow: hidden;
   border: 1px solid #4c5d73;
   background: radial-gradient(circle at 50% 43%, #303e50, #111923 73%);
   isolation: isolate;
+}
+.armor-art img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 24%;
+  filter: saturate(.9) contrast(1.08) brightness(.78);
+}
+.armor-art-shade {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(5,8,14,.05), rgba(5,8,14,.78) 90%);
 }
 .armor-art::after {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(135deg, rgba(255,255,255,.08), transparent 35%, rgba(4,7,12,.42));
+  background: linear-gradient(135deg, rgba(255,255,255,.08), transparent 35%);
 }
 .armor-illustration {
   width: 100%;
@@ -1498,6 +1528,19 @@ svg {
   color: #d5deebaa;
   font-size: 7px;
   letter-spacing: .12em;
+}
+.player-audio-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 10px 17px 0;
+  color: #e8c5ca;
+  font-size: 9px;
+  line-height: 1.6;
+}
+.player-audio-hint svg {
+  flex: 0 0 auto;
+  color: #f29aaa;
 }
 .text-link {
   display: inline-flex;
@@ -1682,6 +1725,10 @@ svg {
   .lore-actions { margin-top: 15px; }
   .character-card-grid,
   .armor-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .character-card,
+  .armor-card { min-height: 350px; }
+  .character-card-art,
+  .armor-art { height: 235px; flex-basis: 235px; }
   .character-card { min-height: 245px; padding: 13px 11px; }
   .character-card > strong { font-size: 17px; }
   .character-avatar { width: 55px; height: 55px; margin: 14px 0 11px; }

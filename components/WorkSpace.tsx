@@ -108,14 +108,20 @@ export default function WorkSpace({
       (current.embedUrl.includes("bilibili.com") ||
         current.embedUrl.includes("youtube")),
   );
+  const isBilibiliPlayer = Boolean(current?.embedUrl?.includes("bilibili.com"));
   const playerSrc = current?.embedUrl
     ? (() => {
         const key = current.embedUrl.includes("bilibili.com") ? "muted" : "mute";
         const value = audioEnabled ? "0" : "1";
+        const autoplay = audioEnabled && isBilibiliPlayer ? "0" : "1";
+        const autoplayPattern = /([?&])autoplay=[^&]*/;
+        const withAutoplay = autoplayPattern.test(current.embedUrl)
+          ? current.embedUrl.replace(autoplayPattern, `$1autoplay=${autoplay}`)
+          : `${current.embedUrl}${current.embedUrl.includes("?") ? "&" : "?"}autoplay=${autoplay}`;
         const pattern = new RegExp(`([?&])${key}=[^&]*`);
-        return pattern.test(current.embedUrl)
-          ? current.embedUrl.replace(pattern, `$1${key}=${value}`)
-          : `${current.embedUrl}${current.embedUrl.includes("?") ? "&" : "?"}${key}=${value}`;
+        return pattern.test(withAutoplay)
+          ? withAutoplay.replace(pattern, `$1${key}=${value}`)
+          : `${withAutoplay}${withAutoplay.includes("?") ? "&" : "?"}${key}=${value}`;
       })()
     : "";
   const directorPeople = people.filter((p) =>
@@ -279,7 +285,7 @@ export default function WorkSpace({
                       title={audioEnabled ? "关闭播放器声音" : "打开播放器声音"}
                     >
                       {audioEnabled ? <Volume2 size={14} /> : <VolumeX size={14} />}
-                      {audioEnabled ? "声音已开启" : "打开声音"}
+                      {audioEnabled ? "声音模式已开" : "打开声音"}
                     </button>
                   )}
                   <span>{region === "mainland" ? "中国大陆线路" : "海外线路"}</span>
@@ -333,6 +339,11 @@ export default function WorkSpace({
                   </div>
                 )}
               </div>
+              {audioEnabled && isBilibiliPlayer && (
+                <p className="player-audio-hint">
+                  <Volume2 size={14} /> 声音模式已开启；若浏览器阻止带声音自动播放，请点击播放器中央的播放键开始播放。
+                </p>
+              )}
               <div className="media-tabs" role="tablist" aria-label="作品媒体">
                 <button
                   role="tab"
