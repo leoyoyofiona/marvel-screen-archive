@@ -1,0 +1,122 @@
+[
+  {
+    "id": "marvel-music-playlist",
+    "title": "Marvel Music",
+    "workTitle": "漫威电影与剧集原声精选",
+    "year": 2026,
+    "provider": "Apple Music · Disney",
+    "url": "https://music.apple.com/us/playlist/marvel-music/pl.7fdd6e74d2324a43bae830645f268538",
+    "note": "官方精选歌单",
+    "checkedAt": "2026-09-01"
+  },
+  {
+    "id": "complete-mcu-playlist",
+    "title": "Complete Marvel Cinematic Universe",
+    "workTitle": "漫威电影宇宙原声精选",
+    "year": 2026,
+    "provider": "Apple Music · Disney",
+    "url": "https://music.apple.com/us/playlist/complete-marvel-cinematic-universe/pl.550dd8b18e4c47fa8445040299256063",
+    "note": "官方精选歌单",
+    "checkedAt": "2026-09-01"
+  },
+  {
+    "id": "avengers-2012-score",
+    "title": "The Avengers (Original Motion Picture Soundtrack)",
+    "workTitle": "复仇者联盟",
+    "year": 2012,
+    "provider": "Apple Music · Marvel Music",
+    "url": "https://music.apple.com/us/album/the-avengers-original-motion-picture-soundtrack/1440663549",
+    "note": "官方电影原声专辑",
+    "checkedAt": "2026-09-01"
+  },
+  {
+    "id": "captain-marvel-songs",
+    "title": "Captain Marvel Soundtrack Official Playlist",
+    "workTitle": "惊奇队长",
+    "year": 2019,
+    "provider": "Apple Music · Disney Music",
+    "url": "https://music.apple.com/us/playlist/captain-marvel-soundtrack-official-playlist/pl.cc081a031a18452bb6547480cd0b1776",
+    "note": "官方歌曲歌单",
+    "checkedAt": "2026-09-01"
+  },
+  {
+    "id": "black-widow-score",
+    "title": "Black Widow (Original Motion Picture Soundtrack)",
+    "workTitle": "黑寡妇",
+    "year": 2021,
+    "provider": "Apple Music · Marvel Music",
+    "url": "https://music.apple.com/us/album/black-widow-original-motion-picture-soundtrack/1574253787",
+    "note": "官方电影原声专辑",
+    "checkedAt": "2026-09-01"
+  },
+  {
+    "id": "thor-love-and-thunder-score",
+    "title": "Thor: Love and Thunder (Original Motion Picture Soundtrack)",
+    "workTitle": "雷神4：爱与雷霆",
+    "year": 2022,
+    "provider": "Apple Music · Marvel Music",
+    "url": "https://music.apple.com/us/album/thor-love-and-thunder-original-motion-picture-soundtrack/1632659837",
+    "note": "官方电影原声专辑",
+    "checkedAt": "2026-09-01"
+  },
+  {
+    "id": "doctor-strange-multiverse-score",
+    "title": "Doctor Strange in the Multiverse of Madness",
+    "workTitle": "奇异博士2：疯狂多元宇宙",
+    "year": 2022,
+    "provider": "Apple Music · Marvel Music",
+    "url": "https://music.apple.com/us/album/doctor-strange-in-the-multiverse-of-madness/1624853117",
+    "note": "官方电影原声专辑",
+    "checkedAt": "2026-09-01"
+  },
+  {
+    "id": "guardians-vol-3-score",
+    "title": "Guardians of the Galaxy, Vol. 3 (Original Score)",
+    "workTitle": "银河护卫队3",
+    "year": 2023,
+    "provider": "Apple Music · Marvel Music",
+    "url": "https://music.apple.com/us/album/guardians-of-the-galaxy-vol-3-original-score/1685071315",
+    "note": "官方电影原声专辑",
+    "checkedAt": "2026-09-01"
+  },
+  {
+    "id": "captain-america-brave-new-world-score",
+    "title": "Captain America: Brave New World (Original Motion Picture Soundtrack)",
+    "workTitle": "美国队长4：勇敢新世界",
+    "year": 2025,
+    "provider": "Apple Music · Marvel Music",
+    "url": "https://music.apple.com/us/album/captain-america-brave-new-world-original-motion-picture/1795821594",
+    "note": "官方电影原声专辑",
+    "checkedAt": "2026-09-01"
+  },
+  {
+    "id": "fantastic-four-first-steps-score",
+    "title": "The Fantastic Four: First Steps (Original Motion Picture Soundtrack)",
+    "workTitle": "神奇四侠：初露锋芒",
+    "year": 2025,
+    "provider": "Apple Music · Marvel Music",
+    "url": "https://music.apple.com/us/album/the-fantastic-four-first-steps-original-motion/1826653923",
+    "note": "官方电影原声专辑",
+    "checkedAt": "2026-09-01"
+  },
+  {
+    "id": "thunderbolts-score",
+    "title": "Thunderbolts* (Original Motion Picture Soundtrack)",
+    "workTitle": "雷霆特攻队*",
+    "year": 2025,
+    "provider": "Apple Music · Marvel Music",
+    "url": "https://music.apple.com/us/album/thunderbolts-original-motion-picture-soundtrack/1810533249",
+    "note": "官方电影原声专辑",
+    "checkedAt": "2026-09-01"
+  },
+  {
+    "id": "spider-man-brand-new-day-score",
+    "title": "Spider-Man: Brand New Day (Original Motion Picture Soundtrack)",
+    "workTitle": "蜘蛛侠：崭新之日",
+    "year": 2026,
+    "provider": "Apple Music · Sony Music",
+    "url": "https://music.apple.com/us/album/spider-man-brand-new-day-original-motion-picture-soundtrack/6795223715",
+    "note": "官方电影原声专辑",
+    "checkedAt": "2026-09-01"
+  }
+]

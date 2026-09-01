@@ -10,7 +10,6 @@ import {
   Bookmark,
   ChevronLeft,
   ChevronRight,
-  Disc3,
   VolumeX,
   FileCheck2,
   ExternalLink,
@@ -21,6 +20,7 @@ import { Header, Disclaimer, Footer } from "./Chrome";
 import { WorkCard } from "./Poster";
 import { ReferenceChecklist } from "./ReferenceChecklist";
 import Timeline from "./Timeline";
+import SoundtrackHall from "./SoundtrackHall";
 const Relationships = dynamic(() => import("./Relationships"), {
   loading: () => <div className="loading-section">正在打开关系宇宙…</div>,
   ssr: false,
@@ -543,39 +543,7 @@ export default function Archive({ data }: { data: ArchiveCatalogue }) {
                 ))}
             </div>
           </section>
-          <section id="listening" className="section listening-section">
-            <div className="section-heading">
-              <div>
-                <span className="eyebrow">05 / THE SOUND OF STORIES</span>
-                <h2>
-                  视听厅<span>有些旋律，一响起就是一段回忆</span>
-                </h2>
-              </div>
-              <Disc3 size={30} className="silver" />
-            </div>
-            <div className="listening-empty">
-              <div className="record-art">
-                <div />
-                <span>
-                  ORIGINAL
-                  <br />
-                  SOUNDTRACKS
-                </span>
-              </div>
-              <div>
-                <span className="tag">
-                  {region === "mainland" ? "中国大陆线路" : "海外线路"}
-                </span>
-                <h3>留给真正的电影原声。</h3>
-                <p>
-                  曲目、经典对白与官方片段正在逐条核对来源和播放条件。不会用其他音乐冒充电影配乐，也不会把搜索结果或预告当成免费全片。
-                </p>
-                <span className="muted">
-                  <FileCheck2 size={16} /> 当前无已完成播放核验的音频条目
-                </span>
-              </div>
-            </div>
-          </section>
+          <SoundtrackHall region={region} />
           <Community />
           <section className="source-note">
             <FileCheck2 size={19} />

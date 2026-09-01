@@ -1687,6 +1687,89 @@ svg {
   border: 1px solid #373d4b;
   margin-top: 30px;
 }
+.listening-shell {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 42px;
+  background: radial-gradient(ellipse at left, #2b1c28, #111723 60%);
+  border: 1px solid #373d4b;
+  margin-top: 30px;
+}
+.soundtrack-content h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 16px 0;
+}
+.soundtrack-content > p {
+  font-size: 12px;
+  color: #a5afc0;
+  max-width: 750px;
+  line-height: 1.9;
+}
+.soundtrack-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 22px;
+}
+.soundtrack-card {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  min-width: 0;
+  padding: 13px 14px;
+  color: #e8ebf1;
+  border: 1px solid #3b4351;
+  background: rgba(10, 14, 23, 0.54);
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease;
+}
+.soundtrack-card:hover,
+.soundtrack-card:focus-visible {
+  border-color: #d26b73;
+  background: rgba(112, 30, 45, 0.28);
+  transform: translateY(-2px);
+}
+.soundtrack-card > svg:first-child {
+  color: #e49ca5;
+  flex: 0 0 auto;
+}
+.soundtrack-card > svg:last-child {
+  color: #a5afc0;
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+.soundtrack-card span {
+  min-width: 0;
+}
+.soundtrack-card strong,
+.soundtrack-card small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.soundtrack-card strong {
+  font-size: 12px;
+  font-weight: 500;
+}
+.soundtrack-card small {
+  color: #9ca7b8;
+  font-size: 10px;
+  margin-top: 5px;
+}
+.soundtrack-note {
+  color: #8793a6;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 18px;
+  line-height: 1.6;
+}
 .record-art {
   height: 220px;
   width: 220px;
@@ -3009,6 +3092,11 @@ svg {
     padding: 27px;
     gap: 25px;
   }
+  .listening-shell {
+    grid-template-columns: 210px 1fr;
+    padding: 27px;
+    gap: 25px;
+  }
   .record-art {
     height: 190px;
     width: 190px;
@@ -3573,6 +3661,11 @@ svg {
     padding: 25px;
     gap: 22px;
   }
+  .listening-shell {
+    grid-template-columns: 1fr;
+    padding: 25px;
+    gap: 22px;
+  }
   .record-art {
     height: 150px;
     width: 150px;
@@ -3596,6 +3689,15 @@ svg {
   }
   .listening-empty .tag {
     font-size: 9px;
+  }
+  .soundtrack-grid {
+    grid-template-columns: 1fr;
+  }
+  .soundtrack-content h3 {
+    font-size: 20px;
+  }
+  .soundtrack-content > p {
+    font-size: 11px;
   }
   .community-section > .section-heading {
     align-items: flex-start;

@@ -26,6 +26,12 @@ const relationshipPayload = JSON.parse(
     "utf8",
   ),
 );
+const soundtrackLinks = JSON.parse(
+  await readFile(
+    new URL("../public/data/soundtracks.json", import.meta.url),
+    "utf8",
+  ),
+);
 const officialEpisodesText = await readFile(
   new URL("../data/official-episodes.json", import.meta.url),
   "utf8",
@@ -118,6 +124,17 @@ test("relationship graph payload is complete but strips work-detail fields", () 
   assert.ok(
     relationshipPayload.people.every(
       (person) => person.portrait?.startsWith("/media/people/"),
+    ),
+  );
+});
+test("soundtrack hall only exposes reviewed official music pages", () => {
+  assert.equal(soundtrackLinks.length, 12);
+  assert.ok(
+    soundtrackLinks.every(
+      (item) =>
+        /^https:\/\/music\.apple\.com\//.test(item.url) &&
+        item.provider.includes("Apple Music") &&
+        item.checkedAt === "2026-09-01",
     ),
   );
 });
