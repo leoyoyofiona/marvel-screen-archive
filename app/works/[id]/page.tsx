@@ -25,6 +25,7 @@ export default async function WorkPage({
     <WorkSpace
       work={work}
       people={catalogue.people.filter((p) => work.people.includes(p.id))}
+      characters={catalogue.characters.filter((c) => work.characters.includes(c.id))}
       related={catalogue.works
         .filter((w) => w.id !== id && w.universe === work.universe)
         .slice(0, 5)}

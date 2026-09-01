@@ -1,7 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -46,6 +46,7 @@ export default function Archive({ data }: { data: ArchiveCatalogue }) {
     [posterComments, setPosterComments] = useState<
       Record<string, { name: string; body: string }>
     >({});
+  const regionTouched = useRef(false);
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
       try {
@@ -63,11 +64,13 @@ export default function Archive({ data }: { data: ArchiveCatalogue }) {
           setOnlySaved(!!state.onlySaved);
         }
         setSaved(JSON.parse(localStorage.getItem("marvel-saved") ?? "[]"));
-        setRegion(
-          localStorage.getItem("marvel-region") === "overseas"
-            ? "overseas"
-            : "mainland",
-        );
+        if (!regionTouched.current) {
+          setRegion(
+            localStorage.getItem("marvel-region") === "overseas"
+              ? "overseas"
+              : "mainland",
+          );
+        }
       } catch {}
     });
     return () => cancelAnimationFrame(frame);
@@ -120,7 +123,13 @@ export default function Archive({ data }: { data: ArchiveCatalogue }) {
     } catch {}
   }, [query, universe, kind, phase, page, release, sort, onlySaved]);
   const changeRegion = (r: "mainland" | "overseas") => {
+    regionTouched.current = true;
     setRegion(r);
+    setNotice(
+      r === "mainland"
+        ? "已切换到中国大陆线路：视听厅与作品空间将优先展示大陆可访问来源。"
+        : "已切换到海外线路：作品空间将优先展示海外官方公开素材。",
+    );
     try {
       localStorage.setItem("marvel-region", r);
     } catch {}
