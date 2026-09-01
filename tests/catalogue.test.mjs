@@ -64,6 +64,14 @@ test("fresh primary index snapshot matches the imported candidate inventory", ()
     sourceIndexAudit.freshCandidateCount + data.audit.officialDigitalSeriesCount + 5,
   );
 });
+test("every work has a Chinese archive title while preserving its source title", () => {
+  assert.equal(data.audit.untranslated, 0);
+  for (const work of data.works) {
+    assert.ok(work.title.trim(), `missing Chinese archive title for ${work.id}`);
+    assert.ok(work.titleEn.trim(), `missing source title for ${work.id}`);
+    assert.equal(work.translated, true, `untranslated work ${work.id}`);
+  }
+});
 test("distinct universes never gain an MCU phase from a shared year", () => {
   for (const id of [
     "venom-2018-film",

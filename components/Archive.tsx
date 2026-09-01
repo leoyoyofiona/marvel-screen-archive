@@ -284,6 +284,10 @@ export default function Archive({ data }: { data: Catalogue }) {
                   </small>
                 </span>
                 <span>
+                  {data.works.length - data.audit.untranslated}
+                  <small>中文档案标题 · 同时保留英文原名</small>
+                </span>
+                <span>
                   {data.audit.watchLinkCount}
                   <small>合规全片链接</small>
                 </span>

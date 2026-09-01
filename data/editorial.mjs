@@ -268,6 +268,80 @@ The Mighty Marvel Podcast|漫威强力播客
 This Week in Marvel NOW!|漫威本周 NOW!
 This Week In Marvel's Agent Carter|《特工卡特》官方幕后播客
 This Week In Marvel's Agents Of S.H.I.E.L.D.|《神盾局特工》官方幕后播客
+Astonishing X-Men: Gifted|惊世X战警：天赋
+Marvel Super Heroes 4D (London)|漫威超级英雄4D（伦敦）
+Astonishing X-Men: Dangerous|惊世X战警：危险
+Astonishing X-Men: Torn|惊世X战警：分裂
+Astonishing X-Men: Unstoppable|惊世X战警：势不可挡
+Marvel Super Heroes 4D (New York)|漫威超级英雄4D（纽约）
+Marvel: All Winners Squad|漫威：全胜小队
+Lego Marvel Super Heroes: Maximum Overload|乐高漫威超级英雄：极限超载
+Marvel Super Heroes 4D (Bali)|漫威超级英雄4D（巴厘岛）
+Marvel Super Heroes 4D (Las Vegas)|漫威超级英雄4D（拉斯维加斯）
+Ultimate Wolverine Vs. Hulk|终极金刚狼大战浩克
+Wolverine: Origin|金刚狼：起源
+Wolverine Versus Sabretooth|金刚狼大战剑齿虎
+Wolverine: Weapon X: Tomorrow Dies Today|金刚狼：X武器——明日今日终结
+Lego Marvel Super Heroes: Avengers Reassembled|乐高漫威超级英雄：复仇者再集结
+Marvel Super Hero Adventures: Frost Fight!|漫威超级英雄大冒险：冰霜之战
+Powers|超能力
+WHIH Newsfront|WHIH 新闻前线
+Wolverine Versus Sabretooth: Reborn|金刚狼大战剑齿虎：重生
+Agents of S.H.I.E.L.D.: Slingshot|神盾局特工：弹弓
+Hulk: Where Monsters Dwell|浩克：怪兽栖息之地
+Marvel Funko Shorts|漫威 Funko 短片
+Marvel Video Comics a.k.a. Marvel Ultimate Comics|漫威动态漫画（又名漫威终极漫画）
+Marvel's Most Wanted|漫威头号通缉
+Team Thor|雷神小队
+#TBT to That Time Archer Met Kingsman|#回顾：阿彻遇见王牌特工的那次
+Baymax Returns|大白归来
+Big Hero 6: The Series|超能陆战队：动画系列
+Lego Marvel Super Heroes - Guardians of the Galaxy: The Thanos Threat|乐高漫威超级英雄——银河护卫队：灭霸威胁
+Marvel Future Avengers|漫威未来复仇者
+Marvel Super Hero Adventures|漫威超级英雄大冒险
+Marvel Super Heroes 4D (Sentosa)|漫威超级英雄4D（圣淘沙）
+Marvel's Ant-Man|漫威蚁人
+Marvel's Rocket & Groot|漫威：火箭与格鲁特
+Marvel's Spider-Man|漫威蜘蛛侠
+New Warriors|新勇士
+No Good Deed|好事不成
+Team Thor: Part 2|雷神小队2
+Baymax And|大白与……
+Baymax Dreams|大白的梦
+Big Chibi 6 The Shorts|迷你超能陆战队短片
+Lego Marvel Super Heroes - Black Panther: Trouble in Wakanda|乐高漫威超级英雄——黑豹：瓦坎达危机
+Marvel Rising: Initiation|漫威崛起：启蒙
+Marvel Rising: Secret Warriors|漫威崛起：秘密勇士
+Team Darryl|达里尔小队
+Baymax & Mochi|大白与麻糬
+Lego Marvel Spider-Man: Vexed by Venom|乐高漫威蜘蛛侠：毒液来袭
+Marvel Rising: Battle of the Bands|漫威崛起：乐队之战
+Marvel Rising: Chasing Ghosts|漫威崛起：追逐幽灵
+Marvel Rising: Heart of Iron|漫威崛起：钢铁之心
+Marvel Rising: Operation Shuri|漫威崛起：舒莉行动
+Marvel Rising: Playing with Fire|漫威崛起：玩火
+Marvel Studios: Expanding the Universe|漫威影业：扩展宇宙
+Marvel's Hero Project|漫威英雄计划
+Peter's To-Do List|彼得的待办清单
+Spider-Ham: Caught in a Ham|猪猪侠：火腿困局
+The Daily Bugle|号角日报
+Lego Marvel Avengers: Climate Conundrum|乐高漫威复仇者：气候难题
+Marvel Battleworld|漫威战斗世界
+Deadpool and Korg React|死侍与科尔格看片
+Hit-Monkey|杀手猴
+Lego Marvel Avengers: Loki in Training|乐高漫威复仇者：洛基训练营
+M.O.D.O.K.|魔多客
+Meet Spidey and His Amazing Friends|认识蜘蛛侠和他的神奇小伙伴
+Lego Marvel Avengers: Time Twisted|乐高漫威复仇者：时间扭曲
+Lego Marvel Avengers: Code Red|乐高漫威复仇者：红色代码
+Lego Marvel Avengers: Mission Demolition|乐高漫威复仇者：拆除任务
+Lego Marvel Avengers: Strange Tails|乐高漫威复仇者：奇异故事
+Meet Iron Man and His Awesome Friends|认识钢铁侠和他的神奇朋友们
+Spidey and Iron Man: Avengers Team-Up!|蜘蛛侠与钢铁侠：复仇者联手
+Spidey and the Avengers: Halloween Team-Up!|蜘蛛侠与复仇者：万圣节联手
+Blade (Marvel Studios)|刀锋战士（漫威影业）
+Stuntnuts Does School Fight|特技狂人：校园大战
+Stuntnuts: The Movie|特技狂人：大电影
 `
     .trim()
     .split("\n")
