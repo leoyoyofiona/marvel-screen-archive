@@ -245,5 +245,57 @@
     "status": "playback-verified",
     "checkedAt": "2026-09-01",
     "source": "YouTube oEmbed title/channel check; Sony Pictures Entertainment official channel"
+  },
+  {
+    "id": "captain-marvel-overseas-trailer",
+    "workId": "captain-marvel-2019-film",
+    "title": "Marvel Studios' Captain Marvel · Official Trailer",
+    "kind": "trailer",
+    "region": "overseas",
+    "provider": "Marvel Entertainment",
+    "url": "https://www.youtube.com/watch?v=Z1BCujX3pw8",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/Z1BCujX3pw8?autoplay=1&mute=1&rel=0&modestbranding=1",
+    "status": "playback-verified",
+    "checkedAt": "2026-09-01",
+    "source": "YouTube official Marvel Entertainment channel result; browser playback check"
+  },
+  {
+    "id": "the-marvels-overseas-trailer",
+    "workId": "the-marvels-2023-film",
+    "title": "Marvel Studios' The Marvels · Official Trailer",
+    "kind": "trailer",
+    "region": "overseas",
+    "provider": "Marvel Entertainment",
+    "url": "https://www.youtube.com/watch?v=wS_qbDztgVY",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/wS_qbDztgVY?autoplay=1&mute=1&rel=0&modestbranding=1",
+    "status": "playback-verified",
+    "checkedAt": "2026-09-01",
+    "source": "YouTube official Marvel Entertainment channel result; browser playback check"
+  },
+  {
+    "id": "black-widow-overseas-trailer",
+    "workId": "black-widow-2021-film",
+    "title": "Marvel Studios' Black Widow · Official Trailer",
+    "kind": "trailer",
+    "region": "overseas",
+    "provider": "Marvel Entertainment",
+    "url": "https://www.youtube.com/watch?v=ybji16u608U",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/ybji16u608U?autoplay=1&mute=1&rel=0&modestbranding=1",
+    "status": "playback-verified",
+    "checkedAt": "2026-09-01",
+    "source": "YouTube official Marvel Entertainment channel result; browser playback check"
+  },
+  {
+    "id": "shang-chi-overseas-trailer",
+    "workId": "shang-chi-and-the-legend-of-the-ten-rings-2021-film",
+    "title": "Marvel Studios' Shang-Chi and the Legend of the Ten Rings · Official Trailer",
+    "kind": "trailer",
+    "region": "overseas",
+    "provider": "Marvel Entertainment",
+    "url": "https://www.youtube.com/watch?v=8YjFbMbfXaQ",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/8YjFbMbfXaQ?autoplay=1&mute=1&rel=0&modestbranding=1",
+    "status": "playback-verified",
+    "checkedAt": "2026-09-01",
+    "source": "YouTube official Marvel Entertainment channel result; browser playback check"
   }
 ]
