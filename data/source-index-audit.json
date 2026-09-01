@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-09-01",
+  "catalogueCutoff": "2026-08-31",
+  "baselineCandidateCount": 319,
+  "freshCandidateCount": 319,
+  "freshOnlyCount": 0,
+  "removedCount": 0,
+  "normalizationDifferenceCount": 1,
+  "normalizationNote": "《Hulk Versus》来源页锚点仅有大小写变化，指向同一条目，不是新增或缺失作品。",
+  "primaryIndexes": [
+    {
+      "label": "Films based on Marvel Comics publications",
+      "url": "https://en.wikipedia.org/wiki/List_of_films_based_on_Marvel_Comics_publications"
+    },
+    {
+      "label": "Television series based on Marvel Comics publications",
+      "url": "https://en.wikipedia.org/wiki/List_of_television_series_based_on_Marvel_Comics_publications"
+    }
+  ],
+  "scopeNote": "319 是两份主索引去重后的系列级候选数。本站另以 Marvel 官方页面补入数字节目、播客和后续项目；不同统计口径不得相加后冒充已逐条核验的作品总数。"
+}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight, CheckCircle2, ListChecks } from "lucide-react";
 import checklist from "@/data/reference-checklist.json";
+import sourceAudit from "@/data/source-index-audit.json";
 
 export function ReferenceChecklist() {
   const total = checklist.groups.reduce(
@@ -21,7 +22,11 @@ export function ReferenceChecklist() {
       </summary>
       <div className="reference-checklist-intro">
         <p>{checklist.description}</p>
-        <small>最后核对：{checklist.checkedAt}</small>
+        <small>
+          参考图最后核对：{checklist.checkedAt} · 主索引于{" "}
+          {sourceAudit.checkedAt} 重新抓取，{sourceAudit.freshCandidateCount} /{" "}
+          {sourceAudit.baselineCandidateCount} 个候选一致，无新增或删除条目。
+        </small>
       </div>
       <div className="reference-groups">
         {checklist.groups.map((group) => (

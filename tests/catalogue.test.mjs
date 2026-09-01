@@ -14,6 +14,12 @@ const referenceChecklist = JSON.parse(
     "utf8",
   ),
 );
+const sourceIndexAudit = JSON.parse(
+  await readFile(
+    new URL("../data/source-index-audit.json", import.meta.url),
+    "utf8",
+  ),
+);
 const officialEpisodesText = await readFile(
   new URL("../data/official-episodes.json", import.meta.url),
   "utf8",
@@ -46,6 +52,16 @@ test("all 56 user reference-list items resolve without inflating season counts",
     items.filter((item) => item.workId === "i-am-groot-2022-animated-series")
       .length,
     2,
+  );
+});
+test("fresh primary index snapshot matches the imported candidate inventory", () => {
+  assert.equal(sourceIndexAudit.freshCandidateCount, 319);
+  assert.equal(sourceIndexAudit.baselineCandidateCount, 319);
+  assert.equal(sourceIndexAudit.freshOnlyCount, 0);
+  assert.equal(sourceIndexAudit.removedCount, 0);
+  assert.equal(
+    data.works.length,
+    sourceIndexAudit.freshCandidateCount + data.audit.officialDigitalSeriesCount + 5,
   );
 });
 test("distinct universes never gain an MCU phase from a shared year", () => {
