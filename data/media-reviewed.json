@@ -323,5 +323,18 @@
     "status": "playback-verified",
     "checkedAt": "2026-09-01",
     "source": "YouTube official Marvel Entertainment channel result; browser playback check"
+  },
+  {
+    "id": "avengers-doomsday-mainland-trailer",
+    "workId": "avengers-doomsday-2026-film",
+    "title": "复仇者联盟：毁灭之日 · PV1预告",
+    "kind": "trailer",
+    "region": "mainland",
+    "provider": "哔哩哔哩电影",
+    "url": "https://www.bilibili.com/bangumi/play/ep4880235",
+    "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1ysKb6gECV&page=1&autoplay=1&high_quality=1&danmaku=0",
+    "status": "playback-verified",
+    "checkedAt": "2026-09-01",
+    "source": "哔哩哔哩电影正版剧集页；页面标注 PV1 预告；浏览器播放器检查"
   }
 ]
