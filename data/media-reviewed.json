@@ -297,5 +297,31 @@
     "status": "playback-verified",
     "checkedAt": "2026-09-01",
     "source": "YouTube official Marvel Entertainment channel result; browser playback check"
+  },
+  {
+    "id": "thor-love-and-thunder-overseas-trailer",
+    "workId": "thor-love-and-thunder-2022-film",
+    "title": "Marvel Studios' Thor: Love and Thunder · Official Trailer",
+    "kind": "trailer",
+    "region": "overseas",
+    "provider": "Marvel Entertainment",
+    "url": "https://www.youtube.com/watch?v=Go8nTmfrQd8",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/Go8nTmfrQd8?autoplay=1&mute=1&rel=0&modestbranding=1",
+    "status": "playback-verified",
+    "checkedAt": "2026-09-01",
+    "source": "YouTube official Marvel Entertainment channel result; browser playback check"
+  },
+  {
+    "id": "ant-man-quantumania-overseas-trailer",
+    "workId": "ant-man-and-the-wasp-quantumania-2023-film",
+    "title": "Marvel Studios' Ant-Man and The Wasp: Quantumania · Official Trailer",
+    "kind": "trailer",
+    "region": "overseas",
+    "provider": "Marvel Entertainment",
+    "url": "https://www.youtube.com/watch?v=X4QzYBlfdb8",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/X4QzYBlfdb8?autoplay=1&mute=1&rel=0&modestbranding=1",
+    "status": "playback-verified",
+    "checkedAt": "2026-09-01",
+    "source": "YouTube official Marvel Entertainment channel result; browser playback check"
   }
 ]
