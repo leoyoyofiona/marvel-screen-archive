@@ -20,6 +20,7 @@
     "catalog:public": "node scripts/build-public-data.mjs",
     "assets:collect": "node scripts/collect-primary-assets.mjs",
     "assets:official": "node scripts/collect-official-posters.mjs",
+    "assets:wikipedia": "node scripts/collect-wikipedia-posters.mjs",
     "assets:people": "node scripts/collect-person-portraits.mjs",
     "admin:hash-password": "node scripts/hash-admin-password.mjs",
     "catalog:validate": "node scripts/validate-catalog.mjs"

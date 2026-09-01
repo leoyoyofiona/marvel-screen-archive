@@ -15,7 +15,7 @@
 - 范围：漫威相关电影、真人剧集、动画、连续短片、特别节目、纪录／幕后，以及单列的历史关联、旗下出版品牌作品。不包含漫画、游戏全集。
 - 不把索尼、X战警、蜘蛛侠动画宇宙或历史版本强行归入 MCU 阶段。
 - 首页、时间线、筛选、收藏、作品详情、人物／角色双关系图已经通过桌面及 390px 移动端基础交互验收。
-- 365 个系列级条目都有本地电影档案视觉：138 个使用与年代、媒介和官方项目页精确对应的本地化宣传图；其余 227 个使用按作品生成、明确标注“非官方素材”的原创档案设计海报，文件全部随站点本地部署。同名电影、剧集与动画不会互相借图，官方剧集季级资料以独立宣传图卡片展示。
+- 365 个系列级条目都有本地电影档案视觉：138 个使用与年代、媒介和官方项目页精确对应的本地化宣传图，130 个使用逐条对应 Wikipedia 作品条目的 Wikimedia 上传识别图，剩余 97 个使用按作品生成、明确标注“非官方素材”的原创档案设计海报；文件全部随站点本地部署。同名电影、剧集与动画不会互相借图，官方剧集季级资料以独立宣传图卡片展示。
 - 1,315 位演职员均有头像：348 张为记录作者和许可证的 Wikimedia Commons 真人照片，其余为明确标注“非真人照片”的本地姓名身份头像。8 个首批角色节点使用独立身份头像，不与演员混淆。
 - 数据库支持独立 PostgreSQL。当前 `render.yaml` 已把 Render Postgres 与网站声明为同一 Blueprint，并自动注入 `DATABASE_URL`；真正创建资源仍需在 Render Dashboard 中由站长确认。
 - 数字节目详情页支持官方逐集搜索与分页；只链接 Marvel 官方资料页，不保存带时效签名的播放器地址。
@@ -78,6 +78,7 @@ Render 构建命令 `npm ci && npm run catalog:validate && npm run build`；启�
 6. `official-index.json` 与 `official-poster-ledger.json`：Marvel 官方电影、剧集、数字节目、播客索引及宣传图来源、文件校验记录。
 7. `official-episodes.json`：从 Marvel 官方数字系列页读取的唯一单集标题、简介、日期、时长和详情页；不保存临时播放清单、签名串流地址或视频文件。
 8. `person-portrait-ledger.json`：真人照片的 Commons 来源、作者、许可证和本地文件哈希；无合规照片的人物使用身份头像，不冒充照片。
+9. `wikipedia-poster-ledger.json`：逐条对应作品 Wikipedia 页面识别图的本地素材、来源 URL、哈希与版权说明；无法取得可靠识别图的条目仍明确使用原创档案设计海报。
 
 官方目录参考：[Marvel 电影](https://www.marvel.com/movies)、[Marvel 电视](https://www.marvel.com/tv-shows)、[Marvel 数字节目](https://www.marvel.com/watch)、[Marvel 播客](https://www.marvel.com/podcasts)。官方宣传图仍属于版权素材，并非开放许可证；照片许可仅适用于账本中明确记录的对应文件。
 

@@ -143,6 +143,7 @@ export type Catalogue = {
     watchLinkCount: number;
     untranslated: number;
     officialArtworkCount: number;
+    wikipediaArtworkCount: number;
     officialDigitalSeriesCount: number;
     officialDigitalEpisodeTotal: number;
     officialDigitalEpisodeUniquePages: number;

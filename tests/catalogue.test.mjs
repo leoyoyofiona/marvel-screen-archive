@@ -32,6 +32,12 @@ const soundtrackLinks = JSON.parse(
     "utf8",
   ),
 );
+const wikipediaPosterLedger = JSON.parse(
+  await readFile(
+    new URL("../data/wikipedia-poster-ledger.json", import.meta.url),
+    "utf8",
+  ),
+);
 const officialIndex = JSON.parse(
   await readFile(
     new URL("../data/official-index.json", import.meta.url),
@@ -269,7 +275,9 @@ test("official artwork and season hierarchy are linked to the correct records", 
 test("every work has a local poster asset with an explicit provenance label", async () => {
   assert.equal(data.audit.posterCount, data.works.length);
   assert.equal(
-    data.audit.officialArtworkCount + data.audit.archiveDesignPosterCount,
+    data.audit.officialArtworkCount +
+      data.audit.wikipediaArtworkCount +
+      data.audit.archiveDesignPosterCount,
     data.works.length,
   );
   assert.ok(
@@ -278,14 +286,30 @@ test("every work has a local poster asset with an explicit provenance label", as
         work.poster?.startsWith("/media/") &&
         work.posterCredit &&
         (work.poster?.startsWith("/media/official/") ||
+          work.poster?.startsWith("/media/wikipedia-posters/") ||
           work.posterCredit.includes("非官方素材")),
     ),
   );
   for (const work of data.works)
     await access(new URL(`../public${work.poster}`, import.meta.url));
 });
+test("Wikipedia poster ledger matches published local artwork", async () => {
+  assert.equal(wikipediaPosterLedger.count, data.audit.wikipediaArtworkCount);
+  const ids = new Set(data.works.map((work) => work.id));
+  assert.equal(
+    new Set(wikipediaPosterLedger.items.map((item) => item.workId)).size,
+    wikipediaPosterLedger.items.length,
+  );
+  for (const item of wikipediaPosterLedger.items) {
+    assert.ok(ids.has(item.workId));
+    assert.equal(item.publish, true);
+    assert.match(item.sourcePage, /^https:\/\/en\.wikipedia\.org\/wiki\//);
+    assert.match(item.sourceUrl, /^https:\/\/upload\.wikimedia\.org\//);
+    await access(new URL(`../public${item.local}`, import.meta.url));
+  }
+});
 test("same-name works never inherit artwork or seasons from another era or format", () => {
-  const noOfficialArtwork = [
+  const sameNameWorks = [
     "spider-man-1967-animated-series",
     "spider-man-1977-film",
     "spider-man-1978-series",
@@ -297,13 +321,16 @@ test("same-name works never inherit artwork or seasons from another era or forma
     "daredevil-2003-film",
     "agent-carter-2013-short",
   ];
-  for (const id of noOfficialArtwork) {
+  const posterPaths = [];
+  for (const id of sameNameWorks) {
     const work = data.works.find((candidate) => candidate.id === id);
     assert.ok(work, id);
-    assert.ok(work.poster?.startsWith("/media/archive-posters/"), id);
-    assert.match(work.posterCredit ?? "", /非官方素材/);
+    assert.ok(work.poster?.startsWith("/media/"), id);
+    assert.ok(work.posterCredit, id);
+    posterPaths.push(work.poster);
     assert.equal(work.seasons.length, 0, id);
   }
+  assert.equal(new Set(posterPaths).size, posterPaths.length);
   const spiderMan2002 = data.works.find(
     (work) => work.id === "spider-man-2002-film",
   );

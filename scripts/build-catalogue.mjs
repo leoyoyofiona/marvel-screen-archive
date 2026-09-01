@@ -30,7 +30,8 @@ const candidates = await read("catalogue-candidates.json", []),
   }),
   officialEpisodes = await read("official-episodes.json", { series: [] }),
   officialArtwork = await read("official-poster-ledger.json", { items: [] }),
-  personArtwork = await read("person-portrait-ledger.json", { items: [] });
+  personArtwork = await read("person-portrait-ledger.json", { items: [] }),
+  wikipediaArtwork = await read("wikipedia-poster-ledger.json", { items: [] });
 const personArtById = new Map(
   personArtwork.items
     .filter((item) => item.publish)
@@ -314,11 +315,20 @@ const primaryPosterWorkIds = new Set(
 const officialPosterWorkIds = new Set(
   [...officialWorkIdBySource.values()].filter(Boolean),
 );
+const wikipediaPosterById = new Map(
+  wikipediaArtwork.items
+    .filter((item) => item.publish)
+    .map((item) => [item.workId, item]),
+);
 const archivePosterDir = path.join(root, "public", "media", "archive-posters");
 await mkdir(archivePosterDir, { recursive: true });
 const archivePosterById = new Map();
 for (const item of items) {
-  if (primaryPosterWorkIds.has(item.id) || officialPosterWorkIds.has(item.id))
+  if (
+    primaryPosterWorkIds.has(item.id) ||
+    officialPosterWorkIds.has(item.id) ||
+    wikipediaPosterById.has(item.id)
+  )
     continue;
   const hue = [...item.id].reduce(
     (total, character) => (total * 31 + character.charCodeAt(0)) % 360,
@@ -547,14 +557,20 @@ const works = items
         "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       highlights: c.highlights ?? [],
       poster:
-        poster?.local ?? officialArt?.local ?? archivePosterById.get(w.id) ?? null,
+        poster?.local ??
+        officialArt?.local ??
+        wikipediaPosterById.get(w.id)?.local ??
+        archivePosterById.get(w.id) ??
+        null,
       backdrop: backdrop?.local ?? null,
       posterCredit:
         poster?.credit ??
         (officialArt
           ? `Marvel 官方宣传图 · © Marvel/Disney · 低分辨率资料识别用途 · 来源 ${officialArt.sourcePage}`
-          : archivePosterById.has(w.id)
-            ? "档案设计海报 · 非官方素材 · 由本项目原创生成"
+          : wikipediaPosterById.has(w.id)
+            ? wikipediaPosterById.get(w.id).credit
+            : archivePosterById.has(w.id)
+              ? "档案设计海报 · 非官方素材 · 由本项目原创生成"
             : null),
       verification: primary ? "primary-partial" : "catalogue-only",
       sourceFamily: w.sourceFamily,
@@ -596,6 +612,9 @@ const output = {
     officialArtworkCount: works.filter((w) =>
       w.poster?.startsWith("/media/official/"),
     ).length,
+    wikipediaArtworkCount: works.filter((w) =>
+      w.poster?.startsWith("/media/wikipedia-posters/"),
+    ).length,
     archiveDesignPosterCount: works.filter((w) =>
       w.poster?.startsWith("/media/archive-posters/"),
     ).length,
@@ -624,7 +643,7 @@ const output = {
       "电影与电视主目录已和 Marvel 官方索引交叉核对；历史授权、合作及品牌改编仍需继续逐条核验",
       "23 个有公开单集列表的 Marvel 官方数字系列已索引 1,881 个唯一详情页；其中 17 个系列与页面标称总数一致，6 个系列保留计数差异待核。无公开单集列表的节目与播客仍只有系列级档案",
       "角色出场为人工整理的首批关系，尚未覆盖全部角色与客串",
-      "全部 1,315 位索引人物均有头像节点，其中 348 张为带许可来源的 Wikimedia Commons 真人照片，其余使用明确标注的本地姓名身份头像；227 条历史／动画记录使用原创档案设计海报，真实海报与经典剧照仍需逐条核验",
+      `全部 ${people.size.toLocaleString("zh-CN")} 位索引人物均有头像节点，其中 ${[...people.values()].filter((person) => person.portraitKind === "wikimedia-commons").length.toLocaleString("zh-CN")} 张为带许可来源的 Wikimedia Commons 真人照片，其余使用明确标注的本地姓名身份头像；${works.filter((work) => work.poster?.startsWith("/media/archive-posters/")).length} 条记录仍使用原创档案设计海报，真实海报与经典剧照需继续逐条核验`,
       "音乐、对白、访谈和大陆／海外两条线路的实际播放核验尚未完成；当前不提供未经验证的播放链接",
     ],
   },
