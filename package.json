@@ -23,7 +23,8 @@
     "assets:wikipedia": "node scripts/collect-wikipedia-posters.mjs",
     "assets:people": "node scripts/collect-person-portraits.mjs",
     "admin:hash-password": "node scripts/hash-admin-password.mjs",
-    "catalog:validate": "node scripts/validate-catalog.mjs"
+    "catalog:validate": "node scripts/validate-catalog.mjs",
+    "deploy:validate": "node scripts/validate-deployment.mjs"
   },
   "dependencies": {
     "@electric-sql/pglite": "0.5.8",

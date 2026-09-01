@@ -64,6 +64,8 @@ MARVEL_LOCAL_DB=true npm run dev
 
 Render 构建命令 `npm ci && npm run catalog:validate && npm run build`；启动命令 `npm start`。当前 Blueprint 中的数据库计划是 `free`，仅用于先完成可验收的爱好者预览；Render 官方说明免费 Postgres 30 天后过期、无备份，长期运行前必须在 Render 中升级数据库计划。免费服务的休眠／冷启动与境外线路实际可达性必须单独验证，不能承诺“大陆所有网络都能访问”。
 
+部署前可运行 `npm run deploy:validate` 做无秘密输出的预检。生产环境会检查 `DATABASE_URL`、`SESSION_SECRET`、`ADMIN_PASSWORD_HASH`、`NEXT_PUBLIC_SITE_URL` 和 Blueprint 资源是否齐全；本地开发不会因为缺少线上配置而阻塞。
+
 仓库提供 `render.yaml`。它只声明这个独立站点和一个同名 Render Postgres 数据库，不使用或修改周星驰网站的数据库、服务和环境变量。不要复制其他项目的连接字符串。首次在 Render 创建 Blueprint 时，平台会提示并确认将要创建的资源；本项目不会从代码中自动调用 Render API 创建资源。
 
 留言默认进入待审核状态。站长可打开 `/admin`，用仅保存在部署平台环境变量中的管理口令批准、拒绝或退回留言；会话为 HttpOnly、SameSite=Strict Cookie，8 小时后失效。
