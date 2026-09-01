@@ -1,6 +1,6 @@
 {
   "cutoff": "2026-08-31",
-  "generatedAt": "2026-09-01T16:15:43.547Z",
+  "generatedAt": "2026-09-01T16:29:57.619Z",
   "works": [
     {
       "id": "captain-america-1944-short",
@@ -5536,7 +5536,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "incredible-hulk-overseas-trailer",
+          "workId": "the-incredible-hulk-2008-film",
+          "title": "The Incredible Hulk (2008) · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Rotten Tomatoes Classic Trailers",
+          "url": "https://www.youtube.com/watch?v=xbqNb2PFKKA",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/xbqNb2PFKKA?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube public trailer page; Rotten Tomatoes Classic Trailers channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -7254,7 +7268,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "x-men-first-class-overseas-trailer",
+          "workId": "x-men-first-class-2011-film",
+          "title": "X-Men: First Class · Official Trailer HD",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "X-Men Movies",
+          "url": "https://www.youtube.com/watch?v=kyQKi5-k0UU",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/kyQKi5-k0UU?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified X-Men Movies channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -8779,7 +8807,21 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "wolverine-overseas-trailer",
+          "workId": "the-wolverine-2013-film",
+          "title": "The Wolverine · Official Trailer 1 HD",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "20th Century Studios",
+          "url": "https://www.youtube.com/watch?v=u1VCP3O8wG0",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/u1VCP3O8wG0?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified 20th Century Studios channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -9244,7 +9286,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "captain-america-winter-soldier-overseas-trailer",
+          "workId": "captain-america-the-winter-soldier-2014-film",
+          "title": "Captain America: The Winter Soldier · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Australia & New Zealand",
+          "url": "https://www.youtube.com/watch?v=1dx6IxnnoYM",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/1dx6IxnnoYM?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified Marvel Australia & New Zealand channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -9932,7 +9988,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "x-men-days-future-past-overseas-trailer",
+          "workId": "x-men-days-of-future-past-2014-film",
+          "title": "X-Men: Days of Future Past · Official Trailer 3",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "X-Men Movies",
+          "url": "https://www.youtube.com/watch?v=gsjtg7m1MMM",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/gsjtg7m1MMM?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified X-Men Movies / 20th Century Fox channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -11022,7 +11092,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "deadpool-overseas-trailer",
+          "workId": "deadpool-2016-film",
+          "title": "Deadpool · Trailer HD",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "20th Century Studios",
+          "url": "https://www.youtube.com/watch?v=ONHBaC-pfsk",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/ONHBaC-pfsk?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified 20th Century Studios channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -11540,7 +11624,21 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "x-men-apocalypse-overseas-trailer",
+          "workId": "x-men-apocalypse-2016-film",
+          "title": "X-Men: Apocalypse · Official Trailer HD",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "20th Century Studios",
+          "url": "https://www.youtube.com/watch?v=PfBVIHgQbYk",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/PfBVIHgQbYk?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified 20th Century Studios channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -11879,7 +11977,21 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "guardians-vol-2-overseas-trailer",
+          "workId": "guardians-of-the-galaxy-vol-2-2017-film",
+          "title": "Guardians of the Galaxy Vol. 2 · Teaser Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=dW1BIid8Osg",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/dW1BIid8Osg?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified Marvel Entertainment channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -12392,7 +12504,21 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "logan-overseas-trailer",
+          "workId": "logan-2017-film",
+          "title": "Logan · Official Trailer HD",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "20th Century Studios",
+          "url": "https://www.youtube.com/watch?v=Div0iP65aZo",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/Div0iP65aZo?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified 20th Century Studios channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -14942,7 +15068,21 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "into-spider-verse-overseas-trailer",
+          "workId": "spider-man-into-the-spider-verse-2018-animated-film",
+          "title": "Spider-Man: Into the Spider-Verse · Official Trailer HD",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Sony Pictures Entertainment",
+          "url": "https://www.youtube.com/watch?v=g4Hbz2jLxvQ",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/g4Hbz2jLxvQ?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified Sony Pictures Entertainment channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -15541,7 +15681,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "dark-phoenix-overseas-trailer",
+          "workId": "dark-phoenix-2019-film",
+          "title": "Dark Phoenix · Teaser Trailer HD",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "20th Century Studios",
+          "url": "https://www.youtube.com/watch?v=QWbMckU3AOQ",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/QWbMckU3AOQ?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified 20th Century Studios channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -16685,7 +16839,21 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "new-mutants-overseas-trailer",
+          "workId": "the-new-mutants-2020-film",
+          "title": "The New Mutants · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "20th Century Studios",
+          "url": "https://www.youtube.com/watch?v=W_vJhUAOFpI",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/W_vJhUAOFpI?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified 20th Century Studios channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -16902,7 +17070,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "eternals-overseas-trailer",
+          "workId": "eternals-2021-film",
+          "title": "Marvel Studios’ Eternals · Final Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=x_me3xsvDgk",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/x_me3xsvDgk?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified Marvel Entertainment channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -18053,7 +18235,21 @@
           "verification": "candidate"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "venom-2-overseas-trailer",
+          "workId": "venom-let-there-be-carnage-2021-film",
+          "title": "Venom: Let There Be Carnage · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Sony Pictures Entertainment",
+          "url": "https://www.youtube.com/watch?v=-ezfi6FQ8Ds",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/-ezfi6FQ8Ds?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified Sony Pictures Entertainment channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -18774,7 +18970,21 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "morbius-overseas-trailer",
+          "workId": "morbius-2022-film",
+          "title": "Morbius · Official Trailer HD",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Sony Pictures Entertainment",
+          "url": "https://www.youtube.com/watch?v=oZ6iiRrz1SY",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/oZ6iiRrz1SY?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified Sony Pictures Entertainment channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -19450,6 +19660,19 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "哔哩哔哩电影正版剧集页；页面标注 PV1 预告；浏览器播放器实际播放检查"
+        },
+        {
+          "id": "guardians-vol-3-overseas-trailer",
+          "workId": "guardians-of-the-galaxy-vol-3-2023-film",
+          "title": "Marvel Studios’ Guardians of the Galaxy Vol. 3 · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=u3V5KDHRQvk",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/u3V5KDHRQvk?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified Marvel Entertainment channel; browser video element playback check"
         }
       ],
       "watchLinks": []
@@ -20513,7 +20736,21 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "kraven-overseas-trailer",
+          "workId": "kraven-the-hunter-2024-film",
+          "title": "Kraven the Hunter · Official Trailer",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Marvel Entertainment",
+          "url": "https://www.youtube.com/watch?v=I8gFw4-2RBM",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/I8gFw4-2RBM?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified Marvel Entertainment channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -20630,7 +20867,21 @@
           "verification": "retrieved"
         }
       ],
-      "media": [],
+      "media": [
+        {
+          "id": "madame-web-overseas-trailer",
+          "workId": "madame-web-2024-film",
+          "title": "Madame Web · Official Trailer HD",
+          "kind": "trailer",
+          "region": "overseas",
+          "provider": "Sony Pictures Entertainment",
+          "url": "https://www.youtube.com/watch?v=s_76M4c4LTo",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/s_76M4c4LTo?autoplay=1&mute=1&rel=0&modestbranding=1",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-01",
+          "source": "YouTube verified Sony Pictures Entertainment channel; browser video element playback check"
+        }
+      ],
       "watchLinks": []
     },
     {
@@ -46596,10 +46847,10 @@
     "officialDigitalEpisodeMismatchSeries": 6,
     "personPortraitCount": 1315,
     "personRealPortraitCount": 348,
-    "mediaCount": 49,
-    "playbackVerifiedMediaCount": 49,
+    "mediaCount": 67,
+    "playbackVerifiedMediaCount": 67,
     "mainlandMediaCount": 17,
-    "overseasMediaCount": 32,
+    "overseasMediaCount": 50,
     "watchLinkCount": 0,
     "untranslated": 0,
     "gaps": [
@@ -46607,7 +46858,7 @@
       "23 个有公开单集列表的 Marvel 官方数字系列已索引 1,881 个唯一详情页；其中 17 个系列与页面标称总数一致，6 个系列保留计数差异待核。无公开单集列表的节目与播客仍只有系列级档案",
       "角色出场为人工整理的首批关系，尚未覆盖全部角色与客串",
       "全部 1,315 位索引人物均有头像节点，其中 348 张为带许可来源的 Wikimedia Commons 真人照片，其余使用明确标注的本地姓名身份头像；95 条记录仍使用原创档案设计海报，真实海报与经典剧照需继续逐条核验",
-      "已接入 49 条大陆／海外公开预告与片段，并完成播放器级来源标记；尚未覆盖的作品继续显示无合规媒体状态，不把资料页或搜索页当作播放器"
+      "已接入 67 条大陆／海外公开预告与片段，并完成播放器级来源标记；尚未覆盖的作品继续显示无合规媒体状态，不把资料页或搜索页当作播放器"
     ]
   }
 }
