@@ -83,6 +83,23 @@ test("reviewed official work hubs are available without becoming film links", ()
   assert.equal(worksWithHub.length, 50);
   assert.ok(worksWithHub.every((work) => work.watchLinks.length === 0));
 });
+test("offline shell stays same-origin and never caches live APIs", async () => {
+  const serviceWorker = await readFile(
+    new URL("../public/sw.js", import.meta.url),
+    "utf8",
+  );
+  const manifest = JSON.parse(
+    await readFile(
+      new URL("../public/manifest.webmanifest", import.meta.url),
+      "utf8",
+    ),
+  );
+  assert.match(serviceWorker, /url\.origin !== self\.location\.origin/);
+  assert.match(serviceWorker, /url\.pathname\.startsWith\("\/api\/"\)/);
+  assert.doesNotMatch(serviceWorker, /youtube|bilibili|marvel\.com|google/i);
+  assert.equal(manifest.start_url, "/");
+  assert.ok(manifest.icons.every((icon) => icon.src.startsWith("/")));
+});
 test("distinct universes never gain an MCU phase from a shared year", () => {
   for (const id of [
     "venom-2018-film",

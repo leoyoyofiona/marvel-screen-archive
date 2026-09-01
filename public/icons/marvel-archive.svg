@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">漫威银幕档案 M 标志</title>
+  <defs>
+    <radialGradient id="bg" cx="30%" cy="20%" r="100%">
+      <stop offset="0" stop-color="#442431"/>
+      <stop offset="0.48" stop-color="#151d2a"/>
+      <stop offset="1" stop-color="#070b12"/>
+    </radialGradient>
+    <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ff8995"/>
+      <stop offset="1" stop-color="#b51d32"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect x="18" y="18" width="476" height="476" rx="96" fill="none" stroke="#fff" stroke-opacity=".12" stroke-width="4"/>
+  <path d="M100 364V148h61l95 128 95-128h61v216h-66V247l-90 119-90-119v117z" fill="none" stroke="url(#stroke)" stroke-width="25" stroke-linejoin="bevel"/>
+  <circle cx="256" cy="256" r="11" fill="#f4d8dd"/>
+</svg>

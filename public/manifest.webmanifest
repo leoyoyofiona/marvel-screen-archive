@@ -1,0 +1,19 @@
+{
+  "name": "漫威所有相关作品全集欣赏",
+  "short_name": "漫威银幕档案",
+  "description": "LEOYOYOFIONA 整理的非商业漫威银幕档案。",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#090d15",
+  "theme_color": "#090d15",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "/icons/marvel-archive.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
