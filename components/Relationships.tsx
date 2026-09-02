@@ -485,18 +485,18 @@ function RelationshipGraph({
             aria-pressed={mode === "people"}
             onClick={() => switchMode("people")}
           >
-            演员与创作者
+            演员关系图
           </button>
           <button
             aria-pressed={mode === "characters"}
             onClick={() => switchMode("characters")}
           >
-            角色与作品
+            角色关系图
           </button>
         </div>
       </div>
       <p className="section-description">
-        现实人物与剧中角色分层浏览。演员、导演、配音与创作者通过作品节点串联；角色层同时纳入主角、反派和重要配角，再用作品节点连接同场角色。点击任意人物或角色可展开其已编目作品。节点可拖拽，电影票根可打开作品。
+        演员关系图显示演员、导演、配音与创作者；角色关系图显示主角、反派和重要配角。两种关系图都通过作品节点串联，点击节点可展开其已编目作品。节点可拖拽，电影票根可打开作品。
       </p>
       <div className="graph-filters">
         <label className="search-field">
@@ -909,7 +909,7 @@ function RelationshipGraph({
           <p className="relationship-note">
             {mode === "people"
               ? "人物与作品按影视条目的演职员资料连接；作品节点会继续串出共同演员、配音、导演和创作者。"
-              : `角色与作品按银幕出场连接，当前含${roleCharacters.length}位已编目角色（主角、反派与重要配角）；同一作品中的角色会彼此串联。`}
+              : `角色关系图按银幕出场连接，当前含${roleCharacters.length}位已编目角色（主角、反派与重要配角）；同一作品中的角色会彼此串联。`}
           </p>
           {mode === "characters" && entity && "role" in entity && (
             <div className="network-summary character-summary">

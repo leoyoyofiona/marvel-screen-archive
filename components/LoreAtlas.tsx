@@ -48,6 +48,35 @@ const cards: Card[] = [
 const armorNames = [
   "Mark I", "Mark II", "Mark III", "Mark IV", "Mark V", "Mark VI", "Mark VII", "Mark VIII", "Mark IX", "Mark X", "Mark XI", "Mark XII", "Mark XIII", "Mark XIV", "Mark XV · Sneaky", "Mark XVI · Nightclub", "Mark XVII · Heartbreaker", "Mark XVIII · Casanova", "Mark XIX · Tiger", "Mark XX · Python", "Mark XXI · Midas", "Mark XXII · Hot Rod", "Mark XXIII · Shades", "Mark XXIV · Tank", "Mark XXV · Striker", "Mark XXVI · Gamma", "Mark XXVII · Disco", "Mark XXVIII · Jack", "Mark XXIX · Fiddler", "Mark XXX · Blue Steel", "Mark XXXI · Piston", "Mark XXXII · Romeo", "Mark XXXIII · Silver Centurion", "Mark XXXIV · Southpaw", "Mark XXXV · Red Snapper", "Mark XXXVI · Peacemaker", "Mark XXXVII · Hammerhead", "Mark XXXVIII · Igor", "Mark XXXIX · Gemini", "Mark XL · Shotgun", "Mark XLI · Bones", "Mark XLII · 吸附式", "Hulkbuster · Veronica", "War Machine", "Iron Patriot", "Rescue · Mark XLIX", "Bleeding Edge", "Model-Prime", "Godkiller", "Thorbuster", "Silver Centurion", "Extremis", "Stealth Armor", "Hydro Armor", "Space Armor", "Deep-Space Armor", "Endo-Sym Armor", "Model 70", "Ironheart Armor" ];
 
+type ArmorDetail = { time: string; origin: string; feature: string; specs: string };
+const armorDetails: Record<string, ArmorDetail> = {
+  "Mark I": { time: "2008", origin: "《钢铁侠》· 洞穴原型", feature: "粗重钢板、火焰喷射与短时飞行", specs: "钛钢外壳 · 小型反应堆 · 低机动" },
+  "Mark II": { time: "2008", origin: "《钢铁侠》· 实验室测试", feature: "首次稳定飞行，仍有高空结冰问题", specs: "钛合金 · 喷气推进 · 掌心炮" },
+  "Mark III": { time: "2008", origin: "《钢铁侠》· 红金战甲", feature: "经典红金外观，完整武器系统", specs: "金钛合金 · 导弹 · 激光切割" },
+  "Mark IV": { time: "2010", origin: "《钢铁侠2》· 维护版", feature: "更快穿戴与更成熟的外甲结构", specs: "机械展开 · 反应堆供能 · 飞行" },
+  "Mark V": { time: "2010", origin: "《钢铁侠2》· 便携战甲", feature: "折叠进手提箱，现场快速部署", specs: "便携模块 · 掌心炮 · 轻量化" },
+  "Mark VI": { time: "2010", origin: "《钢铁侠2》· 三角反应堆", feature: "三角形胸口核心与重型武器升级", specs: "新元素核心 · 激光 · 飞行" },
+  "Mark VII": { time: "2012", origin: "《复仇者联盟》· 曼哈顿", feature: "远程追踪穿戴，完整空战与武器配置", specs: "卫星锁定 · 肩载导弹 · 反应堆" },
+  "Mark XLII · 吸附式": { time: "2013", origin: "《钢铁侠3》· 绝境病毒时代", feature: "分体组件远程吸附，适合快速换装", specs: "生物电信号 · 分体装配 · 飞行" },
+  "Hulkbuster · Veronica": { time: "2015", origin: "《复仇者联盟2》· 绿巨人协议", feature: "重型外骨骼，可持续补充受损模块", specs: "Veronica 支援 · 增强液压 · 重装" },
+  "War Machine": { time: "2010", origin: "《钢铁侠2》· 罗德斯军用改装", feature: "军方火力取向，强调持续压制", specs: "机枪 · 肩炮 · 军用装甲" },
+  "Iron Patriot": { time: "2013", origin: "《钢铁侠3》· 政府宣传涂装", feature: "战争机器的爱国者涂装版本", specs: "重火力 · 飞行 · 军用通信" },
+  "Rescue · Mark XLIX": { time: "2019", origin: "《复仇者联盟4》· Pepper 专属", feature: "蓝紫配色，兼顾救援与战斗", specs: "纳米结构 · 飞行 · 防护场" },
+  "Bleeding Edge": { time: "2012", origin: "Marvel Comics · 扩展设定", feature: "装甲与身体神经系统高度融合", specs: "纳米技术 · 神经接口 · 自修复" },
+  "Extremis": { time: "2005", origin: "Marvel Comics · Extremis", feature: "绝境病毒让战甲由身体直接召唤", specs: "生物接口 · 纳米储存 · 高速部署" },
+  "Model 70": { time: "2024", origin: "Marvel Comics · 新世代", feature: "现代化模块与经典红金设计结合", specs: "高能核心 · 模块化 · 远程支援" },
+  "Ironheart Armor": { time: "2025", origin: "《钢铁之心》· Riri Williams", feature: "新一代工程师的自制装甲路线", specs: "高能核心 · 飞行 · 智能辅助" },
+};
+
+function getArmorDetail(name: string, index: number): ArmorDetail {
+  return armorDetails[name] ?? {
+    time: index < 42 ? "2013" : "扩展设定",
+    origin: index < 42 ? "《钢铁侠3》· 型号索引" : "Marvel Comics／扩展宇宙",
+    feature: index % 3 === 0 ? "专用任务优化与快速部署" : index % 3 === 1 ? "模块化结构与战术适配" : "强化防护与动力输出",
+    specs: index % 2 === 0 ? "反应堆供能 · 飞行 · 远程接口" : "高强度合金 · 掌心炮 · 智能辅助",
+  };
+}
+
 const characterPortraits: Record<string, string> = {
   "iron-man": "/media/characters/tony-stark.svg",
   "captain-america": "/media/characters/steve-rogers.svg",
@@ -115,7 +144,12 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
   const [side, setSide] = useState<"all" | "hero" | "villain">("all");
   const [selected, setSelected] = useState<Card | null>(null);
   const [story, setStory] = useState("infinity");
+  const [rankingSide, setRankingSide] = useState<"hero" | "villain" | "all">("all");
   const visible = useMemo(() => cards.filter((card) => side === "all" || card.side === side), [side]);
+  const rankedCards = useMemo(
+    () => cards.filter((card) => rankingSide === "all" || card.side === rankingSide).sort((a, b) => b.power - a.power),
+    [rankingSide],
+  );
   const activeStory = storylines.find((item) => item.id === story) ?? storylines[0];
   const workMap = new Map(works.map((work) => [work.id, work]));
   return (
@@ -138,9 +172,18 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
           <span className="card-corner">MARVEL ARCHIVE</span><CardPortrait card={card} poster={workMap.get(card.workIds[0])?.poster} /><span className="character-card-copy"><small>{card.universe}</small><span className="character-card-title-line"><strong>{card.alias}</strong><span className="character-card-intro">{card.intro}</span></span><em>{card.name}</em><span className="character-card-rule" /><span className="character-card-meta"><i>档案指数</i><b>{card.power}</b><i>定位</i><b>{card.rank}</b></span><span className="character-card-move">{card.move}</span></span>
         </button>)}
       </div>
+      <div className="power-rankings">
+        <div className="ranking-heading"><div><span className="eyebrow">POWER INDEX / 能力程度排行榜</span><h3>厉害程度排行榜</h3><p>按卡牌中的影迷向档案指数排序；这是本网站的阅读指标，不是官方战斗力排名。</p></div><Sparkles size={25} /></div>
+        <div className="ranking-tabs" role="tablist" aria-label="能力排行榜筛选">
+          {([["hero", "正面人物排行"], ["villain", "反面人物排行"], ["all", "所有人物排行"]] as const).map(([value, label]) => <button key={value} className={rankingSide === value ? "active" : ""} onClick={() => setRankingSide(value)}>{label}</button>)}
+        </div>
+        <ol className="power-ranking-list">
+          {rankedCards.map((card, index) => <li key={card.id}><span className="ranking-number">{String(index + 1).padStart(2, "0")}</span><div><strong>{card.alias}</strong><small>{card.name} · {card.role} · {card.move}</small></div><b>{card.power}</b></li>)}
+        </ol>
+      </div>
       <div className="armor-atlas">
-        <div className="armor-heading"><div><span className="eyebrow">IRON MAN ARMOR INDEX / 装甲谱</span><h3>钢铁侠装甲：从 Mark I 到纳米时代</h3><p>影像与设定索引共 {armorNames.length} 套；每张卡片聚焦装甲战衣本身，按电影视觉与型号演变排列，名称中带“设定”的条目仍会继续逐条核验。</p></div><Shield size={29} /></div>
-        <div className="armor-grid">{armorNames.map((name, index) => <article className="armor-card" key={`${name}-${index}`}><span className="card-corner">ARMOR FILE</span><ArmorFigure index={index} name={name} /><span className="armor-card-copy"><small>{index < 42 ? "MCU Mark" : "扩展设定"}</small><span className="armor-card-title-line"><strong>{name}</strong><small className="armor-card-note">{index % 3 === 0 ? "能量核心 · 飞行" : index % 3 === 1 ? "模块化 · 战术" : "防护层 · 动力"}</small></span></span></article>)}</div>
+        <div className="armor-heading"><div><span className="eyebrow">IRON MAN ARMOR INDEX / 装甲谱</span><h3>钢铁侠装甲：从 Mark I 到纳米时代</h3><p>共收录 {armorNames.length} 套战甲卡片。每张卡片都有时间、出处、特点与参数；图像使用真实战甲实物／展陈照片，不使用卡通图。Mark I、Mark III、Mark XLII 为对应型号照片，其余为 MCU 战甲外观参考。</p></div><Shield size={29} /></div>
+        <div className="armor-grid">{armorNames.map((name, index) => { const detail = getArmorDetail(name, index); return <article className="armor-card" key={`${name}-${index}`}><span className="card-corner">ARMOR FILE</span><ArmorFigure index={index} name={name} /><span className="armor-card-copy"><small>{detail.time} · {detail.origin}</small><span className="armor-card-title-line"><strong>{name}</strong><small className="armor-card-note">{index < 42 ? "MCU Mark" : "扩展设定"}</small></span><span className="armor-card-facts"><span><i>特点</i>{detail.feature}</span><span><i>参数</i>{detail.specs}</span></span></span></article>; })}</div>
         <a className="text-link" href="https://www.marvel.com/watch/digital-series/earth-s-mightiest-show/all-of-the-armor-worn-by-tony-stark-in-the-mcu" target="_blank" rel="noopener noreferrer">查看 Marvel 官方装甲专题 <ArrowUpRight size={14} /></a>
       </div>
       <div className="storyline-atlas">

@@ -125,7 +125,7 @@ export function Disclaimer() {
         本站为影迷基于个人爱好制作的非官方、非商业文化档案，与漫威、迪士尼、索尼及相关发行方无隶属关系。不提供、不存储、不引导访问盗版影视资源；作品名称、海报、剧照、音乐及公开视频等权利归原作者和相关权利人所有。资料如有错漏，或权利人对展示内容有异议，欢迎联系指正，我们将及时核验与处理。
       </p>
       <a href="mailto:leooelcn@gmail.com">
-        联系 LEOYOYOFIONA · leooelcn@gmail.com <ArrowUpRight size={16} />
+        联系方式：LEOYOYOFIONA · leooelcn@gmail.com <ArrowUpRight size={16} />
       </a>
     </aside>
   );
