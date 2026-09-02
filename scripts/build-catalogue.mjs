@@ -22,6 +22,9 @@ const candidates = await read("catalogue-candidates.json", []),
   assets = await read("primary-assets.json", []),
   media = await read("media-reviewed.json", []),
   mainlandExpanded = await read("media-mainland-expanded.json", []),
+  mainlandRejected = new Set(
+    await read("media-mainland-rejected.json", []),
+  ),
   mainlandQueue = await read("media-mainland-queue.json", []),
   officialIndex = await read("official-index.json", {
     movies: [],
@@ -406,9 +409,14 @@ function group(w) {
   if (w.kind.includes("animated")) return "其他动画世界";
   return "其他真人世界";
 }
+const rejectedMainland = (item) => {
+  const bvid =
+    item.bvid ?? item.embedUrl?.match(/[?&]bvid=([^&]+)/)?.[1] ?? null;
+  return Boolean(bvid && mainlandRejected.has(bvid));
+};
 const mediaRecords = [
-  ...media,
-  ...mainlandExpanded.map((item) => ({
+  ...media.filter((item) => !rejectedMainland(item)),
+  ...mainlandExpanded.filter((item) => !rejectedMainland(item)).map((item) => ({
     id: item.id,
     workId: item.workId,
     title: item.title,
@@ -425,7 +433,7 @@ const mediaRecords = [
   })),
   ...mainlandQueue.filter(
     (item) => !media.some((existing) => existing.id === item.id),
-  ),
+  ).filter((item) => !rejectedMainland(item)),
 ];
 const works = items
   .map((w) => {

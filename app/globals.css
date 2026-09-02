@@ -6434,3 +6434,73 @@ html:not([data-theme="day"]) .timeline-bottom,
 html:not([data-theme="day"]) .media-resource-list > small {
   color: #9eacbd;
 }
+
+/* Mobile detail polish: the light theme must stay light through the entire
+   work room, and the index grid must not create a duplicate seam after the
+   opening-frame highlights. */
+html[data-theme="day"] .work-main {
+  background: #f5f7fa;
+  color: #17212b;
+}
+html[data-theme="day"] .work-backdrop {
+  height: 900px;
+  background:
+    radial-gradient(ellipse at 72% 12%, #eadfe5 0%, #f5f7fa 58%, #f5f7fa 100%);
+}
+html[data-theme="day"] .work-backdrop > img {
+  opacity: 0.12;
+  mask-image: linear-gradient(#000 0%, #000 28%, transparent 92%);
+}
+html[data-theme="day"] .work-breadcrumb,
+html[data-theme="day"] .work-breadcrumb i,
+html[data-theme="day"] .work-main .back-link {
+  color: #536170;
+}
+html[data-theme="day"] .work-main .back-link:hover {
+  color: #a71938;
+}
+html[data-theme="day"] .work-lead,
+html[data-theme="day"] .work-details-grid,
+html[data-theme="day"] .work-deep-dive,
+html[data-theme="day"] .work-sources {
+  border-color: #c3ced9;
+}
+html[data-theme="day"] .work-lead-index,
+html[data-theme="day"] .work-lead-index > div {
+  border-color: #c3ced9;
+}
+
+@media (max-width: 700px) {
+  .work-lead-index {
+    border-top: 0;
+  }
+  html[data-theme="day"] .work-lead-index {
+    border-top: 0;
+  }
+  html[data-theme="day"] .site-header nav.open {
+    color: #17212b;
+    background: #ffffff;
+    border-bottom-color: #b7c4d0;
+    box-shadow: 0 18px 35px #17212b18;
+  }
+  html[data-theme="day"] .site-header nav.open a {
+    color: #273746;
+    border-bottom-color: #d8e0e7;
+  }
+  html[data-theme="day"] .site-header nav.open a:hover,
+  html[data-theme="day"] .site-header nav.open a:focus-visible {
+    color: #a71938;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1000px) {
+  html[data-theme="day"] .site-header nav.open {
+    color: #17212b;
+    background: #ffffff;
+    border-bottom-color: #b7c4d0;
+    box-shadow: 0 18px 35px #17212b18;
+  }
+  html[data-theme="day"] .site-header nav.open a {
+    color: #273746;
+  }
+}
