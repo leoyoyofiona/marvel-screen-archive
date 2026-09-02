@@ -64,6 +64,18 @@ if (fakeMotionPosterMedia.length)
   errors.push(
     `fake motion-poster media must not be published as playback: ${fakeMotionPosterMedia.length}`,
   );
+const mainlandPlaybackCount = d.works.reduce(
+  (total, w) =>
+    total +
+    w.media.filter(
+      (m) => m.region === "mainland" && m.status === "playback-verified",
+    ).length,
+  0,
+);
+if (mainlandPlaybackCount < 100)
+  errors.push(
+    `mainland playback regression: expected at least 100 verified videos, got ${mainlandPlaybackCount}`,
+  );
 console.log(
   JSON.stringify(
     {

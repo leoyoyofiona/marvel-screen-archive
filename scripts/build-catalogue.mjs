@@ -21,6 +21,7 @@ const candidates = await read("catalogue-candidates.json", []),
   enriched = await read("enrichment.json", {}),
   assets = await read("primary-assets.json", []),
   media = await read("media-reviewed.json", []),
+  mainlandExpanded = await read("media-mainland-expanded.json", []),
   mainlandQueue = await read("media-mainland-queue.json", []),
   officialIndex = await read("official-index.json", {
     movies: [],
@@ -407,6 +408,21 @@ function group(w) {
 }
 const mediaRecords = [
   ...media,
+  ...mainlandExpanded.map((item) => ({
+    id: item.id,
+    workId: item.workId,
+    title: item.title,
+    kind: item.kind,
+    region: "mainland",
+    provider: item.provider ?? "哔哩哔哩电影",
+    url: `https://www.bilibili.com/video/${item.bvid}/`,
+    embedUrl: `https://player.bilibili.com/player.html?bvid=${item.bvid}&page=1&autoplay=1&high_quality=1&danmaku=0`,
+    status: "playback-verified",
+    checkedAt: "2026-09-02",
+    source:
+      item.source ??
+      `哔哩哔哩电影官方番剧页公开预告／花絮条目；接口返回 ${item.resolution} 且 area_limit=0，播放接口提供免登录高清流`,
+  })),
   ...mainlandQueue.filter(
     (item) => !media.some((existing) => existing.id === item.id),
   ),
