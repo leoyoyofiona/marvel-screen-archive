@@ -1269,8 +1269,10 @@ svg {
 }
 .character-card-art {
   position: relative;
-  height: 190px;
-  flex: 0 0 190px;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 4 / 5;
+  flex: 0 0 auto;
   margin: 14px -1px 0;
   overflow: hidden;
   border: 1px solid #596a82;
@@ -1341,7 +1343,7 @@ svg {
 }
 .character-card-copy {
   min-height: 62px;
-  padding-top: 8px;
+  padding: 9px 2px 1px;
 }
 .character-card-copy > small,
 .character-card-copy > em,
@@ -1368,6 +1370,13 @@ svg {
   line-height: 1.45;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.character-card-intro {
+  display: block;
+  max-height: 29px;
+  color: #b9c6d7;
+  line-height: 1.45;
+  white-space: normal;
 }
 .character-card-copy > strong,
 .character-card-title-line > strong,
@@ -1772,7 +1781,7 @@ svg {
   .armor-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
   .character-card,
   .armor-card { min-height: 270px; }
-  .character-card-art,
+  .character-card-art { height: auto; min-height: 0; flex-basis: auto; aspect-ratio: 4 / 5; }
   .armor-art { height: 170px; flex-basis: 170px; }
   .character-card-copy > strong,
   .armor-card-copy > strong { font-size: 14px; }
@@ -6539,8 +6548,9 @@ html[data-theme="day"] .work-lead-index > div {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
-  object-position: center 35%;
+  object-fit: contain;
+  object-position: center;
+  padding: 5px;
   filter: saturate(1.08) contrast(1.05) brightness(1.08);
   transition: transform 420ms ease, filter 420ms ease;
 }

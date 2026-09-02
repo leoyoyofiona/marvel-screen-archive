@@ -3,6 +3,7 @@ import { useMemo, useState } from "react";
 import { ArrowUpRight, BookOpen, Shield, Sparkles, Swords, X } from "lucide-react";
 import Link from "next/link";
 import type { WorkPreview } from "@/lib/catalogue-types";
+import armorImageManifest from "@/data/armor-image-manifest.json";
 
 type Card = {
   id: string;
@@ -101,7 +102,7 @@ function initials(text: string) {
 }
 
 function CardPortrait({ card, poster, large = false }: { card: Card; poster?: string | null; large?: boolean }) {
-  const portrait = characterPortraits[card.id] ?? poster;
+  const portrait = poster || characterPortraits[card.id];
   return (
     <div className={`character-card-art${large ? " large" : ""}${portrait ? "" : " fallback"}`}>
       {portrait ? <img src={portrait} alt={`${card.alias}人物视觉档案`} /> : <span className="character-avatar">{initials(card.alias)}</span>}
@@ -112,25 +113,9 @@ function CardPortrait({ card, poster, large = false }: { card: Card; poster?: st
   );
 }
 
-type ArmorImageSource = { source: string; credit: string };
-
-const armorImageSources: ArmorImageSource[] = [
-  { source: "https://commons.wikimedia.org/wiki/File:Iron_Man_Mark_III.jpg", credit: "Mark III 实物照片 · Wikimedia Commons" },
-  { source: "https://commons.wikimedia.org/wiki/File:Iron_Man_Mark_V.jpg", credit: "Mark V 实物照片 · Wikimedia Commons" },
-  { source: "https://commons.wikimedia.org/wiki/File:Mark_V_suits.jpg", credit: "Mark V 战甲展陈 · Wikimedia Commons" },
-  { source: "https://commons.wikimedia.org/wiki/File:Iron_Man_Armor_(13729296773).jpg", credit: "公开战甲制作影像 · Wikimedia Commons" },
-  { source: "https://commons.wikimedia.org/wiki/File:SDCC_2012_-_Iron_Man_(7573609494).jpg", credit: "公开战甲制作影像 · Wikimedia Commons" },
-  { source: "https://commons.wikimedia.org/wiki/File:SDCC_2012_-_Iron_Man_(7573692958).jpg", credit: "公开战甲制作影像 · Wikimedia Commons" },
-  { source: "https://commons.wikimedia.org/wiki/File:C2E2_2015_Contest_-_Iron_Man_(17327260351).jpg", credit: "公开战甲制作影像 · Wikimedia Commons" },
-  { source: "https://commons.wikimedia.org/wiki/File:C2E2_2015_Contest_-_Iron_Man_(17301696286).jpg", credit: "公开战甲制作影像 · Wikimedia Commons" },
-  { source: "https://commons.wikimedia.org/wiki/File:C2E2_2016_Contest_-_Iron_Man_Mark_39_(34129715466).jpg", credit: "Mark XXXIX 外观参考 · Wikimedia Commons" },
-  { source: "https://commons.wikimedia.org/wiki/File:2019_sdcc_vacation_Cosplay_of_Iron_Man_Hulkbuster_Armor.jpg", credit: "Hulkbuster 外观制作参考 · Wikimedia Commons" },
-  { source: "https://commons.wikimedia.org/wiki/File:2023_NYCC_Cosplay_of_Iron_Man_01.jpg", credit: "公开战甲制作影像 · Wikimedia Commons" },
-];
-
 function ArmorFigure({ index, name }: { index: number; name: string }) {
-  const image = armorImageSources[index % armorImageSources.length];
-  const photo = `/media/armor/catalogue/armor-${String(index + 1).padStart(2, "0")}.jpg`;
+  const image = armorImageManifest[index] ?? armorImageManifest[0];
+  const photo = image.file;
   return (
     <div className="armor-art">
       <img className="armor-photo" src={photo} alt={`${name}真实战甲影像参考`} />
@@ -171,7 +156,7 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
       </div>
       <div className="character-card-grid">
         {visible.map((card) => <button className={`character-card ${card.side}`} key={card.id} onClick={() => setSelected(card)} aria-label={`查看${card.alias}角色卡`}>
-          <span className="card-corner">MARVEL ARCHIVE</span><CardPortrait card={card} poster={workMap.get(card.workIds[0])?.poster} /><span className="character-card-copy"><small>{card.universe}</small><span className="character-card-title-line"><strong>{card.alias}</strong><span className="character-card-intro">{card.intro}</span></span><em>{card.name}</em><span className="character-card-rule" /><span className="character-card-meta"><i>档案指数</i><b>{card.power}</b><i>定位</i><b>{card.rank}</b></span><span className="character-card-move">{card.move}</span></span>
+          <span className="card-corner">MARVEL ARCHIVE</span><CardPortrait card={card} poster={workMap.get(card.workIds[0])?.poster} /><span className="character-card-copy"><small>{card.universe}</small><span className="character-card-title-line"><strong>{card.alias}</strong></span><span className="character-card-intro">{card.intro}</span><em>{card.name}</em><span className="character-card-rule" /><span className="character-card-meta"><i>档案指数</i><b>{card.power}</b><i>定位</i><b>{card.rank}</b></span><span className="character-card-move">{card.move}</span></span>
         </button>)}
       </div>
       <div className="power-rankings">
