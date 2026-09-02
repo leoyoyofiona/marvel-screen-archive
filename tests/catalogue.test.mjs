@@ -410,18 +410,30 @@ test("catalogued preview media keeps regional source and gates playback status",
   for (const work of data.works) {
     for (const media of work.media) {
       assert.ok(media.checkedAt);
-      const source = new URL(media.url);
-      if (media.region === "mainland") {
-        assert.equal(source.hostname, "www.bilibili.com");
+      const localOriginal = media.url.startsWith(
+        "/media/mainland-motion-posters/",
+      );
+      if (localOriginal) {
+        assert.equal(media.region, "mainland");
+        assert.match(media.provider, /本站原创/);
       } else {
-        assert.equal(source.hostname, "www.youtube.com");
+        const source = new URL(media.url);
+        if (media.region === "mainland") {
+          assert.equal(source.hostname, "www.bilibili.com");
+        } else {
+          assert.equal(source.hostname, "www.youtube.com");
+        }
       }
       if (media.status === "playback-verified") {
-        const embed = new URL(media.embedUrl);
-        if (media.region === "mainland") {
-          assert.equal(embed.hostname, "player.bilibili.com");
+        if (localOriginal) {
+          assert.equal(media.embedUrl, undefined);
         } else {
-          assert.equal(embed.hostname, "www.youtube-nocookie.com");
+          const embed = new URL(media.embedUrl);
+          if (media.region === "mainland") {
+            assert.equal(embed.hostname, "player.bilibili.com");
+          } else {
+            assert.equal(embed.hostname, "www.youtube-nocookie.com");
+          }
         }
       } else {
         assert.equal(media.status, "source-verified");

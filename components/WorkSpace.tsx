@@ -108,6 +108,9 @@ export default function WorkSpace({
       (current.embedUrl.includes("bilibili.com") ||
         current.embedUrl.includes("youtube")),
   );
+  const isLocalMotionPoster = Boolean(
+    current?.url.startsWith("/media/mainland-motion-posters/"),
+  );
   const playerSrc = current?.embedUrl
     ? (() => {
         const key = current.embedUrl.includes("bilibili.com") ? "muted" : "mute";
@@ -312,6 +315,29 @@ export default function WorkSpace({
                       在 {current.provider} 打开 ↗
                     </a>
                   </>
+                ) : isLocalMotionPoster ? (
+                  <>
+                    <video
+                      key={current.id + region}
+                      className="cinema-local-video"
+                      controls
+                      autoPlay
+                      playsInline
+                      poster={work.poster ?? undefined}
+                      preload="metadata"
+                    >
+                      <source src={current.url} type="video/mp4" />
+                      你的浏览器不支持 HTML5 视频播放。
+                    </video>
+                    <a
+                      className="cinema-open-source"
+                      href={current.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      打开本站原创视频 ↗
+                    </a>
+                  </>
                 ) : (
                   <div className="player-empty">
                     <div className="cinema-archive-motion" aria-hidden="true">
@@ -412,7 +438,12 @@ export default function WorkSpace({
                           setAudioEnabled(false);
                         }}
                       >
-                        {m.title} · {m.provider} · {m.kind === "clip" ? "片段" : "预告"}
+                        {m.title} · {m.provider} ·{" "}
+                        {m.provider.includes("本站原创")
+                          ? "动态海报 · 720p"
+                          : m.kind === "clip"
+                            ? "片段"
+                            : "预告"}
                       </button>
                     ))}
                     {tab === "trailer" && region === "overseas" &&
@@ -449,10 +480,14 @@ export default function WorkSpace({
                     <span>
                       {current.provider} ·{" "}
                       {current.region === "mainland" ? "中国大陆" : "海外"} ·{" "}
-                      播放核验 {current.checkedAt ?? "日期待补"}
+                      {current.provider.includes("本站原创")
+                        ? "720p 本站直连"
+                        : `播放核验 ${current.checkedAt ?? "日期待补"}`}
                     </span>
                     <small>
-                      这是已核验的预告、宣传片或片段，不代表完整正片；完整影片入口单独核验。
+                      {current.provider.includes("本站原创")
+                        ? "这是本站原创动态档案海报，用于合法展示作品信息，不是电影正片或未授权片段。"
+                        : "这是已核验的预告、宣传片或片段，不代表完整正片；完整影片入口单独核验。"}
                     </small>
                   </div>
                 )}

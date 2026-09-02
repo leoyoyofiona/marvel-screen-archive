@@ -20,6 +20,15 @@ for (const w of d.works) {
   }
   if (!w.media.every((m) => m.status !== "candidate"))
     errors.push(w.id + ": unpublished media candidate leaked");
+  for (const m of w.media) {
+    if (m.url.startsWith("/media/")) {
+      try {
+        await access(new URL("../public" + m.url, import.meta.url));
+      } catch {
+        errors.push(w.id + ": media file missing: " + m.url);
+      }
+    }
+  }
   if (!w.people.every((id) => people.has(id)))
     errors.push(w.id + ": dangling person");
   if (w.phase && !["MCU"].includes(w.universe))
@@ -43,6 +52,21 @@ for (const p of d.people)
 for (const c of d.characters)
   if (!c.works.every((id) => ids.has(id)))
     errors.push(c.id + ": dangling character appearance");
+const mainlandLocalMotionCount = d.works.reduce(
+  (total, w) =>
+    total +
+    w.media.filter(
+      (m) =>
+        m.region === "mainland" &&
+        m.status === "playback-verified" &&
+        m.url.startsWith("/media/mainland-motion-posters/"),
+    ).length,
+  0,
+);
+if (mainlandLocalMotionCount < 100)
+  errors.push(
+    `mainland original motion poster playback count below 100: ${mainlandLocalMotionCount}`,
+  );
 console.log(
   JSON.stringify(
     {
