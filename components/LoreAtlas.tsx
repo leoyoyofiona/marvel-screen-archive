@@ -129,10 +129,10 @@ function initials(text: string) {
 function CardPortrait({ card, image, large = false }: { card: Card; image?: string; large?: boolean }) {
   return (
     <div className={`character-card-art${large ? " large" : ""}${image ? "" : " fallback"}`}>
-      {image ? <img src={image} alt={`${card.alias}剧中真人画面`} /> : <span className="character-avatar">{initials(card.alias)}</span>}
+      {image ? <img src={image} alt={`${card.alias}角色公开画面`} /> : <span className="character-avatar">{initials(card.alias)}</span>}
       <span className="character-art-shade" />
       <span className="character-art-label">{card.alias}</span>
-      <span className="character-art-caption">LIVE-ACTION FRAME / {card.universe}</span>
+      <span className="character-art-caption">ON-SCREEN SOURCE / {card.universe}</span>
     </div>
   );
 }
