@@ -6558,7 +6558,7 @@ html[data-theme="day"] .work-lead-index > div {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(5,8,14,.02), rgba(5,8,14,.44));
+  background: linear-gradient(180deg, rgba(5,8,14,.01), rgba(5,8,14,.14));
 }
 .armor-card:hover .armor-photo,
 .armor-card:focus-within .armor-photo {
@@ -6583,7 +6583,7 @@ html[data-theme="day"] .work-lead-index > div {
   text-decoration: underline;
 }
 html[data-theme="day"] .armor-photo-shade {
-  background: linear-gradient(180deg, rgba(15,23,32,.02), rgba(15,23,32,.38));
+  background: linear-gradient(180deg, rgba(15,23,32,.01), rgba(15,23,32,.08));
 }
 html[data-theme="day"] .armor-art-credit {
   color: #ffffffdd;

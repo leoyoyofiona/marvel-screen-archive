@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 400" role="img" aria-label="布鲁斯·班纳 · 绿巨人角色视觉档案">
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#254f3b"/><stop offset="1" stop-color="#0b1616"/></linearGradient><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M0 24 24 0" stroke="#b5e58c" stroke-opacity=".12"/></pattern></defs>
+  <rect width="320" height="400" fill="url(#bg)"/><rect width="320" height="400" fill="url(#grid)"/>
+  <path d="M72 303c12-56 34-82 55-94l-12-32 45 13 45-13-12 32c22 12 44 38 55 94z" fill="#6f9b65" stroke="#d5f19d" stroke-opacity=".55" stroke-width="3"/><circle cx="160" cy="129" r="47" fill="#83b66d" stroke="#d5f19d" stroke-opacity=".55" stroke-width="3"/><path d="M117 111q43-36 86 0l-13-28h-60z" fill="#163a2c"/><path d="M112 306h96" stroke="#b9e87d" stroke-width="3"/><text x="160" y="347" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="25" font-weight="700">绿巨人</text><text x="160" y="373" text-anchor="middle" fill="#b8dca2" font-family="Arial,sans-serif" font-size="11" letter-spacing="3">GAMMA FILE / ORIGINAL VISUAL</text>
+</svg>

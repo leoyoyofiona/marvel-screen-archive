@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 400" role="img" aria-label="奥托·奥克塔维斯 · 章鱼博士角色视觉档案">
+  <defs><radialGradient id="bg"><stop stop-color="#5b3e2a"/><stop offset="1" stop-color="#17141c"/></radialGradient></defs>
+  <rect width="320" height="400" fill="url(#bg)"/><path d="M105 305q12-92 55-130 43 38 55 130z" fill="#6b3f27" stroke="#d4a66c" stroke-width="3"/><circle cx="160" cy="126" r="44" fill="#d8aa79" stroke="#ffe1b0" stroke-width="3"/><path d="M117 166Q49 110 28 180M203 166q68-56 89 14M126 193Q59 199 38 270M194 193q67 6 88 77" fill="none" stroke="#8cb9c8" stroke-width="9" stroke-linecap="round"/><circle cx="160" cy="210" r="12" fill="#8cb9c8"/><text x="160" y="347" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="25" font-weight="700">章鱼博士</text><text x="160" y="373" text-anchor="middle" fill="#add4dc" font-family="Arial,sans-serif" font-size="11" letter-spacing="3">OCTAVIUS FILE / ORIGINAL VISUAL</text>
+</svg>

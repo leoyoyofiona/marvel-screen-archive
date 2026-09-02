@@ -87,6 +87,21 @@ const characterPortraits: Record<string, string> = {
   "doctor-strange": "/media/characters/stephen-strange.svg",
   "scarlet-witch": "/media/characters/wanda-maximoff.svg",
   wolverine: "/media/characters/logan-fox.svg",
+  hulk: "/media/characters/hulk.svg",
+  "black-panther": "/media/characters/black-panther.svg",
+  "captain-marvel": "/media/characters/captain-marvel.svg",
+  "ant-man": "/media/characters/ant-man.svg",
+  "star-lord": "/media/characters/star-lord.svg",
+  loki: "/media/characters/loki.svg",
+  thanos: "/media/characters/thanos.svg",
+  ultron: "/media/characters/ultron.svg",
+  killmonger: "/media/characters/killmonger.svg",
+  "green-goblin": "/media/characters/green-goblin.svg",
+  "doctor-octopus": "/media/characters/doctor-octopus.svg",
+  magneto: "/media/characters/magneto.svg",
+  deadpool: "/media/characters/deadpool.svg",
+  venom: "/media/characters/venom.svg",
+  "doctor-doom": "/media/characters/doctor-doom.svg",
 };
 
 const storylines = [
@@ -101,8 +116,8 @@ function initials(text: string) {
   return text.replace(/[··\s]/g, "").slice(0, 2);
 }
 
-function CardPortrait({ card, poster, large = false }: { card: Card; poster?: string | null; large?: boolean }) {
-  const portrait = poster || characterPortraits[card.id];
+function CardPortrait({ card, large = false }: { card: Card; large?: boolean }) {
+  const portrait = characterPortraits[card.id];
   return (
     <div className={`character-card-art${large ? " large" : ""}${portrait ? "" : " fallback"}`}>
       {portrait ? <img src={portrait} alt={`${card.alias}人物视觉档案`} /> : <span className="character-avatar">{initials(card.alias)}</span>}
@@ -118,7 +133,7 @@ function ArmorFigure({ index, name }: { index: number; name: string }) {
   const photo = image.file;
   return (
     <div className="armor-art">
-      <img className="armor-photo" src={photo} alt={`${name}真实战甲影像参考`} />
+      <img className="armor-photo" src={photo} alt={`${name}单件战甲视觉档案`} />
       <span className="armor-photo-shade" />
       <span className="armor-art-index">ARMOR EVOLUTION / {String(index + 1).padStart(2, "0")}</span>
       <a className="armor-art-credit" href={image.source} target="_blank" rel="noopener noreferrer">{image.credit} · 图片来源</a>
@@ -156,7 +171,7 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
       </div>
       <div className="character-card-grid">
         {visible.map((card) => <button className={`character-card ${card.side}`} key={card.id} onClick={() => setSelected(card)} aria-label={`查看${card.alias}角色卡`}>
-          <span className="card-corner">MARVEL ARCHIVE</span><CardPortrait card={card} poster={workMap.get(card.workIds[0])?.poster} /><span className="character-card-copy"><small>{card.universe}</small><span className="character-card-title-line"><strong>{card.alias}</strong></span><span className="character-card-intro">{card.intro}</span><em>{card.name}</em><span className="character-card-rule" /><span className="character-card-meta"><i>档案指数</i><b>{card.power}</b><i>定位</i><b>{card.rank}</b></span><span className="character-card-move">{card.move}</span></span>
+          <span className="card-corner">MARVEL ARCHIVE</span><CardPortrait card={card} /><span className="character-card-copy"><small>{card.universe}</small><span className="character-card-title-line"><strong>{card.alias}</strong></span><span className="character-card-intro">{card.intro}</span><em>{card.name}</em><span className="character-card-rule" /><span className="character-card-meta"><i>档案指数</i><b>{card.power}</b><i>定位</i><b>{card.rank}</b></span><span className="character-card-move">{card.move}</span></span>
         </button>)}
       </div>
       <div className="power-rankings">
@@ -171,13 +186,13 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
           </div>
         </div>
         {rankingView === "cards" ? <div className="power-ranking-cards">
-          {rankedCards.map((card, index) => <button className={`power-ranking-card ${card.side}`} key={card.id} onClick={() => setSelected(card)} aria-label={`查看排行榜第${index + 1}名${card.alias}`}><span className="ranking-card-number">{String(index + 1).padStart(2, "0")}</span><CardPortrait card={card} poster={workMap.get(card.workIds[0])?.poster} /><span className="power-ranking-card-copy"><strong>{card.alias}</strong><small>{card.name} · {card.role}</small><em>{card.move}</em><b>{card.power}</b></span></button>)}
+          {rankedCards.map((card, index) => <button className={`power-ranking-card ${card.side}`} key={card.id} onClick={() => setSelected(card)} aria-label={`查看排行榜第${index + 1}名${card.alias}`}><span className="ranking-card-number">{String(index + 1).padStart(2, "0")}</span><CardPortrait card={card} /><span className="power-ranking-card-copy"><strong>{card.alias}</strong><small>{card.name} · {card.role}</small><em>{card.move}</em><b>{card.power}</b></span></button>)}
         </div> : <ol className="power-ranking-list">
           {rankedCards.map((card, index) => <li key={card.id}><span className="ranking-number">{String(index + 1).padStart(2, "0")}</span><div><strong>{card.alias}</strong><small>{card.name} · {card.role} · {card.move}</small></div><b>{card.power}</b></li>)}
         </ol>}
       </div>
       <div className="armor-atlas">
-        <div className="armor-heading"><div><span className="eyebrow">IRON MAN ARMOR INDEX / 装甲谱</span><h3>钢铁侠装甲：从 Mark I 到纳米时代</h3><p>共收录 {armorNames.length} 套战甲卡片，每张卡片使用独立裁切的高清视觉档案。优先采用真实战甲实物／展陈照片；没有型号级实物图的条目，会明确标为公开制作或外观参考，不冒充电影剧照。</p></div><Shield size={29} /></div>
+        <div className="armor-heading"><div><span className="eyebrow">IRON MAN ARMOR INDEX / 装甲谱</span><h3>钢铁侠装甲：从 Mark I 到纳米时代</h3><p>共收录 {armorNames.length} 套战甲卡片。每张图只突出一件完整战甲，优先采用公开授权的单件实物或单人装甲影像；没有型号级原件照片的条目，会明确标为外观参考，不冒充电影剧照。</p></div><Shield size={29} /></div>
         <div className="armor-grid">{armorNames.map((name, index) => { const detail = getArmorDetail(name, index); return <article className="armor-card" key={`${name}-${index}`}><span className="card-corner">ARMOR FILE</span><ArmorFigure index={index} name={name} /><span className="armor-card-copy"><small>{detail.time} · {detail.origin}</small><span className="armor-card-title-line"><strong>{name}</strong><small className="armor-card-note">{index < 42 ? "MCU Mark" : "扩展设定"}</small></span><span className="armor-card-facts"><span><i>特点</i>{detail.feature}</span><span><i>参数</i>{detail.specs}</span></span></span></article>; })}</div>
         <a className="text-link" href="https://www.marvel.com/watch/digital-series/earth-s-mightiest-show/all-of-the-armor-worn-by-tony-stark-in-the-mcu" target="_blank" rel="noopener noreferrer">查看 Marvel 官方装甲专题 <ArrowUpRight size={14} /></a>
       </div>
@@ -186,7 +201,7 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
         <div className="storyline-tabs" role="tablist">{storylines.map((item) => <button key={item.id} className={story === item.id ? "active" : ""} onClick={() => setStory(item.id)}>{item.title}<small>{item.years}</small></button>)}</div>
         <div className="storyline-detail"><div><span className="storyline-number">{String(storylines.findIndex((item) => item.id === activeStory.id) + 1).padStart(2, "0")}</span><h4>{activeStory.title}</h4><p>{activeStory.tone}</p><a className="text-link" href={activeStory.source} target="_blank" rel="noopener noreferrer">资料来源 <ArrowUpRight size={14} /></a></div><ol>{activeStory.items.map((title) => { const work = works.find((item) => item.title === title) ?? [...workMap.values()].find((item) => item.title.includes(title) || title.includes(item.title)); return <li key={title}>{work ? <Link href={`/works/${work.id}`}>{title}<ArrowUpRight size={13} /></Link> : <span>{title}</span>}</li>; })}</ol></div>
       </div>
-      {selected && <div className="lore-modal-backdrop" role="presentation" onClick={() => setSelected(null)}><aside className={`lore-modal ${selected.side}`} role="dialog" aria-modal="true" aria-label={`${selected.alias}角色档案`} onClick={(event) => event.stopPropagation()}><button className="icon-button lore-modal-close" onClick={() => setSelected(null)} aria-label="关闭角色档案"><X /></button><span className="card-corner">CHARACTER FILE / {selected.universe}</span><CardPortrait card={selected} poster={workMap.get(selected.workIds[0])?.poster} large /><small>{selected.side === "hero" ? "HERO FILE" : "VILLAIN FILE"}</small><h3>{selected.alias}</h3><p className="lore-modal-name">{selected.name} · {selected.role}</p><p>{selected.intro}</p><div className="lore-stat-grid"><span><b>{selected.power}</b><small>影迷向档案指数</small></span><span><b>{selected.rank}</b><small>核心定位</small></span></div><div className="lore-move"><Swords size={16} /> 代表绝招：{selected.move}</div><h4>已编目作品</h4><ul>{selected.workIds.map((id) => { const work = workMap.get(id); return work ? <li key={id}><Link href={`/works/${id}`} onClick={() => setSelected(null)}>{work.title} · {work.year ?? "待定"}<ArrowUpRight size={13} /></Link></li> : null; })}</ul><a className="text-link" href={selected.source} target="_blank" rel="noopener noreferrer">打开 Marvel 人物资料 <ArrowUpRight size={14} /></a></aside></div>}
+      {selected && <div className="lore-modal-backdrop" role="presentation" onClick={() => setSelected(null)}><aside className={`lore-modal ${selected.side}`} role="dialog" aria-modal="true" aria-label={`${selected.alias}角色档案`} onClick={(event) => event.stopPropagation()}><button className="icon-button lore-modal-close" onClick={() => setSelected(null)} aria-label="关闭角色档案"><X /></button><span className="card-corner">CHARACTER FILE / {selected.universe}</span><CardPortrait card={selected} large /><small>{selected.side === "hero" ? "HERO FILE" : "VILLAIN FILE"}</small><h3>{selected.alias}</h3><p className="lore-modal-name">{selected.name} · {selected.role}</p><p>{selected.intro}</p><div className="lore-stat-grid"><span><b>{selected.power}</b><small>影迷向档案指数</small></span><span><b>{selected.rank}</b><small>核心定位</small></span></div><div className="lore-move"><Swords size={16} /> 代表绝招：{selected.move}</div><h4>已编目作品</h4><ul>{selected.workIds.map((id) => { const work = workMap.get(id); return work ? <li key={id}><Link href={`/works/${id}`} onClick={() => setSelected(null)}>{work.title} · {work.year ?? "待定"}<ArrowUpRight size={13} /></Link></li> : null; })}</ul><a className="text-link" href={selected.source} target="_blank" rel="noopener noreferrer">打开 Marvel 人物资料 <ArrowUpRight size={14} /></a></aside></div>}
     </section>
   );
 }
