@@ -2241,7 +2241,9 @@ svg {
   fill: #321c2a;
 }
 .graph-node.person:hover circle,
-.graph-node.person:focus circle {
+.graph-node.person:focus circle,
+.graph-node.character:hover circle,
+.graph-node.character:focus circle {
   stroke: #ec2638;
   filter: drop-shadow(0 0 8px #ec263866);
 }
@@ -6503,4 +6505,76 @@ html[data-theme="day"] .work-lead-index > div {
   html[data-theme="day"] .site-header nav.open a {
     color: #273746;
   }
+}
+
+/* Compact archive cards: short records must not be pushed to the bottom of a
+   tall card, leaving the empty white/black field shown in the mobile capture. */
+.character-card,
+.armor-card {
+  min-height: 0;
+  height: auto;
+  align-self: start;
+}
+.character-card-copy,
+.armor-card-copy {
+  min-height: 0;
+  flex: 0 0 auto;
+}
+.character-card-meta,
+.character-card-move {
+  margin-top: 8px;
+}
+.character-card-move {
+  margin-bottom: 1px;
+}
+.armor-card-copy {
+  display: grid;
+  gap: 6px;
+}
+.armor-card-title-line > strong {
+  font-size: 16px;
+  letter-spacing: .015em;
+}
+.armor-photo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 35%;
+  filter: saturate(1.08) contrast(1.05) brightness(1.08);
+  transition: transform 420ms ease, filter 420ms ease;
+}
+.armor-photo-shade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(5,8,14,.02), rgba(5,8,14,.44));
+}
+.armor-card:hover .armor-photo,
+.armor-card:focus-within .armor-photo {
+  transform: scale(1.05);
+  filter: saturate(1.14) contrast(1.08) brightness(1.16);
+}
+.armor-art-credit {
+  position: absolute;
+  z-index: 2;
+  right: 8px;
+  bottom: 7px;
+  max-width: 72%;
+  color: #eef3f8bb;
+  font-size: 6px;
+  line-height: 1.2;
+  text-align: right;
+  text-decoration: none;
+}
+.armor-art-credit:hover,
+.armor-art-credit:focus-visible {
+  color: #ffffff;
+  text-decoration: underline;
+}
+html[data-theme="day"] .armor-photo-shade {
+  background: linear-gradient(180deg, rgba(15,23,32,.02), rgba(15,23,32,.38));
+}
+html[data-theme="day"] .armor-art-credit {
+  color: #ffffffdd;
 }

@@ -84,27 +84,29 @@ function CardPortrait({ card, poster, large = false }: { card: Card; poster?: st
 }
 
 function ArmorFigure({ index, name }: { index: number; name: string }) {
-  const tone = ["red", "gold", "silver", "blue", "dark"][index % 5];
+  const photo = name === "Mark I"
+    ? "/media/armor/mark-i.jpg"
+    : name === "Mark XLII · 吸附式"
+      ? "/media/armor/mark-xlii.jpg"
+      : name === "Mark II" || name === "Mark III" || name === "Mark IV"
+        ? "/media/armor/mark-iii.jpg"
+        : "/media/armor/exhibition.jpg";
+  const credit = photo === "/media/armor/exhibition.jpg"
+    ? "MCU 战甲实物展陈参考 · CC BY 4.0"
+    : "Wikimedia Commons 实物照片 · CC BY-SA 4.0";
+  const source = photo === "/media/armor/exhibition.jpg"
+    ? "https://commons.wikimedia.org/wiki/File:Iron_Man%27s_Armor_(2024_Exhibition).jpg"
+    : photo === "/media/armor/mark-xlii.jpg"
+      ? "https://commons.wikimedia.org/wiki/File:Ironman_Mk.42_on_CCG2014.jpg"
+      : photo === "/media/armor/mark-i.jpg"
+        ? "https://commons.wikimedia.org/wiki/File:Iron_Man_Mark_I.jpg"
+        : "https://commons.wikimedia.org/wiki/File:Iron_Man_Mark_III.jpg";
   return (
-    <div className={`armor-art tone-${tone}`}>
-      <svg className="armor-illustration" viewBox="0 0 180 190" role="img" aria-label={`${name}装甲示意图`}>
-        <title>{`${name}装甲示意图`}</title>
-        <path className="armor-gridline" d="M18 25h144M11 51h158M8 77h164M8 103h164M11 129h158M18 155h144M28 12v166M58 8v174M90 6v178M122 8v174M152 12v166" />
-        <path className="armor-glow" d="M90 10c-31 0-47 19-47 43v22c-16 8-28 27-31 55h156c-3-28-15-47-31-55V53C137 29 121 10 90 10Z" />
-        <path className="armor-helmet" d="M62 61V39c0-14 10-25 28-25s28 11 28 25v22l-8 15H70l-8-15Z" />
-        <path className="armor-visor" d="M67 42h46l-5 15H72l-5-15Z" />
-        <path className="armor-neck" d="M75 72h30l6 14H69l6-14Z" />
-        <path className="armor-body" d="M69 81h42l16 15 13 27H40l13-27 16-15Z" />
-        <path className="armor-chest" d="M75 87h30l8 27H67l8-27Z" />
-        <circle className="armor-reactor" cx="90" cy="100" r="9" />
-        <path className="armor-arm" d="M53 97 33 111l-8 28h20l9-23 13-10Z" />
-        <path className="armor-arm" d="m127 97 20 14 8 28h-20l-9-23-13-10Z" />
-        <path className="armor-leg" d="M60 123h26l-4 32H56l-8-12Z" />
-        <path className="armor-leg" d="M94 123h26l12 20-8 12H98l-4-32Z" />
-        <circle className="armor-repulsor" cx="38" cy="137" r="4" />
-        <circle className="armor-repulsor" cx="142" cy="137" r="4" />
-      </svg>
+    <div className="armor-art">
+      <img className="armor-photo" src={photo} alt={`${name}真实战甲影像参考`} />
+      <span className="armor-photo-shade" />
       <span className="armor-art-index">ARMOR EVOLUTION / {String(index + 1).padStart(2, "0")}</span>
+      <a className="armor-art-credit" href={source} target="_blank" rel="noopener noreferrer">{credit} · 图片来源</a>
     </div>
   );
 }

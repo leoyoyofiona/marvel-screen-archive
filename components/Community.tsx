@@ -344,7 +344,7 @@ export default function Community() {
         <div>
           <span className="eyebrow">06 / FANS AROUND THE WORLD</span>
           <h2>
-            影迷现场<span>我们在不同的地方，喜欢同一些故事</span>
+            影迷现场<span>留下足迹，所有人留下的，所有人都能看到</span>
           </h2>
         </div>
         <span className="live-label">
