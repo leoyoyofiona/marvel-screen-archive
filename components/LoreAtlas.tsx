@@ -101,7 +101,7 @@ function initials(text: string) {
 }
 
 function CardPortrait({ card, poster, large = false }: { card: Card; poster?: string | null; large?: boolean }) {
-  const portrait = poster ?? characterPortraits[card.id];
+  const portrait = characterPortraits[card.id] ?? poster;
   return (
     <div className={`character-card-art${large ? " large" : ""}${portrait ? "" : " fallback"}`}>
       {portrait ? <img src={portrait} alt={`${card.alias}人物视觉档案`} /> : <span className="character-avatar">{initials(card.alias)}</span>}
@@ -112,30 +112,31 @@ function CardPortrait({ card, poster, large = false }: { card: Card; poster?: st
   );
 }
 
+type ArmorImageSource = { source: string; credit: string };
+
+const armorImageSources: ArmorImageSource[] = [
+  { source: "https://commons.wikimedia.org/wiki/File:Iron_Man_Mark_III.jpg", credit: "Mark III 实物照片 · Wikimedia Commons" },
+  { source: "https://commons.wikimedia.org/wiki/File:Iron_Man_Mark_V.jpg", credit: "Mark V 实物照片 · Wikimedia Commons" },
+  { source: "https://commons.wikimedia.org/wiki/File:Mark_V_suits.jpg", credit: "Mark V 战甲展陈 · Wikimedia Commons" },
+  { source: "https://commons.wikimedia.org/wiki/File:Iron_Man_Armor_(13729296773).jpg", credit: "公开战甲制作影像 · Wikimedia Commons" },
+  { source: "https://commons.wikimedia.org/wiki/File:SDCC_2012_-_Iron_Man_(7573609494).jpg", credit: "公开战甲制作影像 · Wikimedia Commons" },
+  { source: "https://commons.wikimedia.org/wiki/File:SDCC_2012_-_Iron_Man_(7573692958).jpg", credit: "公开战甲制作影像 · Wikimedia Commons" },
+  { source: "https://commons.wikimedia.org/wiki/File:C2E2_2015_Contest_-_Iron_Man_(17327260351).jpg", credit: "公开战甲制作影像 · Wikimedia Commons" },
+  { source: "https://commons.wikimedia.org/wiki/File:C2E2_2015_Contest_-_Iron_Man_(17301696286).jpg", credit: "公开战甲制作影像 · Wikimedia Commons" },
+  { source: "https://commons.wikimedia.org/wiki/File:C2E2_2016_Contest_-_Iron_Man_Mark_39_(34129715466).jpg", credit: "Mark XXXIX 外观参考 · Wikimedia Commons" },
+  { source: "https://commons.wikimedia.org/wiki/File:2019_sdcc_vacation_Cosplay_of_Iron_Man_Hulkbuster_Armor.jpg", credit: "Hulkbuster 外观制作参考 · Wikimedia Commons" },
+  { source: "https://commons.wikimedia.org/wiki/File:2023_NYCC_Cosplay_of_Iron_Man_01.jpg", credit: "公开战甲制作影像 · Wikimedia Commons" },
+];
+
 function ArmorFigure({ index, name }: { index: number; name: string }) {
-  const photo = name === "Mark I"
-    ? "/media/armor/mark-i.jpg"
-    : name === "Mark XLII · 吸附式"
-      ? "/media/armor/mark-xlii.jpg"
-      : name === "Mark II" || name === "Mark III" || name === "Mark IV"
-        ? "/media/armor/mark-iii.jpg"
-        : "/media/armor/exhibition.jpg";
-  const credit = photo === "/media/armor/exhibition.jpg"
-    ? "MCU 战甲实物展陈参考 · CC BY 4.0"
-    : "Wikimedia Commons 实物照片 · CC BY-SA 4.0";
-  const source = photo === "/media/armor/exhibition.jpg"
-    ? "https://commons.wikimedia.org/wiki/File:Iron_Man%27s_Armor_(2024_Exhibition).jpg"
-    : photo === "/media/armor/mark-xlii.jpg"
-      ? "https://commons.wikimedia.org/wiki/File:Ironman_Mk.42_on_CCG2014.jpg"
-      : photo === "/media/armor/mark-i.jpg"
-        ? "https://commons.wikimedia.org/wiki/File:Iron_Man_Mark_I.jpg"
-        : "https://commons.wikimedia.org/wiki/File:Iron_Man_Mark_III.jpg";
+  const image = armorImageSources[index % armorImageSources.length];
+  const photo = `/media/armor/catalogue/armor-${String(index + 1).padStart(2, "0")}.jpg`;
   return (
     <div className="armor-art">
       <img className="armor-photo" src={photo} alt={`${name}真实战甲影像参考`} />
       <span className="armor-photo-shade" />
       <span className="armor-art-index">ARMOR EVOLUTION / {String(index + 1).padStart(2, "0")}</span>
-      <a className="armor-art-credit" href={source} target="_blank" rel="noopener noreferrer">{credit} · 图片来源</a>
+      <a className="armor-art-credit" href={image.source} target="_blank" rel="noopener noreferrer">{image.credit} · 图片来源</a>
     </div>
   );
 }
@@ -145,6 +146,7 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
   const [selected, setSelected] = useState<Card | null>(null);
   const [story, setStory] = useState("infinity");
   const [rankingSide, setRankingSide] = useState<"hero" | "villain" | "all">("all");
+  const [rankingView, setRankingView] = useState<"cards" | "list">("cards");
   const visible = useMemo(() => cards.filter((card) => side === "all" || card.side === side), [side]);
   const rankedCards = useMemo(
     () => cards.filter((card) => rankingSide === "all" || card.side === rankingSide).sort((a, b) => b.power - a.power),
@@ -174,15 +176,23 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
       </div>
       <div className="power-rankings">
         <div className="ranking-heading"><div><span className="eyebrow">POWER INDEX / 能力程度排行榜</span><h3>厉害程度排行榜</h3><p>按卡牌中的影迷向档案指数排序；这是本网站的阅读指标，不是官方战斗力排名。</p></div><Sparkles size={25} /></div>
-        <div className="ranking-tabs" role="tablist" aria-label="能力排行榜筛选">
-          {([["hero", "正面人物排行"], ["villain", "反面人物排行"], ["all", "所有人物排行"]] as const).map(([value, label]) => <button key={value} className={rankingSide === value ? "active" : ""} onClick={() => setRankingSide(value)}>{label}</button>)}
+        <div className="ranking-toolbar">
+          <div className="ranking-tabs" role="tablist" aria-label="能力排行榜筛选">
+            {([["hero", "正面人物排行"], ["villain", "反面人物排行"], ["all", "所有人物排行"]] as const).map(([value, label]) => <button key={value} className={rankingSide === value ? "active" : ""} onClick={() => setRankingSide(value)}>{label}</button>)}
+          </div>
+          <div className="ranking-view-tabs" role="group" aria-label="排行榜显示方式">
+            <button className={rankingView === "cards" ? "active" : ""} onClick={() => setRankingView("cards")}>大图卡牌</button>
+            <button className={rankingView === "list" ? "active" : ""} onClick={() => setRankingView("list")}>文字列表</button>
+          </div>
         </div>
-        <ol className="power-ranking-list">
+        {rankingView === "cards" ? <div className="power-ranking-cards">
+          {rankedCards.map((card, index) => <button className={`power-ranking-card ${card.side}`} key={card.id} onClick={() => setSelected(card)} aria-label={`查看排行榜第${index + 1}名${card.alias}`}><span className="ranking-card-number">{String(index + 1).padStart(2, "0")}</span><CardPortrait card={card} poster={workMap.get(card.workIds[0])?.poster} /><span className="power-ranking-card-copy"><strong>{card.alias}</strong><small>{card.name} · {card.role}</small><em>{card.move}</em><b>{card.power}</b></span></button>)}
+        </div> : <ol className="power-ranking-list">
           {rankedCards.map((card, index) => <li key={card.id}><span className="ranking-number">{String(index + 1).padStart(2, "0")}</span><div><strong>{card.alias}</strong><small>{card.name} · {card.role} · {card.move}</small></div><b>{card.power}</b></li>)}
-        </ol>
+        </ol>}
       </div>
       <div className="armor-atlas">
-        <div className="armor-heading"><div><span className="eyebrow">IRON MAN ARMOR INDEX / 装甲谱</span><h3>钢铁侠装甲：从 Mark I 到纳米时代</h3><p>共收录 {armorNames.length} 套战甲卡片。每张卡片都有时间、出处、特点与参数；图像使用真实战甲实物／展陈照片，不使用卡通图。Mark I、Mark III、Mark XLII 为对应型号照片，其余为 MCU 战甲外观参考。</p></div><Shield size={29} /></div>
+        <div className="armor-heading"><div><span className="eyebrow">IRON MAN ARMOR INDEX / 装甲谱</span><h3>钢铁侠装甲：从 Mark I 到纳米时代</h3><p>共收录 {armorNames.length} 套战甲卡片，每张卡片使用独立裁切的高清视觉档案。优先采用真实战甲实物／展陈照片；没有型号级实物图的条目，会明确标为公开制作或外观参考，不冒充电影剧照。</p></div><Shield size={29} /></div>
         <div className="armor-grid">{armorNames.map((name, index) => { const detail = getArmorDetail(name, index); return <article className="armor-card" key={`${name}-${index}`}><span className="card-corner">ARMOR FILE</span><ArmorFigure index={index} name={name} /><span className="armor-card-copy"><small>{detail.time} · {detail.origin}</small><span className="armor-card-title-line"><strong>{name}</strong><small className="armor-card-note">{index < 42 ? "MCU Mark" : "扩展设定"}</small></span><span className="armor-card-facts"><span><i>特点</i>{detail.feature}</span><span><i>参数</i>{detail.specs}</span></span></span></article>; })}</div>
         <a className="text-link" href="https://www.marvel.com/watch/digital-series/earth-s-mightiest-show/all-of-the-armor-worn-by-tony-stark-in-the-mcu" target="_blank" rel="noopener noreferrer">查看 Marvel 官方装甲专题 <ArrowUpRight size={14} /></a>
       </div>

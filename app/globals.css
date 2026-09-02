@@ -6624,6 +6624,113 @@ html[data-theme="day"] .armor-art-credit {
   background: #321b2a;
   color: #f3b1bc;
 }
+.ranking-toolbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.ranking-toolbar .ranking-tabs {
+  margin-top: 18px;
+}
+.ranking-view-tabs {
+  display: flex;
+  gap: 6px;
+  margin-top: 18px;
+}
+.ranking-view-tabs button {
+  padding: 8px 11px;
+  border: 1px solid #344153;
+  border-radius: 999px;
+  background: transparent;
+  color: #9cabbc;
+  font: inherit;
+  font-size: 10px;
+  cursor: pointer;
+}
+.ranking-view-tabs button.active {
+  border-color: #e45d73;
+  background: #261824;
+  color: #f3b1bc;
+}
+.power-ranking-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+.power-ranking-card {
+  position: relative;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #344153;
+  border-radius: 2px;
+  background: #111a27;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+.power-ranking-card:hover,
+.power-ranking-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: #e45d73;
+  box-shadow: 0 14px 26px rgba(0,0,0,.22);
+}
+.power-ranking-card .character-card-art {
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 4 / 5;
+  margin: 0;
+  border: 0;
+}
+.power-ranking-card .character-art-label {
+  font-size: 12px;
+}
+.power-ranking-card-copy {
+  position: relative;
+  display: grid;
+  gap: 5px;
+  min-height: 83px;
+  padding: 11px 44px 13px 12px;
+}
+.power-ranking-card-copy strong {
+  color: #e8edf3;
+  font-size: 13px;
+  font-weight: 500;
+}
+.power-ranking-card-copy small,
+.power-ranking-card-copy em {
+  overflow: hidden;
+  color: #8e9db2;
+  font-size: 8px;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.power-ranking-card-copy em {
+  color: #c3cedd;
+  font-style: normal;
+}
+.power-ranking-card-copy b {
+  position: absolute;
+  top: 11px;
+  right: 12px;
+  color: #efabb6;
+  font-size: 20px;
+  font-weight: 500;
+}
+.ranking-card-number {
+  position: absolute;
+  z-index: 3;
+  top: 9px;
+  left: 10px;
+  color: #f3b1bc;
+  font-size: 10px;
+  letter-spacing: .1em;
+}
 .power-ranking-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -6704,6 +6811,28 @@ html[data-theme="day"] .ranking-tabs button.active {
   background: #f8e5e7;
   color: #82162f;
 }
+html[data-theme="day"] .ranking-view-tabs button,
+html[data-theme="day"] .power-ranking-card {
+  border-color: #b7c4d0;
+  background: #ffffff;
+}
+html[data-theme="day"] .ranking-view-tabs button {
+  color: #536170;
+}
+html[data-theme="day"] .ranking-view-tabs button.active {
+  border-color: #a71938;
+  background: #f8e5e7;
+  color: #82162f;
+}
+html[data-theme="day"] .power-ranking-card-copy strong {
+  color: #17212b;
+}
+html[data-theme="day"] .power-ranking-card-copy small {
+  color: #536170;
+}
+html[data-theme="day"] .power-ranking-card-copy em {
+  color: #273746;
+}
 html[data-theme="day"] .power-ranking-list strong {
   color: #17212b;
 }
@@ -6726,6 +6855,25 @@ html[data-theme="day"] .armor-card-facts i {
   }
   .ranking-tabs {
     gap: 6px;
+  }
+  .ranking-toolbar {
+    align-items: stretch;
+  }
+  .ranking-view-tabs {
+    margin-top: 10px;
+  }
+  .ranking-view-tabs button {
+    font-size: 9px;
+    padding: 7px 9px;
+  }
+  .power-ranking-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1100px) {
+  .power-ranking-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
