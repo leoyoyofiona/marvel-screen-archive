@@ -1,7 +1,15 @@
 "use client";
 import Link from "next/link";
-import { Menu, X, Globe2, ArrowUpRight, ShieldCheck } from "lucide-react";
-import { useState } from "react";
+import {
+  Menu,
+  X,
+  Globe2,
+  ArrowUpRight,
+  ShieldCheck,
+  Moon,
+  Sun,
+} from "lucide-react";
+import { useEffect, useState } from "react";
 export const navigation = [
   ["时间长廊", "timeline"],
   ["作品档案", "archive"],
@@ -20,6 +28,22 @@ export function Header({
   detail?: boolean;
 }) {
   const [open, setOpen] = useState(false);
+  const [theme, setTheme] = useState<"night" | "day">("night");
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      const saved = window.localStorage.getItem("marvel-theme");
+      const next = saved === "day" ? "day" : "night";
+      setTheme(next);
+      document.documentElement.dataset.theme = next;
+    });
+    return () => cancelAnimationFrame(frame);
+  }, []);
+  const toggleTheme = () => {
+    const next = theme === "night" ? "day" : "night";
+    setTheme(next);
+    document.documentElement.dataset.theme = next;
+    window.localStorage.setItem("marvel-theme", next);
+  };
   return (
     <header className="site-header">
       <Link href="/" className="brand">
@@ -51,6 +75,16 @@ export function Header({
           <strong>LEOYOYOFIONA</strong>
           <small>CREATOR · CONTACT</small>
         </a>
+        <button
+          className="theme-toggle"
+          type="button"
+          onClick={toggleTheme}
+          aria-label={theme === "night" ? "切换到白天模式" : "切换到夜晚模式"}
+          title={theme === "night" ? "白天模式" : "夜晚模式"}
+        >
+          {theme === "night" ? <Sun size={15} /> : <Moon size={15} />}
+          <span>{theme === "night" ? "白天" : "夜晚"}</span>
+        </button>
         <label className="region-switch">
           <Globe2 size={15} />
           <span className="sr-only">访问地区</span>

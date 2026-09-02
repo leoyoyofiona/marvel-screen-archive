@@ -328,6 +328,22 @@ svg {
   gap: 18px;
   margin-left: auto;
 }
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 32px;
+  padding: 0 8px;
+  border: 1px solid #4a5362;
+  color: #e6c9a4;
+  background: #171a22;
+  font-size: 9px;
+  white-space: nowrap;
+}
+.theme-toggle:hover {
+  border-color: #e4a56f;
+  color: #ffe2bd;
+}
 .creator-logo {
   display: flex;
   flex-direction: column;
@@ -3303,6 +3319,123 @@ svg {
   font: inherit;
   font-size: 9px;
 }
+
+html[data-theme="day"] {
+  color-scheme: light;
+  --ink: #f3eee8;
+  --panel: #fffaf5;
+  --panel-2: #eee5dd;
+  --line: #d3c6bd;
+  --text: #25272d;
+  --muted: #675f5a;
+  --red: #bc263f;
+}
+html[data-theme="day"] body {
+  background: var(--ink);
+  color: var(--text);
+}
+html[data-theme="day"] .site-header {
+  border-bottom-color: #2c303822;
+  background: #fffaf5ee;
+}
+html[data-theme="day"] .brand strong,
+html[data-theme="day"] .site-header nav a:hover,
+html[data-theme="day"] .character-card,
+html[data-theme="day"] .armor-card,
+html[data-theme="day"] .section-heading h2,
+html[data-theme="day"] .work-space-heading h1 {
+  color: #25272d;
+}
+html[data-theme="day"] .brand small,
+html[data-theme="day"] .site-header nav a,
+html[data-theme="day"] .region-switch,
+html[data-theme="day"] .creator-logo,
+html[data-theme="day"] .section-description,
+html[data-theme="day"] .section-heading h2 > span,
+html[data-theme="day"] .work-space-heading p {
+  color: #675f5a;
+}
+html[data-theme="day"] .theme-toggle {
+  border-color: #b9a99f;
+  color: #835018;
+  background: #fff7ed;
+}
+html[data-theme="day"] input,
+html[data-theme="day"] select,
+html[data-theme="day"] textarea {
+  border-color: #c8b9b0;
+  background: #fffaf5;
+  color: #25272d;
+}
+html[data-theme="day"] .section,
+html[data-theme="day"] .lore-intro,
+html[data-theme="day"] .armor-atlas,
+html[data-theme="day"] .storyline-atlas,
+html[data-theme="day"] .work-lead {
+  border-color: #d3c6bd;
+}
+html[data-theme="day"] .lore-actions button,
+html[data-theme="day"] .storyline-tabs button,
+html[data-theme="day"] .character-card,
+html[data-theme="day"] .armor-card,
+html[data-theme="day"] .storyline-detail,
+html[data-theme="day"] .cinema-panel,
+html[data-theme="day"] .audiovisual-queue,
+html[data-theme="day"] .listening-shell {
+  border-color: #cdbeb4;
+  background-color: #fffaf5;
+}
+html[data-theme="day"] .lore-actions button,
+html[data-theme="day"] .storyline-tabs button {
+  color: #675f5a;
+}
+html[data-theme="day"] .lore-actions button.selected,
+html[data-theme="day"] .storyline-tabs button.active {
+  color: #8e1d35;
+  background: #f5e3de;
+}
+html[data-theme="day"] .character-card {
+  background: linear-gradient(150deg, #fffaf5, #eee5dd 72%);
+}
+html[data-theme="day"] .armor-card {
+  background: linear-gradient(150deg, #fffaf5, #eee5dd 72%);
+}
+html[data-theme="day"] .character-card-title-line > strong,
+html[data-theme="day"] .armor-card-title-line > strong,
+html[data-theme="day"] .character-card-art .character-art-label,
+html[data-theme="day"] .lore-intro strong,
+html[data-theme="day"] .armor-heading h3,
+html[data-theme="day"] .storyline-heading h3,
+html[data-theme="day"] .audiovisual-queue-heading h3 {
+  color: #25272d;
+}
+html[data-theme="day"] .character-card-intro,
+html[data-theme="day"] .armor-card-note,
+html[data-theme="day"] .character-card-move,
+html[data-theme="day"] .lore-intro p,
+html[data-theme="day"] .armor-heading p,
+html[data-theme="day"] .audiovisual-queue-note,
+html[data-theme="day"] .audiovisual-queue-card > small {
+  color: #6d625b;
+}
+html[data-theme="day"] .cinema-panel-heading,
+html[data-theme="day"] .audiovisual-queue {
+  background: #f4ece5;
+}
+html[data-theme="day"] .cinema-panel-heading strong,
+html[data-theme="day"] .work-lead-copy > p,
+html[data-theme="day"] .work-lead-index dd,
+html[data-theme="day"] .media-current-note strong {
+  color: #302e31;
+}
+html[data-theme="day"] .footer {
+  border-top-color: #d3c6bd;
+  background: #e8ded5;
+  color: #675f5a;
+}
+html[data-theme="day"] .footer p {
+  color: #85766e;
+}
 .player-audio-toggle:hover,
 .player-audio-toggle[aria-pressed="true"] {
   border-color: #f29aaa;
@@ -4397,6 +4530,13 @@ svg {
     gap: 0;
   }
   .creator-logo {
+    display: none;
+  }
+  .theme-toggle {
+    min-height: 30px;
+    padding: 0 6px;
+  }
+  .theme-toggle span {
     display: none;
   }
   .region-switch > svg {

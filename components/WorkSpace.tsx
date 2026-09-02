@@ -47,7 +47,7 @@ export default function WorkSpace({
     [likes, setLikes] = useState<number | null>(null),
     [pending, setPending] = useState(false),
     [message, setMessage] = useState(""),
-    [audioEnabled, setAudioEnabled] = useState(false);
+    [audioEnabled, setAudioEnabled] = useState(true);
   const regionTouched = useRef(false);
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
@@ -81,7 +81,7 @@ export default function WorkSpace({
     regionTouched.current = true;
     setRegion(r);
     setActive("");
-    setAudioEnabled(false);
+    setAudioEnabled(true);
     setMessage(
       r === "mainland"
         ? "已切换到中国大陆播放线路，播放器将优先加载大陆可访问来源。"
@@ -108,12 +108,13 @@ export default function WorkSpace({
       (current.embedUrl.includes("bilibili.com") ||
         current.embedUrl.includes("youtube")),
   );
-  const isBilibiliPlayer = Boolean(current?.embedUrl?.includes("bilibili.com"));
   const playerSrc = current?.embedUrl
     ? (() => {
         const key = current.embedUrl.includes("bilibili.com") ? "muted" : "mute";
         const value = audioEnabled ? "0" : "1";
-        const autoplay = audioEnabled && isBilibiliPlayer ? "0" : "1";
+        // Reload the iframe in the user's click path with sound explicitly enabled.
+        // Bilibili's official embed API accepts autoplay/muted as 0/1 query values.
+        const autoplay = "1";
         const autoplayPattern = /([?&])autoplay=[^&]*/;
         const withAutoplay = autoplayPattern.test(current.embedUrl)
           ? current.embedUrl.replace(autoplayPattern, `$1autoplay=${autoplay}`)
@@ -339,7 +340,7 @@ export default function WorkSpace({
                   </div>
                 )}
               </div>
-              {audioEnabled && isBilibiliPlayer && (
+              {audioEnabled && current?.embedUrl?.includes("bilibili.com") && (
                 <p className="player-audio-hint">
                   <Volume2 size={14} /> 声音模式已开启；若浏览器阻止带声音自动播放，请点击播放器中央的播放键开始播放。
                 </p>
