@@ -1,4 +1,5 @@
 "use client";
+import * as React from "react";
 import { useMemo, useState } from "react";
 import { ArrowUpRight, BookOpen, Shield, Sparkles, Swords, X } from "lucide-react";
 import Link from "next/link";
@@ -126,14 +127,75 @@ function initials(text: string) {
   return text.replace(/[··\s]/g, "").slice(0, 2);
 }
 
-function CardPortrait({ card, image, large = false }: { card: Card; image?: string; large?: boolean }) {
+function CardPortrait({ card, image, large = false, onClick }: { card: Card; image?: string; large?: boolean; onClick?: () => void }) {
   return (
-    <div className={`character-card-art${large ? " large" : ""}${image ? "" : " fallback"}`}>
+    <div
+      className={`character-card-art${large ? " large" : ""}${image ? "" : " fallback"}${onClick ? " is-clickable" : ""}`}
+      onClick={(event) => {
+        if (!onClick) return;
+        event.stopPropagation();
+        onClick();
+      }}
+      onKeyDown={(event) => {
+        if (!onClick || (event.key !== "Enter" && event.key !== " ")) return;
+        event.preventDefault();
+        event.stopPropagation();
+        onClick();
+      }}
+      tabIndex={onClick ? 0 : undefined}
+      role={onClick ? "button" : undefined}
+      aria-label={onClick ? `打开${card.alias}人物信息` : undefined}
+    >
       {image ? <img src={image} alt={`${card.alias}角色公开画面`} /> : <span className="character-avatar">{initials(card.alias)}</span>}
       <span className="character-art-shade" />
       <span className="character-art-label">{card.alias}</span>
       <span className="character-art-caption">ON-SCREEN SOURCE / {card.universe}</span>
     </div>
+  );
+}
+
+function CharacterCard({ card, image, onAvatarClick }: { card: Card; image?: string; onAvatarClick: () => void }) {
+  const [flipped, setFlipped] = useState(false);
+  function toggle(event?: React.MouseEvent | React.KeyboardEvent) {
+    if (event && "key" in event && event.key !== "Enter" && event.key !== " ") return;
+    event?.preventDefault();
+    setFlipped((value) => !value);
+  }
+  return (
+    <article
+      className={`character-card ${card.side === "hero" ? "character-hero" : "villain"}${flipped ? " is-flipped" : ""}`}
+      onClick={toggle}
+      onKeyDown={toggle}
+      tabIndex={0}
+      role="button"
+      aria-label={`${flipped ? "翻回" : "翻看"}${card.alias}人物卡`}
+    >
+      <div className="character-card-flipper">
+        <div className="character-card-face character-card-front" aria-hidden={flipped}>
+          <span className="card-corner">MARVEL ARCHIVE</span>
+          <CardPortrait card={card} image={image} onClick={onAvatarClick} />
+          <span className="character-card-copy">
+            <small>{card.universe}</small>
+            <span className="character-card-title-line"><strong>{card.alias}</strong></span>
+            <span className="character-card-intro">{card.intro}</span>
+            <em>{card.name}</em>
+            <span className="character-card-rule" />
+            <span className="character-card-meta"><i>档案指数</i><b>{card.power}</b><i>定位</i><b>{card.rank}</b></span>
+            <span className="character-card-move">{card.move}</span>
+          </span>
+          <small className="character-card-flip-hint">点击翻牌 · 点击头像查看人物档案</small>
+        </div>
+        <div className="character-card-face character-card-back" aria-hidden={!flipped}>
+          <span className="card-corner">CHARACTER FILE / 人物档案</span>
+          <CardPortrait card={card} image={image} large onClick={onAvatarClick} />
+          <strong>{card.alias}</strong>
+          <small>{card.name} · {card.role}</small>
+          <p>{card.intro}</p>
+          <span className="character-card-back-note">{card.move} · 档案指数 {card.power}</span>
+          <span className="character-card-flip-hint">点击翻回人物卡</span>
+        </div>
+      </div>
+    </article>
   );
 }
 
@@ -180,9 +242,7 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
         </div>
       </div>
       <div className="character-card-grid">
-        {visible.map((card) => <article className={`character-card ${card.side === "hero" ? "character-hero" : "villain"}`} key={card.id} onClick={() => setSelected(card)} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); setSelected(card); } }} tabIndex={0} role="button" aria-label={`查看${card.alias}角色卡`}>
-          <span className="card-corner">MARVEL ARCHIVE</span><CardPortrait card={card} image={portraitFor(card)} /><span className="character-card-copy"><small>{card.universe}</small><span className="character-card-title-line"><strong>{card.alias}</strong></span><span className="character-card-intro">{card.intro}</span><em>{card.name}</em><span className="character-card-rule" /><span className="character-card-meta"><i>档案指数</i><b>{card.power}</b><i>定位</i><b>{card.rank}</b></span><span className="character-card-move">{card.move}</span></span>
-        </article>)}
+        {visible.map((card) => <CharacterCard key={card.id} card={card} image={portraitFor(card)} onAvatarClick={() => setSelected(card)} />)}
       </div>
       <div className="power-rankings">
         <div className="ranking-heading"><div><span className="eyebrow">POWER INDEX / 能力程度排行榜</span><h3>厉害程度排行榜</h3><p>按卡牌中的影迷向档案指数排序；这是本网站的阅读指标，不是官方战斗力排名。</p></div><Sparkles size={25} /></div>
@@ -196,7 +256,7 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
           </div>
         </div>
         {rankingView === "cards" ? <div className="power-ranking-cards">
-          {rankedCards.map((card, index) => <article className={`power-ranking-card ${card.side === "hero" ? "character-hero" : "villain"}`} key={card.id} onClick={() => setSelected(card)} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); setSelected(card); } }} tabIndex={0} role="button" aria-label={`查看排行榜第${index + 1}名${card.alias}`}><span className="ranking-card-number">{String(index + 1).padStart(2, "0")}</span><CardPortrait card={card} image={portraitFor(card)} /><span className="power-ranking-card-copy"><strong>{card.alias}</strong><small>{card.name} · {card.role}</small><em>{card.move}</em><b>{card.power}</b></span></article>)}
+          {rankedCards.map((card, index) => <article className={`power-ranking-card ${card.side === "hero" ? "character-hero" : "villain"}`} key={card.id} onClick={() => setSelected(card)} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); setSelected(card); } }} tabIndex={0} role="button" aria-label={`查看排行榜第${index + 1}名${card.alias}`}><span className="ranking-card-number">{String(index + 1).padStart(2, "0")}</span><CardPortrait card={card} image={portraitFor(card)} onClick={() => setSelected(card)} /><span className="power-ranking-card-copy"><strong>{card.alias}</strong><small>{card.name} · {card.role}</small><em>{card.move}</em><b>{card.power}</b></span></article>)}
         </div> : <ol className="power-ranking-list">
           {rankedCards.map((card, index) => <li key={card.id}><span className="ranking-number">{String(index + 1).padStart(2, "0")}</span><div><strong>{card.alias}</strong><small>{card.name} · {card.role} · {card.move}</small></div><b>{card.power}</b></li>)}
         </ol>}

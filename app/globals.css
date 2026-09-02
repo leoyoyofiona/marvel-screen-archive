@@ -7145,3 +7145,95 @@ html[data-theme="day"] .timeline-hover-copy p { color: #516174; }
   .work-card-back-heading strong { font-size: 16px; }
   .work-card-summary { font-size: 10px; }
 }
+
+/* Character cards are physical-card interactions: the card flips in place;
+   the portrait itself remains an explicit target for the character dialog. */
+.character-card {
+  padding: 0;
+  display: block;
+  perspective: 1100px;
+}
+.character-card-flipper {
+  display: grid;
+  min-width: 0;
+  transform-style: preserve-3d;
+  transition: transform 520ms cubic-bezier(.2,.7,.2,1);
+}
+.character-card.is-flipped .character-card-flipper {
+  transform: rotateY(180deg);
+}
+.character-card-face {
+  grid-area: 1 / 1;
+  min-width: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 17px 15px 14px;
+}
+.character-card-front { z-index: 1; }
+.character-card-back {
+  transform: rotateY(180deg);
+  background: radial-gradient(circle at 100% 0%, #a32d4a33, transparent 45%), linear-gradient(150deg, #192333, #0f151f 72%);
+  color: #dbe3ee;
+}
+.character-card-back .character-card-art.large {
+  width: 100%;
+  height: auto;
+  flex: 0 0 auto;
+  aspect-ratio: 4 / 5;
+  margin: 12px 0 13px;
+}
+.character-card-back > strong {
+  color: #f3f5f8;
+  font-size: 21px;
+  font-weight: 550;
+  line-height: 1.25;
+}
+.character-card-back > small {
+  margin-top: 5px;
+  color: #a8b6c8;
+  font-size: 9px;
+}
+.character-card-back > p {
+  margin: 13px 0 11px;
+  color: #c6d0dd;
+  font-size: 10px;
+  line-height: 1.7;
+}
+.character-card-back-note {
+  display: block;
+  padding-top: 9px;
+  border-top: 1px solid #3a4759;
+  color: #b6c3d2;
+  font-size: 9px;
+  line-height: 1.5;
+}
+.character-card-flip-hint {
+  display: block;
+  margin-top: auto;
+  padding-top: 11px;
+  color: #e58b9b;
+  font-size: 8px;
+  letter-spacing: .04em;
+}
+.character-card-art.is-clickable {
+  cursor: pointer;
+}
+.character-card-art.is-clickable:focus-visible {
+  outline: 2px solid #f56c78;
+  outline-offset: -3px;
+}
+html[data-theme="day"] .character-card-back {
+  background: linear-gradient(150deg, #ffffff, #edf2f7);
+  color: #17212b;
+}
+html[data-theme="day"] .character-card-back > strong { color: #17212b; }
+html[data-theme="day"] .character-card-back > small,
+html[data-theme="day"] .character-card-back > p,
+html[data-theme="day"] .character-card-back-note { color: #536170; }
+html[data-theme="day"] .character-card-back-note { border-color: #c3ced9; }
+@media (max-width: 700px) {
+  .character-card-face { padding: 13px 11px 12px; }
+  .character-card-back > strong { font-size: 18px; }
+}
