@@ -7,6 +7,7 @@ import { Poster } from "./Poster";
 export default function Timeline({ works }: { works: WorkPreview[] }) {
   const rail = useRef<HTMLDivElement>(null);
   const drag = useRef<{ x: number; scroll: number } | null>(null);
+  const [hovered, setHovered] = useState<{ work: WorkPreview; rect: DOMRect } | null>(null);
   const [mode, setMode] = useState("all");
   const years = useMemo(
     () =>
@@ -64,13 +65,14 @@ export default function Timeline({ works }: { works: WorkPreview[] }) {
         </div>
       </div>
       <p className="section-description">
-        按作品首发年份浏览。悬停或聚焦节点查看档案；横向拖动、滚动或点击箭头，手机上向下浏览。
+        按作品首发年份浏览。每个年份都展示正常海报；悬停或聚焦卡片，会弹出大图预览，移开后自动收起。
       </p>
       <div
         className="timeline-rail"
         ref={rail}
         tabIndex={0}
         aria-label="年份时间线"
+        onScroll={() => setHovered(null)}
         onKeyDown={(e) => {
           if (e.key === "ArrowRight") {
             e.preventDefault();
@@ -102,7 +104,14 @@ export default function Timeline({ works }: { works: WorkPreview[] }) {
             group.find((w) => w.kind === "film") ??
             group[0];
           return (
-            <div className="year-node" key={year}>
+            <div
+              className="year-node"
+              key={year}
+              onMouseEnter={(event) => setHovered({ work: example, rect: event.currentTarget.getBoundingClientRect() })}
+              onMouseLeave={() => setHovered(null)}
+              onFocus={(event) => setHovered({ work: example, rect: event.currentTarget.getBoundingClientRect() })}
+              onBlur={() => setHovered(null)}
+            >
               <div className="time-preview">
                 <Poster work={example} decorative />
                 <span>{group.length} 项档案</span>
@@ -127,6 +136,20 @@ export default function Timeline({ works }: { works: WorkPreview[] }) {
           );
         })}
       </div>
+      {hovered ? (() => {
+        const viewportWidth = typeof window === "undefined" ? 1280 : window.innerWidth;
+        const viewportHeight = typeof window === "undefined" ? 900 : window.innerHeight;
+        const width = Math.min(410, viewportWidth - 32);
+        const height = 330;
+        const left = Math.min(Math.max(16, hovered.rect.left - 30), viewportWidth - width - 16);
+        const top = hovered.rect.bottom + 14 + height < viewportHeight
+          ? hovered.rect.bottom + 14
+          : Math.max(16, hovered.rect.top - height - 14);
+        return <div className="timeline-hover-preview" style={{ left, top, width }} role="status" aria-live="polite">
+          <div className="timeline-hover-poster"><Poster work={hovered.work} decorative /></div>
+          <div className="timeline-hover-copy"><span>{hovered.work.year ?? "待定"} · {hovered.work.universe}</span><strong>{hovered.work.title}</strong><p>作品海报预览 · {hovered.work.kind === "film" ? "电影" : "影视档案"}</p><Link href={`/works/${hovered.work.id}`}>进入作品空间 <ArrowUpRight size={14} /></Link></div>
+        </div>;
+      })() : null}
       <div className="timeline-bottom">
         <span>
           1944 — 2026 <i>/</i> 后续已公布项目单列

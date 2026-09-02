@@ -843,6 +843,10 @@ svg {
   cursor: grab;
   overscroll-behavior-x: contain;
 }
+.timeline-rail:focus-visible {
+  outline: 2px solid #f56c78;
+  outline-offset: 5px;
+}
 .year-node {
   width: 185px;
   flex-shrink: 0;
@@ -901,20 +905,18 @@ svg {
   color: #778498;
 }
 .time-preview {
-  height: 188px;
-  width: 116px;
+  height: 198px;
+  width: 132px;
   position: absolute;
   top: 0;
   left: -5px;
-  opacity: 0.32;
-  transform: translateY(8px);
-  transition:
-    opacity 0.25s,
-    transform 0.25s;
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.25s, filter 0.25s;
   pointer-events: none;
 }
 .time-preview .poster-frame {
-  height: 170px;
+  height: 178px;
   aspect-ratio: auto;
 }
 .time-preview .poster-kind,
@@ -942,13 +944,13 @@ svg {
 .time-preview > span {
   display: block;
   font-size: 9px;
-  color: #c1cad9;
+  color: #bdc7d5;
   margin-top: 5px;
 }
 .year-node:focus-within .time-preview,
 .year-node:hover .time-preview {
-  opacity: 1;
-  transform: translateY(0);
+  transform: translateY(-4px);
+  filter: saturate(1.08) brightness(1.08);
 }
 .year-node:focus-within .year-dot span,
 .year-node:hover .year-dot span {
@@ -971,6 +973,63 @@ svg {
   margin: 0 14px;
   font-style: normal;
   color: #616c7d;
+}
+.timeline-hover-preview {
+  position: fixed;
+  z-index: 220;
+  display: grid;
+  grid-template-columns: 148px 1fr;
+  gap: 18px;
+  padding: 14px;
+  border: 1px solid #aab5c3;
+  background: #101722f7;
+  color: #f4f6f9;
+  box-shadow: 0 28px 75px #000b, 0 0 0 1px #ec263833;
+  pointer-events: none;
+  animation: timelinePreviewIn 0.2s ease-out both;
+}
+.timeline-hover-poster,
+.timeline-hover-poster .poster-frame {
+  min-width: 0;
+  height: 300px;
+}
+.timeline-hover-poster .poster-kind,
+.timeline-hover-poster .poster-hover,
+.timeline-hover-poster .poster-comment-ticker {
+  display: none;
+}
+.timeline-hover-copy {
+  min-width: 0;
+  align-self: end;
+  padding-bottom: 2px;
+}
+.timeline-hover-copy > span {
+  display: block;
+  color: #f0717d;
+  font: 10px "Courier New", monospace;
+  letter-spacing: 0.12em;
+}
+.timeline-hover-copy strong {
+  display: block;
+  margin-top: 10px;
+  color: #fff;
+  font: 600 24px/1.18 "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+.timeline-hover-copy p {
+  margin: 10px 0 18px;
+  color: #b7c2d0;
+  font-size: 11px;
+}
+.timeline-hover-copy a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #ff7c87;
+  font-size: 11px;
+}
+@keyframes timelinePreviewIn {
+  from { opacity: 0; transform: translateY(6px) scale(.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 .filter-top {
   display: flex;
@@ -4961,6 +5020,9 @@ html[data-theme="day"] .behind-list > a h3 {
   .time-preview .archive-frame:before {
     inset: 7px;
   }
+  .timeline-hover-preview {
+    display: none;
+  }
   .time-preview .frame-year {
     top: 10px;
     right: 10px;
@@ -6062,6 +6124,18 @@ html[data-theme="day"] .timeline-bottom {
 html[data-theme="day"] .year-count,
 html[data-theme="day"] .timeline-bottom i {
   color: #687888;
+}
+html[data-theme="day"] .timeline-hover-preview {
+  border-color: #8796a4;
+  background: #fffffffa;
+  color: #17212b;
+  box-shadow: 0 28px 75px #33445540, 0 0 0 1px #a7193833;
+}
+html[data-theme="day"] .timeline-hover-copy strong {
+  color: #17212b;
+}
+html[data-theme="day"] .timeline-hover-copy p {
+  color: #536170;
 }
 html[data-theme="day"] .year-node:hover .year-number,
 html[data-theme="day"] .year-node:focus-within .year-number {

@@ -78,30 +78,40 @@ function getArmorDetail(name: string, index: number): ArmorDetail {
   };
 }
 
-const characterPortraits: Record<string, string> = {
-  "iron-man": "/media/characters/tony-stark.svg",
-  "captain-america": "/media/characters/steve-rogers.svg",
-  thor: "/media/characters/thor.svg",
-  "black-widow": "/media/characters/natasha-romanoff.svg",
-  "spider-man": "/media/characters/peter-parker-mcu.svg",
-  "doctor-strange": "/media/characters/stephen-strange.svg",
-  "scarlet-witch": "/media/characters/wanda-maximoff.svg",
-  wolverine: "/media/characters/logan-fox.svg",
-  hulk: "/media/characters/hulk.svg",
-  "black-panther": "/media/characters/black-panther.svg",
-  "captain-marvel": "/media/characters/captain-marvel.svg",
-  "ant-man": "/media/characters/ant-man.svg",
-  "star-lord": "/media/characters/star-lord.svg",
-  loki: "/media/characters/loki.svg",
-  thanos: "/media/characters/thanos.svg",
-  ultron: "/media/characters/ultron.svg",
-  killmonger: "/media/characters/killmonger.svg",
-  "green-goblin": "/media/characters/green-goblin.svg",
-  "doctor-octopus": "/media/characters/doctor-octopus.svg",
-  magneto: "/media/characters/magneto.svg",
-  deadpool: "/media/characters/deadpool.svg",
-  venom: "/media/characters/venom.svg",
-  "doctor-doom": "/media/characters/doctor-doom.svg",
+// These are work-specific visual sources, not generic character illustrations.
+// Keeping the image attached to a work prevents a character name from being
+// paired with the wrong hero or villain poster.
+const characterStillWorkIds: Record<string, string> = {
+  "iron-man": "iron-man-2008-film",
+  "captain-america": "captain-america-the-first-avenger-2011-film",
+  thor: "thor-2011-film",
+  hulk: "the-incredible-hulk-2008-film",
+  "black-widow": "black-widow-2021-film",
+  "spider-man": "spider-man-2002-film",
+  "doctor-strange": "doctor-strange-2016-film",
+  "scarlet-witch": "avengers-age-of-ultron-2015-film",
+  "black-panther": "black-panther-2018-film",
+  "captain-marvel": "captain-marvel-2019-film",
+  "ant-man": "ant-man-2015-film",
+  "star-lord": "guardians-of-the-galaxy-2014-film",
+  loki: "loki-2021-series",
+  thanos: "avengers-infinity-war-2018-film",
+  ultron: "avengers-age-of-ultron-2015-film",
+  killmonger: "black-panther-2018-film",
+  "green-goblin": "spider-man-2002-film",
+  "doctor-octopus": "spider-man-2-2004-film",
+  magneto: "x-men-2000-film",
+  wolverine: "logan-2017-film",
+  deadpool: "deadpool-2016-film",
+  venom: "venom-2018-film",
+  "doctor-doom": "fantastic-four-2005-film",
+};
+
+const characterStillOverrides: Record<string, string> = {
+  // Dedicated live-action stills keep the two Spider-Man villains from being
+  // represented by a Spider-Man-only poster.
+  "doctor-octopus": "/media/character-stills/doctor-octopus-spider-man-2.jpg",
+  "green-goblin": "/media/character-stills/green-goblin-spider-man.jpg",
 };
 
 const storylines = [
@@ -116,14 +126,13 @@ function initials(text: string) {
   return text.replace(/[··\s]/g, "").slice(0, 2);
 }
 
-function CardPortrait({ card, large = false }: { card: Card; large?: boolean }) {
-  const portrait = characterPortraits[card.id];
+function CardPortrait({ card, image, large = false }: { card: Card; image?: string; large?: boolean }) {
   return (
-    <div className={`character-card-art${large ? " large" : ""}${portrait ? "" : " fallback"}`}>
-      {portrait ? <img src={portrait} alt={`${card.alias}人物视觉档案`} /> : <span className="character-avatar">{initials(card.alias)}</span>}
+    <div className={`character-card-art${large ? " large" : ""}${image ? "" : " fallback"}`}>
+      {image ? <img src={image} alt={`${card.alias}剧中真人画面`} /> : <span className="character-avatar">{initials(card.alias)}</span>}
       <span className="character-art-shade" />
       <span className="character-art-label">{card.alias}</span>
-      <span className="character-art-caption">VISUAL FILE / {card.universe}</span>
+      <span className="character-art-caption">LIVE-ACTION FRAME / {card.universe}</span>
     </div>
   );
 }
@@ -154,6 +163,7 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
   );
   const activeStory = storylines.find((item) => item.id === story) ?? storylines[0];
   const workMap = new Map(works.map((work) => [work.id, work]));
+  const portraitFor = (card: Card) => characterStillOverrides[card.id] ?? workMap.get(characterStillWorkIds[card.id])?.poster ?? undefined;
   return (
     <section id="lore" className="section lore-section">
       <div className="section-heading">
@@ -171,7 +181,7 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
       </div>
       <div className="character-card-grid">
         {visible.map((card) => <button className={`character-card ${card.side}`} key={card.id} onClick={() => setSelected(card)} aria-label={`查看${card.alias}角色卡`}>
-          <span className="card-corner">MARVEL ARCHIVE</span><CardPortrait card={card} /><span className="character-card-copy"><small>{card.universe}</small><span className="character-card-title-line"><strong>{card.alias}</strong></span><span className="character-card-intro">{card.intro}</span><em>{card.name}</em><span className="character-card-rule" /><span className="character-card-meta"><i>档案指数</i><b>{card.power}</b><i>定位</i><b>{card.rank}</b></span><span className="character-card-move">{card.move}</span></span>
+          <span className="card-corner">MARVEL ARCHIVE</span><CardPortrait card={card} image={portraitFor(card)} /><span className="character-card-copy"><small>{card.universe}</small><span className="character-card-title-line"><strong>{card.alias}</strong></span><span className="character-card-intro">{card.intro}</span><em>{card.name}</em><span className="character-card-rule" /><span className="character-card-meta"><i>档案指数</i><b>{card.power}</b><i>定位</i><b>{card.rank}</b></span><span className="character-card-move">{card.move}</span></span>
         </button>)}
       </div>
       <div className="power-rankings">
@@ -186,7 +196,7 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
           </div>
         </div>
         {rankingView === "cards" ? <div className="power-ranking-cards">
-          {rankedCards.map((card, index) => <button className={`power-ranking-card ${card.side}`} key={card.id} onClick={() => setSelected(card)} aria-label={`查看排行榜第${index + 1}名${card.alias}`}><span className="ranking-card-number">{String(index + 1).padStart(2, "0")}</span><CardPortrait card={card} /><span className="power-ranking-card-copy"><strong>{card.alias}</strong><small>{card.name} · {card.role}</small><em>{card.move}</em><b>{card.power}</b></span></button>)}
+          {rankedCards.map((card, index) => <button className={`power-ranking-card ${card.side}`} key={card.id} onClick={() => setSelected(card)} aria-label={`查看排行榜第${index + 1}名${card.alias}`}><span className="ranking-card-number">{String(index + 1).padStart(2, "0")}</span><CardPortrait card={card} image={portraitFor(card)} /><span className="power-ranking-card-copy"><strong>{card.alias}</strong><small>{card.name} · {card.role}</small><em>{card.move}</em><b>{card.power}</b></span></button>)}
         </div> : <ol className="power-ranking-list">
           {rankedCards.map((card, index) => <li key={card.id}><span className="ranking-number">{String(index + 1).padStart(2, "0")}</span><div><strong>{card.alias}</strong><small>{card.name} · {card.role} · {card.move}</small></div><b>{card.power}</b></li>)}
         </ol>}
@@ -201,7 +211,7 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
         <div className="storyline-tabs" role="tablist">{storylines.map((item) => <button key={item.id} className={story === item.id ? "active" : ""} onClick={() => setStory(item.id)}>{item.title}<small>{item.years}</small></button>)}</div>
         <div className="storyline-detail"><div><span className="storyline-number">{String(storylines.findIndex((item) => item.id === activeStory.id) + 1).padStart(2, "0")}</span><h4>{activeStory.title}</h4><p>{activeStory.tone}</p><a className="text-link" href={activeStory.source} target="_blank" rel="noopener noreferrer">资料来源 <ArrowUpRight size={14} /></a></div><ol>{activeStory.items.map((title) => { const work = works.find((item) => item.title === title) ?? [...workMap.values()].find((item) => item.title.includes(title) || title.includes(item.title)); return <li key={title}>{work ? <Link href={`/works/${work.id}`}>{title}<ArrowUpRight size={13} /></Link> : <span>{title}</span>}</li>; })}</ol></div>
       </div>
-      {selected && <div className="lore-modal-backdrop" role="presentation" onClick={() => setSelected(null)}><aside className={`lore-modal ${selected.side}`} role="dialog" aria-modal="true" aria-label={`${selected.alias}角色档案`} onClick={(event) => event.stopPropagation()}><button className="icon-button lore-modal-close" onClick={() => setSelected(null)} aria-label="关闭角色档案"><X /></button><span className="card-corner">CHARACTER FILE / {selected.universe}</span><CardPortrait card={selected} large /><small>{selected.side === "hero" ? "HERO FILE" : "VILLAIN FILE"}</small><h3>{selected.alias}</h3><p className="lore-modal-name">{selected.name} · {selected.role}</p><p>{selected.intro}</p><div className="lore-stat-grid"><span><b>{selected.power}</b><small>影迷向档案指数</small></span><span><b>{selected.rank}</b><small>核心定位</small></span></div><div className="lore-move"><Swords size={16} /> 代表绝招：{selected.move}</div><h4>已编目作品</h4><ul>{selected.workIds.map((id) => { const work = workMap.get(id); return work ? <li key={id}><Link href={`/works/${id}`} onClick={() => setSelected(null)}>{work.title} · {work.year ?? "待定"}<ArrowUpRight size={13} /></Link></li> : null; })}</ul><a className="text-link" href={selected.source} target="_blank" rel="noopener noreferrer">打开 Marvel 人物资料 <ArrowUpRight size={14} /></a></aside></div>}
+      {selected && <div className="lore-modal-backdrop" role="presentation" onClick={() => setSelected(null)}><aside className={`lore-modal ${selected.side}`} role="dialog" aria-modal="true" aria-label={`${selected.alias}角色档案`} onClick={(event) => event.stopPropagation()}><button className="icon-button lore-modal-close" onClick={() => setSelected(null)} aria-label="关闭角色档案"><X /></button><span className="card-corner">CHARACTER FILE / {selected.universe}</span><CardPortrait card={selected} image={portraitFor(selected)} large /><small>{selected.side === "hero" ? "HERO FILE" : "VILLAIN FILE"}</small><h3>{selected.alias}</h3><p className="lore-modal-name">{selected.name} · {selected.role}</p><p>{selected.intro}</p><div className="lore-stat-grid"><span><b>{selected.power}</b><small>影迷向档案指数</small></span><span><b>{selected.rank}</b><small>核心定位</small></span></div><div className="lore-move"><Swords size={16} /> 代表绝招：{selected.move}</div><h4>已编目作品</h4><ul>{selected.workIds.map((id) => { const work = workMap.get(id); return work ? <li key={id}><Link href={`/works/${id}`} onClick={() => setSelected(null)}>{work.title} · {work.year ?? "待定"}<ArrowUpRight size={13} /></Link></li> : null; })}</ul><a className="text-link" href={selected.source} target="_blank" rel="noopener noreferrer">打开 Marvel 人物资料 <ArrowUpRight size={14} /></a></aside></div>}
     </section>
   );
 }
