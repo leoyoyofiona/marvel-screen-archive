@@ -1,7 +1,6 @@
 "use client";
 import { useMemo, useRef, useState } from "react";
-import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
-import Link from "next/link";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import type { WorkPreview } from "@/lib/catalogue-types";
 import { Poster } from "./Poster";
 export default function Timeline({ works }: { works: WorkPreview[] }) {
@@ -116,18 +115,16 @@ export default function Timeline({ works }: { works: WorkPreview[] }) {
                 <Poster work={example} decorative />
                 <span>{group.length} 项档案</span>
               </div>
-              <Link
+              <span
                 className="year-dot"
-                href={"/works/" + example.id}
                 aria-label={year + "年，查看" + example.title}
               >
                 <span />
-              </Link>
+              </span>
               <strong className="year-number">{year}</strong>
-              <Link className="year-name" href={"/works/" + example.id}>
+              <span className="year-name">
                 {example.title}
-                <ArrowUpRight size={13} />
-              </Link>
+              </span>
               <span className="year-count">
                 {group.length} 项 ·{" "}
                 {year > 2026 ? "已公布项目" : "作品首发年份"}
@@ -139,15 +136,15 @@ export default function Timeline({ works }: { works: WorkPreview[] }) {
       {hovered ? (() => {
         const viewportWidth = typeof window === "undefined" ? 1280 : window.innerWidth;
         const viewportHeight = typeof window === "undefined" ? 900 : window.innerHeight;
-        const width = Math.min(410, viewportWidth - 32);
-        const height = 330;
+        const width = Math.min(560, viewportWidth - 32);
+        const height = 360;
         const left = Math.min(Math.max(16, hovered.rect.left - 30), viewportWidth - width - 16);
         const top = hovered.rect.bottom + 14 + height < viewportHeight
           ? hovered.rect.bottom + 14
           : Math.max(16, hovered.rect.top - height - 14);
         return <div className="timeline-hover-preview" style={{ left, top, width }} role="status" aria-live="polite">
           <div className="timeline-hover-poster"><Poster work={hovered.work} decorative /></div>
-          <div className="timeline-hover-copy"><span>{hovered.work.year ?? "待定"} · {hovered.work.universe}</span><strong>{hovered.work.title}</strong><p>作品海报预览 · {hovered.work.kind === "film" ? "电影" : "影视档案"}</p><Link href={`/works/${hovered.work.id}`}>进入作品空间 <ArrowUpRight size={14} /></Link></div>
+          <div className="timeline-hover-copy"><span>{hovered.work.year ?? "待定"} · {hovered.work.universe}</span><strong>{hovered.work.title}</strong><p>{hovered.work.kind === "film" ? "电影" : "影视档案"} · 首发年份与海报预览</p></div>
         </div>;
       })() : null}
       <div className="timeline-bottom">

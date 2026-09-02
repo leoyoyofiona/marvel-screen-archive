@@ -6976,3 +6976,172 @@ html[data-theme="day"] .armor-card-facts i {
     margin-top: 14px;
   }
 }
+/* Final archive interaction pass: compact cards, in-place flip details and a
+   browse-only timeline with a large balanced hover preview. */
+.work-card {
+  perspective: 1100px;
+  cursor: pointer;
+  outline: none;
+}
+.work-card:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 5px;
+}
+.work-card-flipper {
+  display: grid;
+  min-width: 0;
+  transform-style: preserve-3d;
+  transition: transform 520ms cubic-bezier(.2,.7,.2,1);
+}
+.work-card.is-flipped .work-card-flipper {
+  transform: rotateY(180deg);
+}
+.work-card-face {
+  grid-area: 1 / 1;
+  min-width: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.work-card-front { z-index: 1; }
+.work-card-back {
+  min-height: 0;
+  padding: 22px 18px 18px;
+  border: 1px solid #46566b;
+  background: radial-gradient(circle at 100% 0%, #a32d4a33, transparent 43%), linear-gradient(145deg, #182435, #0d141e 76%);
+  color: #dfe7f0;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+}
+.work-card-front .poster-hover { display: none; }
+.work-card-back-heading strong {
+  display: block;
+  margin-top: 11px;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 550;
+  line-height: 1.35;
+}
+.work-card-back-heading small {
+  display: block;
+  margin-top: 6px;
+  color: #a8b6c8;
+  font-size: 9px;
+}
+.work-card-summary {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 15px 0 13px;
+  color: #c6d0dd;
+  font-size: 11px;
+  line-height: 1.7;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.work-card-facts {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 11px 0;
+  border-top: 1px solid #3a4759;
+  border-bottom: 1px solid #3a4759;
+}
+.work-card-facts > div {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: 9px;
+  min-width: 0;
+}
+.work-card-facts dt { color: #e68b9a; font-size: 9px; }
+.work-card-facts dd {
+  overflow: hidden;
+  margin: 0;
+  color: #b6c3d2;
+  font-size: 9px;
+  line-height: 1.45;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.work-card-back-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 12px;
+  margin-top: auto;
+  padding-top: 14px;
+}
+.work-card-back-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #ff8793;
+  font-size: 9px;
+}
+.work-card-back-actions a:hover,
+.work-card-back-actions a:focus-visible { color: #fff; }
+.timeline-rail,
+.year-node,
+.year-dot,
+.year-name { cursor: default; }
+.timeline-hover-preview {
+  grid-template-columns: minmax(205px, 240px) minmax(0, 1fr);
+  gap: 22px;
+  width: min(560px, calc(100vw - 32px)) !important;
+  min-height: 332px;
+  padding: 16px;
+}
+.timeline-hover-poster,
+.timeline-hover-poster .poster-frame { height: 328px; }
+.timeline-hover-copy {
+  align-self: center;
+  padding: 0 8px 0 0;
+}
+.timeline-hover-copy strong {
+  margin-top: 13px;
+  color: #fff;
+  font-size: 30px;
+  line-height: 1.25;
+}
+.timeline-hover-copy p {
+  max-width: 16em;
+  margin: 12px 0 0;
+  color: #d3dce7;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.power-ranking-card { align-self: start; }
+.character-card,
+.power-ranking-card,
+.related-card { cursor: pointer; }
+.related-card {
+  display: block;
+  min-width: 0;
+}
+.related-card .poster-frame { transition: transform .25s ease, box-shadow .25s ease; }
+.related-card:hover .poster-frame,
+.related-card:focus-visible .poster-frame {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 28px #0003;
+}
+html[data-theme="day"] .work-card-back {
+  border-color: #bcc9d7;
+  background: linear-gradient(145deg, #fff, #edf2f7);
+  color: #1e2b39;
+}
+html[data-theme="day"] .work-card-back-heading strong { color: #192635; }
+html[data-theme="day"] .work-card-back-heading small,
+html[data-theme="day"] .work-card-summary,
+html[data-theme="day"] .work-card-facts dd { color: #526174; }
+html[data-theme="day"] .work-card-facts { border-color: #d3dce5; }
+html[data-theme="day"] .timeline-hover-preview {
+  border-color: #c1ccd8;
+  background: #fffffffc;
+  color: #1d2b39;
+  box-shadow: 0 25px 70px #24364b35, 0 0 0 1px #bd385022;
+}
+html[data-theme="day"] .timeline-hover-copy strong { color: #162535; }
+html[data-theme="day"] .timeline-hover-copy p { color: #516174; }
+@media (max-width: 700px) {
+  .work-card-back { padding: 16px 13px 14px; }
+  .work-card-back-heading strong { font-size: 16px; }
+  .work-card-summary { font-size: 10px; }
+}

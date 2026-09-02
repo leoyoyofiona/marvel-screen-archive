@@ -71,6 +71,13 @@ export type WorkPreview = Pick<
   | "backdrop"
 >;
 export type PublicWorkPreview = WorkPreview & {
+  date?: string | null;
+  summary?: string;
+  highlights?: string[];
+  facts?: Record<string, string>;
+  peopleCount?: number;
+  charactersCount?: number;
+  mediaCount?: number;
   hasMainlandMedia: boolean;
   hasOverseasMedia: boolean;
   mainlandMediaCount?: number;

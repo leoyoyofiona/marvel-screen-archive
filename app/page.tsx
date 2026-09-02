@@ -16,6 +16,13 @@ const archiveData: ArchiveCatalogue = {
     status: work.status,
     universe: work.universe,
     phase: work.phase,
+    date: work.date,
+    summary: work.summary,
+    highlights: work.highlights,
+    facts: work.facts,
+    peopleCount: work.people.length,
+    charactersCount: work.characters.length,
+    mediaCount: work.media.length,
     poster: work.poster,
     backdrop: work.backdrop,
     hasMainlandMedia: work.media.some(

@@ -25,7 +25,6 @@ import type {
 import { kindLabels, statusLabels } from "@/lib/catalogue-types";
 import { Header, Disclaimer, Footer } from "./Chrome";
 import { Poster } from "./Poster";
-import { Comments } from "./Community";
 import { EpisodeArchive } from "./EpisodeArchive";
 export default function WorkSpace({
   work,
@@ -620,12 +619,10 @@ export default function WorkSpace({
           <section className="work-deep-dive">
             <div className="section-heading">
               <div>
-                <span className="eyebrow">THE STORY BEHIND THE FRAME</span>
-                <h2>从这一帧继续往里走</h2>
+                <span className="eyebrow">WORK TIMELINE / 作品时间线</span>
+                <h2>作品时间线</h2>
               </div>
-              <span className="work-deep-caption">
-                资料、人物与视听入口分层呈现
-              </span>
+              <span className="work-deep-caption">重要事件、创作与宇宙位置</span>
             </div>
             <div className="work-deep-grid">
               <article className="work-deep-card work-event-card">
@@ -660,7 +657,7 @@ export default function WorkSpace({
                   {work.facts["Productioncompany"] ?? "制作公司资料待继续核验"}
                 </p>
                 <small>
-                  资料来源与观看入口分开记录；片段播放器只呈现已经完成播放核验的公开素材。
+                  片段播放器只呈现已经完成播放核验的公开素材；完整影片入口单独核验。
                 </small>
               </article>
               <article className="work-deep-card work-universe-card">
@@ -683,41 +680,6 @@ export default function WorkSpace({
             </div>
           </section>
           {episodeSeries && <EpisodeArchive series={episodeSeries} />}
-          <section className="work-sources">
-            <div>
-              <span className="eyebrow">EVIDENCE / NOT WATCH LINKS</span>
-              <h2>资料来源</h2>
-              <p>
-                这些链接用于核验片目信息，不承诺免费、无广告或可播放完整影片。
-              </p>
-            </div>
-            <div>
-              {work.sources.map((s, i) => (
-                <a
-                  href={s.url}
-                  key={s.url + i}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div>
-                    <strong>{s.title}</strong>
-                    <small>
-                      {s.checkedAt
-                        ? "资料查阅日期 " + s.checkedAt
-                        : "链接待复核"}{" "}
-                      · {new URL(s.url).hostname}
-                    </small>
-                  </div>
-                  <ExternalLink size={16} />
-                </a>
-              ))}
-            </div>
-          </section>
-          <section className="section work-comments">
-            <span className="eyebrow">YOUR MEMORY OF THIS STORY</span>
-            <h2>这部作品，留给你什么？</h2>
-            <Comments workId={work.id} />
-          </section>
           <section className="section">
             <div className="section-heading">
               <h2>继续探索同一世界</h2>
@@ -725,9 +687,9 @@ export default function WorkSpace({
                 返回全部作品 <ArrowUpRight size={16} />
               </Link>
             </div>
-            <div className="poster-grid related-grid">
+            <div className="poster-grid related-grid" aria-label="同一世界的相关作品">
               {related.map((w) => (
-                <Link href={"/works/" + w.id} key={w.id}>
+                <Link className="related-card" href={"/works/" + w.id} key={w.id}>
                   <Poster work={w} />
                   <h3>{w.title}</h3>
                   <p className="muted tiny">{w.year}</p>

@@ -28,7 +28,7 @@ export default async function WorkPage({
       characters={catalogue.characters.filter((c) => work.characters.includes(c.id))}
       related={catalogue.works
         .filter((w) => w.id !== id && w.universe === work.universe)
-        .slice(0, 5)}
+        .slice(0, 10)}
       episodeSeries={getOfficialEpisodeSeries(work)}
     />
   );

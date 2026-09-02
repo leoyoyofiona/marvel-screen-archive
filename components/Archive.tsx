@@ -11,8 +11,6 @@ import {
   ChevronLeft,
   ChevronRight,
   VolumeX,
-  FileCheck2,
-  ExternalLink,
 } from "lucide-react";
 import type { ArchiveCatalogue, WorkKind } from "@/lib/catalogue-types";
 import { kindLabels } from "@/lib/catalogue-types";
@@ -566,70 +564,8 @@ export default function Archive({ data }: { data: ArchiveCatalogue }) {
           </section>
           <LoreAtlas works={data.works} />
           <Relationships />
-          <section className="section behind-section">
-            <div>
-              <span className="eyebrow">04 / BEHIND THE FRAME</span>
-              <h2>
-                英雄之外，
-                <br />
-                还有创造故事的人。
-              </h2>
-              <p>
-                制作纪录、配乐访谈与幕后影像独立归档。
-                <br />
-                不是虚构世界的角色出场，也不是完整版电影。
-              </p>
-              <button
-                className="button ghost"
-                onClick={() => {
-                  setKind("documentary");
-                  setUniverse("all");
-                  setPhase("all");
-                  setRelease("all");
-                  setQuery("");
-                  setPage(1);
-                  document
-                    .getElementById("archive")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                查看纪录与幕后 <ArrowUpRight size={16} />
-              </button>
-            </div>
-            <div className="behind-list">
-              {data.works
-                .filter((w) => w.kind === "documentary")
-                .slice(0, 3)
-                .map((w, i) => (
-                  <Link href={"/works/" + w.id} key={w.id}>
-                    <span>0{i + 1}</span>
-                    <div>
-                      <h3>{w.title}</h3>
-                      <p>{w.year} · 纪录／幕后</p>
-                    </div>
-                    <ArrowUpRight size={21} />
-                  </Link>
-                ))}
-            </div>
-          </section>
           <SoundtrackHall region={region} works={data.works} />
           <Community />
-          <section className="source-note">
-            <FileCheck2 size={19} />
-            <div>
-              <h3>每一项资料，都应该有出处。</h3>
-              <p>
-                本轮目录以影视索引建立，再以漫威、迪士尼、索尼等官方作品页交叉核对。完整性、图片使用依据与播放状态分别记录，不以一个“已验证”笼统代替。
-              </p>
-              <a
-                href="https://www.marvel.com/movies/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Marvel 官方电影目录 <ExternalLink size={13} />
-              </a>
-            </div>
-          </section>
         </div>
       </main>
       <Footer />
