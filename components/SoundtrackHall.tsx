@@ -116,7 +116,7 @@ export default function SoundtrackHall({
                 </div>
                 <strong>{work.title}</strong>
                 <small>
-                  {work.year ?? "待定"} · 预告／片段／动态海报 · 点击播放
+                  {work.year ?? "待定"} · 真实预告／宣传片／片段 · 点击播放
                 </small>
               </Link>
             ))}
@@ -130,7 +130,7 @@ export default function SoundtrackHall({
           </div>
         )}
         <p className="audiovisual-queue-note">
-          这里只列出当前地区已经完成播放器核验的视频素材所覆盖的作品；大陆线路还包含本站原创 720p 动态档案海报，明确标注为原创资料，不是正片或未授权片段。同一部作品可能有多条预告或片段；切换右上角地区后，列表会随线路即时更新。
+          这里只列出当前地区已经完成播放器核验的真实视频素材所覆盖的作品；动态海报只用于视觉展示，不会伪装成视频入口。同一部作品可能有多条预告、宣传片、片段或花絮；切换右上角地区后，列表会随线路即时更新。
         </p>
       </div>
       <div className="listening-shell">

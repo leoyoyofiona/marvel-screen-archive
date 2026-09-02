@@ -5869,3 +5869,568 @@ html[data-theme="day"] .behind-list > a h3 {
     animation: none;
   }
 }
+
+/* Final contrast pass: keep the cinematic palette, but never make the copy
+   compete with its surface. This block intentionally comes last so it wins
+   over section-specific dark defaults in both themes. */
+html[data-theme="day"] {
+  color-scheme: light;
+  --ink: #f5f7fa;
+  --panel: #ffffff;
+  --panel-2: #edf2f6;
+  --line: #c3ced9;
+  --text: #17212b;
+  --muted: #536170;
+  --red: #a71938;
+}
+html[data-theme="day"] body {
+  background: var(--ink);
+  color: var(--text);
+}
+html[data-theme="day"] .site-header {
+  background: #ffffffed;
+  border-bottom-color: #bcc7d2;
+  box-shadow: 0 5px 22px #45556516;
+}
+html[data-theme="day"] .brand strong,
+html[data-theme="day"] .section-heading h2,
+html[data-theme="day"] .work-space-heading h1,
+html[data-theme="day"] .work-details-grid h2,
+html[data-theme="day"] .work-sources h2,
+html[data-theme="day"] .work-deep-dive .section-heading h2,
+html[data-theme="day"] .work-comments h2,
+html[data-theme="day"] .behind-section h2 {
+  color: #17212b;
+}
+html[data-theme="day"] .brand small,
+html[data-theme="day"] .site-header nav a,
+html[data-theme="day"] .region-switch,
+html[data-theme="day"] .creator-logo,
+html[data-theme="day"] .creator-logo small,
+html[data-theme="day"] .section-heading h2 > span,
+html[data-theme="day"] .section-description,
+html[data-theme="day"] .work-space-heading p,
+html[data-theme="day"] .eyebrow {
+  color: #536170;
+}
+html[data-theme="day"] .creator-logo strong {
+  color: #7f2438;
+}
+html[data-theme="day"] .theme-toggle {
+  color: #6e2b17;
+  background: #fff8ef;
+  border-color: #ad9b8b;
+}
+html[data-theme="day"] .theme-toggle:hover {
+  color: #8b1936;
+  border-color: #8b1936;
+}
+html[data-theme="day"] .region-switch {
+  border-left-color: #c3ced9;
+}
+html[data-theme="day"] .region-switch select option {
+  background: #ffffff;
+  color: #17212b;
+}
+html[data-theme="day"] input,
+html[data-theme="day"] select,
+html[data-theme="day"] textarea,
+html[data-theme="day"] .search-field {
+  color: #17212b;
+  background: #ffffff;
+  border-color: #b7c4d0;
+}
+html[data-theme="day"] input::placeholder,
+html[data-theme="day"] textarea::placeholder {
+  color: #687788;
+  opacity: 1;
+}
+html[data-theme="day"] .button {
+  color: #17212b;
+  background: #ffffff;
+  border-color: #9eacba;
+}
+html[data-theme="day"] .button:hover {
+  color: #7f1732;
+  background: #f6e9e9;
+  border-color: #9d334d;
+}
+html[data-theme="day"] .button.primary,
+html[data-theme="day"] .segmented button[aria-pressed="true"] {
+  color: #ffffff;
+  background: #a71938;
+  border-color: #a71938;
+}
+html[data-theme="day"] .button.primary:hover {
+  color: #ffffff;
+  background: #86152e;
+  border-color: #86152e;
+}
+html[data-theme="day"] .button.ghost {
+  color: #17212b;
+  background: #ffffffd9;
+  border-color: #8e9dac;
+}
+html[data-theme="day"] .button.selected,
+html[data-theme="day"] .lore-actions button.selected,
+html[data-theme="day"] .storyline-tabs button.active {
+  color: #82162f;
+  background: #f8e5e7;
+  border-color: #a71938;
+}
+html[data-theme="day"] .icon-button,
+html[data-theme="day"] .segmented {
+  color: #334455;
+  background: #ffffff;
+  border-color: #b7c4d0;
+}
+html[data-theme="day"] .tag {
+  color: #4d5d6c;
+  border-color: #b7c4d0;
+  background: #ffffff;
+}
+html[data-theme="day"] .hero {
+  border-bottom-color: #b9c5d0;
+}
+html[data-theme="day"] .hero-scene {
+  background: #cbd5df;
+}
+html[data-theme="day"] .hero-scene > img {
+  filter: saturate(1.08) contrast(1.1) brightness(.96);
+}
+html[data-theme="day"] .hero-scene:after {
+  background:
+    linear-gradient(90deg, #f5f7faf7 0%, #f5f7fae8 28%, #f5f7fa75 56%, #f5f7fa08 82%),
+    linear-gradient(0deg, #f5f7fa 0%, #f5f7fa00 42%);
+}
+html[data-theme="day"] .hero-kicker,
+html[data-theme="day"] .hero-content > p,
+html[data-theme="day"] .hero-bottom,
+html[data-theme="day"] .hero-bottom button,
+html[data-theme="day"] .hero-note > div,
+html[data-theme="day"] .hero-note small {
+  color: #334455;
+}
+html[data-theme="day"] .hero h1 {
+  color: #111b26;
+  text-shadow: 0 1px 0 #ffffffcc;
+}
+html[data-theme="day"] .hero h1 > span {
+  color: #a71938;
+}
+html[data-theme="day"] .hero-note > span {
+  color: #263746;
+}
+html[data-theme="day"] .hero-note > div,
+html[data-theme="day"] .hero-bottom {
+  border-color: #8796a4;
+}
+html[data-theme="day"] .universe-watermark {
+  color: #536170;
+  opacity: .1;
+}
+html[data-theme="day"] .timeline-rail {
+  scrollbar-color: #7c8997 #e4eaf0;
+}
+html[data-theme="day"] .year-node:after {
+  background: #8d9aa7;
+}
+html[data-theme="day"] .year-dot span {
+  background: #b4495e;
+  border-color: #f5f7fa;
+  box-shadow: 0 0 0 1px #943148;
+}
+html[data-theme="day"] .year-number {
+  color: #1d2a37;
+}
+html[data-theme="day"] .year-name,
+html[data-theme="day"] .time-preview > span,
+html[data-theme="day"] .timeline-bottom {
+  color: #536170;
+}
+html[data-theme="day"] .year-count,
+html[data-theme="day"] .timeline-bottom i {
+  color: #687888;
+}
+html[data-theme="day"] .year-node:hover .year-number,
+html[data-theme="day"] .year-node:focus-within .year-number {
+  color: #a71938;
+}
+html[data-theme="day"] .filter-label,
+html[data-theme="day"] .filter-row > label,
+html[data-theme="day"] .results-line,
+html[data-theme="day"] .results-line button,
+html[data-theme="day"] .work-card > p,
+html[data-theme="day"] .watch-status {
+  color: #536170;
+}
+html[data-theme="day"] .filter-row select,
+html[data-theme="day"] .results-line strong,
+html[data-theme="day"] .work-card h3 {
+  color: #17212b;
+}
+html[data-theme="day"] .poster-frame {
+  background: #e7edf2;
+  border-color: #9eacba;
+  box-shadow: 0 8px 20px #33445512;
+}
+html[data-theme="day"] .poster-kind {
+  color: #ffffff;
+  background: #273543e8;
+  border-color: #ffffff99;
+}
+html[data-theme="day"] .poster-comment-ticker {
+  color: #ffffff;
+  background: linear-gradient(90deg, #273543f2, #273543c9, #273543f2);
+}
+html[data-theme="day"] .poster-hover {
+  color: #ffffff;
+  background: linear-gradient(180deg, #14222dcc, #14222df2);
+}
+html[data-theme="day"] .lore-section,
+html[data-theme="day"] .lore-intro,
+html[data-theme="day"] .armor-atlas,
+html[data-theme="day"] .storyline-atlas,
+html[data-theme="day"] .work-lead,
+html[data-theme="day"] .work-details-grid,
+html[data-theme="day"] .work-deep-dive,
+html[data-theme="day"] .work-sources,
+html[data-theme="day"] .episode-archive {
+  border-color: #c3ced9;
+}
+html[data-theme="day"] .lore-intro strong,
+html[data-theme="day"] .armor-heading h3,
+html[data-theme="day"] .storyline-heading h3,
+html[data-theme="day"] .lore-intro p,
+html[data-theme="day"] .armor-heading p,
+html[data-theme="day"] .audiovisual-queue-heading h3 {
+  color: #17212b;
+}
+html[data-theme="day"] .lore-intro p,
+html[data-theme="day"] .armor-heading p,
+html[data-theme="day"] .character-card-intro,
+html[data-theme="day"] .character-card-move,
+html[data-theme="day"] .armor-card-note,
+html[data-theme="day"] .armor-card-spec {
+  color: #536170;
+}
+html[data-theme="day"] .lore-actions button,
+html[data-theme="day"] .storyline-tabs button,
+html[data-theme="day"] .character-card,
+html[data-theme="day"] .armor-card,
+html[data-theme="day"] .storyline-detail {
+  color: #17212b;
+  background: #ffffff;
+  border-color: #b7c4d0;
+}
+html[data-theme="day"] .character-card.villain {
+  background: #fbf8fc;
+}
+html[data-theme="day"] .character-card-title-line > strong,
+html[data-theme="day"] .armor-card-title-line > strong,
+html[data-theme="day"] .character-card-art .character-art-label,
+html[data-theme="day"] .armor-card-copy > strong,
+html[data-theme="day"] .storyline-detail h4 {
+  color: #17212b;
+}
+html[data-theme="day"] .character-card-copy > small,
+html[data-theme="day"] .character-card-copy > em,
+html[data-theme="day"] .character-card-meta i,
+html[data-theme="day"] .storyline-tabs small,
+html[data-theme="day"] .storyline-detail p,
+html[data-theme="day"] .storyline-detail li a,
+html[data-theme="day"] .storyline-detail li span {
+  color: #536170;
+}
+html[data-theme="day"] .character-card-rule,
+html[data-theme="day"] .character-card-meta,
+html[data-theme="day"] .storyline-detail li {
+  border-color: #c3ced9;
+}
+html[data-theme="day"] .character-card-meta b {
+  color: #9b243f;
+}
+html[data-theme="day"] .armor-art {
+  background: radial-gradient(circle at 50% 43%, #899aa9, #dce4ea 73%);
+  border-color: #8f9eaa;
+}
+html[data-theme="day"] .armor-illustration .armor-gridline {
+  stroke: #273543;
+  stroke-opacity: .2;
+}
+html[data-theme="day"] .graph-layout {
+  background: #ffffff;
+  border-color: #aebbc7;
+}
+html[data-theme="day"] .graph-stage {
+  background: radial-gradient(circle at 50% 50%, #eef3f7, #dce5ec 72%);
+}
+html[data-theme="day"] .graph-caption,
+html[data-theme="day"] .graph-controls > span,
+html[data-theme="day"] .graph-instruction,
+html[data-theme="day"] .strip-hint {
+  color: #536170;
+}
+html[data-theme="day"] .graph-caption small {
+  color: #687888;
+}
+html[data-theme="day"] .graph-controls .icon-button {
+  background: #ffffff;
+  border-color: #aebbc7;
+}
+html[data-theme="day"] .relationship-detail {
+  color: #17212b;
+  background: #ffffff;
+  border-color: #c3ced9;
+}
+html[data-theme="day"] .person-strip button,
+html[data-theme="day"] .network-summary,
+html[data-theme="day"] .relation-work-list a,
+html[data-theme="day"] .person-heading p,
+html[data-theme="day"] .relationship-note,
+html[data-theme="day"] .relation-stats small,
+html[data-theme="day"] .relationship-detail > small {
+  color: #536170;
+}
+html[data-theme="day"] .person-strip button,
+html[data-theme="day"] .network-summary {
+  background: #f5f8fa;
+  border-color: #b7c4d0;
+}
+html[data-theme="day"] .person-strip button.active {
+  color: #82162f;
+  background: #f8e5e7;
+  border-color: #a71938;
+}
+html[data-theme="day"] .person-heading h3,
+html[data-theme="day"] .relation-stats > span,
+html[data-theme="day"] .network-summary strong,
+html[data-theme="day"] .relation-work-list a:hover {
+  color: #17212b;
+}
+html[data-theme="day"] .relation-stats,
+html[data-theme="day"] .relation-work-list a {
+  border-color: #c3ced9;
+}
+html[data-theme="day"] .behind-section p,
+html[data-theme="day"] .behind-list > a,
+html[data-theme="day"] .source-note,
+html[data-theme="day"] .work-sources p,
+html[data-theme="day"] .work-sources small,
+html[data-theme="day"] .work-sources strong {
+  color: #536170;
+  border-color: #c3ced9;
+}
+html[data-theme="day"] .behind-list > a h3,
+html[data-theme="day"] .source-note h3 {
+  color: #17212b;
+}
+html[data-theme="day"] .listening-shell,
+html[data-theme="day"] .audiovisual-queue,
+html[data-theme="day"] .cinema-panel,
+html[data-theme="day"] .full-watch,
+html[data-theme="day"] .work-deep-card,
+html[data-theme="day"] .episode-card,
+html[data-theme="day"] .season-card,
+html[data-theme="day"] .character-index > div > span {
+  color: #17212b;
+  background: #ffffff;
+  border-color: #b7c4d0;
+}
+html[data-theme="day"] .audiovisual-queue,
+html[data-theme="day"] .cinema-panel-heading {
+  background: #edf2f6;
+}
+html[data-theme="day"] .queue-region,
+html[data-theme="day"] .audiovisual-queue-note,
+html[data-theme="day"] .audiovisual-queue-card > small,
+html[data-theme="day"] .cinema-panel-heading-actions > span,
+html[data-theme="day"] .cinema-panel-heading strong,
+html[data-theme="day"] .media-panel,
+html[data-theme="day"] .media-resource-list > small,
+html[data-theme="day"] .media-current-note span,
+html[data-theme="day"] .media-current-note small,
+html[data-theme="day"] .full-watch,
+html[data-theme="day"] .full-watch > span {
+  color: #536170;
+}
+html[data-theme="day"] .media-tabs,
+html[data-theme="day"] .media-current-note,
+html[data-theme="day"] .full-watch,
+html[data-theme="day"] .cinema-panel-heading {
+  border-color: #c3ced9;
+}
+html[data-theme="day"] .media-tabs button {
+  color: #536170;
+}
+html[data-theme="day"] .media-tabs button[aria-selected="true"] {
+  color: #a71938;
+  border-bottom-color: #a71938;
+}
+html[data-theme="day"] .media-current-note strong,
+html[data-theme="day"] .full-watch strong,
+html[data-theme="day"] .work-lead-copy > p,
+html[data-theme="day"] .work-lead-index dd,
+html[data-theme="day"] .work-summary,
+html[data-theme="day"] .work-facts dd,
+html[data-theme="day"] .work-events,
+html[data-theme="day"] .work-overview summary,
+html[data-theme="day"] .work-credits details,
+html[data-theme="day"] .work-deep-card h3,
+html[data-theme="day"] .work-deep-card p,
+html[data-theme="day"] .work-event-card li,
+html[data-theme="day"] .episode-card strong,
+html[data-theme="day"] .season-card,
+html[data-theme="day"] .character-index strong {
+  color: #273746;
+}
+html[data-theme="day"] .work-lead-highlights > span,
+html[data-theme="day"] .work-facts > div,
+html[data-theme="day"] .work-tags > span,
+html[data-theme="day"] .credits-list a,
+html[data-theme="day"] .character-index,
+html[data-theme="day"] .work-event-card li,
+html[data-theme="day"] .work-deep-card,
+html[data-theme="day"] .episode-card,
+html[data-theme="day"] .episode-meta,
+html[data-theme="day"] .episode-source,
+html[data-theme="day"] .episode-empty,
+html[data-theme="day"] .season-card {
+  border-color: #c3ced9;
+}
+html[data-theme="day"] .work-lead-highlights > span,
+html[data-theme="day"] .work-tags > span,
+html[data-theme="day"] .editorial-warning,
+html[data-theme="day"] .episode-search {
+  color: #536170;
+  background: #f8fafb;
+}
+html[data-theme="day"] .work-lead-index {
+  border-color: #c3ced9;
+}
+html[data-theme="day"] .work-lead-index dt,
+html[data-theme="day"] .work-facts dt,
+html[data-theme="day"] .work-deep-caption,
+html[data-theme="day"] .work-deep-card > small,
+html[data-theme="day"] .episode-card > p,
+html[data-theme="day"] .episode-meta,
+html[data-theme="day"] .episode-pagination > span,
+html[data-theme="day"] .episode-empty,
+html[data-theme="day"] .credits-list small,
+html[data-theme="day"] .character-index small,
+html[data-theme="day"] .portrait-credit {
+  color: #5d6e7f;
+}
+html[data-theme="day"] .editorial-warning {
+  border-left-color: #a71938;
+  background: #fff0f1;
+}
+html[data-theme="day"] .episode-card::after {
+  background: #a7193826;
+}
+html[data-theme="day"] .lore-modal-backdrop {
+  background: #17212bcc;
+}
+html[data-theme="day"] .lore-modal {
+  color: #17212b;
+  background: #ffffff;
+  border-color: #9eacba;
+  box-shadow: 0 24px 80px #17212b38;
+}
+html[data-theme="day"] .lore-modal h3,
+html[data-theme="day"] .lore-modal h4,
+html[data-theme="day"] .lore-stat-grid b {
+  color: #17212b;
+}
+html[data-theme="day"] .lore-modal > p:not(.lore-modal-name),
+html[data-theme="day"] .lore-modal-name,
+html[data-theme="day"] .lore-stat-grid small,
+html[data-theme="day"] .lore-modal li a {
+  color: #536170;
+}
+html[data-theme="day"] .lore-stat-grid span,
+html[data-theme="day"] .lore-move {
+  color: #273746;
+  background: #f3f7fa;
+  border-color: #b7c4d0;
+}
+html[data-theme="day"] .cinema-panel-heading,
+html[data-theme="day"] .cinema-panel-heading strong,
+html[data-theme="day"] .cinema-panel-heading-actions > span {
+  color: #273746;
+}
+html[data-theme="day"] .cinema-open-source {
+  color: #ffffff;
+  background: #17212bd9;
+  border-color: #ffffff99;
+}
+html[data-theme="day"] .cinema-open-source:hover {
+  color: #ffd7de;
+}
+html[data-theme="day"] .player-audio-toggle {
+  color: #82162f;
+  background: #fff0f2;
+  border-color: #a71938;
+}
+html[data-theme="day"] .player-audio-hint {
+  color: #536170;
+}
+html[data-theme="day"] .work-poster > p,
+html[data-theme="day"] .poster-credit,
+html[data-theme="day"] .season-source {
+  color: #5d6e7f;
+}
+html[data-theme="day"] .footer {
+  color: #536170;
+  background: #e5ebf0;
+  border-top-color: #b7c4d0;
+}
+html[data-theme="day"] .footer p,
+html[data-theme="day"] .footer a,
+html[data-theme="day"] .signature {
+  color: #536170;
+}
+html[data-theme="day"] .signature {
+  color: #273746;
+}
+
+html:not([data-theme="day"]) .eyebrow,
+html:not([data-theme="day"]) .section-description,
+html:not([data-theme="day"]) .filter-label,
+html:not([data-theme="day"]) .filter-row > label,
+html:not([data-theme="day"]) .results-line,
+html:not([data-theme="day"]) .work-card > p,
+html:not([data-theme="day"]) .watch-status,
+html:not([data-theme="day"]) .relationship-note,
+html:not([data-theme="day"]) .graph-instruction,
+html:not([data-theme="day"]) .strip-hint,
+html:not([data-theme="day"]) .work-summary,
+html:not([data-theme="day"]) .work-events,
+html:not([data-theme="day"]) .work-deep-card p,
+html:not([data-theme="day"]) .work-deep-card > small,
+html:not([data-theme="day"]) .work-sources p,
+html:not([data-theme="day"]) .episode-card > p,
+html:not([data-theme="day"]) .episode-meta,
+html:not([data-theme="day"]) .episode-empty,
+html:not([data-theme="day"]) .media-panel,
+html:not([data-theme="day"]) .media-current-note span,
+html:not([data-theme="day"]) .media-current-note small,
+html:not([data-theme="day"]) .full-watch {
+  color: #b3bfce;
+}
+html:not([data-theme="day"]) .work-facts dt,
+html:not([data-theme="day"]) .work-facts dd,
+html:not([data-theme="day"]) .credits-list small,
+html:not([data-theme="day"]) .character-index small,
+html:not([data-theme="day"]) .portrait-credit,
+html:not([data-theme="day"]) .relation-stats small,
+html:not([data-theme="day"]) .relationship-detail > small {
+  color: #a6b4c4;
+}
+html:not([data-theme="day"]) .section-heading h2 > span,
+html:not([data-theme="day"]) .work-deep-caption,
+html:not([data-theme="day"]) .year-count,
+html:not([data-theme="day"]) .timeline-bottom,
+html:not([data-theme="day"]) .media-resource-list > small {
+  color: #9eacbd;
+}

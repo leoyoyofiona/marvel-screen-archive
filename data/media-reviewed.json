@@ -1,5 +1,44 @@
 [
   {
+    "id": "avengers-doomsday-mainland-official-trailer-2026",
+    "workId": "avengers-doomsday-2026-film",
+    "title": "复仇者联盟5：毁灭之日 · 官方全新预告",
+    "kind": "trailer",
+    "region": "mainland",
+    "provider": "迪士尼影业",
+    "url": "https://www.bilibili.com/video/BV15QKH6zEeK/",
+    "embedUrl": "https://player.bilibili.com/player.html?bvid=BV15QKH6zEeK&page=1&autoplay=1&high_quality=1&danmaku=0",
+    "status": "playback-verified",
+    "checkedAt": "2026-09-02",
+    "source": "哔哩哔哩迪士尼影业官方账号；公开视频页与 yt-dlp 播放格式核验均提供 1920x1080 视频流"
+  },
+  {
+    "id": "spider-man-brand-new-day-mainland-official-trailer-2026",
+    "workId": "spider-man-brand-new-day-2026-film",
+    "title": "蜘蛛侠：崭新之日 · 官方独家预告",
+    "kind": "trailer",
+    "region": "mainland",
+    "provider": "蜘蛛侠系列电影官方账号",
+    "url": "https://www.bilibili.com/video/BV11ZKm68ENY/",
+    "embedUrl": "https://player.bilibili.com/player.html?bvid=BV11ZKm68ENY&page=1&autoplay=1&high_quality=1&danmaku=0",
+    "status": "playback-verified",
+    "checkedAt": "2026-09-02",
+    "source": "哔哩哔哩蜘蛛侠系列电影官方账号；公开视频页与 yt-dlp 播放格式核验均提供 1920x1080 视频流"
+  },
+  {
+    "id": "avengers-doomsday-mainland-kevin-feige-event-2026",
+    "workId": "avengers-doomsday-2026-film",
+    "title": "复仇者联盟5：毁灭之日 · 凯文·费奇 BW2026 高光回顾",
+    "kind": "clip",
+    "region": "mainland",
+    "provider": "迪士尼影业",
+    "url": "https://www.bilibili.com/video/BV1YsNy6aEdc/",
+    "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1YsNy6aEdc&page=1&autoplay=1&high_quality=1&danmaku=0",
+    "status": "playback-verified",
+    "checkedAt": "2026-09-02",
+    "source": "哔哩哔哩迪士尼影业官方账号；公开活动回顾视频与 yt-dlp 播放格式核验均提供 1920x1080 视频流"
+  },
+  {
     "id": "iron-man-2008-overseas-trailer",
     "workId": "iron-man-2008-film",
     "title": "Iron Man (2008) · Official Trailer",

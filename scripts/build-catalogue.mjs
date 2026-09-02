@@ -241,26 +241,6 @@ const items = [
   ...additions,
   ...(candidates.some((w) => w.id === extra.id) ? [] : [extra]),
 ];
-const originalMotionItems = [...items]
-  .sort(
-    (a, b) =>
-      (a.year ?? 9999) - (b.year ?? 9999) ||
-      a.titleEn.localeCompare(b.titleEn),
-  )
-  .slice(0, 100);
-const originalMotionMedia = originalMotionItems.map((item) => ({
-  id: `mainland-original-motion-${item.id}`,
-  workId: item.id,
-  title: `${names[item.titleEn] ?? item.titleEn} · 原创档案动态海报`,
-  kind: "clip",
-  region: "mainland",
-  provider: "本站原创 · 中国大陆直连",
-  url: `/media/mainland-motion-posters/${slug(item.id)}.mp4`,
-  status: "playback-verified",
-  checkedAt: "2026-09-02",
-  source:
-    "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段",
-}));
 const manualOfficialWorkIds = new Map([
   ["https://www.marvel.com/movies/blade", "blade-marvel-studios-undated-film"],
   ["https://www.marvel.com/movies/spider-man", "spider-man-2002-film"],
@@ -427,11 +407,8 @@ function group(w) {
 }
 const mediaRecords = [
   ...media,
-  ...originalMotionMedia,
   ...mainlandQueue.filter(
-    (item) =>
-      !media.some((existing) => existing.id === item.id) &&
-      !originalMotionMedia.some((existing) => existing.id === item.id),
+    (item) => !media.some((existing) => existing.id === item.id),
   ),
 ];
 const works = items
@@ -710,7 +687,7 @@ const output = {
       "23 个有公开单集列表的 Marvel 官方数字系列已索引 1,881 个唯一详情页；其中 17 个系列与页面标称总数一致，6 个系列保留计数差异待核。无公开单集列表的节目与播客仍只有系列级档案",
       "角色出场为人工整理的首批关系，尚未覆盖全部角色与客串",
       `全部 ${people.size.toLocaleString("zh-CN")} 位索引人物均有头像节点，其中 ${[...people.values()].filter((person) => person.portraitKind === "wikimedia-commons").length.toLocaleString("zh-CN")} 张为带许可来源的 Wikimedia Commons 真人照片，其余使用明确标注的本地姓名身份头像；${works.filter((work) => work.poster?.startsWith("/media/archive-posters/")).length} 条记录仍使用原创档案设计海报，真实海报与经典剧照需继续逐条核验`,
-      `已接入 ${mediaRecords.length} 条大陆／海外公开素材索引，其中 ${originalMotionMedia.length} 条为本站原创 720p 动态档案海报、${mediaRecords.filter((item) => item.status === "playback-verified").length} 条完成播放器级来源标记；待核验入口不会在前台显示播放按钮，不把资料页或搜索页当作播放器`,
+      `已接入 ${mediaRecords.length} 条大陆／海外公开素材索引，其中 ${mediaRecords.filter((item) => item.status === "playback-verified").length} 条为真实视频并完成播放器级来源标记；不把动态海报、资料页、搜索页或版权不明转载当作播放入口，待核验入口不会在前台显示播放按钮`,
     ],
   },
 };

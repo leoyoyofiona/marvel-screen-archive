@@ -1,6 +1,6 @@
 {
   "cutoff": "2026-08-31",
-  "generatedAt": "2026-09-02T05:34:37.866Z",
+  "generatedAt": "2026-09-02T06:34:54.915Z",
   "works": [
     {
       "id": "captain-america-1944-short",
@@ -67,20 +67,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-captain-america-1944-short",
-          "workId": "captain-america-1944-short",
-          "title": "美国队长 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/captain-america-1944-short.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -154,20 +141,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-the-marvel-super-heroes-1966-animated-series",
-          "workId": "the-marvel-super-heroes-1966-animated-series",
-          "title": "漫威超级英雄 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/the-marvel-super-heroes-1966-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -229,20 +203,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-spider-man-1967-animated-series",
-          "workId": "spider-man-1967-animated-series",
-          "title": "蜘蛛侠 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/spider-man-1967-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -305,20 +266,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-the-fantastic-four-1967-animated-series",
-          "workId": "the-fantastic-four-1967-animated-series",
-          "title": "神奇四侠 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/the-fantastic-four-1967-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -370,20 +318,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-spidey-super-stories-1974-series",
-          "workId": "spidey-super-stories-1974-series",
-          "title": "蜘蛛侠小故事 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/spidey-super-stories-1974-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -445,20 +380,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-return-of-the-incredible-hulk-1977-film",
-          "workId": "return-of-the-incredible-hulk-1977-film",
-          "title": "无敌浩克归来 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/return-of-the-incredible-hulk-1977-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -517,20 +439,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-spider-man-1977-film",
-          "workId": "spider-man-1977-film",
-          "title": "蜘蛛侠 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/spider-man-1977-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -595,20 +504,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-the-amazing-spider-man-1977-series",
-          "workId": "the-amazing-spider-man-1977-series",
-          "title": "超凡蜘蛛侠 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/the-amazing-spider-man-1977-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -670,20 +566,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-the-incredible-hulk-1977-film",
-          "workId": "the-incredible-hulk-1977-film",
-          "title": "无敌浩克 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/the-incredible-hulk-1977-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -746,20 +629,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-the-incredible-hulk-1977-series",
-          "workId": "the-incredible-hulk-1977-series",
-          "title": "无敌浩克 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/the-incredible-hulk-1977-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -820,20 +690,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-dr-strange-1978-film",
-          "workId": "dr-strange-1978-film",
-          "title": "奇异博士 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/dr-strange-1978-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -889,20 +746,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-spider-man-1978-short",
-          "workId": "spider-man-1978-short",
-          "title": "蜘蛛侠 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/spider-man-1978-short.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -965,20 +809,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-spider-man-1978-series",
-          "workId": "spider-man-1978-series",
-          "title": "蜘蛛侠 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/spider-man-1978-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -1035,20 +866,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-spider-man-strikes-back-1978-film",
-          "workId": "spider-man-strikes-back-1978-film",
-          "title": "蜘蛛侠反击战 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/spider-man-strikes-back-1978-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -1088,20 +906,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-the-incredible-hulk-married-1978-film",
-          "workId": "the-incredible-hulk-married-1978-film",
-          "title": "无敌浩克：婚姻 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/the-incredible-hulk-married-1978-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -1168,20 +973,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-the-new-fantastic-four-1978-animated-series",
-          "workId": "the-new-fantastic-four-1978-animated-series",
-          "title": "新神奇四侠 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/the-new-fantastic-four-1978-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -1243,20 +1035,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-battle-fever-j-1979-series",
-          "workId": "battle-fever-j-1979-series",
-          "title": "战斗狂热 J · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/battle-fever-j-1979-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -1315,20 +1094,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-captain-america-1979-film",
-          "workId": "captain-america-1979-film",
-          "title": "美国队长 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/captain-america-1979-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -1394,20 +1160,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-captain-america-ii-death-too-soon-1979-film",
-          "workId": "captain-america-ii-death-too-soon-1979-film",
-          "title": "美国队长2：死亡降临 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/captain-america-ii-death-too-soon-1979-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -1473,20 +1226,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-fred-and-barney-meet-the-thing-1979-animated-series",
-          "workId": "fred-and-barney-meet-the-thing-1979-animated-series",
-          "title": "弗雷德与巴尼遇见石头人 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/fred-and-barney-meet-the-thing-1979-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -1545,20 +1285,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-spider-woman-1979-animated-series",
-          "workId": "spider-woman-1979-animated-series",
-          "title": "蜘蛛女侠 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/spider-woman-1979-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -1616,20 +1343,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-denshi-sentai-denjiman-1980-series",
-          "workId": "denshi-sentai-denjiman-1980-series",
-          "title": "电子战队电磁人 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/denshi-sentai-denjiman-1980-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -1679,20 +1393,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-dracula-sovereign-of-the-damned-1980-animated-film",
-          "workId": "dracula-sovereign-of-the-damned-1980-animated-film",
-          "title": "德古拉：恶魔之主 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/dracula-sovereign-of-the-damned-1980-animated-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -1742,20 +1443,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-kyoufu-densetsu-kaiki-frankenstein-1981-animated-film",
-          "workId": "kyoufu-densetsu-kaiki-frankenstein-1981-animated-film",
-          "title": "恐怖传说：科学怪人 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/kyoufu-densetsu-kaiki-frankenstein-1981-animated-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -1816,20 +1504,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-spider-man-1981-animated-series",
-          "workId": "spider-man-1981-animated-series",
-          "title": "蜘蛛侠 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/spider-man-1981-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -1893,20 +1568,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-spider-man-and-his-amazing-friends-1981-animated-series",
-          "workId": "spider-man-and-his-amazing-friends-1981-animated-series",
-          "title": "蜘蛛侠和他的神奇朋友们 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/spider-man-and-his-amazing-friends-1981-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -1967,20 +1629,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-spider-man-the-dragon-s-challenge-1981-film",
-          "workId": "spider-man-the-dragon-s-challenge-1981-film",
-          "title": "蜘蛛侠：龙之挑战 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/spider-man-the-dragon-s-challenge-1981-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -2041,20 +1690,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-taiyo-sentai-sun-vulcan-1981-series",
-          "workId": "taiyo-sentai-sun-vulcan-1981-series",
-          "title": "太阳战队太阳火神 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/taiyo-sentai-sun-vulcan-1981-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -2116,20 +1752,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-the-incredible-hulk-1982-animated-series",
-          "workId": "the-incredible-hulk-1982-animated-series",
-          "title": "无敌浩克 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/the-incredible-hulk-1982-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -2189,20 +1812,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-howard-the-duck-1986-film",
-          "workId": "howard-the-duck-1986-film",
-          "title": "天降神兵 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/howard-the-duck-1986-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -2247,20 +1857,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-solarman-1988-special",
-          "workId": "solarman-1988-special",
-          "title": "太阳侠 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/solarman-1988-special.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -2322,20 +1919,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-the-incredible-hulk-returns-1988-film",
-          "workId": "the-incredible-hulk-returns-1988-film",
-          "title": "无敌浩克归来 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/the-incredible-hulk-returns-1988-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -2396,20 +1980,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-the-punisher-1989-film",
-          "workId": "the-punisher-1989-film",
-          "title": "惩罚者 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/the-punisher-1989-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -2473,20 +2044,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-the-trial-of-the-incredible-hulk-1989-film",
-          "workId": "the-trial-of-the-incredible-hulk-1989-film",
-          "title": "无敌浩克的审判 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/the-trial-of-the-incredible-hulk-1989-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -2556,20 +2114,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-x-men-pryde-of-the-x-men-1989-special",
-          "workId": "x-men-pryde-of-the-x-men-1989-special",
-          "title": "X战警：幻影猫的冒险 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/x-men-pryde-of-the-x-men-1989-special.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -2634,20 +2179,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-captain-america-1990-film",
-          "workId": "captain-america-1990-film",
-          "title": "美国队长 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/captain-america-1990-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -2710,20 +2242,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-the-death-of-the-incredible-hulk-1990-film",
-          "workId": "the-death-of-the-incredible-hulk-1990-film",
-          "title": "无敌浩克之死 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/the-death-of-the-incredible-hulk-1990-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -2771,20 +2290,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-power-pack-1991-special",
-          "workId": "power-pack-1991-special",
-          "title": "少年超人队 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/power-pack-1991-special.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -2855,18 +2361,6 @@
       ],
       "media": [
         {
-          "id": "mainland-original-motion-x-men-the-animated-series-1992-animated-series",
-          "workId": "x-men-the-animated-series-1992-animated-series",
-          "title": "X战警：动画系列 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/x-men-the-animated-series-1992-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        },
-        {
           "id": "mainland-queue-058",
           "workId": "x-men-the-animated-series-1992-animated-series",
           "title": "X战警：动画系列 · 公开剧集入口（待播放核验）",
@@ -2921,20 +2415,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-firearm-1993-short",
-          "workId": "firearm-1993-short",
-          "title": "火器 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/firearm-1993-short.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -2981,20 +2462,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-hardcase-1993-short",
-          "workId": "hardcase-1993-short",
-          "title": "硬汉 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/hardcase-1993-short.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -3057,20 +2525,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-fantastic-four-1994-animated-series",
-          "workId": "fantastic-four-1994-animated-series",
-          "title": "神奇四侠 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/fantastic-four-1994-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -3139,20 +2594,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-iron-man-1994-animated-series",
-          "workId": "iron-man-1994-animated-series",
-          "title": "钢铁侠 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/iron-man-1994-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -3223,20 +2665,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-spider-man-the-animated-series-1994-animated-series",
-          "workId": "spider-man-the-animated-series-1994-animated-series",
-          "title": "蜘蛛侠：动画系列 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/spider-man-the-animated-series-1994-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -3300,20 +2729,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-the-fantastic-four-1994-film",
-          "workId": "the-fantastic-four-1994-film",
-          "title": "神奇四侠 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/the-fantastic-four-1994-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -3363,20 +2779,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-ultraforce-1994-animated-series",
-          "workId": "ultraforce-1994-animated-series",
-          "title": "超级战队 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/ultraforce-1994-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -3437,20 +2840,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-generation-x-1996-film",
-          "workId": "generation-x-1996-film",
-          "title": "X世代 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/generation-x-1996-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -3521,20 +2911,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-the-incredible-hulk-1996-animated-series",
-          "workId": "the-incredible-hulk-1996-animated-series",
-          "title": "无敌浩克 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/the-incredible-hulk-1996-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -3596,20 +2973,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-men-in-black-1997-film",
-          "workId": "men-in-black-1997-film",
-          "title": "黑衣人 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/men-in-black-1997-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -3676,20 +3040,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-men-in-black-the-series-1997-animated-series",
-          "workId": "men-in-black-the-series-1997-animated-series",
-          "title": "黑衣人：动画系列 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/men-in-black-the-series-1997-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -3759,20 +3110,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-night-man-1997-series",
-          "workId": "night-man-1997-series",
-          "title": "夜行人 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/night-man-1997-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -3812,20 +3150,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-nightman-world-premiere-1997-film",
-          "workId": "nightman-world-premiere-1997-film",
-          "title": "夜行人：首映特别篇 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/nightman-world-premiere-1997-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -3886,20 +3211,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-blade-1998-film",
-          "workId": "blade-1998-film",
-          "title": "刀锋战士 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/blade-1998-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -3963,20 +3275,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-nick-fury-agent-of-s-h-i-e-l-d-1998-film",
-          "workId": "nick-fury-agent-of-s-h-i-e-l-d-1998-film",
-          "title": "尼克·弗瑞：神盾局特工 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/nick-fury-agent-of-s-h-i-e-l-d-1998-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -4035,20 +3334,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-silver-surfer-1998-animated-series",
-          "workId": "silver-surfer-1998-animated-series",
-          "title": "银影侠 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/silver-surfer-1998-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -4122,20 +3408,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-spider-man-unlimited-1999-animated-series",
-          "workId": "spider-man-unlimited-1999-animated-series",
-          "title": "超级蜘蛛侠 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/spider-man-unlimited-1999-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -4199,20 +3472,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-the-avengers-united-they-stand-1999-animated-series",
-          "workId": "the-avengers-united-they-stand-1999-animated-series",
-          "title": "复仇者：团结一致 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/the-avengers-united-they-stand-1999-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -4303,18 +3563,6 @@
           "source": "YouTube public trailer page; Rotten Tomatoes Classic Trailers channel; browser video element playback check"
         },
         {
-          "id": "mainland-original-motion-x-men-2000-film",
-          "workId": "x-men-2000-film",
-          "title": "X战警 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/x-men-2000-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        },
-        {
           "id": "mainland-queue-035",
           "workId": "x-men-2000-film",
           "title": "X战警 · 公开预告入口（待播放核验）",
@@ -4398,20 +3646,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-x-men-evolution-2000-animated-series",
-          "workId": "x-men-evolution-2000-animated-series",
-          "title": "X战警：进化 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/x-men-evolution-2000-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -4475,20 +3710,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-mutant-x-2001-series",
-          "workId": "mutant-x-2001-series",
-          "title": "异种战士 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/mutant-x-2001-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -4550,20 +3772,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-blade-ii-2002-film",
-          "workId": "blade-ii-2002-film",
-          "title": "刀锋战士2 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/blade-ii-2002-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -4628,20 +3837,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-men-in-black-ii-2002-film",
-          "workId": "men-in-black-ii-2002-film",
-          "title": "黑衣人2 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/men-in-black-ii-2002-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -4717,18 +3913,6 @@
         }
       ],
       "media": [
-        {
-          "id": "mainland-original-motion-spider-man-2002-film",
-          "workId": "spider-man-2002-film",
-          "title": "蜘蛛侠 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/spider-man-2002-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        },
         {
           "id": "mainland-queue-025",
           "workId": "spider-man-2002-film",
@@ -4820,18 +4004,6 @@
           "source": "YouTube public trailer page; Rotten Tomatoes Classic Trailers channel; browser video element playback check"
         },
         {
-          "id": "mainland-original-motion-daredevil-2003-film",
-          "workId": "daredevil-2003-film",
-          "title": "夜魔侠 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/daredevil-2003-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        },
-        {
           "id": "mainland-queue-048",
           "workId": "daredevil-2003-film",
           "title": "夜魔侠 · 公开预告入口（待播放核验）",
@@ -4906,20 +4078,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-hulk-2003-film",
-          "workId": "hulk-2003-film",
-          "title": "绿巨人浩克 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/hulk-2003-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -4984,20 +4143,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-spider-man-the-new-animated-series-2003-animated-series",
-          "workId": "spider-man-the-new-animated-series-2003-animated-series",
-          "title": "蜘蛛侠：新动画系列 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/spider-man-the-new-animated-series-2003-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -5089,18 +4235,6 @@
           "source": "YouTube public trailer page; Rotten Tomatoes Classic Trailers channel; browser video element playback check"
         },
         {
-          "id": "mainland-original-motion-x2-2003-film",
-          "workId": "x2-2003-film",
-          "title": "X战警2 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/x2-2003-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        },
-        {
           "id": "mainland-queue-036",
           "workId": "x2-2003-film",
           "title": "X战警2 · 公开预告入口（待播放核验）",
@@ -5176,20 +4310,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-blade-trinity-2004-film",
-          "workId": "blade-trinity-2004-film",
-          "title": "刀锋战士3 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/blade-trinity-2004-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -5280,18 +4401,6 @@
           "source": "哔哩哔哩电影正版剧集页；页面标注预告；浏览器播放器实际播放检查"
         },
         {
-          "id": "mainland-original-motion-spider-man-2-2004-film",
-          "workId": "spider-man-2-2004-film",
-          "title": "蜘蛛侠2 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/spider-man-2-2004-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        },
-        {
           "id": "mainland-queue-026",
           "workId": "spider-man-2-2004-film",
           "title": "蜘蛛侠2 · 预告入口（待播放核验）",
@@ -5367,20 +4476,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-the-punisher-2004-film",
-          "workId": "the-punisher-2004-film",
-          "title": "惩罚者 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/the-punisher-2004-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -5442,20 +4538,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-elektra-2005-film",
-          "workId": "elektra-2005-film",
-          "title": "艾丽卡 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/elektra-2005-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -5539,18 +4622,6 @@
           "source": "YouTube verified 20th Century Studios channel; browser video element playback check"
         },
         {
-          "id": "mainland-original-motion-fantastic-four-2005-film",
-          "workId": "fantastic-four-2005-film",
-          "title": "神奇四侠 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/fantastic-four-2005-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        },
-        {
           "id": "mainland-queue-045",
           "workId": "fantastic-four-2005-film",
           "title": "神奇四侠 · 公开预告入口（待播放核验）",
@@ -5622,20 +4693,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-man-thing-2005-film",
-          "workId": "man-thing-2005-film",
-          "title": "类人体 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/man-thing-2005-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -5698,20 +4756,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-blade-house-of-chthon-2006-film",
-          "workId": "blade-house-of-chthon-2006-film",
-          "title": "刀锋战士：冥神之屋 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/blade-house-of-chthon-2006-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -5775,20 +4820,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-blade-the-series-2006-series",
-          "workId": "blade-the-series-2006-series",
-          "title": "刀锋战士：剧集 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/blade-the-series-2006-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -5856,20 +4888,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-fantastic-four-world-s-greatest-heroes-2006-animated-series",
-          "workId": "fantastic-four-world-s-greatest-heroes-2006-animated-series",
-          "title": "神奇四侠：世界最伟大的英雄 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/fantastic-four-world-s-greatest-heroes-2006-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -5931,20 +4950,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-ultimate-avengers-2006-animated-film",
-          "workId": "ultimate-avengers-2006-animated-film",
-          "title": "终极复仇者 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/ultimate-avengers-2006-animated-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -5995,20 +5001,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-ultimate-avengers-2-2006-animated-film",
-          "workId": "ultimate-avengers-2-2006-animated-film",
-          "title": "终极复仇者2 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/ultimate-avengers-2-2006-animated-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -6098,18 +5091,6 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-02",
           "source": "YouTube public trailer page; Rotten Tomatoes Classic Trailers channel; browser video element playback check"
-        },
-        {
-          "id": "mainland-original-motion-x-men-the-last-stand-2006-film",
-          "workId": "x-men-the-last-stand-2006-film",
-          "title": "X战警：背水一战 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/x-men-the-last-stand-2006-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
         }
       ],
       "watchLinks": []
@@ -6162,20 +5143,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-doctor-strange-the-sorcerer-supreme-2007-animated-film",
-          "workId": "doctor-strange-the-sorcerer-supreme-2007-animated-film",
-          "title": "奇异博士：至尊法师 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/doctor-strange-the-sorcerer-supreme-2007-animated-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -6253,18 +5221,6 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-02",
           "source": "YouTube public trailer page; Rotten Tomatoes Classic Trailers channel; browser video element playback check"
-        },
-        {
-          "id": "mainland-original-motion-fantastic-four-rise-of-the-silver-surfer-2007-film",
-          "workId": "fantastic-four-rise-of-the-silver-surfer-2007-film",
-          "title": "神奇四侠2：银影侠现身 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/fantastic-four-rise-of-the-silver-surfer-2007-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
         },
         {
           "id": "mainland-queue-046",
@@ -6362,18 +5318,6 @@
           "source": "YouTube verified Sony Pictures Entertainment channel; browser video element playback check"
         },
         {
-          "id": "mainland-original-motion-ghost-rider-2007-film",
-          "workId": "ghost-rider-2007-film",
-          "title": "灵魂战车 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/ghost-rider-2007-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        },
-        {
           "id": "mainland-queue-047",
           "workId": "ghost-rider-2007-film",
           "title": "灵魂战车 · 公开预告入口（待播放核验）",
@@ -6466,18 +5410,6 @@
       ],
       "media": [
         {
-          "id": "mainland-original-motion-spider-man-3-2007-film",
-          "workId": "spider-man-3-2007-film",
-          "title": "蜘蛛侠3 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/spider-man-3-2007-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        },
-        {
           "id": "mainland-queue-027",
           "workId": "spider-man-3-2007-film",
           "title": "蜘蛛侠3 · 预告入口（待播放核验）",
@@ -6540,20 +5472,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-the-invincible-iron-man-2007-animated-film",
-          "workId": "the-invincible-iron-man-2007-animated-film",
-          "title": "无敌钢铁侠 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/the-invincible-iron-man-2007-animated-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -6648,18 +5567,6 @@
           "source": "YouTube oEmbed title/channel check; direct public trailer page"
         },
         {
-          "id": "mainland-original-motion-iron-man-2008-film",
-          "workId": "iron-man-2008-film",
-          "title": "钢铁侠 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/iron-man-2008-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        },
-        {
           "id": "mainland-queue-001",
           "workId": "iron-man-2008-film",
           "title": "钢铁侠 · 大陆公开预告入口（待播放核验）",
@@ -6741,20 +5648,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-next-avengers-heroes-of-tomorrow-2008-animated-film",
-          "workId": "next-avengers-heroes-of-tomorrow-2008-animated-film",
-          "title": "下一代复仇者：明日英雄 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/next-avengers-heroes-of-tomorrow-2008-animated-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -6831,18 +5725,6 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-02",
           "source": "YouTube public trailer page; Rotten Tomatoes Classic Trailers channel; browser video element playback check"
-        },
-        {
-          "id": "mainland-original-motion-punisher-war-zone-2008-film",
-          "workId": "punisher-war-zone-2008-film",
-          "title": "惩罚者2：战争特区 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/punisher-war-zone-2008-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
         },
         {
           "id": "mainland-queue-049",
@@ -6938,18 +5820,6 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-01",
           "source": "YouTube public trailer page; Rotten Tomatoes Classic Trailers channel; browser video element playback check"
-        },
-        {
-          "id": "mainland-original-motion-the-incredible-hulk-2008-film",
-          "workId": "the-incredible-hulk-2008-film",
-          "title": "无敌浩克 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/the-incredible-hulk-2008-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
         }
       ],
       "watchLinks": []
@@ -7026,18 +5896,6 @@
       ],
       "media": [
         {
-          "id": "mainland-original-motion-the-spectacular-spider-man-2008-animated-series",
-          "workId": "the-spectacular-spider-man-2008-animated-series",
-          "title": "神奇蜘蛛侠 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/the-spectacular-spider-man-2008-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        },
-        {
           "id": "mainland-queue-057",
           "workId": "the-spectacular-spider-man-2008-animated-series",
           "title": "神奇蜘蛛侠 · 公开剧集入口（待播放核验）",
@@ -7098,20 +5956,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-astonishing-x-men-gifted-2009-animated-series",
-          "workId": "astonishing-x-men-gifted-2009-animated-series",
-          "title": "惊世X战警：天赋 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/astonishing-x-men-gifted-2009-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -7162,20 +6007,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-hulk-versus-2009-animated-film",
-          "workId": "hulk-versus-2009-animated-film",
-          "title": "绿巨人大战 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/hulk-versus-2009-animated-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -7245,18 +6077,6 @@
       ],
       "media": [
         {
-          "id": "mainland-original-motion-iron-man-armored-adventures-2009-animated-series",
-          "workId": "iron-man-armored-adventures-2009-animated-series",
-          "title": "钢铁侠：装甲冒险 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/iron-man-armored-adventures-2009-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        },
-        {
           "id": "mainland-queue-056",
           "workId": "iron-man-armored-adventures-2009-animated-series",
           "title": "钢铁侠：装甲冒险 · 公开剧集入口（待播放核验）",
@@ -7316,20 +6136,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-marvel-superheroes-what-the-2009-animated-series",
-          "workId": "marvel-superheroes-what-the-2009-animated-series",
-          "title": "漫威超级英雄：什么鬼？！ · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/marvel-superheroes-what-the-2009-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -7401,20 +6208,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-the-super-hero-squad-show-2009-animated-series",
-          "workId": "the-super-hero-squad-show-2009-animated-series",
-          "title": "超级英雄小队 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/the-super-hero-squad-show-2009-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -7490,20 +6284,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-wolverine-and-the-x-men-2009-animated-series",
-          "workId": "wolverine-and-the-x-men-2009-animated-series",
-          "title": "金刚狼与X战警 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/wolverine-and-the-x-men-2009-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -7587,18 +6368,6 @@
           "source": "YouTube verified 20th Century Studios channel; browser video element playback check"
         },
         {
-          "id": "mainland-original-motion-x-men-origins-wolverine-2009-film",
-          "workId": "x-men-origins-wolverine-2009-film",
-          "title": "金刚狼 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/x-men-origins-wolverine-2009-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        },
-        {
           "id": "mainland-queue-050",
           "workId": "x-men-origins-wolverine-2009-film",
           "title": "金刚狼 · 公开预告入口（待播放核验）",
@@ -7676,20 +6445,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-black-panther-2010-animated-series",
-          "workId": "black-panther-2010-animated-series",
-          "title": "黑豹 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/black-panther-2010-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -7764,18 +6520,6 @@
       ],
       "media": [
         {
-          "id": "mainland-original-motion-iron-man-2-2010-film",
-          "workId": "iron-man-2-2010-film",
-          "title": "钢铁侠2 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/iron-man-2-2010-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        },
-        {
           "id": "mainland-queue-002",
           "workId": "iron-man-2-2010-film",
           "title": "钢铁侠2 · 预告花絮入口（待播放核验）",
@@ -7837,20 +6581,7 @@
           "verification": "retrieved"
         }
       ],
-      "media": [
-        {
-          "id": "mainland-original-motion-iron-man-extremis-2010-animated-series",
-          "workId": "iron-man-extremis-2010-animated-series",
-          "title": "钢铁侠：绝境病毒 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/iron-man-extremis-2010-animated-series.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
-        }
-      ],
+      "media": [],
       "watchLinks": []
     },
     {
@@ -7925,18 +6656,6 @@
           "status": "playback-verified",
           "checkedAt": "2026-09-02",
           "source": "YouTube verified Lionsgate Movies channel; browser video element playback check"
-        },
-        {
-          "id": "mainland-original-motion-kick-ass-2010-film",
-          "workId": "kick-ass-2010-film",
-          "title": "海扁王 · 原创档案动态海报",
-          "kind": "clip",
-          "region": "mainland",
-          "provider": "本站原创 · 中国大陆直连",
-          "url": "/media/mainland-motion-posters/kick-ass-2010-film.mp4",
-          "status": "playback-verified",
-          "checkedAt": "2026-09-02",
-          "source": "本站原创动态档案海报；720p 本地文件已生成，并完成 MP4 编码、HTTP Range 读取与 video 元素接入核验，不是电影正片或未授权片段"
         }
       ],
       "watchLinks": []
@@ -25139,6 +23858,32 @@
       ],
       "media": [
         {
+          "id": "avengers-doomsday-mainland-official-trailer-2026",
+          "workId": "avengers-doomsday-2026-film",
+          "title": "复仇者联盟5：毁灭之日 · 官方全新预告",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "迪士尼影业",
+          "url": "https://www.bilibili.com/video/BV15QKH6zEeK/",
+          "embedUrl": "https://player.bilibili.com/player.html?bvid=BV15QKH6zEeK&page=1&autoplay=1&high_quality=1&danmaku=0",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "哔哩哔哩迪士尼影业官方账号；公开视频页与 yt-dlp 播放格式核验均提供 1920x1080 视频流"
+        },
+        {
+          "id": "avengers-doomsday-mainland-kevin-feige-event-2026",
+          "workId": "avengers-doomsday-2026-film",
+          "title": "复仇者联盟5：毁灭之日 · 凯文·费奇 BW2026 高光回顾",
+          "kind": "clip",
+          "region": "mainland",
+          "provider": "迪士尼影业",
+          "url": "https://www.bilibili.com/video/BV1YsNy6aEdc/",
+          "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1YsNy6aEdc&page=1&autoplay=1&high_quality=1&danmaku=0",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "哔哩哔哩迪士尼影业官方账号；公开活动回顾视频与 yt-dlp 播放格式核验均提供 1920x1080 视频流"
+        },
+        {
           "id": "avengers-doomsday-mainland-trailer",
           "workId": "avengers-doomsday-2026-film",
           "title": "复仇者联盟：毁灭之日 · PV1预告",
@@ -25393,6 +24138,19 @@
         }
       ],
       "media": [
+        {
+          "id": "spider-man-brand-new-day-mainland-official-trailer-2026",
+          "workId": "spider-man-brand-new-day-2026-film",
+          "title": "蜘蛛侠：崭新之日 · 官方独家预告",
+          "kind": "trailer",
+          "region": "mainland",
+          "provider": "蜘蛛侠系列电影官方账号",
+          "url": "https://www.bilibili.com/video/BV11ZKm68ENY/",
+          "embedUrl": "https://player.bilibili.com/player.html?bvid=BV11ZKm68ENY&page=1&autoplay=1&high_quality=1&danmaku=0",
+          "status": "playback-verified",
+          "checkedAt": "2026-09-02",
+          "source": "哔哩哔哩蜘蛛侠系列电影官方账号；公开视频页与 yt-dlp 播放格式核验均提供 1920x1080 视频流"
+        },
         {
           "id": "mainland-queue-034",
           "workId": "spider-man-brand-new-day-2026-film",
@@ -49853,11 +48611,11 @@
     "officialDigitalEpisodeMismatchSeries": 6,
     "personPortraitCount": 1315,
     "personRealPortraitCount": 348,
-    "mediaCount": 303,
-    "playbackVerifiedMediaCount": 217,
-    "mainlandMediaCount": 203,
+    "mediaCount": 206,
+    "playbackVerifiedMediaCount": 120,
+    "mainlandMediaCount": 106,
     "overseasMediaCount": 100,
-    "mainlandPlaybackVerifiedMediaCount": 117,
+    "mainlandPlaybackVerifiedMediaCount": 20,
     "overseasPlaybackVerifiedMediaCount": 100,
     "watchLinkCount": 0,
     "untranslated": 0,
@@ -49866,7 +48624,7 @@
       "23 个有公开单集列表的 Marvel 官方数字系列已索引 1,881 个唯一详情页；其中 17 个系列与页面标称总数一致，6 个系列保留计数差异待核。无公开单集列表的节目与播客仍只有系列级档案",
       "角色出场为人工整理的首批关系，尚未覆盖全部角色与客串",
       "全部 1,315 位索引人物均有头像节点，其中 348 张为带许可来源的 Wikimedia Commons 真人照片，其余使用明确标注的本地姓名身份头像；95 条记录仍使用原创档案设计海报，真实海报与经典剧照需继续逐条核验",
-      "已接入 303 条大陆／海外公开素材索引，其中 100 条为本站原创 720p 动态档案海报、217 条完成播放器级来源标记；待核验入口不会在前台显示播放按钮，不把资料页或搜索页当作播放器"
+      "已接入 206 条大陆／海外公开素材索引，其中 120 条为真实视频并完成播放器级来源标记；不把动态海报、资料页、搜索页或版权不明转载当作播放入口，待核验入口不会在前台显示播放按钮"
     ]
   }
 }

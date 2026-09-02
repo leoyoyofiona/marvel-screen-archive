@@ -52,20 +52,17 @@ for (const p of d.people)
 for (const c of d.characters)
   if (!c.works.every((id) => ids.has(id)))
     errors.push(c.id + ": dangling character appearance");
-const mainlandLocalMotionCount = d.works.reduce(
-  (total, w) =>
-    total +
-    w.media.filter(
-      (m) =>
-        m.region === "mainland" &&
-        m.status === "playback-verified" &&
-        m.url.startsWith("/media/mainland-motion-posters/"),
-    ).length,
-  0,
+const fakeMotionPosterMedia = d.works.flatMap((w) =>
+  w.media.filter(
+    (m) =>
+      m.region === "mainland" &&
+      m.status === "playback-verified" &&
+      m.url.startsWith("/media/mainland-motion-posters/"),
+  ),
 );
-if (mainlandLocalMotionCount < 100)
+if (fakeMotionPosterMedia.length)
   errors.push(
-    `mainland original motion poster playback count below 100: ${mainlandLocalMotionCount}`,
+    `fake motion-poster media must not be published as playback: ${fakeMotionPosterMedia.length}`,
   );
 console.log(
   JSON.stringify(
