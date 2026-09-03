@@ -156,7 +156,7 @@ function CardPortrait({ card, image, visualKind = "pending", large = false, onCl
   );
 }
 
-function CharacterCard({ card, image, visualKind, onAvatarClick }: { card: Card; image?: string; visualKind: "still" | "key-art" | "pending"; onAvatarClick: () => void }) {
+function CharacterCard({ card, image, visualKind }: { card: Card; image?: string; visualKind: "still" | "key-art" | "pending" }) {
   const [flipped, setFlipped] = useState(false);
   function toggle(event?: React.MouseEvent | React.KeyboardEvent) {
     if (event && "key" in event && event.key !== "Enter" && event.key !== " ") return;
@@ -175,7 +175,7 @@ function CharacterCard({ card, image, visualKind, onAvatarClick }: { card: Card;
       <div className="character-card-flipper">
         <div className="character-card-face character-card-front" aria-hidden={flipped}>
           <span className="card-corner">MARVEL ARCHIVE</span>
-          <CardPortrait card={card} image={image} visualKind={visualKind} onClick={onAvatarClick} />
+          <CardPortrait card={card} image={image} visualKind={visualKind} />
           <span className="character-card-copy">
             <small>{card.universe}</small>
             <span className="character-card-title-line"><strong>{card.alias}</strong></span>
@@ -185,11 +185,11 @@ function CharacterCard({ card, image, visualKind, onAvatarClick }: { card: Card;
             <span className="character-card-meta"><i>档案指数</i><b>{card.power}</b><i>定位</i><b>{card.rank}</b></span>
             <span className="character-card-move">{card.move}</span>
           </span>
-          <small className="character-card-flip-hint">点击翻牌 · 点击头像查看人物档案</small>
+          <small className="character-card-flip-hint">点击卡片翻牌，查看人物档案</small>
         </div>
         <div className="character-card-face character-card-back" aria-hidden={!flipped}>
           <span className="card-corner">CHARACTER FILE / 人物档案</span>
-          <CardPortrait card={card} image={image} visualKind={visualKind} large onClick={onAvatarClick} />
+          <CardPortrait card={card} image={image} visualKind={visualKind} large />
           <strong>{card.alias}</strong>
           <small>{card.name} · {card.role}</small>
           <p>{card.intro}</p>
@@ -256,7 +256,7 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
         </div>
       </div>
       <div className="character-card-grid">
-        {visible.map((card) => { const visual = visualFor(card); return <CharacterCard key={card.id} card={card} image={visual.image} visualKind={visual.kind} onAvatarClick={() => setSelected(card)} />; })}
+        {visible.map((card) => { const visual = visualFor(card); return <CharacterCard key={card.id} card={card} image={visual.image} visualKind={visual.kind} />; })}
       </div>
       <div className="power-rankings">
         <div className="ranking-heading"><div><span className="eyebrow">POWER INDEX / 能力程度排行榜</span><h3>厉害程度排行榜</h3><p>按卡牌中的影迷向档案指数排序；这是本网站的阅读指标，不是官方战斗力排名。</p></div><Sparkles size={25} /></div>
