@@ -984,6 +984,29 @@ function RelationshipGraph({
               ))}
             </g>
           </svg>
+          <div className="graph-hit-layer" aria-label="关系图头像点击区域">
+            {layout.nodes
+              .filter((node) => node.kind === "person" || node.kind === "character")
+              .map((node) => {
+                const x = pan.x + 390 + ((node.x ?? 390) - 390) * zoom;
+                const y = pan.y + 225 + ((node.y ?? 225) - 225) * zoom;
+                const entityId = node.personId ?? node.characterId ?? "";
+                return (
+                  <button
+                    key={node.id}
+                    type="button"
+                    className="graph-hit-target"
+                    data-graph-hit={entityId}
+                    aria-label={`点选${node.label}`}
+                    style={{
+                      left: `${(x / 780) * 100}%`,
+                      top: `${(y / 450) * 100}%`,
+                    }}
+                    onClick={() => choose(entityId)}
+                  />
+                );
+              })}
+          </div>
           <div className="graph-controls">
             <button
               className="icon-button"

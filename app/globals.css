@@ -2270,6 +2270,28 @@ svg {
   min-height: 470px;
   touch-action: none;
 }
+.graph-hit-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+.graph-hit-target {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.graph-hit-target:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}
 .graph-caption {
   position: absolute;
   left: 20px;
