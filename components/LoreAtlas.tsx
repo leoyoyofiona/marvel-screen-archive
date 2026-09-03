@@ -63,12 +63,6 @@ const verifiedArmorEntries = [
     source: "https://commons.wikimedia.org/wiki/File:Iron_Man_Mark_III.jpg",
     credit: "Iron Man Mark III · Wikimedia Commons",
   },
-  {
-    name: "Mark XLII · 吸附式",
-    photo: "/media/armor/mark-xlii.jpg",
-    source: "https://commons.wikimedia.org/wiki/File:Ironman_Mk.42_on_CCG2014.jpg",
-    credit: "Iron Man Mark XLII · Wikimedia Commons",
-  },
 ] as const;
 
 type ArmorDetail = { time: string; origin: string; feature: string; specs: string };
@@ -80,7 +74,6 @@ const armorDetails: Record<string, ArmorDetail> = {
   "Mark V": { time: "2010", origin: "《钢铁侠2》· 便携战甲", feature: "折叠进手提箱，现场快速部署", specs: "便携模块 · 掌心炮 · 轻量化" },
   "Mark VI": { time: "2010", origin: "《钢铁侠2》· 三角反应堆", feature: "三角形胸口核心与重型武器升级", specs: "新元素核心 · 激光 · 飞行" },
   "Mark VII": { time: "2012", origin: "《复仇者联盟》· 曼哈顿", feature: "远程追踪穿戴，完整空战与武器配置", specs: "卫星锁定 · 肩载导弹 · 反应堆" },
-  "Mark XLII · 吸附式": { time: "2013", origin: "《钢铁侠3》· 绝境病毒时代", feature: "分体组件远程吸附，适合快速换装", specs: "生物电信号 · 分体装配 · 飞行" },
   "Hulkbuster · Veronica": { time: "2015", origin: "《复仇者联盟2》· 绿巨人协议", feature: "重型外骨骼，可持续补充受损模块", specs: "Veronica 支援 · 增强液压 · 重装" },
   "War Machine": { time: "2010", origin: "《钢铁侠2》· 罗德斯军用改装", feature: "军方火力取向，强调持续压制", specs: "机枪 · 肩炮 · 军用装甲" },
   "Iron Patriot": { time: "2013", origin: "《钢铁侠3》· 政府宣传涂装", feature: "战争机器的爱国者涂装版本", specs: "重火力 · 飞行 · 军用通信" },
@@ -99,35 +92,6 @@ function getArmorDetail(name: string, index: number): ArmorDetail {
     specs: index % 2 === 0 ? "反应堆供能 · 飞行 · 远程接口" : "高强度合金 · 掌心炮 · 智能辅助",
   };
 }
-
-// These are work-specific visual sources, not generic character illustrations.
-// Keeping the image attached to a work prevents a character name from being
-// paired with the wrong hero or villain poster.
-const characterStillWorkIds: Record<string, string> = {
-  "iron-man": "iron-man-2008-film",
-  "captain-america": "captain-america-the-first-avenger-2011-film",
-  thor: "thor-2011-film",
-  hulk: "the-incredible-hulk-2008-film",
-  "black-widow": "black-widow-2021-film",
-  "spider-man": "spider-man-2002-film",
-  "doctor-strange": "doctor-strange-2016-film",
-  "scarlet-witch": "avengers-age-of-ultron-2015-film",
-  "black-panther": "black-panther-2018-film",
-  "captain-marvel": "captain-marvel-2019-film",
-  "ant-man": "ant-man-2015-film",
-  "star-lord": "guardians-of-the-galaxy-2014-film",
-  loki: "loki-2021-series",
-  thanos: "avengers-infinity-war-2018-film",
-  ultron: "avengers-age-of-ultron-2015-film",
-  killmonger: "black-panther-2018-film",
-  "green-goblin": "spider-man-2002-film",
-  "doctor-octopus": "spider-man-2-2004-film",
-  magneto: "x-men-2000-film",
-  wolverine: "logan-2017-film",
-  deadpool: "deadpool-2016-film",
-  venom: "venom-2018-film",
-  "doctor-doom": "fantastic-four-2005-film",
-};
 
 const characterStillOverrides: Record<string, string> = {
   // Dedicated live-action stills keep the two Spider-Man villains from being
@@ -257,7 +221,11 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
   );
   const activeStory = storylines.find((item) => item.id === story) ?? storylines[0];
   const workMap = new Map(works.map((work) => [work.id, work]));
-  const portraitFor = (card: Card) => characterStillOverrides[card.id] ?? workMap.get(characterStillWorkIds[card.id])?.poster ?? characterPortraitFallback;
+  // A work poster is never a character portrait. If a dedicated live-action
+  // still has not been cleared, show the labelled pending state instead of a
+  // misleading image from a different character or title.
+  const portraitFor = (card: Card) => characterStillOverrides[card.id] ?? characterPortraitFallback;
+  const verifiedCharacterStillCount = new Set(Object.values(characterStillOverrides)).size;
   return (
     <section id="lore" className="section lore-section">
       <div className="section-heading">
@@ -268,7 +236,7 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
         <Sparkles size={30} className="silver" />
       </div>
       <div className="lore-intro">
-        <div><strong>主角与反派，全部用卡牌方式浏览</strong><p>战力、排行、绝招是影迷向档案指数，用于阅读和比较，不是漫威官方战斗力数值。</p></div>
+        <div><strong>主角与反派，全部用卡牌方式浏览</strong><p>战力、排行、绝招是影迷向档案指数，用于阅读和比较，不是漫威官方战斗力数值。剧中真人画面已核对 {verifiedCharacterStillCount} / {cards.length} 张，其余明确标为待核验。</p></div>
         <div className="lore-actions" role="group" aria-label="角色阵营筛选">
           {([["all", "全部角色"], ["hero", "英雄阵营"], ["villain", "反派阵营"]] as const).map(([value, label]) => <button key={value} className={side === value ? "selected" : ""} onClick={() => setSide(value)}>{label}</button>)}
         </div>

@@ -30,6 +30,10 @@ const relationshipsSource = await readFile(
   new URL("../components/Relationships.tsx", import.meta.url),
   "utf8",
 );
+const loreSource = await readFile(
+  new URL("../components/LoreAtlas.tsx", import.meta.url),
+  "utf8",
+);
 const soundtrackLinks = JSON.parse(
   await readFile(
     new URL("../public/data/soundtracks.json", import.meta.url),
@@ -385,6 +389,17 @@ test("role relationship portraits never use synthetic character SVGs", () => {
   )?.[1] ?? "";
   assert.match(block, /\/media\/character-stills\//);
   assert.doesNotMatch(block, /\/media\/characters\//);
+});
+test("character cards never reuse a work poster as a character portrait", () => {
+  assert.doesNotMatch(loreSource, /characterStillWorkIds/);
+  assert.match(
+    loreSource,
+    /characterStillOverrides\[card\.id\] \?\? characterPortraitFallback/,
+  );
+});
+test("armor cards exclude the previously misclassified convention Mark XLII image", () => {
+  assert.doesNotMatch(loreSource, /Ironman_Mk\.42_on_CCG2014/);
+  assert.match(loreSource, /当前只展示 \{verifiedArmorEntries\.length\} 套/);
 });
 test("the mainland default route can render every archive image without an external asset host", () => {
   for (const work of data.works) {
