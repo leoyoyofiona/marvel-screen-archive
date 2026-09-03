@@ -6297,6 +6297,47 @@ html[data-theme="day"] .relation-stats,
 html[data-theme="day"] .relation-work-list a {
   border-color: #c3ced9;
 }
+/* Relationship nodes keep their captions on a stable label plate so names
+   stay readable when the force layout brings portraits close together. */
+.node-label-backdrop {
+  fill: #0f1722;
+  fill-opacity: .9;
+  stroke: #4b5868;
+  stroke-width: .7;
+  pointer-events: none;
+}
+.graph-coverage {
+  position: absolute;
+  left: 20px;
+  top: 44px;
+  display: flex;
+  gap: 8px;
+  color: #aeb9c8;
+  font-size: 9px;
+  letter-spacing: .04em;
+  z-index: 2;
+}
+.graph-coverage span {
+  padding: 4px 7px;
+  border: 1px solid #435064;
+  background: #101824d9;
+}
+html[data-theme="day"] .node-label-backdrop {
+  fill: #ffffff;
+  fill-opacity: .95;
+  stroke: #95a5b5;
+}
+html[data-theme="day"] .graph-coverage {
+  color: #435362;
+}
+html[data-theme="day"] .graph-coverage span {
+  border-color: #aab9c7;
+  background: #ffffffed;
+}
+html[data-theme="day"] .graph-node.person text,
+html[data-theme="day"] .graph-node.character text {
+  fill: #17212b;
+}
 html[data-theme="day"] .behind-section p,
 html[data-theme="day"] .behind-list > a,
 html[data-theme="day"] .source-note,

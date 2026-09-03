@@ -114,6 +114,7 @@ const characterStillOverrides: Record<string, string> = {
   "doctor-octopus": "/media/character-stills/doctor-octopus-spider-man-2.jpg",
   "green-goblin": "/media/character-stills/green-goblin-spider-man.jpg",
 };
+const characterPortraitFallback = "/media/characters/role-pending.svg";
 
 const storylines = [
   { id: "infinity", title: "无限传奇", years: "2008—2019", tone: "一颗颗宝石，把个人英雄故事汇成一场宇宙终局。", items: ["钢铁侠", "复仇者联盟", "美国队长", "银河护卫队", "复仇者联盟4：终局之战"], source: "https://www.marvel.com/articles/movies/marvel-studios-making-of-marvel-cinematic-universe" },
@@ -146,7 +147,13 @@ function CardPortrait({ card, image, large = false, onClick }: { card: Card; ima
       role={onClick ? "button" : undefined}
       aria-label={onClick ? `打开${card.alias}人物信息` : undefined}
     >
-      {image ? <img src={image} alt={`${card.alias}角色公开画面`} /> : <span className="character-avatar">{initials(card.alias)}</span>}
+      <img
+        src={image ?? characterPortraitFallback}
+        alt={`${card.alias}角色公开画面`}
+        onError={(event) => {
+          event.currentTarget.src = characterPortraitFallback;
+        }}
+      />
       <span className="character-art-shade" />
       <span className="character-art-label">{card.alias}</span>
       <span className="character-art-caption">ON-SCREEN SOURCE / {card.universe}</span>
@@ -225,7 +232,7 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
   );
   const activeStory = storylines.find((item) => item.id === story) ?? storylines[0];
   const workMap = new Map(works.map((work) => [work.id, work]));
-  const portraitFor = (card: Card) => characterStillOverrides[card.id] ?? workMap.get(characterStillWorkIds[card.id])?.poster ?? undefined;
+  const portraitFor = (card: Card) => characterStillOverrides[card.id] ?? workMap.get(characterStillWorkIds[card.id])?.poster ?? characterPortraitFallback;
   return (
     <section id="lore" className="section lore-section">
       <div className="section-heading">

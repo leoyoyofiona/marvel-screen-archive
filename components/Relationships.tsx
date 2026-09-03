@@ -15,7 +15,6 @@ import {
   Minus,
   RotateCcw,
   ArrowUpRight,
-  UserRound,
   Maximize2,
 } from "lucide-react";
 import Link from "next/link";
@@ -67,6 +66,12 @@ const rolePortraits: Record<string, string> = {
   "logan-fox": "/media/characters/logan-fox.svg",
 };
 
+// A relationship node must never collapse to an empty circle when an image
+// cannot be loaded. These local archive placeholders are clearly labelled and
+// are only used as a visual fallback; they are not presented as real people.
+const personPortraitFallback = "/media/people/fallback/relationship-person.svg";
+const rolePortraitFallback = "/media/characters/role-pending.svg";
+
 // Role portraits are intentionally separate from the person portrait ledger.
 // When a dedicated role still is unavailable, use the first related work's
 // locally published key art rather than incorrectly showing the actor's face.
@@ -75,7 +80,7 @@ const rolePortraitByWorkId: Record<string, string> = {
   "iron-man-2-2010-film": "/media/wikipedia-posters/iron-man-2-2010-film.jpg",
   "iron-man-3-2013-film": "/media/wikipedia-posters/iron-man-3-2013-film.jpg",
   "the-avengers-2012-film": "/media/wikipedia-posters/the-avengers-2012-film.jpg",
-  "captain-america-the-first-avenger-2011-film": "/media/official/captainamericathefirstavenger_lob_crd_01_1-8c0ef3fb3c.webp",
+  "captain-america-the-first-avenger-2011-film": "/media/wikipedia-posters/captain-america-the-first-avenger-2011-film.jpg",
   "captain-america-the-winter-soldier-2014-film": "/media/official/captainamericathewintersoldier_lob_crd_01_1-d54fd0253b.webp",
   "captain-america-civil-war-2016-film": "/media/official/captainamericacivilwar_lob_crd_01_9-70b1766db4.webp",
   "avengers-age-of-ultron-2015-film": "/media/official/avengersageofultron_lob_crd_03-7b64c7bc38.webp",
@@ -109,7 +114,22 @@ const rolePortraitByWorkId: Record<string, string> = {
 };
 
 function rolePortraitFor(id: string, workIds: string[]) {
-  return rolePortraits[id] ?? workIds.map((workId) => rolePortraitByWorkId[workId]).find(Boolean) ?? null;
+  return rolePortraits[id] ?? workIds.map((workId) => rolePortraitByWorkId[workId]).find(Boolean) ?? rolePortraitFallback;
+}
+
+function departmentLabel(departments: string[]) {
+  const labels = departments.map((department) =>
+    department === "director"
+      ? "导演"
+      : department === "creator"
+        ? "创作者"
+        : department === "writer"
+          ? "编剧"
+          : department === "producer"
+            ? "制片"
+            : "演员／配音",
+  );
+  return labels.length ? labels.join("／") : "演职员";
 }
 
 // The catalogue only stores eight character anchors today. These curated role links
@@ -409,7 +429,9 @@ function RelationshipGraph({
         y: 220,
         fx: 390,
         fy: 220,
-        portrait: entity?.portrait,
+        portrait:
+          entity?.portrait ??
+          (mode === "characters" ? rolePortraitFallback : personPortraitFallback),
         portraitKind: entityPortraitKind,
       },
     ];
@@ -433,7 +455,9 @@ function RelationshipGraph({
           ...(mode === "people"
             ? { personId: person.id, kind: "person" as const }
             : { characterId: person.id, kind: "character" as const }),
-          portrait: person.portrait,
+          portrait:
+            person.portrait ??
+            (mode === "characters" ? rolePortraitFallback : personPortraitFallback),
           portraitKind:
             mode === "characters" ? "role-still" : "portraitKind" in person ? person.portraitKind : "actor-portrait",
           x: 70 + (i % 7) * 110,
@@ -599,11 +623,17 @@ function RelationshipGraph({
             onClick={() => choose(p.id)}
             aria-pressed={p.id === selected}
           >
-            {p.portrait ? (
-              <img src={p.portrait} alt="" />
-            ) : (
-              <UserRound size={17} />
-            )}
+            <img
+              src={
+                p.portrait ??
+                (mode === "characters" ? rolePortraitFallback : personPortraitFallback)
+              }
+              alt={p.name + "头像"}
+              onError={(event) => {
+                event.currentTarget.src =
+                  mode === "characters" ? rolePortraitFallback : personPortraitFallback;
+              }}
+            />
             <span>{p.name}</span>
           </button>
         ))}
@@ -628,6 +658,10 @@ function RelationshipGraph({
               作品
             </span>
             <small>{mode === "people" ? "人物 — 作品 — 人物，线条只表示共同参与" : "角色 — 作品 — 角色，线条表示同场作品关联"}</small>
+          </div>
+          <div className="graph-coverage" aria-live="polite">
+            <span>头像画面 {layout.nodes.filter((node) => node.kind === "person" || node.kind === "character").length} / {layout.nodes.filter((node) => node.kind === "person" || node.kind === "character").length}</span>
+            <span>姓名文字 {layout.nodes.filter((node) => (node.kind === "person" || node.kind === "character") && node.label.trim()).length} / {layout.nodes.filter((node) => node.kind === "person" || node.kind === "character").length}</span>
           </div>
           <svg
             ref={svg}
@@ -752,6 +786,9 @@ function RelationshipGraph({
                     svg.current?.setPointerCapture(e.pointerId);
                   }}
                 >
+                  <title>
+                    {n.label} · {n.kind === "person" ? "演员／导演／创作者" : n.kind === "character" ? "剧中角色" : n.kind === "work" ? "作品" : "周星驰关系中心"}
+                  </title>
                   {n.kind === "center" ? (
                     <>
                       <circle
@@ -761,9 +798,8 @@ function RelationshipGraph({
                         strokeWidth="2"
                       />
                       <circle r="58" stroke="#ed26383d" fill="none" />
-                      {n.portrait && (
-                        <image
-                          href={n.portrait}
+                      <image
+                          href={n.portrait ?? (mode === "characters" ? rolePortraitFallback : personPortraitFallback)}
                           x="-48"
                           y="-48"
                           width="96"
@@ -771,7 +807,6 @@ function RelationshipGraph({
                           preserveAspectRatio="xMidYMid slice"
                           clipPath="circle(48px at 48px 48px)"
                         />
-                      )}
                       <text
                         textAnchor="middle"
                         y={n.portrait ? "67" : "-4"}
@@ -809,31 +844,21 @@ function RelationshipGraph({
                       }
                       strokeWidth="1.5"
                     />
-                    {n.portrait && (
-                      <image
-                        href={n.portrait}
+                    <image
+                        href={n.portrait ?? personPortraitFallback}
                         x="-28"
                         y="-28"
                         width="56"
                         height="56"
                         preserveAspectRatio="xMidYMid slice"
                         clipPath="circle(28px at 28px 28px)"
-                      />
-                    )}
-                    <text textAnchor="middle" y="46" fill="#e5e9f0" fontSize="9">
-                      {n.label.length > 8 ? n.label.slice(0, 7) + "…" : n.label}
+                        />
+                    <rect className="node-label-backdrop" x="-58" y="37" width="116" height="30" rx="4" />
+                    <text textAnchor="middle" y="48" fill="#e5e9f0" fontSize="9">
+                      {n.label.length > 12 ? n.label.slice(0, 11) + "…" : n.label}
                     </text>
-                    <text textAnchor="middle" y="58" fill="#a4adba" fontSize="8">
-                      {people
-                        .find((person) => person.id === n.personId)
-                        ?.departments.map((department) =>
-                          department === "director"
-                            ? "导演"
-                            : department === "creator"
-                              ? "创作者"
-                              : "演员",
-                        )
-                        .join("／")}
+                    <text textAnchor="middle" y="61" fill="#a4adba" fontSize="7.5">
+                      {departmentLabel(people.find((person) => person.id === n.personId)?.departments ?? [])}
                     </text>
                   </>
                 ) : n.kind === "character" ? (
@@ -850,23 +875,21 @@ function RelationshipGraph({
                       }
                       strokeWidth="1.5"
                     />
-                    {n.portrait && (
-                      <image
-                        href={n.portrait}
+                    <image
+                        href={n.portrait ?? rolePortraitFallback}
                         x="-28"
                         y="-28"
                         width="56"
                         height="56"
                         preserveAspectRatio="xMidYMid slice"
                         clipPath="circle(28px at 28px 28px)"
-                      />
-                    )}
-                    {!n.portrait && <text textAnchor="middle" y="4" fill="#b7e5e2" fontSize="13">{n.label.slice(0, 2)}</text>}
-                    <text textAnchor="middle" y="46" fill="#e5e9f0" fontSize="9">
-                      {n.label.length > 8 ? n.label.slice(0, 7) + "…" : n.label}
+                        />
+                    <rect className="node-label-backdrop" x="-58" y="37" width="116" height="30" rx="4" />
+                    <text textAnchor="middle" y="48" fill="#e5e9f0" fontSize="9">
+                      {n.label.length > 12 ? n.label.slice(0, 11) + "…" : n.label}
                     </text>
-                    <text textAnchor="middle" y="58" fill="#a4adba" fontSize="8">
-                      {roleCharacters.find((character) => character.id === n.characterId)?.role.slice(0, 10) ?? "银幕角色"}
+                    <text textAnchor="middle" y="61" fill="#a4adba" fontSize="7.5">
+                      {(roleCharacters.find((character) => character.id === n.characterId)?.role ?? "银幕角色").slice(0, 14)}
                     </text>
                   </>
                 ) : (
@@ -945,11 +968,17 @@ function RelationshipGraph({
           <span className="eyebrow">SELECTED CONNECTION</span>
           <div className="person-heading">
             <div className="avatar-fallback">
-              {entity?.portrait ? (
-                <img src={entity.portrait} alt={entity.name + "头像"} />
-              ) : (
-                <UserRound size={27} />
-              )}
+              <img
+                src={
+                  entity?.portrait ??
+                  (mode === "characters" ? rolePortraitFallback : personPortraitFallback)
+                }
+                alt={(entity?.name ?? "所选人物") + "头像"}
+                onError={(event) => {
+                  event.currentTarget.src =
+                    mode === "characters" ? rolePortraitFallback : personPortraitFallback;
+                }}
+              />
             </div>
             <div>
               <h3>{entity?.name ?? "请选择人物"}</h3>
