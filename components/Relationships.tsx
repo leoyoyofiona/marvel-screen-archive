@@ -64,6 +64,25 @@ const rolePortraits: Record<string, string> = {
   "stephen-strange": "/media/characters/stephen-strange.svg",
   "wanda-maximoff": "/media/characters/wanda-maximoff.svg",
   "logan-fox": "/media/characters/logan-fox.svg",
+  // These two are dedicated live-action role stills. Keep the catalogue IDs
+  // and the curated role IDs aligned so neither villain falls back to a
+  // Spider-Man-only work poster.
+  "norman-osborn": "/media/character-stills/green-goblin-spider-man.jpg",
+  "otto-octavius": "/media/character-stills/doctor-octopus-spider-man-2.jpg",
+  "green-goblin": "/media/character-stills/green-goblin-spider-man.jpg",
+  "doctor-octopus": "/media/character-stills/doctor-octopus-spider-man-2.jpg",
+  "bruce-banner": "/media/characters/hulk.svg",
+  "loki-character": "/media/characters/loki.svg",
+  "thanos-character": "/media/characters/thanos.svg",
+  "ultron-character": "/media/characters/ultron.svg",
+  "tchalla": "/media/characters/black-panther.svg",
+  "erik-killmonger": "/media/characters/killmonger.svg",
+  "scott-lang": "/media/characters/ant-man.svg",
+  "peter-quill": "/media/characters/star-lord.svg",
+  "wade-wilson": "/media/characters/deadpool.svg",
+  "eddie-brock": "/media/characters/venom.svg",
+  "erik-lehnsherr": "/media/characters/magneto.svg",
+  "carol-danvers": "/media/characters/captain-marvel.svg",
 };
 
 // A relationship node must never collapse to an empty circle when an image
@@ -73,48 +92,12 @@ const personPortraitFallback = "/media/people/fallback/relationship-person.svg";
 const rolePortraitFallback = "/media/characters/role-pending.svg";
 
 // Role portraits are intentionally separate from the person portrait ledger.
-// When a dedicated role still is unavailable, use the first related work's
-// locally published key art rather than incorrectly showing the actor's face.
-const rolePortraitByWorkId: Record<string, string> = {
-  "iron-man-2008-film": "/media/wikipedia-posters/iron-man-2008-film.jpg",
-  "iron-man-2-2010-film": "/media/wikipedia-posters/iron-man-2-2010-film.jpg",
-  "iron-man-3-2013-film": "/media/wikipedia-posters/iron-man-3-2013-film.jpg",
-  "the-avengers-2012-film": "/media/wikipedia-posters/the-avengers-2012-film.jpg",
-  "captain-america-the-first-avenger-2011-film": "/media/wikipedia-posters/captain-america-the-first-avenger-2011-film.jpg",
-  "captain-america-the-winter-soldier-2014-film": "/media/official/captainamericathewintersoldier_lob_crd_01_1-d54fd0253b.webp",
-  "captain-america-civil-war-2016-film": "/media/official/captainamericacivilwar_lob_crd_01_9-70b1766db4.webp",
-  "avengers-age-of-ultron-2015-film": "/media/official/avengersageofultron_lob_crd_03-7b64c7bc38.webp",
-  "avengers-infinity-war-2018-film": "/media/official/avengersinfinitywar_lob_crd_02_1-1add77cbb9.webp",
-  "avengers-endgame-2019-film": "/media/official/avengersendgame_lob_crd_05_2-015e26a56a.webp",
-  "captain-marvel-2019-film": "/media/official/captainmarvel_lob_crd_06-ac8592cc84.webp",
-  "black-panther-2018-film": "/media/official/blackpanther_lob_crd_01_4-298422399f.webp",
-  "ant-man-2015-film": "/media/official/ant-man_lob_crd_01_8-5166ef1167.webp",
-  "guardians-of-the-galaxy-2014-film": "/media/official/guardiansofthegalaxy_lob_crd_03-e6a1faca6f.webp",
-  "thor-ragnarok-2017-film": "/media/official/thorragnarok_lob_crd_03-d86b94d583.webp",
-  "doctor-strange-2016-film": "/media/official/doctorstrange_lob_crd_01_6-4d2c374f16.webp",
-  "doctor-strange-in-the-multiverse-of-madness-2022-film": "/media/official/doctorstrangeinthemultiverseofmadness_lob_crd_02_3-26bf840c70.webp",
-  "spider-man-2002-film": "/media/official/spider-man_lob_crd_01-95bc6087c6.webp",
-  "spider-man-homecoming-2017-film": "/media/official/spider-manhomecoming_lob_crd_02-a43f59f368.webp",
-  "spider-man-no-way-home-2021-film": "/media/official/spider-mannowayhome_lob_crd_03-d08dfc2465.webp",
-  "x-men-2000-film": "/media/wikipedia-posters/x-men-2000-film.jpg",
-  "x2-2003-film": "/media/wikipedia-posters/x2-2003-film.jpg",
-  "x-men-the-last-stand-2006-film": "/media/wikipedia-posters/x-men-the-last-stand-2006-film.jpg",
-  "x-men-first-class-2011-film": "/media/wikipedia-posters/x-men-first-class-2011-film.jpg",
-  "x-men-days-of-future-past-2014-film": "/media/official/fox_x-mendaysoffuturepast_lob_crd_01-9affc81662.webp",
-  "x-men-apocalypse-2016-film": "/media/official/fox_x-menapocalypse_lob_crd_01-4b7d561c67.webp",
-  "logan-2017-film": "/media/official/logan_lob_crd_02-bd1fe03423.webp",
-  "deadpool-2016-film": "/media/official/deadpool_lob_crd_02-5fa02d0271.webp",
-  "deadpool-2-2018-film": "/media/official/deadpool2_lob_crd_02-0f16a7f85e.webp",
-  "deadpool-wolverine-2024-film": "/media/official/deadpoolandwolverine_lob_crd_03-db0762fd78.webp",
-  "venom-2018-film": "/media/official/venom_lob_crd_01-70aa53ecbb.webp",
-  "venom-let-there-be-carnage-2021-film": "/media/wikipedia-posters/venom-let-there-be-carnage-2021-film.jpg",
-  "venom-the-last-dance-2024-film": "/media/wikipedia-posters/venom-the-last-dance-2024-film.jpg",
-  "fantastic-four-2005-film": "/media/wikipedia-posters/fantastic-four-2005-film.jpg",
-  "fantastic-four-rise-of-the-silver-surfer-2007-film": "/media/wikipedia-posters/fantastic-four-rise-of-the-silver-surfer-2007-film.jpg",
-};
-
 function rolePortraitFor(id: string, workIds: string[]) {
-  return rolePortraits[id] ?? workIds.map((workId) => rolePortraitByWorkId[workId]).find(Boolean) ?? rolePortraitFallback;
+  // A work poster is not a character portrait. If a dedicated role image is
+  // unavailable, use the labelled role placeholder instead of pairing the
+  // wrong hero/villain with this node.
+  void workIds;
+  return rolePortraits[id] ?? rolePortraitFallback;
 }
 
 function departmentLabel(departments: string[]) {
@@ -661,7 +644,7 @@ function RelationshipGraph({
           </div>
           <div className="graph-coverage" aria-live="polite">
             <span>头像画面 {layout.nodes.filter((node) => node.kind === "person" || node.kind === "character").length} / {layout.nodes.filter((node) => node.kind === "person" || node.kind === "character").length}</span>
-            <span>姓名文字 {layout.nodes.filter((node) => (node.kind === "person" || node.kind === "character") && node.label.trim()).length} / {layout.nodes.filter((node) => node.kind === "person" || node.kind === "character").length}</span>
+            <span>点击后资料 {layout.nodes.filter((node) => (node.kind === "person" || node.kind === "character") && node.label.trim()).length} / {layout.nodes.filter((node) => node.kind === "person" || node.kind === "character").length}</span>
           </div>
           <svg
             ref={svg}
