@@ -41,7 +41,7 @@ type ScreenCharacter = Character & {
   side: "hero" | "villain" | "support";
   role: string;
   intro: string;
-  portraitKind?: "role-still";
+  portraitKind?: "role-still" | "role-pending";
 };
 
 const characterMeta: Record<string, Pick<ScreenCharacter, "side" | "role" | "intro">> = {
@@ -56,33 +56,12 @@ const characterMeta: Record<string, Pick<ScreenCharacter, "side" | "role" | "int
 };
 
 const rolePortraits: Record<string, string> = {
-  "tony-stark": "/media/characters/tony-stark.svg",
-  "steve-rogers": "/media/characters/steve-rogers.svg",
-  thor: "/media/characters/thor.svg",
-  "natasha-romanoff": "/media/characters/natasha-romanoff.svg",
-  "peter-parker-mcu": "/media/characters/peter-parker-mcu.svg",
-  "stephen-strange": "/media/characters/stephen-strange.svg",
-  "wanda-maximoff": "/media/characters/wanda-maximoff.svg",
-  "logan-fox": "/media/characters/logan-fox.svg",
-  // These two are dedicated live-action role stills. Keep the catalogue IDs
-  // and the curated role IDs aligned so neither villain falls back to a
-  // Spider-Man-only work poster.
+  // Only dedicated live-action role stills are allowed here. Generated
+  // identity artwork and work posters must never masquerade as a character.
   "norman-osborn": "/media/character-stills/green-goblin-spider-man.jpg",
   "otto-octavius": "/media/character-stills/doctor-octopus-spider-man-2.jpg",
   "green-goblin": "/media/character-stills/green-goblin-spider-man.jpg",
   "doctor-octopus": "/media/character-stills/doctor-octopus-spider-man-2.jpg",
-  "bruce-banner": "/media/characters/hulk.svg",
-  "loki-character": "/media/characters/loki.svg",
-  "thanos-character": "/media/characters/thanos.svg",
-  "ultron-character": "/media/characters/ultron.svg",
-  "tchalla": "/media/characters/black-panther.svg",
-  "erik-killmonger": "/media/characters/killmonger.svg",
-  "scott-lang": "/media/characters/ant-man.svg",
-  "peter-quill": "/media/characters/star-lord.svg",
-  "wade-wilson": "/media/characters/deadpool.svg",
-  "eddie-brock": "/media/characters/venom.svg",
-  "erik-lehnsherr": "/media/characters/magneto.svg",
-  "carol-danvers": "/media/characters/captain-marvel.svg",
 };
 
 // A relationship node must never collapse to an empty circle when an image
@@ -275,7 +254,7 @@ function RelationshipGraph({
       ...characters.map((character) => ({
         ...character,
         portrait: rolePortraitFor(character.id, character.works) ?? character.portrait,
-        portraitKind: "role-still" as const,
+        portraitKind: rolePortraits[character.id] ? "role-still" as const : "role-pending" as const,
         ...(characterMeta[character.id] ?? {
           side: "support" as const,
           role: "银幕角色",
@@ -285,7 +264,7 @@ function RelationshipGraph({
       ...roleCharacterCatalog.map((candidate) => ({
         ...candidate,
         portrait: rolePortraitFor(candidate.id, candidate.works),
-        portraitKind: "role-still" as const,
+        portraitKind: rolePortraits[candidate.id] ? "role-still" as const : "role-pending" as const,
       })).filter(
         (candidate) => !characters.some((character) => character.id === candidate.id),
       ),
@@ -444,7 +423,13 @@ function RelationshipGraph({
             person.portrait ??
             (mode === "characters" ? rolePortraitFallback : personPortraitFallback),
           portraitKind:
-            mode === "characters" ? "role-still" : "portraitKind" in person ? person.portraitKind : "actor-portrait",
+            mode === "characters"
+              ? person.portrait === rolePortraitFallback
+                ? "role-pending"
+                : "role-still"
+              : "portraitKind" in person
+                ? person.portraitKind
+                : "actor-portrait",
           x: 70 + (i % 7) * 110,
           y: 55 + Math.floor(i / 7) * 92,
         });
@@ -653,7 +638,12 @@ function RelationshipGraph({
             <small>{mode === "people" ? "人物 — 作品 — 人物，线条只表示共同参与" : "角色 — 作品 — 角色，线条表示同场作品关联"}</small>
           </div>
           <div className="graph-coverage" aria-live="polite">
-            <span>头像画面 {layout.nodes.filter((node) => node.kind === "person" || node.kind === "character").length} / {layout.nodes.filter((node) => node.kind === "person" || node.kind === "character").length}</span>
+            <span>
+              已核对画面 {layout.nodes.filter((node) =>
+                (node.kind === "person" && node.portraitKind === "wikimedia-commons") ||
+                (node.kind === "character" && node.portraitKind === "role-still"),
+              ).length} / {layout.nodes.filter((node) => node.kind === "person" || node.kind === "character").length}
+            </span>
             <span>点击后资料 {layout.nodes.filter((node) => (node.kind === "person" || node.kind === "character") && node.label.trim()).length} / {layout.nodes.filter((node) => node.kind === "person" || node.kind === "character").length}</span>
           </div>
           <svg
@@ -876,7 +866,9 @@ function RelationshipGraph({
                         {n.portraitKind === "identity-fallback"
                           ? "姓名身份头像 · 非真人照片"
                           : n.portraitKind === "role-still"
-                            ? "剧中角色视觉档案"
+                            ? "已核对剧中角色画面"
+                            : n.portraitKind === "role-pending"
+                              ? "剧中角色画面待核验"
                           : n.portrait
                             ? "开放许可人物照片"
                             : "头像待核验"}
