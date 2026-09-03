@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { ArrowUpRight, BookOpen, Shield, Sparkles, Swords, X } from "lucide-react";
 import Link from "next/link";
 import type { WorkPreview } from "@/lib/catalogue-types";
+import armorIndex from "@/data/mcu-armor.json";
 
 type Card = {
   id: string;
@@ -46,24 +47,7 @@ const cards: Card[] = [
   { id: "doctor-doom", name: "维克多·冯·杜姆", alias: "毁灭博士", side: "villain", universe: "漫威多元宇宙", role: "拉脱维亚统治者 / 科学家", power: 97, rank: "科技与魔法", move: "装甲 · 魔法 · 统治意志", intro: "科学和魔法都被他用来证明同一件事：世界应该听命于他。", source: "https://www.marvel.com/characters/doctor-doom-victor-von-doom", workIds: ["fantastic-four-2005-film", "fantastic-four-rise-of-the-silver-surfer-2007-film", "avengers-doomsday-2026-film"] },
 ];
 
-// Only publish armor images that were checked one by one as a single,
-// front-facing, full-body suit. The previous index reused convention photos
-// for unrelated Mark numbers, so those entries are intentionally withheld
-// until a matching, publishable image is available.
-const verifiedArmorEntries = [
-  {
-    name: "Mark I",
-    photo: "/media/armor/mark-i.jpg",
-    source: "https://commons.wikimedia.org/wiki/File:Iron_Man_Mark_I.jpg",
-    credit: "Iron Man Mark I · Wikimedia Commons",
-  },
-  {
-    name: "Mark III",
-    photo: "/media/armor/mark-iii.jpg",
-    source: "https://commons.wikimedia.org/wiki/File:Iron_Man_Mark_III.jpg",
-    credit: "Iron Man Mark III · Wikimedia Commons",
-  },
-] as const;
+const verifiedArmorEntries = armorIndex;
 
 type ArmorDetail = { time: string; origin: string; feature: string; specs: string };
 const armorDetails: Record<string, ArmorDetail> = {
@@ -99,6 +83,32 @@ const characterStillOverrides: Record<string, string> = {
   "doctor-octopus": "/media/character-stills/doctor-octopus-spider-man-2.jpg",
   "green-goblin": "/media/character-stills/green-goblin-spider-man.jpg",
 };
+// Each of the remaining cards has a deliberate, title-specific key visual.
+// This is very different from the former generic fallback: the mapping is
+// reviewed per character and is only used when its title is about that role.
+const characterKeyVisualWorkIds: Record<string, string> = {
+  "iron-man": "iron-man-2008-film",
+  "captain-america": "captain-america-the-first-avenger-2011-film",
+  thor: "thor-2011-film",
+  hulk: "the-incredible-hulk-2008-film",
+  "black-widow": "black-widow-2021-film",
+  "spider-man": "spider-man-2002-film",
+  "doctor-strange": "doctor-strange-2016-film",
+  "scarlet-witch": "wandavision-2021-series",
+  "black-panther": "black-panther-2018-film",
+  "captain-marvel": "captain-marvel-2019-film",
+  "ant-man": "ant-man-2015-film",
+  "star-lord": "guardians-of-the-galaxy-2014-film",
+  loki: "loki-2021-series",
+  thanos: "avengers-infinity-war-2018-film",
+  ultron: "avengers-age-of-ultron-2015-film",
+  killmonger: "black-panther-2018-film",
+  magneto: "x-men-2000-film",
+  wolverine: "logan-2017-film",
+  deadpool: "deadpool-2016-film",
+  venom: "venom-2018-film",
+  "doctor-doom": "fantastic-four-2005-film",
+};
 const characterPortraitFallback = "/media/characters/role-pending.svg";
 
 const storylines = [
@@ -113,7 +123,7 @@ function initials(text: string) {
   return text.replace(/[··\s]/g, "").slice(0, 2);
 }
 
-function CardPortrait({ card, image, large = false, onClick }: { card: Card; image?: string; large?: boolean; onClick?: () => void }) {
+function CardPortrait({ card, image, visualKind = "pending", large = false, onClick }: { card: Card; image?: string; visualKind?: "still" | "key-art" | "pending"; large?: boolean; onClick?: () => void }) {
   return (
     <div
       className={`character-card-art${large ? " large" : ""}${image ? "" : " fallback"}${onClick ? " is-clickable" : ""}`}
@@ -134,19 +144,19 @@ function CardPortrait({ card, image, large = false, onClick }: { card: Card; ima
     >
       <img
         src={image ?? characterPortraitFallback}
-        alt={`${card.alias}角色公开画面`}
+        alt={`${card.alias}${visualKind === "still" ? "剧中角色画面" : visualKind === "key-art" ? "角色主视觉海报" : "角色画面待核验"}`}
         onError={(event) => {
           event.currentTarget.src = characterPortraitFallback;
         }}
       />
       <span className="character-art-shade" />
       <span className="character-art-label">{card.alias}</span>
-      <span className="character-art-caption">ON-SCREEN SOURCE / {card.universe}</span>
+      <span className="character-art-caption">{visualKind === "still" ? "ON-SCREEN STILL" : visualKind === "key-art" ? "CHARACTER KEY ART" : "VISUAL REVIEW"} / {card.universe}</span>
     </div>
   );
 }
 
-function CharacterCard({ card, image, onAvatarClick }: { card: Card; image?: string; onAvatarClick: () => void }) {
+function CharacterCard({ card, image, visualKind, onAvatarClick }: { card: Card; image?: string; visualKind: "still" | "key-art" | "pending"; onAvatarClick: () => void }) {
   const [flipped, setFlipped] = useState(false);
   function toggle(event?: React.MouseEvent | React.KeyboardEvent) {
     if (event && "key" in event && event.key !== "Enter" && event.key !== " ") return;
@@ -165,7 +175,7 @@ function CharacterCard({ card, image, onAvatarClick }: { card: Card; image?: str
       <div className="character-card-flipper">
         <div className="character-card-face character-card-front" aria-hidden={flipped}>
           <span className="card-corner">MARVEL ARCHIVE</span>
-          <CardPortrait card={card} image={image} onClick={onAvatarClick} />
+          <CardPortrait card={card} image={image} visualKind={visualKind} onClick={onAvatarClick} />
           <span className="character-card-copy">
             <small>{card.universe}</small>
             <span className="character-card-title-line"><strong>{card.alias}</strong></span>
@@ -179,7 +189,7 @@ function CharacterCard({ card, image, onAvatarClick }: { card: Card; image?: str
         </div>
         <div className="character-card-face character-card-back" aria-hidden={!flipped}>
           <span className="card-corner">CHARACTER FILE / 人物档案</span>
-          <CardPortrait card={card} image={image} large onClick={onAvatarClick} />
+          <CardPortrait card={card} image={image} visualKind={visualKind} large onClick={onAvatarClick} />
           <strong>{card.alias}</strong>
           <small>{card.name} · {card.role}</small>
           <p>{card.intro}</p>
@@ -221,11 +231,15 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
   );
   const activeStory = storylines.find((item) => item.id === story) ?? storylines[0];
   const workMap = new Map(works.map((work) => [work.id, work]));
-  // A work poster is never a character portrait. If a dedicated live-action
-  // still has not been cleared, show the labelled pending state instead of a
-  // misleading image from a different character or title.
-  const portraitFor = (card: Card) => characterStillOverrides[card.id] ?? characterPortraitFallback;
+  const visualFor = (card: Card) => {
+    const still = characterStillOverrides[card.id];
+    if (still) return { image: still, kind: "still" as const };
+    const keyWork = workMap.get(characterKeyVisualWorkIds[card.id]);
+    if (keyWork?.poster) return { image: keyWork.poster, kind: "key-art" as const };
+    return { image: characterPortraitFallback, kind: "pending" as const };
+  };
   const verifiedCharacterStillCount = new Set(Object.values(characterStillOverrides)).size;
+  const keyVisualCount = cards.filter((card) => visualFor(card).kind === "key-art").length;
   return (
     <section id="lore" className="section lore-section">
       <div className="section-heading">
@@ -236,13 +250,13 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
         <Sparkles size={30} className="silver" />
       </div>
       <div className="lore-intro">
-        <div><strong>主角与反派，全部用卡牌方式浏览</strong><p>战力、排行、绝招是影迷向档案指数，用于阅读和比较，不是漫威官方战斗力数值。剧中真人画面已核对 {verifiedCharacterStillCount} / {cards.length} 张，其余明确标为待核验。</p></div>
+        <div><strong>主角与反派，全部用卡牌方式浏览</strong><p>战力、排行、绝招是影迷向档案指数，用于阅读和比较，不是漫威官方战斗力数值。已核对 {verifiedCharacterStillCount} 张剧中角色画面与 {keyVisualCount} 张角色主视觉海报；两类素材会在卡片角标中明确区分。</p></div>
         <div className="lore-actions" role="group" aria-label="角色阵营筛选">
           {([["all", "全部角色"], ["hero", "英雄阵营"], ["villain", "反派阵营"]] as const).map(([value, label]) => <button key={value} className={side === value ? "selected" : ""} onClick={() => setSide(value)}>{label}</button>)}
         </div>
       </div>
       <div className="character-card-grid">
-        {visible.map((card) => <CharacterCard key={card.id} card={card} image={portraitFor(card)} onAvatarClick={() => setSelected(card)} />)}
+        {visible.map((card) => { const visual = visualFor(card); return <CharacterCard key={card.id} card={card} image={visual.image} visualKind={visual.kind} onAvatarClick={() => setSelected(card)} />; })}
       </div>
       <div className="power-rankings">
         <div className="ranking-heading"><div><span className="eyebrow">POWER INDEX / 能力程度排行榜</span><h3>厉害程度排行榜</h3><p>按卡牌中的影迷向档案指数排序；这是本网站的阅读指标，不是官方战斗力排名。</p></div><Sparkles size={25} /></div>
@@ -256,14 +270,14 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
           </div>
         </div>
         {rankingView === "cards" ? <div className="power-ranking-cards">
-          {rankedCards.map((card, index) => <article className={`power-ranking-card ${card.side === "hero" ? "character-hero" : "villain"}`} key={card.id} onClick={() => setSelected(card)} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); setSelected(card); } }} tabIndex={0} role="button" aria-label={`查看排行榜第${index + 1}名${card.alias}`}><span className="ranking-card-number">{String(index + 1).padStart(2, "0")}</span><CardPortrait card={card} image={portraitFor(card)} onClick={() => setSelected(card)} /><span className="power-ranking-card-copy"><strong>{card.alias}</strong><small>{card.name} · {card.role}</small><em>{card.move}</em><b>{card.power}</b></span></article>)}
+          {rankedCards.map((card, index) => { const visual = visualFor(card); return <article className={`power-ranking-card ${card.side === "hero" ? "character-hero" : "villain"}`} key={card.id} onClick={() => setSelected(card)} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); setSelected(card); } }} tabIndex={0} role="button" aria-label={`查看排行榜第${index + 1}名${card.alias}`}><span className="ranking-card-number">{String(index + 1).padStart(2, "0")}</span><CardPortrait card={card} image={visual.image} visualKind={visual.kind} onClick={() => setSelected(card)} /><span className="power-ranking-card-copy"><strong>{card.alias}</strong><small>{card.name} · {card.role}</small><em>{card.move}</em><b>{card.power}</b></span></article>; })}
         </div> : <ol className="power-ranking-list">
           {rankedCards.map((card, index) => <li key={card.id}><span className="ranking-number">{String(index + 1).padStart(2, "0")}</span><div><strong>{card.alias}</strong><small>{card.name} · {card.role} · {card.move}</small></div><b>{card.power}</b></li>)}
         </ol>}
       </div>
       <div className="armor-atlas">
-        <div className="armor-heading"><div><span className="eyebrow">IRON MAN ARMOR INDEX / 装甲谱</span><h3>钢铁侠装甲：从 Mark I 到纳米时代</h3><p>当前只展示 {verifiedArmorEntries.length} 套已逐张核对的正面全身战甲图。其余型号暂不拿不相关的展会照或侧身照冒充，待找到匹配的公开授权图后再补入。</p></div><Shield size={29} /></div>
-        <div className="armor-grid">{verifiedArmorEntries.map((entry, index) => { const detail = getArmorDetail(entry.name, index); return <article className="armor-card" key={entry.name}><span className="card-corner">ARMOR FILE</span><ArmorFigure index={index} name={entry.name} photo={entry.photo} source={entry.source} credit={entry.credit} /><span className="armor-card-copy"><small>{detail.time} · {detail.origin}</small><span className="armor-card-title-line"><strong>{entry.name}</strong><small className="armor-card-note">MCU Mark</small></span><span className="armor-card-facts"><span><i>特点</i>{detail.feature}</span><span><i>参数</i>{detail.specs}</span></span></span></article>; })}</div>
+        <div className="armor-heading"><div><span className="eyebrow">IRON MAN ARMOR INDEX / 装甲谱</span><h3>钢铁侠装甲：从 Mark I 到纳米时代</h3><p>现展示 {verifiedArmorEntries.length} 套逐张检查过的正面全身战甲图。每张卡片均保留其独立型号来源；玩具、Cosplay、展会照和侧身残缺图已排除。</p></div><Shield size={29} /></div>
+        <div className="armor-grid">{verifiedArmorEntries.map((entry, index) => { const fallback = getArmorDetail(entry.name, index); const detail = { ...fallback, time: entry.time, origin: entry.origin }; return <article className="armor-card" key={entry.name}><span className="card-corner">ARMOR FILE</span><ArmorFigure index={index} name={entry.name} photo={entry.photo} source={entry.source} credit={entry.credit} /><span className="armor-card-copy"><small>{detail.time} · {detail.origin}</small><span className="armor-card-title-line"><strong>{entry.name}</strong><small className="armor-card-note">MCU Mark</small></span><span className="armor-card-facts"><span><i>特点</i>{detail.feature}</span><span><i>参数</i>{detail.specs}</span></span></span></article>; })}</div>
         <a className="text-link" href="https://www.marvel.com/watch/digital-series/earth-s-mightiest-show/all-of-the-armor-worn-by-tony-stark-in-the-mcu" target="_blank" rel="noopener noreferrer">查看 Marvel 官方装甲专题 <ArrowUpRight size={14} /></a>
       </div>
       <div className="storyline-atlas">
@@ -271,7 +285,7 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
         <div className="storyline-tabs" role="tablist">{storylines.map((item) => <button key={item.id} className={story === item.id ? "active" : ""} onClick={() => setStory(item.id)}>{item.title}<small>{item.years}</small></button>)}</div>
         <div className="storyline-detail"><div><span className="storyline-number">{String(storylines.findIndex((item) => item.id === activeStory.id) + 1).padStart(2, "0")}</span><h4>{activeStory.title}</h4><p>{activeStory.tone}</p></div><ol>{activeStory.items.map((title) => { const work = works.find((item) => item.title === title) ?? [...workMap.values()].find((item) => item.title.includes(title) || title.includes(item.title)); return <li key={title}>{work ? <Link href={`/works/${work.id}`}>{title}<ArrowUpRight size={13} /></Link> : <span>{title}</span>}</li>; })}</ol></div>
       </div>
-      {selected && <div className="lore-modal-backdrop" role="presentation" onClick={() => setSelected(null)}><aside className={`lore-modal ${selected.side}`} role="dialog" aria-modal="true" aria-label={`${selected.alias}角色档案`} onClick={(event) => event.stopPropagation()}><button className="icon-button lore-modal-close" onClick={() => setSelected(null)} aria-label="关闭角色档案"><X /></button><span className="card-corner">CHARACTER FILE / {selected.universe}</span><CardPortrait card={selected} image={portraitFor(selected)} large /><small>{selected.side === "hero" ? "HERO FILE" : "VILLAIN FILE"}</small><h3>{selected.alias}</h3><p className="lore-modal-name">{selected.name} · {selected.role}</p><p>{selected.intro}</p><div className="lore-stat-grid"><span><b>{selected.power}</b><small>影迷向档案指数</small></span><span><b>{selected.rank}</b><small>核心定位</small></span></div><div className="lore-move"><Swords size={16} /> 代表绝招：{selected.move}</div><h4>已编目作品</h4><ul>{selected.workIds.map((id) => { const work = workMap.get(id); return work ? <li key={id}><Link href={`/works/${id}`} onClick={() => setSelected(null)}>{work.title} · {work.year ?? "待定"}<ArrowUpRight size={13} /></Link></li> : null; })}</ul><a className="text-link" href={selected.source} target="_blank" rel="noopener noreferrer">打开 Marvel 人物资料 <ArrowUpRight size={14} /></a></aside></div>}
+      {selected && <div className="lore-modal-backdrop" role="presentation" onClick={() => setSelected(null)}><aside className={`lore-modal ${selected.side}`} role="dialog" aria-modal="true" aria-label={`${selected.alias}角色档案`} onClick={(event) => event.stopPropagation()}><button className="icon-button lore-modal-close" onClick={() => setSelected(null)} aria-label="关闭角色档案"><X /></button><span className="card-corner">CHARACTER FILE / {selected.universe}</span>{(() => { const visual = visualFor(selected); return <CardPortrait card={selected} image={visual.image} visualKind={visual.kind} large />; })()}<small>{selected.side === "hero" ? "HERO FILE" : "VILLAIN FILE"}</small><h3>{selected.alias}</h3><p className="lore-modal-name">{selected.name} · {selected.role}</p><p>{selected.intro}</p><div className="lore-stat-grid"><span><b>{selected.power}</b><small>影迷向档案指数</small></span><span><b>{selected.rank}</b><small>核心定位</small></span></div><div className="lore-move"><Swords size={16} /> 代表绝招：{selected.move}</div><h4>已编目作品</h4><ul>{selected.workIds.map((id) => { const work = workMap.get(id); return work ? <li key={id}><Link href={`/works/${id}`} onClick={() => setSelected(null)}>{work.title} · {work.year ?? "待定"}<ArrowUpRight size={13} /></Link></li> : null; })}</ul><a className="text-link" href={selected.source} target="_blank" rel="noopener noreferrer">打开 Marvel 人物资料 <ArrowUpRight size={14} /></a></aside></div>}
     </section>
   );
 }

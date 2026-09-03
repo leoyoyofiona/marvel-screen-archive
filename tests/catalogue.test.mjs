@@ -34,6 +34,9 @@ const loreSource = await readFile(
   new URL("../components/LoreAtlas.tsx", import.meta.url),
   "utf8",
 );
+const armorIndex = JSON.parse(
+  await readFile(new URL("../data/mcu-armor.json", import.meta.url), "utf8"),
+);
 const soundtrackLinks = JSON.parse(
   await readFile(
     new URL("../public/data/soundtracks.json", import.meta.url),
@@ -149,13 +152,13 @@ test("offline shell stays same-origin and never caches live APIs", async () => {
   assert.equal(manifest.start_url, "/");
   assert.ok(manifest.icons.every((icon) => icon.src.startsWith("/")));
 });
-test("relationship graph payload is complete but strips work-detail fields", () => {
+test("relationship graph payload is complete and includes only graph-safe poster paths", () => {
   assert.equal(relationshipPayload.works.length, data.works.length);
   assert.equal(relationshipPayload.people.length, data.people.length);
   assert.equal(relationshipPayload.characters.length, data.characters.length);
   assert.deepEqual(
     Object.keys(relationshipPayload.works[0]).sort(),
-    ["id", "people", "title", "year"],
+    ["id", "people", "poster", "title", "year"],
   );
   assert.ok(
     relationshipPayload.works.every((work) =>
@@ -390,16 +393,16 @@ test("role relationship portraits never use synthetic character SVGs", () => {
   assert.match(block, /\/media\/character-stills\//);
   assert.doesNotMatch(block, /\/media\/characters\//);
 });
-test("character cards never reuse a work poster as a character portrait", () => {
-  assert.doesNotMatch(loreSource, /characterStillWorkIds/);
-  assert.match(
-    loreSource,
-    /characterStillOverrides\[card\.id\] \?\? characterPortraitFallback/,
-  );
+test("character cards use audited stills or explicit role-to-work key art mappings", () => {
+  assert.match(loreSource, /const characterKeyVisualWorkIds: Record<string, string>/);
+  assert.match(loreSource, /const visualFor = \(card: Card\)/);
+  assert.doesNotMatch(loreSource, /const portraitFor =/);
 });
-test("armor cards exclude the previously misclassified convention Mark XLII image", () => {
+test("armor cards exclude convention imagery and publish fifty individually reviewed Marks", () => {
   assert.doesNotMatch(loreSource, /Ironman_Mk\.42_on_CCG2014/);
-  assert.match(loreSource, /当前只展示 \{verifiedArmorEntries\.length\} 套/);
+  assert.equal(armorIndex.length, 50);
+  assert.ok(armorIndex.every((entry) => entry.visualStatus === "visual-reviewed-front-full-body"));
+  assert.ok(armorIndex.every((entry) => entry.photo.startsWith("/media/armor/mcu/")));
 });
 test("the mainland default route can render every archive image without an external asset host", () => {
   for (const work of data.works) {

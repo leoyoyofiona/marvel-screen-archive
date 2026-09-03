@@ -20,7 +20,7 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import type { Work, Person, Character } from "@/lib/catalogue-types";
-type RelationWork = Pick<Work, "id" | "title" | "year" | "people">;
+type RelationWork = Pick<Work, "id" | "title" | "year" | "people" | "poster">;
 type RelationshipPayload = {
   works: RelationWork[];
   people: Person[];
@@ -41,7 +41,7 @@ type ScreenCharacter = Character & {
   side: "hero" | "villain" | "support";
   role: string;
   intro: string;
-  portraitKind?: "role-still" | "role-pending";
+  portraitKind?: "role-still" | "role-key-art" | "actor-portrait" | "role-pending";
 };
 
 const characterMeta: Record<string, Pick<ScreenCharacter, "side" | "role" | "intro">> = {
@@ -63,6 +63,32 @@ const rolePortraits: Record<string, string> = {
   "green-goblin": "/media/character-stills/green-goblin-spider-man.jpg",
   "doctor-octopus": "/media/character-stills/doctor-octopus-spider-man-2.jpg",
 };
+// Main roles may use only an explicit, title-specific key visual. We do not
+// infer a character picture from an arbitrary shared ensemble poster.
+const roleKeyVisualWorkIds: Record<string, string> = {
+  "tony-stark": "iron-man-2008-film",
+  "steve-rogers": "captain-america-the-first-avenger-2011-film",
+  thor: "thor-2011-film",
+  "natasha-romanoff": "black-widow-2021-film",
+  "peter-parker-mcu": "spider-man-homecoming-2017-film",
+  "stephen-strange": "doctor-strange-2016-film",
+  "wanda-maximoff": "wandavision-2021-series",
+  "logan-fox": "logan-2017-film",
+  "loki-character": "loki-2021-series",
+  "thanos-character": "avengers-infinity-war-2018-film",
+  "ultron-character": "avengers-age-of-ultron-2015-film",
+  "tchalla": "black-panther-2018-film",
+  "scott-lang": "ant-man-2015-film",
+  "peter-quill": "guardians-of-the-galaxy-2014-film",
+  "carol-danvers": "captain-marvel-2019-film",
+  "erik-killmonger": "black-panther-2018-film",
+  "wade-wilson": "deadpool-2016-film",
+  "eddie-brock": "venom-2018-film",
+  "victor-von-doom": "fantastic-four-2005-film",
+  "erik-lehnsherr": "x-men-2000-film",
+  "charles-xavier": "x-men-2000-film",
+  "bruce-banner": "the-incredible-hulk-2008-film",
+};
 
 // A relationship node must never collapse to an empty circle when an image
 // cannot be loaded. These local archive placeholders are clearly labelled and
@@ -73,12 +99,13 @@ const graphX = (value: number | undefined) => Math.max(38, Math.min(742, value ?
 const graphY = (value: number | undefined) => Math.max(38, Math.min(412, value ?? 225));
 
 // Role portraits are intentionally separate from the person portrait ledger.
-function rolePortraitFor(id: string, workIds: string[]) {
-  // A work poster is not a character portrait. If a dedicated role image is
-  // unavailable, use the labelled role placeholder instead of pairing the
-  // wrong hero/villain with this node.
-  void workIds;
-  return rolePortraits[id] ?? rolePortraitFallback;
+function rolePortraitFor(id: string, workMap: Map<string, RelationWork>, actorPortrait?: string | null) {
+  const still = rolePortraits[id];
+  if (still) return { portrait: still, portraitKind: "role-still" as const };
+  const keyArt = workMap.get(roleKeyVisualWorkIds[id] ?? "")?.poster;
+  if (keyArt) return { portrait: keyArt, portraitKind: "role-key-art" as const };
+  if (actorPortrait) return { portrait: actorPortrait, portraitKind: "actor-portrait" as const };
+  return { portrait: rolePortraitFallback, portraitKind: "role-pending" as const };
 }
 
 function departmentLabel(departments: string[]) {
@@ -94,6 +121,13 @@ function departmentLabel(departments: string[]) {
             : "演员／配音",
   );
   return labels.length ? labels.join("／") : "演职员";
+}
+
+function avatarQuality(value: Person | ScreenCharacter) {
+  const kind = "portraitKind" in value ? value.portraitKind : null;
+  if (kind === "wikimedia-commons" || kind === "role-still") return 3;
+  if (kind === "role-key-art" || kind === "actor-portrait") return 2;
+  return 0;
 }
 
 // The catalogue only stores eight character anchors today. These curated role links
@@ -249,12 +283,15 @@ function RelationshipGraph({
   characters: Character[];
 }) {
   const router = useRouter();
+  const relationshipWorkMap = useMemo(
+    () => new Map(works.map((work) => [work.id, work])),
+    [works],
+  );
   const roleCharacters = useMemo(
     () => [
       ...characters.map((character) => ({
         ...character,
-        portrait: rolePortraitFor(character.id, character.works) ?? character.portrait,
-        portraitKind: rolePortraits[character.id] ? "role-still" as const : "role-pending" as const,
+        ...rolePortraitFor(character.id, relationshipWorkMap),
         ...(characterMeta[character.id] ?? {
           side: "support" as const,
           role: "银幕角色",
@@ -263,13 +300,20 @@ function RelationshipGraph({
       })),
       ...roleCharacterCatalog.map((candidate) => ({
         ...candidate,
-        portrait: rolePortraitFor(candidate.id, candidate.works),
-        portraitKind: rolePortraits[candidate.id] ? "role-still" as const : "role-pending" as const,
+        ...rolePortraitFor(
+          candidate.id,
+          relationshipWorkMap,
+          people.find(
+            (person) =>
+              person.nameEn === candidate.actor &&
+              person.portraitKind === "wikimedia-commons",
+          )?.portrait,
+        ),
       })).filter(
         (candidate) => !characters.some((character) => character.id === candidate.id),
       ),
     ],
-    [characters],
+    [characters, people, relationshipWorkMap],
   );
   const [mode, setMode] = useState<"people" | "characters">("people"),
     [search, setSearch] = useState(""),
@@ -304,10 +348,10 @@ function RelationshipGraph({
                 .join(" ")
                 .toLowerCase()
                 .includes(search.toLowerCase()),
-          )
+          ).sort((a, b) => avatarQuality(b) - avatarQuality(a) || a.name.localeCompare(b.name, "zh-Hans-CN"))
         : roleCharacters.filter((c) =>
-            [c.name, c.alias].join(" ").includes(search),
-          ),
+          [c.name, c.alias].join(" ").includes(search),
+          ).sort((a, b) => avatarQuality(b) - avatarQuality(a) || a.name.localeCompare(b.name, "zh-Hans-CN")),
     [mode, people, roleCharacters, search, department],
   );
   const entity =
@@ -354,7 +398,7 @@ function RelationshipGraph({
             (character) =>
               character.id !== selected &&
               character.works.some((workId) => relatedIds.has(workId)),
-          ),
+          ).sort((a, b) => avatarQuality(b) - avatarQuality(a) || a.name.localeCompare(b.name, "zh-Hans-CN")),
     [mode, people, roleCharacters, relatedIds, selected],
   );
   const collaboratorWorkIds = (item: Person | ScreenCharacter) =>
@@ -424,9 +468,7 @@ function RelationshipGraph({
             (mode === "characters" ? rolePortraitFallback : personPortraitFallback),
           portraitKind:
             mode === "characters"
-              ? person.portrait === rolePortraitFallback
-                ? "role-pending"
-                : "role-still"
+              ? (person as ScreenCharacter).portraitKind ?? "role-pending"
               : "portraitKind" in person
                 ? person.portraitKind
                 : "actor-portrait",
@@ -641,7 +683,7 @@ function RelationshipGraph({
             <span>
               已核对画面 {layout.nodes.filter((node) =>
                 (node.kind === "person" && node.portraitKind === "wikimedia-commons") ||
-                (node.kind === "character" && node.portraitKind === "role-still"),
+                (node.kind === "character" && ["role-still", "role-key-art"].includes(node.portraitKind ?? "")),
               ).length} / {layout.nodes.filter((node) => node.kind === "person" || node.kind === "character").length}
             </span>
             <span>点击后资料 {layout.nodes.filter((node) => (node.kind === "person" || node.kind === "character") && node.label.trim()).length} / {layout.nodes.filter((node) => node.kind === "person" || node.kind === "character").length}</span>
@@ -867,6 +909,10 @@ function RelationshipGraph({
                           ? "姓名身份头像 · 非真人照片"
                           : n.portraitKind === "role-still"
                             ? "已核对剧中角色画面"
+                            : n.portraitKind === "role-key-art"
+                              ? "角色主视觉海报"
+                              : n.portraitKind === "actor-portrait"
+                                ? "演员公开肖像"
                             : n.portraitKind === "role-pending"
                               ? "剧中角色画面待核验"
                           : n.portrait
