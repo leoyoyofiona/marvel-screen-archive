@@ -788,6 +788,16 @@ function RelationshipGraph({
                     };
                     svg.current?.setPointerCapture(e.pointerId);
                   }}
+                  onMouseDown={(e) => {
+                    // Some embedded browsers expose SVG taps through the
+                    // mouse event path only. Keep this idempotent with the
+                    // pointer handler so the selected detail is available
+                    // even when pointer capture suppresses click.
+                    e.stopPropagation();
+                    if (n.personId || n.characterId) {
+                      choose(n.personId ?? n.characterId ?? "");
+                    }
+                  }}
                   onPointerUp={(e) => {
                     e.stopPropagation();
                     const currentDrag = drag.current;
