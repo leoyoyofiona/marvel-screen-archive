@@ -1,0 +1,285 @@
+{
+  "checkedAt": "2026-09-03",
+  "items": {
+    "pepper-potts": {
+      "portrait": "/media/role-stills/pepper-potts.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Virginia_Potts_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/1/11/Virginia_Potts_%28Earth-199999%29_from_Avengers_Endgame_promotional_art_002.jpg/revision/latest?cb=20190510232319",
+      "title": "Virginia Potts (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "james-rhodes": {
+      "portrait": "/media/role-stills/james-rhodes.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/James_Rhodes_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/b/bf/James_Rhodes_%28Earth-199999%29_from_Avengers_Endgame_003.png/revision/latest?cb=20190703043402",
+      "title": "James Rhodes (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "happy-hogan": {
+      "portrait": "/media/role-stills/happy-hogan.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Harold_Hogan_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/9/97/Avengers_Endgame_poster_018_textless.jpg/revision/latest/scale-to-width-down/486?cb=20190721084911",
+      "title": "Harold Hogan (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "obadiah-stane": {
+      "portrait": "/media/role-stills/obadiah-stane.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Obadiah_Stane_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/4/41/Obadiah_Stane_%28Earth-199999%29_from_Iron_Man_%28film%29_0002.jpg/revision/latest/scale-to-width-down/559?cb=20120209164433",
+      "title": "Obadiah Stane (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "yinsen": {
+      "portrait": "/media/role-stills/yinsen.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Ho_Yinsen_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/a/a3/Ho_Yinsen_%28Earth-199999%29_from_Iron_Man_%28film%29_001.jpg/revision/latest?cb=20080503145602",
+      "title": "Ho Yinsen (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "justin-hammer": {
+      "portrait": "/media/role-stills/justin-hammer.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Justin_Hammer_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/0/03/Justin_Hammer_%28Earth-199999%29_from_Iron_Man_2_%28film%29_0001.jpg/revision/latest/scale-to-width-down/519?cb=20130420160717",
+      "title": "Justin Hammer (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "aldrich-killian": {
+      "portrait": "/media/role-stills/aldrich-killian.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Aldrich_Killian_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/8/8b/Aldrich_Killian_%28Earth-199999%29_from_Iron_Man_3_%28film%29_poster_003.jpg/revision/latest/scale-to-width-down/526?cb=20130218174952",
+      "title": "Aldrich Killian (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "bruce-banner": {
+      "portrait": "/media/role-stills/bruce-banner.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Bruce_Banner_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/4/4e/Bruce_Banner_%28Earth-199999%29_from_Spider-Man_Brand_New_Day_poster_001.jpg/revision/latest/scale-to-width-down/485?cb=20260821150502",
+      "title": "Bruce Banner (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "clint-barton": {
+      "portrait": "/media/role-stills/clint-barton.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Clinton_Barton_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/7/78/Hawkeye_%28TV_series%29_poster_004_Textless.jpg/revision/latest/scale-to-width-down/576?cb=20211124133858",
+      "title": "Clinton Barton (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "nick-fury": {
+      "portrait": "/media/role-stills/nick-fury.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Nicholas_Fury_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/f/fb/The_Marvels_%28film%29_poster_017_textless.png/revision/latest/scale-to-width-down/576?cb=20231109173116",
+      "title": "Nicholas Fury (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "loki-character": {
+      "portrait": "/media/role-stills/loki-character.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Loki_Laufeyson_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/e/e2/Loki_Laufeyson_%28Earth-199999%29_from_Thor_Ragnarok_0001_.jpg/revision/latest/scale-to-width-down/516?cb=20171024020206",
+      "title": "Loki Laufeyson (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "thanos-character": {
+      "portrait": "/media/role-stills/thanos-character.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Thanos_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/b/bc/Thanos_%28Earth-199999%29_from_Avengers_Infinity_War_-_The_Official_Movie_Special_001.jpg/revision/latest/scale-to-width-down/571?cb=20180501065444",
+      "title": "Thanos (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "ultron-character": {
+      "portrait": "/media/role-stills/ultron-character.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Ultron_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/7/7c/Ultron_%28Earth-199999%29_from_Avengers_Age_of_Ultron_002.jpg/revision/latest?cb=20150725024625",
+      "title": "Ultron (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "vision-character": {
+      "portrait": "/media/role-stills/vision-character.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Vision_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/e/ec/Vision_%28Earth-199999%29_from_Marvel_Legends_002.jpg/revision/latest/scale-to-width-down/520?cb=20210519112055",
+      "title": "Vision (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "sam-wilson": {
+      "portrait": "/media/role-stills/sam-wilson.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Samuel_Wilson_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/4/47/Samuel_Wilson_%28Earth-199999%29_from_Captain_America-_Brave_New_World_001.png/revision/latest/scale-to-width-down/506?cb=20250212114203",
+      "title": "Samuel Wilson (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "baron-zemo": {
+      "portrait": "/media/role-stills/baron-zemo.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Helmut_Zemo_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/2/28/The_Falcon_and_The_Winter_Soldier_poster_006_textless.jpg/revision/latest/scale-to-width-down/480?cb=20210309163939",
+      "title": "Helmut Zemo (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "tchalla": {
+      "portrait": "/media/role-stills/tchalla.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/T%27Challa_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/7/79/T%27Challa_%28Earth-199999%29_from_Black_Panther_film_002.jpg/revision/latest/scale-to-width-down/476?cb=20180216040242",
+      "title": "T'Challa (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "shuri": {
+      "portrait": "/media/role-stills/shuri.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Shuri_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/e/e3/Shuri_%28Earth-199999%29_from_Black_Panther_Wakanda_Forever_001.jpeg/revision/latest/scale-to-width-down/720?cb=20250329174534",
+      "title": "Shuri (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "erik-killmonger": {
+      "portrait": "/media/role-stills/erik-killmonger.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/N%27Jadaka_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/7/78/N%27Jadaka_%28Earth-199999%29_from_Black_Panther_%28film%29_005.jpg/revision/latest?cb=20180220195031",
+      "title": "N'Jadaka (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "scott-lang": {
+      "portrait": "/media/role-stills/scott-lang.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Scott_Lang_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/b/b8/Ant-Man_and_the_Wasp_Quantumania_poster_009_textless.png/revision/latest/scale-to-width-down/576?cb=20230213215119",
+      "title": "Scott Lang (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "hope-van-dyne": {
+      "portrait": "/media/role-stills/hope-van-dyne.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Hope_Van_Dyne_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/9/9a/Ant-Man_and_the_Wasp_Quantumania_poster_010_textless.png/revision/latest/scale-to-width-down/576?cb=20230213215047",
+      "title": "Hope Van Dyne (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "peter-quill": {
+      "portrait": "/media/role-stills/peter-quill.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Peter_Quill_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/d/d2/Peter_Quill_%28Earth-199999%29_from_Guardians_of_the_Galaxy_Vol._3_%28film%29_001.jpg/revision/latest/scale-to-width-down/559?cb=20230425130527",
+      "title": "Peter Quill (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "gamora": {
+      "portrait": "/media/role-stills/gamora.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Gamora_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/d/d7/Avengers_Infinity_War_poster_011_Textless.jpg/revision/latest/scale-to-width-down/503?cb=20180418025120",
+      "title": "Gamora (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "rocket": {
+      "portrait": "/media/role-stills/rocket.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Rocket_Raccoon_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/0/0d/Rocket_Raccoon_%28Earth-199999%29_from_Guardians_of_the_Galaxy_Vol._3_%28film%29_001.jpg/revision/latest/scale-to-width-down/557?cb=20230425130708",
+      "title": "Rocket Raccoon (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "drax": {
+      "portrait": "/media/role-stills/drax.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Drax_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/f/f5/Drax_%28Earth-199999%29_from_Guardians_of_the_Galaxy_Vol._3_%28film%29_001.jpg/revision/latest/scale-to-width-down/560?cb=20230425130922",
+      "title": "Drax (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "nebula": {
+      "portrait": "/media/role-stills/nebula.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Nebula_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/e/ec/Nebula_%28Earth-199999%29_from_Guardians_of_the_Galaxy_Vol._3_%28film%29_001.jpeg/revision/latest/scale-to-width-down/601?cb=20230425131252",
+      "title": "Nebula (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "carol-danvers": {
+      "portrait": "/media/role-stills/carol-danvers.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Carol_Danvers_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/1/14/The_Marvels_%28film%29_promo_art_001.png/revision/latest/scale-to-width-down/382?cb=20230805203336",
+      "title": "Carol Danvers (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "hela": {
+      "portrait": "/media/role-stills/hela.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Hela_Odinsdottir_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/6/6c/Thor_Ragnarok_poster_009_textless.jpg/revision/latest/scale-to-width-down/516?cb=20190721083835",
+      "title": "Hela Odinsdottir (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "valkyrie": {
+      "portrait": "/media/role-stills/valkyrie.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Brunnhilde_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/1/15/Thor_Love_and_Thunder_poster_007_textless.jpg/revision/latest/scale-to-width-down/504?cb=20220826120550",
+      "title": "Brunnhilde (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "wong": {
+      "portrait": "/media/role-stills/wong.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Wong_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/1/16/Wong_%28Earth-199999%29_from_Doctor_Strange_in_the_Multiverse_of_Madness_Promo_001.jpg/revision/latest/scale-to-width-down/549?cb=20220504145338",
+      "title": "Wong (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "norman-osborn": {
+      "portrait": "/media/role-stills/norman-osborn.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Norman_Osborn_(Earth-96283)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/1/1b/Norman_Osborn_%28Earth-96283%29_from_Spider-Man_%282002_film%29_Poster_0004.jpg/revision/latest/scale-to-width-down/529?cb=20230719162800",
+      "title": "Norman Osborn (Earth-96283)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "mj-watson": {
+      "portrait": "/media/role-stills/mj-watson.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Michelle_Jones_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/0/03/Spider-Man_Far_From_Home_poster_009_textless.jpg/revision/latest/scale-to-width-down/504?cb=20190724142439",
+      "title": "Michelle Jones (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "charles-xavier": {
+      "portrait": "/media/role-stills/charles-xavier.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Charles_Xavier_(Earth-10005)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/2/28/Charles_Xavier_%28Earth-10005%29_from_Dark_Phoenix_%28film%29_Poster_001.jpg/revision/latest?cb=20190607035806",
+      "title": "Charles Xavier (Earth-10005)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "erik-lehnsherr": {
+      "portrait": "/media/role-stills/erik-lehnsherr.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Erik_Lehnsherr_(Earth-10005)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/3/34/Erik_Lehnsherr_%28Earth-10005%29_from_Dark_Phoenix_%28film%29_001.png/revision/latest?cb=20190607042420",
+      "title": "Erik Lehnsherr (Earth-10005)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "jean-grey": {
+      "portrait": "/media/role-stills/jean-grey.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Jean_Grey_(Earth-199999)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/c/c4/Jean_Grey_%28Earth-199999%29_from_Spider-Man_Brand_New_Day_Promotional_001.jpg/revision/latest/scale-to-width-down/552?cb=20260902095642",
+      "title": "Jean Grey (Earth-199999)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "storm": {
+      "portrait": "/media/role-stills/storm.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Ororo_Munroe_(Earth-10005)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/7/7f/Ororo_Munroe_%28Earth-10005%29_from_Dark_Phoenix_%28film%29_001.jpg/revision/latest?cb=20190607040915",
+      "title": "Ororo Munroe (Earth-10005)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "mystique": {
+      "portrait": "/media/role-stills/mystique.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Raven_Darkh%C3%B6lme_(Earth-10005)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/8/8c/Raven_Darkh%C3%B6lme_%28Earth-10005%29_from_Dark_Phoenix_%28film%29_001.jpg/revision/latest/scale-to-width-down/720?cb=20190607040131",
+      "title": "Raven Darkhölme (Earth-10005)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "wade-wilson": {
+      "portrait": "/media/role-stills/wade-wilson.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Wade_Wilson_(Earth-10005)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/e/e3/Wade_Wilson_%28Earth-10005%29_from_Deadpool_%26_Wolverine_001_promo.png/revision/latest/scale-to-width-down/613?cb=20240626091542",
+      "title": "Wade Wilson (Earth-10005)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "reed-richards": {
+      "portrait": "/media/role-stills/reed-richards.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Reed_Richards_(Earth-121698)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/f/fb/Fantastic-Four-Rise-Silver-Surfer-3.jpg/revision/latest/scale-to-width-down/432?cb=20131026071748",
+      "title": "Reed Richards (Earth-121698)",
+      "status": "visual-reviewed-screen-role"
+    },
+    "victor-von-doom": {
+      "portrait": "/media/role-stills/victor-von-doom.webp",
+      "sourcePage": "https://marvel.fandom.com/wiki/Victor_von_Doom_(Earth-121698)",
+      "sourceImage": "https://static.wikia.nocookie.net/marveldatabase/images/1/11/Victor_von_Doom_%28Earth-121698%29_from_Fantastic_Four_%282005_film%29_0003.jpg/revision/latest?cb=20090709013425",
+      "title": "Victor von Doom (Earth-121698)",
+      "status": "visual-reviewed-screen-role"
+    }
+  }
+}

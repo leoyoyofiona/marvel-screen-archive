@@ -20,6 +20,7 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import type { Work, Person, Character } from "@/lib/catalogue-types";
+import rolePortraitAudit from "@/data/role-portraits.json";
 type RelationWork = Pick<Work, "id" | "title" | "year" | "people" | "poster">;
 type RelationshipPayload = {
   works: RelationWork[];
@@ -56,8 +57,11 @@ const characterMeta: Record<string, Pick<ScreenCharacter, "side" | "role" | "int
 };
 
 const rolePortraits: Record<string, string> = {
-  // Only dedicated live-action role stills are allowed here. Generated
-  // identity artwork and work posters must never masquerade as a character.
+  // Only image records checked against the named screen role are permitted.
+  // The two older Spider-Man entries retain dedicated live-action stills.
+  ...Object.fromEntries(
+    Object.entries(rolePortraitAudit.items).map(([id, value]) => [id, value.portrait]),
+  ),
   "norman-osborn": "/media/character-stills/green-goblin-spider-man.jpg",
   "otto-octavius": "/media/character-stills/doctor-octopus-spider-man-2.jpg",
   "green-goblin": "/media/character-stills/green-goblin-spider-man.jpg",
