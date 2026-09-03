@@ -682,16 +682,28 @@ function RelationshipGraph({
                 }
               }
             }}
-            onPointerUp={() => {
-              if (drag.current?.id !== "pan") {
+            onPointerUp={(e) => {
+              const currentDrag = drag.current;
+              if (!currentDrag) return;
+              const moved = Math.hypot(
+                e.clientX - currentDrag.startX,
+                e.clientY - currentDrag.startY,
+              );
+              if (currentDrag.id !== "pan") {
                 const n = simulation.current
                   ?.nodes()
-                  .find((n) => n.id === drag.current?.id);
+                  .find((n) => n.id === currentDrag.id);
                 if (n && n.kind !== "center") {
                   n.fx = null;
                   n.fy = null;
                 }
                 simulation.current?.alphaTarget(0);
+                // Pointer capture can retarget pointerup to the SVG instead
+                // of the child <g>. Keep the tap action here as a root-level
+                // fallback so an avatar click always opens its detail panel.
+                if (moved < 8 && n && (n.personId || n.characterId)) {
+                  choose(n.personId ?? n.characterId ?? "");
+                }
               }
               drag.current = null;
             }}
