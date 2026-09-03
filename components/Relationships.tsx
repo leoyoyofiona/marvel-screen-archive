@@ -90,6 +90,8 @@ const rolePortraits: Record<string, string> = {
 // are only used as a visual fallback; they are not presented as real people.
 const personPortraitFallback = "/media/people/fallback/relationship-person.svg";
 const rolePortraitFallback = "/media/characters/role-pending.svg";
+const graphX = (value: number | undefined) => Math.max(38, Math.min(742, value ?? 390));
+const graphY = (value: number | undefined) => Math.max(38, Math.min(412, value ?? 225));
 
 // Role portraits are intentionally separate from the person portrait ledger.
 function rolePortraitFor(id: string, workIds: string[]) {
@@ -736,10 +738,10 @@ function RelationshipGraph({
                 return a && b ? (
                   <line
                     key={edge.source + "-" + edge.target}
-                    x1={a.x}
-                    y1={a.y}
-                    x2={b.x}
-                    y2={b.y}
+                    x1={graphX(a.x)}
+                    y1={graphY(a.y)}
+                    x2={graphX(b.x)}
+                    y2={graphY(b.y)}
                     stroke={edge.kind === "anchor" ? "#a32a3d" : "#755361"}
                     strokeWidth={edge.kind === "anchor" ? "1.4" : ".8"}
                     strokeDasharray={
@@ -752,7 +754,7 @@ function RelationshipGraph({
                 <g
                   key={n.id}
                   data-node={n.id}
-                  transform={`translate(${n.x ?? 0} ${n.y ?? 0})`}
+                  transform={`translate(${graphX(n.x)} ${graphY(n.y)})`}
                   className={"graph-node " + n.kind}
                   tabIndex={n.kind === "work" || n.kind === "person" || n.kind === "character" ? 0 : -1}
                   role={
@@ -996,8 +998,8 @@ function RelationshipGraph({
             {layout.nodes
               .filter((node) => node.kind === "person" || node.kind === "character")
               .map((node) => {
-                const x = pan.x + 390 + ((node.x ?? 390) - 390) * zoom;
-                const y = pan.y + 225 + ((node.y ?? 225) - 225) * zoom;
+                const x = pan.x + 390 + (graphX(node.x) - 390) * zoom;
+                const y = pan.y + 225 + (graphY(node.y) - 225) * zoom;
                 const entityId = node.personId ?? node.characterId ?? "";
                 return (
                   <button
