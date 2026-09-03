@@ -27,6 +27,7 @@ export default function SoundtrackHall({
   const section = useRef<HTMLElement>(null);
   const [items, setItems] = useState<Soundtrack[] | null>(null);
   const [error, setError] = useState(false);
+  const [queueLimit, setQueueLimit] = useState(12);
   const load = useCallback(() => {
     setError(false);
     fetch("/data/soundtracks.json")
@@ -72,11 +73,11 @@ export default function SoundtrackHall({
         : work.overseasMediaCount ?? 0),
     0,
   );
+  const visiblePlayableWorks = playableWorks.slice(0, queueLimit);
 
   return (
     <section
       ref={section}
-      id="listening"
       className="section listening-section"
       aria-busy={!items && !error}
     >
@@ -102,7 +103,7 @@ export default function SoundtrackHall({
         </div>
         {playableWorks.length > 0 ? (
           <div className="audiovisual-queue-grid">
-            {playableWorks.map((work) => (
+            {visiblePlayableWorks.map((work) => (
               <Link
                 href={"/works/" + work.id + "#audiovisual-space"}
                 className="audiovisual-queue-card"
@@ -127,6 +128,14 @@ export default function SoundtrackHall({
             <span>
               当前线路还没有完成播放核验的作品；作品档案仍可进入，但不会加载不明播放器。
             </span>
+          </div>
+        )}
+        {playableWorks.length > visiblePlayableWorks.length && (
+          <div className="audiovisual-queue-more">
+            <span>当前展示 {visiblePlayableWorks.length} / {playableWorks.length} 部作品</span>
+            <button className="button compact" onClick={() => setQueueLimit((value) => Math.min(value + 12, playableWorks.length))}>
+              再显示 12 部
+            </button>
           </div>
         )}
         <p className="audiovisual-queue-note">

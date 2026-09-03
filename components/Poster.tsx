@@ -37,7 +37,8 @@ export function Poster({
         <img
           src={work.poster ?? ""}
           alt={decorative ? "" : work.title + "海报"}
-          loading={decorative ? "eager" : "lazy"}
+          loading="lazy"
+          decoding="async"
           width="400"
           height="600"
           onError={() => setFailedImageKey(imageKey)}

@@ -7409,3 +7409,132 @@ html[data-theme="day"] .armor-card-facts i { color: #a71938; }
   .armor-card-title-line .armor-card-note,
   .armor-card-facts { font-size: 9px; }
 }
+
+/* Armor cards use the same physical-card interaction as character cards.
+   The back deliberately contains text only, so turning a card does not cause
+   the browser to decode a second copy of every large armor image. */
+.armor-flip-card {
+  padding: 0;
+  cursor: pointer;
+  perspective: 1100px;
+}
+.armor-card-flipper {
+  display: grid;
+  min-width: 0;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 520ms cubic-bezier(.2,.7,.2,1);
+}
+.armor-flip-card.is-flipped .armor-card-flipper { transform: rotateY(180deg); }
+.armor-card-face {
+  grid-area: 1 / 1;
+  min-width: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+.armor-card-front { z-index: 1; }
+.armor-card-back {
+  transform: rotateY(180deg);
+  background: radial-gradient(circle at 100% 0%, #ed677c28, transparent 46%), linear-gradient(150deg, #202c3e, #101722 72%);
+  color: #eaf1fa;
+}
+.armor-card-back > strong {
+  margin-top: 34px;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 1.15;
+}
+.armor-card-back > small:not(.armor-card-flip-hint) {
+  margin-top: 8px;
+  color: #b9cae1;
+  font-size: 11px;
+  font-weight: 600;
+}
+.armor-detail-list {
+  display: grid;
+  gap: 9px;
+  margin: 19px 0 12px;
+}
+.armor-detail-list div {
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr);
+  gap: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #61738a55;
+}
+.armor-detail-list dt { color: #ffb8c2; font-size: 10px; font-weight: 700; }
+.armor-detail-list dd { margin: 0; color: #e3edf8; font-size: 11px; line-height: 1.55; }
+.armor-card-back > p {
+  margin: 3px 0 13px;
+  color: #c2d1e0;
+  font-size: 10px;
+  line-height: 1.65;
+}
+.armor-back-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  color: #ffd0d6;
+  font-size: 10px;
+  text-decoration: none;
+}
+.armor-back-source:hover,
+.armor-back-source:focus-visible { color: #ffffff; text-decoration: underline; }
+.armor-card-flip-hint {
+  display: block;
+  margin-top: auto;
+  padding-top: 12px;
+  color: #ffb8c2;
+  font-size: 8px;
+  letter-spacing: .04em;
+}
+html[data-theme="day"] .armor-card-back { background: linear-gradient(150deg, #ffffff, #e7eef6); color: #17212b; }
+html[data-theme="day"] .armor-card-back > strong { color: #142235; }
+html[data-theme="day"] .armor-card-back > small:not(.armor-card-flip-hint) { color: #486078; }
+html[data-theme="day"] .armor-detail-list div { border-color: #9caec155; }
+html[data-theme="day"] .armor-detail-list dt,
+html[data-theme="day"] .armor-card-flip-hint,
+html[data-theme="day"] .armor-back-source { color: #a71938; }
+html[data-theme="day"] .armor-detail-list dd,
+html[data-theme="day"] .armor-card-back > p { color: #30495f; }
+@media (max-width: 700px) {
+  .armor-card-back > strong { font-size: 20px; }
+  .armor-card-back > small:not(.armor-card-flip-hint),
+  .armor-detail-list dt,
+  .armor-detail-list dd,
+  .armor-card-back > p,
+  .armor-back-source { font-size: 9px; }
+}
+
+/* Lightweight placeholders preserve navigation anchors while below-the-fold
+   visual systems wait for the visitor to approach them. */
+.deferred-section {
+  min-height: 150px;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  margin: 0;
+  color: #afbed0;
+}
+.deferred-section p { margin: 8px 0 0; font-size: 13px; }
+.audiovisual-queue-more {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 15px;
+  padding-top: 14px;
+  border-top: 1px solid #415063;
+  color: #aebcd0;
+  font-size: 11px;
+}
+html[data-theme="day"] .deferred-section { color: #40576c; }
+html[data-theme="day"] .audiovisual-queue-more { border-color: #c1ceda; color: #50677d; }
+@media (max-width: 700px) {
+  .deferred-section { min-height: 112px; }
+  .audiovisual-queue-more { align-items: flex-start; flex-direction: column; }
+}

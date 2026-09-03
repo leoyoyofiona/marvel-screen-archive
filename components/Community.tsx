@@ -339,7 +339,7 @@ export default function Community() {
     }
   }
   return (
-    <section id="community" className="section community-section" ref={section}>
+    <section className="section community-section" ref={section}>
       <div className="section-heading">
         <div>
           <span className="eyebrow">06 / FANS AROUND THE WORLD</span>

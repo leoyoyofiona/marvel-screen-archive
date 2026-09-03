@@ -145,6 +145,8 @@ function CardPortrait({ card, image, visualKind = "pending", large = false, onCl
       <img
         src={image ?? characterPortraitFallback}
         alt={`${card.alias}${visualKind === "still" ? "剧中角色画面" : visualKind === "key-art" ? "角色主视觉海报" : "角色画面待核验"}`}
+        loading="lazy"
+        decoding="async"
         onError={(event) => {
           event.currentTarget.src = characterPortraitFallback;
         }}
@@ -210,11 +212,50 @@ function ArmorFigure({ index, name, photo, source, credit }: {
 }) {
   return (
     <div className="armor-art">
-      <img className="armor-photo" src={photo} alt={`${name}单件正面全身战甲视觉档案`} />
+      <img className="armor-photo" src={photo} alt={`${name}单件正面全身战甲视觉档案`} loading="lazy" decoding="async" />
       <span className="armor-photo-shade" />
       <span className="armor-art-index">ARMOR EVOLUTION / {String(index + 1).padStart(2, "0")}</span>
-      <a className="armor-art-credit" href={source} target="_blank" rel="noopener noreferrer">{credit} · 图片来源</a>
+      <a className="armor-art-credit" href={source} target="_blank" rel="noopener noreferrer" onClick={(event) => event.stopPropagation()}>{credit} · 图片来源</a>
     </div>
+  );
+}
+
+function ArmorCard({ entry, index }: { entry: (typeof verifiedArmorEntries)[number]; index: number }) {
+  const [flipped, setFlipped] = useState(false);
+  const fallback = getArmorDetail(entry.name, index);
+  const detail = { ...fallback, time: entry.time, origin: entry.origin };
+  function toggle(event?: React.MouseEvent | React.KeyboardEvent) {
+    if (event && "key" in event && event.key !== "Enter" && event.key !== " ") return;
+    event?.preventDefault();
+    setFlipped((value) => !value);
+  }
+  return (
+    <article
+      className={`armor-card armor-flip-card${flipped ? " is-flipped" : ""}`}
+      tabIndex={0}
+      role="button"
+      aria-label={`${flipped ? "翻回" : "翻看"}${entry.name}战甲档案`}
+      onClick={toggle}
+      onKeyDown={toggle}
+    >
+      <div className="armor-card-flipper">
+        <div className="armor-card-face armor-card-front" aria-hidden={flipped}>
+          <span className="card-corner">ARMOR FILE</span>
+          <ArmorFigure index={index} name={entry.name} photo={entry.photo} source={entry.source} credit={entry.credit} />
+          <span className="armor-card-copy"><small>{detail.time} · {detail.origin}</small><span className="armor-card-title-line"><strong>{entry.name}</strong><small className="armor-card-note">MCU Mark</small></span><span className="armor-card-facts"><span><i>特点</i>{detail.feature}</span><span><i>参数</i>{detail.specs}</span></span></span>
+          <small className="armor-card-flip-hint">点击卡片翻牌，查看战甲档案</small>
+        </div>
+        <div className="armor-card-face armor-card-back" aria-hidden={!flipped}>
+          <span className="card-corner">ARMOR ARCHIVE / 战甲档案</span>
+          <strong>{entry.name}</strong>
+          <small>{detail.time} · {detail.origin}</small>
+          <dl className="armor-detail-list"><div><dt>装备特点</dt><dd>{detail.feature}</dd></div><div><dt>核心参数</dt><dd>{detail.specs}</dd></div><div><dt>图像核验</dt><dd>正面全身战甲图 · 已逐张审查</dd></div></dl>
+          <p>这张卡片仅展示该型号单独战甲视觉，不以玩具、Cosplay、展会照片或不完整侧身图替代。</p>
+          <a className="armor-back-source" href={entry.source} target="_blank" rel="noopener noreferrer" onClick={(event) => event.stopPropagation()}>查看图片来源 <ArrowUpRight size={13} /></a>
+          <small className="armor-card-flip-hint">点击翻回战甲正面</small>
+        </div>
+      </div>
+    </article>
   );
 }
 
@@ -241,7 +282,7 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
   const verifiedCharacterStillCount = new Set(Object.values(characterStillOverrides)).size;
   const keyVisualCount = cards.filter((card) => visualFor(card).kind === "key-art").length;
   return (
-    <section id="lore" className="section lore-section">
+    <section className="section lore-section">
       <div className="section-heading">
         <div>
           <span className="eyebrow">04 / HEROES · VILLAINS · ARMOR</span>
@@ -277,7 +318,7 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
       </div>
       <div className="armor-atlas">
         <div className="armor-heading"><div><span className="eyebrow">IRON MAN ARMOR INDEX / 装甲谱</span><h3>钢铁侠装甲：从 Mark I 到纳米时代</h3><p>现展示 {verifiedArmorEntries.length} 套逐张检查过的正面全身战甲图。每张卡片均保留其独立型号来源；玩具、Cosplay、展会照和侧身残缺图已排除。</p></div><Shield size={29} /></div>
-        <div className="armor-grid">{verifiedArmorEntries.map((entry, index) => { const fallback = getArmorDetail(entry.name, index); const detail = { ...fallback, time: entry.time, origin: entry.origin }; return <article className="armor-card" key={entry.name}><span className="card-corner">ARMOR FILE</span><ArmorFigure index={index} name={entry.name} photo={entry.photo} source={entry.source} credit={entry.credit} /><span className="armor-card-copy"><small>{detail.time} · {detail.origin}</small><span className="armor-card-title-line"><strong>{entry.name}</strong><small className="armor-card-note">MCU Mark</small></span><span className="armor-card-facts"><span><i>特点</i>{detail.feature}</span><span><i>参数</i>{detail.specs}</span></span></span></article>; })}</div>
+        <div className="armor-grid">{verifiedArmorEntries.map((entry, index) => <ArmorCard entry={entry} index={index} key={entry.name} />)}</div>
         <a className="text-link" href="https://www.marvel.com/watch/digital-series/earth-s-mightiest-show/all-of-the-armor-worn-by-tony-stark-in-the-mcu" target="_blank" rel="noopener noreferrer">查看 Marvel 官方装甲专题 <ArrowUpRight size={14} /></a>
       </div>
       <div className="storyline-atlas">

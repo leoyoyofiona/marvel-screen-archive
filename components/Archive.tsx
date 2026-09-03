@@ -1,7 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -18,8 +18,14 @@ import { Header, Disclaimer, Footer } from "./Chrome";
 import { WorkCard } from "./Poster";
 import { ReferenceChecklist } from "./ReferenceChecklist";
 import Timeline from "./Timeline";
-import SoundtrackHall from "./SoundtrackHall";
-import LoreAtlas from "./LoreAtlas";
+const LoreAtlas = dynamic(() => import("./LoreAtlas"), {
+  loading: () => <div className="loading-section">正在准备角色卡牌与装甲图鉴…</div>,
+  ssr: false,
+});
+const SoundtrackHall = dynamic(() => import("./SoundtrackHall"), {
+  loading: () => <div className="loading-section">正在准备视听厅…</div>,
+  ssr: false,
+});
 const Relationships = dynamic(() => import("./Relationships"), {
   loading: () => <div className="loading-section">正在打开关系宇宙…</div>,
   ssr: false,
@@ -29,6 +35,31 @@ const Community = dynamic(() => import("./Community"), {
   ssr: false,
 });
 const PAGE_SIZE = 20;
+
+// Do not hydrate the 50-card armor atlas, video queue or world map while a
+// visitor is still reading the archive. This keeps the main thread responsive
+// on mainland mobile networks and mounts each section before it enters view.
+function DeferredMount({ id, label, children }: { id: string; label: string; children: ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+    if (!("IntersectionObserver" in window)) {
+      const frame = requestAnimationFrame(() => setReady(true));
+      return () => cancelAnimationFrame(frame);
+    }
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      setReady(true);
+      observer.disconnect();
+    }, { rootMargin: "720px 0px", threshold: 0.01 });
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+  return <div id={id} ref={ref} className="deferred-mount">{ready ? children : <section className="section deferred-section" aria-busy="true"><span className="eyebrow">ARCHIVE ON DEMAND</span><p>{label}</p></section>}</div>;
+}
+
 export default function Archive({ data }: { data: ArchiveCatalogue }) {
   const [region, setRegion] = useState<"mainland" | "overseas">("mainland"),
     [query, setQuery] = useState(""),
@@ -562,10 +593,16 @@ export default function Archive({ data }: { data: ArchiveCatalogue }) {
               </button>
             </nav>
           </section>
-          <LoreAtlas works={data.works} />
+          <DeferredMount id="lore" label="角色卡牌与钢铁侠装甲将在接近本区域时加载。">
+            <LoreAtlas works={data.works} />
+          </DeferredMount>
           <Relationships />
-          <SoundtrackHall region={region} works={data.works} />
-          <Community />
+          <DeferredMount id="listening" label="视听厅将在接近本区域时加载。">
+            <SoundtrackHall region={region} works={data.works} />
+          </DeferredMount>
+          <DeferredMount id="community" label="影迷现场将在接近本区域时加载。">
+            <Community />
+          </DeferredMount>
         </div>
       </main>
       <Footer />
