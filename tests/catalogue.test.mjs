@@ -26,6 +26,10 @@ const relationshipPayload = JSON.parse(
     "utf8",
   ),
 );
+const relationshipsSource = await readFile(
+  new URL("../components/Relationships.tsx", import.meta.url),
+  "utf8",
+);
 const soundtrackLinks = JSON.parse(
   await readFile(
     new URL("../public/data/soundtracks.json", import.meta.url),
@@ -374,6 +378,13 @@ test("every indexed person and curated character has a visible local avatar", ()
       character.portrait?.startsWith("/media/characters/"),
     ),
   );
+});
+test("role relationship portraits never use synthetic character SVGs", () => {
+  const block = relationshipsSource.match(
+    /const rolePortraits: Record<string, string> = \{([\s\S]*?)\n\};/,
+  )?.[1] ?? "";
+  assert.match(block, /\/media\/character-stills\//);
+  assert.doesNotMatch(block, /\/media\/characters\//);
 });
 test("the mainland default route can render every archive image without an external asset host", () => {
   for (const work of data.works) {
