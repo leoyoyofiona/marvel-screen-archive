@@ -785,6 +785,27 @@ function RelationshipGraph({
                     };
                     svg.current?.setPointerCapture(e.pointerId);
                   }}
+                  onPointerUp={(e) => {
+                    e.stopPropagation();
+                    const currentDrag = drag.current;
+                    if (!currentDrag) return;
+                    const moved = Math.hypot(
+                      e.clientX - currentDrag.startX,
+                      e.clientY - currentDrag.startY,
+                    );
+                    const node = simulation.current
+                      ?.nodes()
+                      .find((candidate) => candidate.id === n.id);
+                    if (node && node.kind !== "center") {
+                      node.fx = null;
+                      node.fy = null;
+                    }
+                    simulation.current?.alphaTarget(0);
+                    drag.current = null;
+                    if (moved < 8 && (n.personId || n.characterId)) {
+                      choose(n.personId ?? n.characterId ?? "");
+                    }
+                  }}
                 >
                   {(n.kind === "work" || n.kind === "center" || n.id === selected) && (
                     <title>
