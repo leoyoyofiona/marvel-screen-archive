@@ -1003,6 +1003,20 @@ function RelationshipGraph({
                       top: `${(y / 450) * 100}%`,
                     }}
                     onClick={() => choose(entityId)}
+                    onPointerDown={(event) => {
+                      event.stopPropagation();
+                      choose(entityId);
+                    }}
+                    onMouseDown={(event) => {
+                      event.stopPropagation();
+                      choose(entityId);
+                    }}
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        choose(entityId);
+                      }
+                    }}
                   />
                 );
               })}
