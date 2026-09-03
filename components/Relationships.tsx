@@ -771,6 +771,14 @@ function RelationshipGraph({
                   }}
                   onPointerDown={(e) => {
                     e.stopPropagation();
+                    // Select on pointerdown as well as pointerup. The SVG
+                    // captures the pointer for dragging, and some browsers
+                    // retarget the later click to the root SVG. Selecting
+                    // here keeps a normal mouse tap reliable without
+                    // changing the drag gesture.
+                    if (n.personId || n.characterId) {
+                      choose(n.personId ?? n.characterId ?? "");
+                    }
                     drag.current = {
                       id: n.id,
                       startX: e.clientX,
