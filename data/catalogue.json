@@ -4095,9 +4095,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/spider-man-the-new-animated-series-2003-animated-series.svg",
+      "poster": "/media/fandom-posters/spider-man-the-new-animated-series-2003-animated-series.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/Spider-Man%3A_The_New_Animated_Series",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -4144,7 +4144,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/Spider-Man%3A_The_New_Animated_Series",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "x2-2003-film",
@@ -6024,9 +6026,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/iron-man-armored-adventures-2009-animated-series.svg",
+      "poster": "/media/fandom-posters/iron-man-armored-adventures-2009-animated-series.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/Iron_Man%3A_Armored_Adventures",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -6089,7 +6091,9 @@
           "source": "Bilibili 公开页面；仅作为大陆候选来源索引，尚未完成浏览器播放核验，不在前台显示播放按钮"
         }
       ],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/Iron_Man%3A_Armored_Adventures",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "marvel-superheroes-what-the-2009-animated-series",
@@ -7485,9 +7489,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/thor-loki-blood-brothers-2011-animated-series.svg",
+      "poster": "/media/fandom-posters/thor-loki-blood-brothers-2011-animated-series.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/Thor_%26_Loki%3A_Blood_Brothers",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -7508,7 +7512,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/Thor_%26_Loki%3A_Blood_Brothers",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "thor-tales-of-asgard-2011-animated-film",
@@ -7807,9 +7813,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/fury-files-2012-animated-series.svg",
+      "poster": "/media/fandom-posters/fury-files-2012-animated-series.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/The_Fury_Files",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -7833,7 +7839,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/The_Fury_Files",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "item-47-2012-short",
@@ -8679,9 +8687,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/hulk-and-the-agents-of-s-m-a-s-h-2013-animated-series.svg",
+      "poster": "/media/fandom-posters/hulk-and-the-agents-of-s-m-a-s-h-2013-animated-series.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/Hulk_and_the_Agents_of_S.M.A.S.H.",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -8729,7 +8737,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/Hulk_and_the_Agents_of_S.M.A.S.H.",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "inhumans-2013-animated-series",
@@ -9072,9 +9082,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/lego-marvel-super-heroes-maximum-overload-2013-short.svg",
+      "poster": "/media/fandom-posters/lego-marvel-super-heroes-maximum-overload-2013-short.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/LEGO_Marvel_Super_Heroes%3A_Maximum_Overload",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -9095,7 +9105,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/LEGO_Marvel_Super_Heroes%3A_Maximum_Overload",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "marvel-super-heroes-4d-bali-2013-short",
@@ -9203,9 +9215,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/phineas-and-ferb-mission-marvel-2013-special.svg",
+      "poster": "/media/fandom-posters/phineas-and-ferb-mission-marvel-2013-special.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/Phineas_and_Ferb%3A_Mission_Marvel",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -9234,7 +9246,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/Phineas_and_Ferb%3A_Mission_Marvel",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "the-wolverine-2013-film",
@@ -11262,9 +11276,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/lego-marvel-super-heroes-avengers-reassembled-2015-short.svg",
+      "poster": "/media/fandom-posters/lego-marvel-super-heroes-avengers-reassembled-2015-short.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/LEGO_Marvel_Super_Heroes%3A_Avengers_Reassembled",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -11285,7 +11299,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/LEGO_Marvel_Super_Heroes%3A_Avengers_Reassembled",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "marvel-super-hero-adventures-frost-fight-2015-animated-film",
@@ -11301,9 +11317,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/marvel-super-hero-adventures-frost-fight-2015-animated-film.svg",
+      "poster": "/media/fandom-posters/marvel-super-hero-adventures-frost-fight-2015-animated-film.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/Marvel_Super_Hero_Adventures%3A_Frost_Fight!",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -11334,7 +11350,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/Marvel_Super_Hero_Adventures%3A_Frost_Fight!",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "powers-2015-series",
@@ -11415,9 +11433,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/whih-newsfront-2015-series.svg",
+      "poster": "/media/fandom-posters/whih-newsfront-2015-series.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/WHIH_Newsfront",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -11449,7 +11467,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/WHIH_Newsfront",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "wolverine-versus-sabretooth-reborn-2015-animated-series",
@@ -12074,9 +12094,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/marvel-funko-shorts-2016-animated-series.svg",
+      "poster": "/media/fandom-posters/marvel-funko-shorts-2016-animated-series.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/Marvel_Funko_Shorts",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -12100,7 +12120,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/Marvel_Funko_Shorts",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "marvel-video-comics-a-k-a-marvel-ultimate-comics-2016-animated-series",
@@ -12487,9 +12509,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/big-hero-6-the-series-2017-animated-series.svg",
+      "poster": "/media/fandom-posters/big-hero-6-the-series-2017-animated-series.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/Big_Hero_6%3A_The_Series",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -12538,7 +12560,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/Big_Hero_6%3A_The_Series",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "official-eat-the-universe-digital-series",
@@ -13184,9 +13208,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/lego-marvel-super-heroes-guardians-of-the-galaxy-the-thanos-threat-2017-short.svg",
+      "poster": "/media/fandom-posters/lego-marvel-super-heroes-guardians-of-the-galaxy-the-thanos-threat-2017-short.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/LEGO_Marvel_Super_Heroes_-_Guardians_of_the_Galaxy%3A_The_Thanos_Threat",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -13207,7 +13231,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/LEGO_Marvel_Super_Heroes_-_Guardians_of_the_Galaxy%3A_The_Thanos_Threat",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "logan-2017-film",
@@ -13702,9 +13728,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/marvel-s-ant-man-2017-animated-series.svg",
+      "poster": "/media/fandom-posters/marvel-s-ant-man-2017-animated-series.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/Marvel's_Ant-Man",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -13753,7 +13779,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/Marvel's_Ant-Man",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "marvel-s-rocket-groot-2017-animated-series",
@@ -15598,9 +15626,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/lego-marvel-super-heroes-black-panther-trouble-in-wakanda-2018-short.svg",
+      "poster": "/media/fandom-posters/lego-marvel-super-heroes-black-panther-trouble-in-wakanda-2018-short.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/LEGO_Marvel_Super_Heroes_%E2%80%93_Black_Panther%3A_Trouble_in_Wakanda",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -15621,7 +15649,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/LEGO_Marvel_Super_Heroes_%E2%80%93_Black_Panther%3A_Trouble_in_Wakanda",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "official-marvel-by-the-numbers-digital-series",
@@ -16319,9 +16349,9 @@
       "phase": null,
       "summary": "Following a string of mysterious deaths in Burns, Alaska, Special Agents Sally Pierce and Tad Marshall arrive to investigate.",
       "highlights": [],
-      "poster": "/media/archive-posters/official-wolverine-the-long-night-podcast.svg",
+      "poster": "/media/fandom-posters/official-wolverine-the-long-night-podcast.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/Wolverine%3A_The_Long_Night",
       "verification": "primary-partial",
       "sourceFamily": "official-digital",
       "edition": null,
@@ -16340,7 +16370,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/Wolverine%3A_The_Long_Night",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "official-women-of-marvel-digital-series",
@@ -16794,9 +16826,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/lego-marvel-spider-man-vexed-by-venom-2019-short.svg",
+      "poster": "/media/fandom-posters/lego-marvel-spider-man-vexed-by-venom-2019-short.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/LEGO_Marvel_Spider-Man%3A_Vexed_by_Venom",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -16817,7 +16849,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/LEGO_Marvel_Spider-Man%3A_Vexed_by_Venom",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "marvel-rising-battle-of-the-bands-2019-short",
@@ -16833,9 +16867,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/marvel-rising-battle-of-the-bands-2019-short.svg",
+      "poster": "/media/fandom-posters/marvel-rising-battle-of-the-bands-2019-short.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/Marvel_Rising%3A_Battle_of_the_Bands",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -16867,7 +16901,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/Marvel_Rising%3A_Battle_of_the_Bands",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "marvel-rising-chasing-ghosts-2019-short",
@@ -16883,9 +16919,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/marvel-rising-chasing-ghosts-2019-short.svg",
+      "poster": "/media/fandom-posters/marvel-rising-chasing-ghosts-2019-short.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/Marvel_Rising%3A_Chasing_Ghosts",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -16917,7 +16953,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/Marvel_Rising%3A_Chasing_Ghosts",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "marvel-rising-heart-of-iron-2019-short",
@@ -16933,9 +16971,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/marvel-rising-heart-of-iron-2019-short.svg",
+      "poster": "/media/fandom-posters/marvel-rising-heart-of-iron-2019-short.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/Marvel_Rising%3A_Heart_of_Iron",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -16967,7 +17005,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/Marvel_Rising%3A_Heart_of_Iron",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "marvel-rising-operation-shuri-2019-short",
@@ -16983,9 +17023,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/marvel-rising-operation-shuri-2019-short.svg",
+      "poster": "/media/fandom-posters/marvel-rising-operation-shuri-2019-short.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/Marvel_Rising%3A_Operation_Shuri",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -17017,7 +17057,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/Marvel_Rising%3A_Operation_Shuri",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "marvel-rising-playing-with-fire-2019-short",
@@ -17033,9 +17075,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/marvel-rising-playing-with-fire-2019-short.svg",
+      "poster": "/media/fandom-posters/marvel-rising-playing-with-fire-2019-short.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/Marvel_Rising%3A_Playing_With_Fire",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -17067,7 +17109,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/Marvel_Rising%3A_Playing_With_Fire",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "marvel-studios-expanding-the-universe-2019-documentary",
@@ -17683,9 +17727,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/lego-marvel-avengers-climate-conundrum-2020-animated-series.svg",
+      "poster": "/media/fandom-posters/lego-marvel-avengers-climate-conundrum-2020-animated-series.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/LEGO_Marvel_Avengers%3A_Climate_Conundrum",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -17706,7 +17750,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/LEGO_Marvel_Avengers%3A_Climate_Conundrum",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "marvel-battleworld-2020-animated-series",
@@ -18494,9 +18540,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/lego-marvel-avengers-loki-in-training-2021-short.svg",
+      "poster": "/media/fandom-posters/lego-marvel-avengers-loki-in-training-2021-short.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/LEGO_Marvel_Avengers%3A_Loki_in_Training",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -18517,7 +18563,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/LEGO_Marvel_Avengers%3A_Loki_in_Training",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "loki-2021-series",
@@ -20191,9 +20239,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/lego-marvel-avengers-time-twisted-2022-short.svg",
+      "poster": "/media/fandom-posters/lego-marvel-avengers-time-twisted-2022-short.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/LEGO_Marvel_Avengers%3A_Time_Twisted",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -20214,7 +20262,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/LEGO_Marvel_Avengers%3A_Time_Twisted",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "official-marvel-s-squirrel-girl-the-unbeatable-radio-show-podcast",
@@ -20230,9 +20280,9 @@
       "phase": null,
       "summary": "Squirrel Girl has taken down Thanos and Doctor Doom – but now she faces something far more terrifying… living authentically.",
       "highlights": [],
-      "poster": "/media/archive-posters/official-marvel-s-squirrel-girl-the-unbeatable-radio-show-podcast.svg",
+      "poster": "/media/fandom-posters/official-marvel-s-squirrel-girl-the-unbeatable-radio-show-podcast.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/Marvel's_Squirrel_Girl%3A_The_Unbeatable_Radio_Show!",
       "verification": "primary-partial",
       "sourceFamily": "official-digital",
       "edition": null,
@@ -20251,7 +20301,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/Marvel's_Squirrel_Girl%3A_The_Unbeatable_Radio_Show!",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "moon-knight-2022-series",
@@ -24704,9 +24756,9 @@
       "phase": null,
       "summary": "这份档案保留作品年份、媒介类型与演职员索引。剧情简介和重要事件仍在逐条整理；未经核验的内容不会补写成事实。",
       "highlights": [],
-      "poster": "/media/archive-posters/spidey-and-the-avengers-halloween-team-up-2026-special.svg",
+      "poster": "/media/fandom-posters/spidey-and-the-avengers-halloween-team-up-2026-special.webp",
       "backdrop": null,
-      "posterCredit": "档案设计海报 · 非官方素材 · 由本项目原创生成",
+      "posterCredit": "Marvel Database public reference image · rights belong to respective holders · 来源 https://marvel.fandom.com/wiki/Spidey_and_the_Avengers%3A_Halloween_Team-Up!",
       "verification": "catalogue-only",
       "sourceFamily": "core",
       "edition": null,
@@ -24728,7 +24780,9 @@
         }
       ],
       "media": [],
-      "watchLinks": []
+      "watchLinks": [],
+      "posterSource": "https://marvel.fandom.com/wiki/Spidey_and_the_Avengers%3A_Halloween_Team-Up!",
+      "posterVisualStatus": "visual-reviewed-title-matched"
     },
     {
       "id": "the-punisher-one-last-kill-2026-special",
@@ -30284,11 +30338,11 @@
         "avengers-doomsday-2026-film"
       ],
       "source": "https://en.wikipedia.org/wiki/Patrick_Stewart",
-      "portrait": "/media/people/fallback/p-167fbcbebbe2.svg",
-      "portraitKind": "identity-fallback",
-      "portraitCredit": "本地生成的姓名身份头像，不是真人照片",
-      "portraitSource": null,
-      "portraitLicenseUrl": null
+      "portrait": "/media/people/p-167fbcbebbe2-5316553ecc.jpg",
+      "portraitKind": "wikimedia-commons",
+      "portraitCredit": "Own work",
+      "portraitSource": "https://commons.wikimedia.org/wiki/File:Patrick_Stewart_by_Gage_Skidmore_2.jpg",
+      "portraitLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
     },
     {
       "id": "p-6320c7d18dfd",
@@ -31577,11 +31631,11 @@
         "spider-man-no-way-home-2021-film"
       ],
       "source": "https://en.wikipedia.org/wiki/Alfred_Molina",
-      "portrait": "/media/people/fallback/p-37dee7f64766.svg",
-      "portraitKind": "identity-fallback",
-      "portraitCredit": "本地生成的姓名身份头像，不是真人照片",
-      "portraitSource": null,
-      "portraitLicenseUrl": null
+      "portrait": "/media/people/p-37dee7f64766-168137239b.jpg",
+      "portraitKind": "wikimedia-commons",
+      "portraitCredit": "Own work",
+      "portraitSource": "https://commons.wikimedia.org/wiki/File:Alfred_Molina_2021.jpg",
+      "portraitLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
     },
     {
       "id": "p-ab50f6c179eb",
@@ -31851,11 +31905,11 @@
         "fantastic-four-rise-of-the-silver-surfer-2007-film"
       ],
       "source": "https://en.wikipedia.org/wiki/Ioan_Gruffudd",
-      "portrait": "/media/people/fallback/p-7eaba33702f5.svg",
-      "portraitKind": "identity-fallback",
-      "portraitCredit": "本地生成的姓名身份头像，不是真人照片",
-      "portraitSource": null,
-      "portraitLicenseUrl": null
+      "portrait": "/media/people/p-7eaba33702f5-cca53fcf0d.jpg",
+      "portraitKind": "wikimedia-commons",
+      "portraitCredit": "Ioan Gruffudd, Nestor Carbonell, Sarah MIchelle Gellar & Kristoffer Polaha",
+      "portraitSource": "https://commons.wikimedia.org/wiki/File:Ioan_Gruffudd_at_the_2011_Comic-Con_International.jpg",
+      "portraitLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
     },
     {
       "id": "p-a460aac3cb9e",
@@ -31932,11 +31986,11 @@
         "runaways-2017-series"
       ],
       "source": "https://en.wikipedia.org/wiki/Julian_McMahon",
-      "portrait": "/media/people/fallback/p-c239691de608.svg",
-      "portraitKind": "identity-fallback",
-      "portraitCredit": "本地生成的姓名身份头像，不是真人照片",
-      "portraitSource": null,
-      "portraitLicenseUrl": null
+      "portrait": "/media/people/p-c239691de608-ca9dc3115c.jpg",
+      "portraitKind": "wikimedia-commons",
+      "portraitCredit": "https://www.flickr.com/photos/dannycasillas/6524545325/",
+      "portraitSource": "https://commons.wikimedia.org/wiki/File:Julian_McMahon_Dec_2011_(cropped).jpg",
+      "portraitLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
     },
     {
       "id": "p-e39222c3e35f",
@@ -32806,11 +32860,11 @@
         "avengers-endgame-2019-film"
       ],
       "source": "https://en.wikipedia.org/wiki/Gwyneth_Paltrow",
-      "portrait": "/media/people/fallback/p-241e4424f6a4.svg",
-      "portraitKind": "identity-fallback",
-      "portraitCredit": "本地生成的姓名身份头像，不是真人照片",
-      "portraitSource": null,
-      "portraitLicenseUrl": null
+      "portrait": "/media/people/p-241e4424f6a4-4ebf62fea1.jpg",
+      "portraitKind": "wikimedia-commons",
+      "portraitCredit": "Own work",
+      "portraitSource": "https://commons.wikimedia.org/wiki/File:Gwyneth_Paltrow_-_Marty_Supreme.jpg",
+      "portraitLicenseUrl": "https://creativecommons.org/licenses/by/4.0"
     },
     {
       "id": "p-423aec01a01c",
@@ -32840,11 +32894,11 @@
         "iron-man-2008-film"
       ],
       "source": "https://en.wikipedia.org/wiki/Shaun_Toub",
-      "portrait": "/media/people/fallback/p-d8ff5e48be30.svg",
-      "portraitKind": "identity-fallback",
-      "portraitCredit": "本地生成的姓名身份头像，不是真人照片",
-      "portraitSource": null,
-      "portraitLicenseUrl": null
+      "portrait": "/media/people/p-d8ff5e48be30-9b0d8edb76.jpg",
+      "portraitKind": "wikimedia-commons",
+      "portraitCredit": "Shaun_Toub_2011.jpg",
+      "portraitSource": "https://commons.wikimedia.org/wiki/File:Shaun_Toub_2011_cropped.jpg",
+      "portraitLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
     },
     {
       "id": "p-fc3423b97612",
@@ -33975,11 +34029,11 @@
         "stuntnuts-the-movie-undated-film"
       ],
       "source": "https://en.wikipedia.org/wiki/Sam_Rockwell",
-      "portrait": "/media/people/fallback/p-aff6e81a3532.svg",
-      "portraitKind": "identity-fallback",
-      "portraitCredit": "本地生成的姓名身份头像，不是真人照片",
-      "portraitSource": null,
-      "portraitLicenseUrl": null
+      "portrait": "/media/people/p-aff6e81a3532-7311f42928.jpg",
+      "portraitKind": "wikimedia-commons",
+      "portraitCredit": "Own work",
+      "portraitSource": "https://commons.wikimedia.org/wiki/File:Sam_Rockwell-3953.jpg",
+      "portraitLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
     },
     {
       "id": "p-a2859cc7fe21",
@@ -33992,11 +34046,11 @@
         "iron-man-2-2010-film"
       ],
       "source": "https://en.wikipedia.org/wiki/Mickey_Rourke",
-      "portrait": "/media/people/fallback/p-a2859cc7fe21.svg",
-      "portraitKind": "identity-fallback",
-      "portraitCredit": "本地生成的姓名身份头像，不是真人照片",
-      "portraitSource": null,
-      "portraitLicenseUrl": null
+      "portrait": "/media/people/p-a2859cc7fe21-ceb51cf53e.jpg",
+      "portraitKind": "wikimedia-commons",
+      "portraitCredit": "http://premier.gov.ru/events/news/13364/photolents.html",
+      "portraitSource": "https://commons.wikimedia.org/wiki/File:Mickey_Rourke_10_December_2010_(cropped).jpeg",
+      "portraitLicenseUrl": "https://creativecommons.org/licenses/by/4.0"
     },
     {
       "id": "p-75b188569bd5",
@@ -34648,11 +34702,11 @@
         "stuntnuts-the-movie-undated-film"
       ],
       "source": "https://en.wikipedia.org/wiki/Chris_Hemsworth",
-      "portrait": "/media/people/fallback/p-e117cfe61e3f.svg",
-      "portraitKind": "identity-fallback",
-      "portraitCredit": "本地生成的姓名身份头像，不是真人照片",
-      "portraitSource": null,
-      "portraitLicenseUrl": null
+      "portrait": "/media/people/p-e117cfe61e3f-42eea57fa5.jpg",
+      "portraitKind": "wikimedia-commons",
+      "portraitCredit": "Own work",
+      "portraitSource": "https://commons.wikimedia.org/wiki/File:Chris_Hemsworth_-_Crime_101.jpg",
+      "portraitLicenseUrl": "https://creativecommons.org/licenses/by/4.0"
     },
     {
       "id": "p-9d06cc97ca49",
@@ -34689,11 +34743,11 @@
         "avengers-doomsday-2026-film"
       ],
       "source": "https://en.wikipedia.org/wiki/Tom_Hiddleston",
-      "portrait": "/media/people/fallback/p-e2732b6d3d3c.svg",
-      "portraitKind": "identity-fallback",
-      "portraitCredit": "本地生成的姓名身份头像，不是真人照片",
-      "portraitSource": null,
-      "portraitLicenseUrl": null
+      "portrait": "/media/people/p-e2732b6d3d3c-d5f6f0eddf.jpg",
+      "portraitKind": "wikimedia-commons",
+      "portraitCredit": "Own work",
+      "portraitSource": "https://commons.wikimedia.org/wiki/File:Tom_Hiddleston_at_the_2024_Toronto_International_Film_Festival_(cropped).jpg",
+      "portraitLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
     },
     {
       "id": "p-94d938d6a715",
@@ -37024,11 +37078,11 @@
         "guardians-of-the-galaxy-vol-3-2023-film"
       ],
       "source": "https://en.wikipedia.org/wiki/Chris_Pratt",
-      "portrait": "/media/people/fallback/p-2059e0319339.svg",
-      "portraitKind": "identity-fallback",
-      "portraitCredit": "本地生成的姓名身份头像，不是真人照片",
-      "portraitSource": null,
-      "portraitLicenseUrl": null
+      "portrait": "/media/people/p-2059e0319339-51d4ed0241.jpg",
+      "portraitKind": "wikimedia-commons",
+      "portraitCredit": "Jurassic World: Fallen Kingdom Japan Premiere Red Carpet: Chris Pratt",
+      "portraitSource": "https://commons.wikimedia.org/wiki/File:Chris_Pratt_Jurassic_World_Fallen_Kingdom_Japan_Premiere_Red_Carpet_(3x4_cropped).jpg",
+      "portraitLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
     },
     {
       "id": "p-7f204d39789b",
@@ -37108,11 +37162,11 @@
         "guardians-of-the-galaxy-vol-3-2023-film"
       ],
       "source": "https://en.wikipedia.org/wiki/Bradley_Cooper",
-      "portrait": "/media/people/fallback/p-7c31d1ff1e37.svg",
-      "portraitKind": "identity-fallback",
-      "portraitCredit": "本地生成的姓名身份头像，不是真人照片",
-      "portraitSource": null,
-      "portraitLicenseUrl": null
+      "portrait": "/media/people/p-7c31d1ff1e37-bdce330155.jpg",
+      "portraitKind": "wikimedia-commons",
+      "portraitCredit": "Own work",
+      "portraitSource": "https://commons.wikimedia.org/wiki/File:Bradley_Cooper_Is_This_Thing_On-41_(cropped).jpg",
+      "portraitLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
     },
     {
       "id": "p-51cbd139ca6b",
@@ -37166,11 +37220,11 @@
         "guardians-of-the-galaxy-vol-3-2023-film"
       ],
       "source": "https://en.wikipedia.org/wiki/Karen_Gillan",
-      "portrait": "/media/people/fallback/p-08f7ac91e979.svg",
-      "portraitKind": "identity-fallback",
-      "portraitCredit": "本地生成的姓名身份头像，不是真人照片",
-      "portraitSource": null,
-      "portraitLicenseUrl": null
+      "portrait": "/media/people/p-08f7ac91e979-cf2b650d8c.jpg",
+      "portraitKind": "wikimedia-commons",
+      "portraitCredit": "Own work",
+      "portraitSource": "https://commons.wikimedia.org/wiki/File:Karen_Gillan_by_Gage_Skidmore.jpg",
+      "portraitLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
     },
     {
       "id": "p-11eb4180189f",
@@ -37538,11 +37592,11 @@
         "ant-man-and-the-wasp-quantumania-2023-film"
       ],
       "source": "https://en.wikipedia.org/wiki/Evangeline_Lilly",
-      "portrait": "/media/people/fallback/p-cac8b1228f79.svg",
-      "portraitKind": "identity-fallback",
-      "portraitCredit": "本地生成的姓名身份头像，不是真人照片",
-      "portraitSource": null,
-      "portraitLicenseUrl": null
+      "portrait": "/media/people/p-cac8b1228f79-6c09a4407e.jpg",
+      "portraitKind": "wikimedia-commons",
+      "portraitCredit": "Own work",
+      "portraitSource": "https://commons.wikimedia.org/wiki/File:Evangeline_Lilly-D.jpg",
+      "portraitLicenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
     },
     {
       "id": "p-48aa22f9d249",
@@ -38678,11 +38732,11 @@
         "black-panther-2018-film"
       ],
       "source": "https://en.wikipedia.org/wiki/Chadwick_Boseman",
-      "portrait": "/media/people/fallback/p-5164c9de5329.svg",
-      "portraitKind": "identity-fallback",
-      "portraitCredit": "本地生成的姓名身份头像，不是真人照片",
-      "portraitSource": null,
-      "portraitLicenseUrl": null
+      "portrait": "/media/people/p-5164c9de5329-72ab88f008.jpg",
+      "portraitKind": "wikimedia-commons",
+      "portraitCredit": "https://www.flickr.com/photos/gageskidmore/35852212800",
+      "portraitSource": "https://commons.wikimedia.org/wiki/File:Chadwick_Boseman_by_Gage_Skidmore_July_2017_(cropped).jpg",
+      "portraitLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
     },
     {
       "id": "p-025ece7a7df7",
@@ -38926,11 +38980,11 @@
         "doctor-strange-in-the-multiverse-of-madness-2022-film"
       ],
       "source": "https://en.wikipedia.org/wiki/Benedict_Cumberbatch",
-      "portrait": "/media/people/fallback/p-ef9918c4a7ec.svg",
-      "portraitKind": "identity-fallback",
-      "portraitCredit": "本地生成的姓名身份头像，不是真人照片",
-      "portraitSource": null,
-      "portraitLicenseUrl": null
+      "portrait": "/media/people/p-ef9918c4a7ec-935b4a4310.jpg",
+      "portraitKind": "wikimedia-commons",
+      "portraitCredit": "https://www.flickr.com/photos/bellaphon/4409531705/",
+      "portraitSource": "https://commons.wikimedia.org/wiki/File:Benedict_Cumberbatch_filming_Sherlock_cropped.jpg",
+      "portraitLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
     },
     {
       "id": "p-70e2cea9c67b",
@@ -38985,11 +39039,11 @@
         "she-hulk-attorney-at-law-2022-series"
       ],
       "source": "https://en.wikipedia.org/wiki/Benedict_Wong",
-      "portrait": "/media/people/fallback/p-a759b14de3c5.svg",
-      "portraitKind": "identity-fallback",
-      "portraitCredit": "本地生成的姓名身份头像，不是真人照片",
-      "portraitSource": null,
-      "portraitLicenseUrl": null
+      "portrait": "/media/people/p-a759b14de3c5-ad7fd3c1f0.jpg",
+      "portraitKind": "wikimedia-commons",
+      "portraitCredit": "Benedict Wong",
+      "portraitSource": "https://commons.wikimedia.org/wiki/File:Benedict_Wong_(28352087500).jpg",
+      "portraitLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
     },
     {
       "id": "p-5b724e75fff6",
@@ -42438,11 +42492,11 @@
         "venom-2018-film"
       ],
       "source": "https://en.wikipedia.org/wiki/Tom_Hardy",
-      "portrait": "/media/people/fallback/p-40b817dc528d.svg",
-      "portraitKind": "identity-fallback",
-      "portraitCredit": "本地生成的姓名身份头像，不是真人照片",
-      "portraitSource": null,
-      "portraitLicenseUrl": null
+      "portrait": "/media/people/p-40b817dc528d-c3ed91fd27.jpg",
+      "portraitKind": "wikimedia-commons",
+      "portraitCredit": "Tom_Hardy_&_Nicolas_Winding_Refn.jpg",
+      "portraitSource": "https://commons.wikimedia.org/wiki/File:Tom_Hardy.jpg",
+      "portraitLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
     },
     {
       "id": "p-b4f4c3731b1a",
@@ -42527,11 +42581,11 @@
         "the-marvels-2023-film"
       ],
       "source": "https://en.wikipedia.org/wiki/Brie_Larson",
-      "portrait": "/media/people/fallback/p-77dc11a91e97.svg",
-      "portraitKind": "identity-fallback",
-      "portraitCredit": "本地生成的姓名身份头像，不是真人照片",
-      "portraitSource": null,
-      "portraitLicenseUrl": null
+      "portrait": "/media/people/p-77dc11a91e97-7aa910b84e.jpg",
+      "portraitKind": "wikimedia-commons",
+      "portraitCredit": "Brie Larson @ the SXSW premiere of Don Jon",
+      "portraitSource": "https://commons.wikimedia.org/wiki/File:Brie_Larson_(cropped).jpg",
+      "portraitLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
     },
     {
       "id": "p-25259cc8fcc3",
@@ -49058,14 +49112,14 @@
     "posterCount": 365,
     "officialArtworkCount": 138,
     "wikipediaArtworkCount": 132,
-    "archiveDesignPosterCount": 95,
+    "archiveDesignPosterCount": 68,
     "officialDigitalSeriesCount": 41,
     "officialDigitalEpisodeTotal": 1890,
     "officialDigitalEpisodeUniquePages": 1881,
     "officialDigitalEpisodeExactSeries": 17,
     "officialDigitalEpisodeMismatchSeries": 6,
     "personPortraitCount": 1315,
-    "personRealPortraitCount": 348,
+    "personRealPortraitCount": 367,
     "mediaCount": 241,
     "playbackVerifiedMediaCount": 155,
     "mainlandMediaCount": 141,
@@ -49078,8 +49132,9 @@
       "电影与电视主目录已和 Marvel 官方索引交叉核对；历史授权、合作及品牌改编仍需继续逐条核验",
       "23 个有公开单集列表的 Marvel 官方数字系列已索引 1,881 个唯一详情页；其中 17 个系列与页面标称总数一致，6 个系列保留计数差异待核。无公开单集列表的节目与播客仍只有系列级档案",
       "角色出场为人工整理的首批关系，尚未覆盖全部角色与客串",
-      "全部 1,315 位索引人物均有头像节点，其中 348 张为带许可来源的 Wikimedia Commons 真人照片，其余使用明确标注的本地姓名身份头像；95 条记录仍使用原创档案设计海报，真实海报与经典剧照需继续逐条核验",
+      "全部 1,315 位索引人物均有头像节点，其中 356 张为带许可来源的 Wikimedia Commons 真人照片；68 条记录仍使用原创档案设计海报，真实海报与经典剧照需继续逐条核验",
       "已接入 241 条大陆／海外公开素材索引，其中 155 条为真实视频并完成播放器级来源标记；不把动态海报、资料页、搜索页或版权不明转载当作播放入口，待核验入口不会在前台显示播放按钮"
-    ]
+    ],
+    "fandomArtworkCount": 27
   }
 }

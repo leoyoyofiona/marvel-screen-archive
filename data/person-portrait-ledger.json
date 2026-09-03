@@ -1,8 +1,8 @@
 {
   "checkedAt": "2026-08-31",
   "total": 1315,
-  "realPortraits": 348,
-  "identityFallbacks": 967,
+  "realPortraits": 367,
+  "identityFallbacks": 948,
   "policy": "Wikimedia Commons images require explicit license metadata; unmatched people receive a locally generated identity portrait, never an unlicensed photo.",
   "items": [
     {
@@ -2732,11 +2732,18 @@
     {
       "personId": "p-167fbcbebbe2",
       "name": "Patrick Stewart",
-      "portrait": "/media/people/fallback/p-167fbcbebbe2.svg",
-      "kind": "identity-fallback",
+      "portrait": "/media/people/p-167fbcbebbe2-5316553ecc.jpg",
+      "fallback": "/media/people/fallback/p-167fbcbebbe2.svg",
+      "kind": "wikimedia-commons",
       "publish": true,
-      "checkedAt": "2026-08-31",
-      "error": "HTTP 429"
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Patrick_Stewart_by_Gage_Skidmore_2.jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Patrick_Stewart_by_Gage_Skidmore_2.jpg/500px-Patrick_Stewart_by_Gage_Skidmore_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "credit": "Own work",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sha256": "5316553ecc2421b022a793e19c51ef0220a0cbb66c7384d977249b5120fc5ccf",
+      "bytes": 70332,
+      "checkedAt": "2026-08-31"
     },
     {
       "personId": "p-6320c7d18dfd",
@@ -3572,11 +3579,18 @@
     {
       "personId": "p-37dee7f64766",
       "name": "Alfred Molina",
-      "portrait": "/media/people/fallback/p-37dee7f64766.svg",
-      "kind": "identity-fallback",
+      "portrait": "/media/people/p-37dee7f64766-168137239b.jpg",
+      "fallback": "/media/people/fallback/p-37dee7f64766.svg",
+      "kind": "wikimedia-commons",
       "publish": true,
-      "checkedAt": "2026-08-31",
-      "error": "HTTP 429"
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Alfred_Molina_2021.jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Alfred_Molina_2021.jpg/500px-Alfred_Molina_2021.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "credit": "Own work",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "168137239ba1ac649b0694bafd492febfbfb956ba2935b858a582ae7cd5ce3db",
+      "bytes": 81853,
+      "checkedAt": "2026-08-31"
     },
     {
       "personId": "p-ab50f6c179eb",
@@ -3756,11 +3770,18 @@
     {
       "personId": "p-7eaba33702f5",
       "name": "Ioan Gruffudd",
-      "portrait": "/media/people/fallback/p-7eaba33702f5.svg",
-      "kind": "identity-fallback",
+      "portrait": "/media/people/p-7eaba33702f5-cca53fcf0d.jpg",
+      "fallback": "/media/people/fallback/p-7eaba33702f5.svg",
+      "kind": "wikimedia-commons",
       "publish": true,
-      "checkedAt": "2026-08-31",
-      "error": "HTTP 429"
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Ioan_Gruffudd_at_the_2011_Comic-Con_International.jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Ioan_Gruffudd_at_the_2011_Comic-Con_International.jpg/500px-Ioan_Gruffudd_at_the_2011_Comic-Con_International.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "credit": "Ioan Gruffudd, Nestor Carbonell, Sarah MIchelle Gellar & Kristoffer Polaha",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "cca53fcf0ddd9bc8ad562b3cd0d3059cd1b314c1f274f996a5860ebc72a109ac",
+      "bytes": 83055,
+      "checkedAt": "2026-08-31"
     },
     {
       "personId": "p-a460aac3cb9e",
@@ -3808,11 +3829,18 @@
     {
       "personId": "p-c239691de608",
       "name": "Julian McMahon",
-      "portrait": "/media/people/fallback/p-c239691de608.svg",
-      "kind": "identity-fallback",
+      "portrait": "/media/people/p-c239691de608-ca9dc3115c.jpg",
+      "fallback": "/media/people/fallback/p-c239691de608.svg",
+      "kind": "wikimedia-commons",
       "publish": true,
-      "checkedAt": "2026-08-31",
-      "error": "HTTP 429"
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Julian_McMahon_Dec_2011_(cropped).jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Julian_McMahon_Dec_2011_%28cropped%29.jpg/500px-Julian_McMahon_Dec_2011_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "credit": "https://www.flickr.com/photos/dannycasillas/6524545325/",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "ca9dc3115c460dc980db76543fd8a7c889e26524036264c056845bab1f7c97e0",
+      "bytes": 97879,
+      "checkedAt": "2026-08-31"
     },
     {
       "personId": "p-e39222c3e35f",
@@ -4384,11 +4412,18 @@
     {
       "personId": "p-241e4424f6a4",
       "name": "Gwyneth Paltrow",
-      "portrait": "/media/people/fallback/p-241e4424f6a4.svg",
-      "kind": "identity-fallback",
+      "portrait": "/media/people/p-241e4424f6a4-4ebf62fea1.jpg",
+      "fallback": "/media/people/fallback/p-241e4424f6a4.svg",
+      "kind": "wikimedia-commons",
       "publish": true,
-      "checkedAt": "2026-08-31",
-      "error": "HTTP 429"
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Gwyneth_Paltrow_-_Marty_Supreme.jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Gwyneth_Paltrow_-_Marty_Supreme.jpg/500px-Gwyneth_Paltrow_-_Marty_Supreme.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "credit": "Own work",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "4ebf62fea160bb3c0a47904fa673b318319de36f0bb17efe71990d89955981c9",
+      "bytes": 66868,
+      "checkedAt": "2026-08-31"
     },
     {
       "personId": "p-423aec01a01c",
@@ -4402,11 +4437,18 @@
     {
       "personId": "p-d8ff5e48be30",
       "name": "Shaun Toub",
-      "portrait": "/media/people/fallback/p-d8ff5e48be30.svg",
-      "kind": "identity-fallback",
+      "portrait": "/media/people/p-d8ff5e48be30-9b0d8edb76.jpg",
+      "fallback": "/media/people/fallback/p-d8ff5e48be30.svg",
+      "kind": "wikimedia-commons",
       "publish": true,
-      "checkedAt": "2026-08-31",
-      "error": "HTTP 429"
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Shaun_Toub_2011_cropped.jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Shaun_Toub_2011_cropped.jpg/500px-Shaun_Toub_2011_cropped.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "credit": "Shaun_Toub_2011.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "9b0d8edb7650b188b20afd1a51929b22d9c4871a173ed28cbd36a8ef851e9944",
+      "bytes": 62197,
+      "checkedAt": "2026-08-31"
     },
     {
       "personId": "p-fc3423b97612",
@@ -5138,20 +5180,34 @@
     {
       "personId": "p-aff6e81a3532",
       "name": "Sam Rockwell",
-      "portrait": "/media/people/fallback/p-aff6e81a3532.svg",
-      "kind": "identity-fallback",
+      "portrait": "/media/people/p-aff6e81a3532-7311f42928.jpg",
+      "fallback": "/media/people/fallback/p-aff6e81a3532.svg",
+      "kind": "wikimedia-commons",
       "publish": true,
-      "checkedAt": "2026-08-31",
-      "error": "HTTP 429"
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Sam_Rockwell-3953.jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Sam_Rockwell-3953.jpg/500px-Sam_Rockwell-3953.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "credit": "Own work",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "7311f429289ec5a43d5e7cad3c0676f7348f772c358551ecd41b153a0697fa83",
+      "bytes": 53022,
+      "checkedAt": "2026-08-31"
     },
     {
       "personId": "p-a2859cc7fe21",
       "name": "Mickey Rourke",
-      "portrait": "/media/people/fallback/p-a2859cc7fe21.svg",
-      "kind": "identity-fallback",
+      "portrait": "/media/people/p-a2859cc7fe21-ceb51cf53e.jpg",
+      "fallback": "/media/people/fallback/p-a2859cc7fe21.svg",
+      "kind": "wikimedia-commons",
       "publish": true,
-      "checkedAt": "2026-08-31",
-      "error": "HTTP 429"
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Mickey_Rourke_10_December_2010_(cropped).jpeg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Mickey_Rourke_10_December_2010_%28cropped%29.jpeg/500px-Mickey_Rourke_10_December_2010_%28cropped%29.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "credit": "http://premier.gov.ru/events/news/13364/photolents.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "ceb51cf53eb63b4b6de3f12472e7c597cff155ec1d6f3ef2be960ae7ac28e508",
+      "bytes": 73278,
+      "checkedAt": "2026-08-31"
     },
     {
       "personId": "p-75b188569bd5",
@@ -5566,11 +5622,18 @@
     {
       "personId": "p-e117cfe61e3f",
       "name": "Chris Hemsworth",
-      "portrait": "/media/people/fallback/p-e117cfe61e3f.svg",
-      "kind": "identity-fallback",
+      "portrait": "/media/people/p-e117cfe61e3f-42eea57fa5.jpg",
+      "fallback": "/media/people/fallback/p-e117cfe61e3f.svg",
+      "kind": "wikimedia-commons",
       "publish": true,
-      "checkedAt": "2026-08-31",
-      "error": "HTTP 429"
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Chris_Hemsworth_-_Crime_101.jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Chris_Hemsworth_-_Crime_101.jpg/500px-Chris_Hemsworth_-_Crime_101.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "credit": "Own work",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "42eea57fa5453bc1c381370ce2d4ed9ecc2a35ce5cb6956009f19053579dedd6",
+      "bytes": 65945,
+      "checkedAt": "2026-08-31"
     },
     {
       "personId": "p-9d06cc97ca49",
@@ -5592,11 +5655,18 @@
     {
       "personId": "p-e2732b6d3d3c",
       "name": "Tom Hiddleston",
-      "portrait": "/media/people/fallback/p-e2732b6d3d3c.svg",
-      "kind": "identity-fallback",
+      "portrait": "/media/people/p-e2732b6d3d3c-d5f6f0eddf.jpg",
+      "fallback": "/media/people/fallback/p-e2732b6d3d3c.svg",
+      "kind": "wikimedia-commons",
       "publish": true,
-      "checkedAt": "2026-08-31",
-      "error": "HTTP 429"
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Tom_Hiddleston_at_the_2024_Toronto_International_Film_Festival_(cropped).jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Tom_Hiddleston_at_the_2024_Toronto_International_Film_Festival_%28cropped%29.jpg/500px-Tom_Hiddleston_at_the_2024_Toronto_International_Film_Festival_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "credit": "Own work",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "d5f6f0eddf9dc76674f9d76b6e5eb060ad378c872e9c0195dcce9c5fe45635dd",
+      "bytes": 77367,
+      "checkedAt": "2026-08-31"
     },
     {
       "personId": "p-94d938d6a715",
@@ -7250,11 +7320,18 @@
     {
       "personId": "p-2059e0319339",
       "name": "Chris Pratt",
-      "portrait": "/media/people/fallback/p-2059e0319339.svg",
-      "kind": "identity-fallback",
+      "portrait": "/media/people/p-2059e0319339-51d4ed0241.jpg",
+      "fallback": "/media/people/fallback/p-2059e0319339.svg",
+      "kind": "wikimedia-commons",
       "publish": true,
-      "checkedAt": "2026-08-31",
-      "error": "HTTP 429"
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Chris_Pratt_Jurassic_World_Fallen_Kingdom_Japan_Premiere_Red_Carpet_(3x4_cropped).jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Chris_Pratt_Jurassic_World_Fallen_Kingdom_Japan_Premiere_Red_Carpet_%283x4_cropped%29.jpg/500px-Chris_Pratt_Jurassic_World_Fallen_Kingdom_Japan_Premiere_Red_Carpet_%283x4_cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "credit": "Jurassic World: Fallen Kingdom Japan Premiere Red Carpet: Chris Pratt",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "51d4ed0241c78f7fcce43a69833dd58fc8a16cc14e061090f6c93d1d7a0f9d18",
+      "bytes": 73828,
+      "checkedAt": "2026-08-31"
     },
     {
       "personId": "p-7f204d39789b",
@@ -7310,11 +7387,18 @@
     {
       "personId": "p-7c31d1ff1e37",
       "name": "Bradley Cooper",
-      "portrait": "/media/people/fallback/p-7c31d1ff1e37.svg",
-      "kind": "identity-fallback",
+      "portrait": "/media/people/p-7c31d1ff1e37-bdce330155.jpg",
+      "fallback": "/media/people/fallback/p-7c31d1ff1e37.svg",
+      "kind": "wikimedia-commons",
       "publish": true,
-      "checkedAt": "2026-08-31",
-      "error": "HTTP 429"
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Bradley_Cooper_Is_This_Thing_On-41_(cropped).jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Bradley_Cooper_Is_This_Thing_On-41_%28cropped%29.jpg/500px-Bradley_Cooper_Is_This_Thing_On-41_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "credit": "Own work",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "bdce3301551f98cb64e18d8b8d8fe56db3b6dc79870be84d80c2fc261907d8b4",
+      "bytes": 70703,
+      "checkedAt": "2026-08-31"
     },
     {
       "personId": "p-51cbd139ca6b",
@@ -7353,11 +7437,18 @@
     {
       "personId": "p-08f7ac91e979",
       "name": "Karen Gillan",
-      "portrait": "/media/people/fallback/p-08f7ac91e979.svg",
-      "kind": "identity-fallback",
+      "portrait": "/media/people/p-08f7ac91e979-cf2b650d8c.jpg",
+      "fallback": "/media/people/fallback/p-08f7ac91e979.svg",
+      "kind": "wikimedia-commons",
       "publish": true,
-      "checkedAt": "2026-08-31",
-      "error": "HTTP 429"
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Karen_Gillan_by_Gage_Skidmore.jpg",
+      "sourceImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Karen_Gillan_by_Gage_Skidmore.jpg/960px-Karen_Gillan_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Own work",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sha256": "cf2b650d8c3d7bb5eda45518c4520abcffd800a45a39cc54e9e0f0ad211f3570",
+      "bytes": 271599,
+      "checkedAt": "2026-08-31"
     },
     {
       "personId": "p-11eb4180189f",
@@ -7614,11 +7705,18 @@
     {
       "personId": "p-cac8b1228f79",
       "name": "Evangeline Lilly",
-      "portrait": "/media/people/fallback/p-cac8b1228f79.svg",
-      "kind": "identity-fallback",
+      "portrait": "/media/people/p-cac8b1228f79-6c09a4407e.jpg",
+      "fallback": "/media/people/fallback/p-cac8b1228f79.svg",
+      "kind": "wikimedia-commons",
       "publish": true,
-      "checkedAt": "2026-08-31",
-      "error": "HTTP 429"
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Evangeline_Lilly-D.jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/5/50/Evangeline_Lilly-D.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "credit": "Own work",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "sha256": "6c09a4407e83c55ee31d8555e667aabf2cc52b4b4aaa7047c5f405e9a287b3ac",
+      "bytes": 18106,
+      "checkedAt": "2026-08-31"
     },
     {
       "personId": "p-48aa22f9d249",
@@ -8406,11 +8504,18 @@
     {
       "personId": "p-5164c9de5329",
       "name": "Chadwick Boseman",
-      "portrait": "/media/people/fallback/p-5164c9de5329.svg",
-      "kind": "identity-fallback",
+      "portrait": "/media/people/p-5164c9de5329-72ab88f008.jpg",
+      "fallback": "/media/people/fallback/p-5164c9de5329.svg",
+      "kind": "wikimedia-commons",
       "publish": true,
-      "checkedAt": "2026-08-31",
-      "error": "HTTP 429"
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Chadwick_Boseman_by_Gage_Skidmore_July_2017_(cropped).jpg",
+      "sourceImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Chadwick_Boseman_by_Gage_Skidmore_July_2017_%28cropped%29.jpg/960px-Chadwick_Boseman_by_Gage_Skidmore_July_2017_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "https://www.flickr.com/photos/gageskidmore/35852212800",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "72ab88f008133bf54e6b965ad58eec6ba89335cb3d9d53b18d558502df29d586",
+      "bytes": 251797,
+      "checkedAt": "2026-08-31"
     },
     {
       "personId": "p-025ece7a7df7",
@@ -8587,11 +8692,18 @@
     {
       "personId": "p-ef9918c4a7ec",
       "name": "Benedict Cumberbatch",
-      "portrait": "/media/people/fallback/p-ef9918c4a7ec.svg",
-      "kind": "identity-fallback",
+      "portrait": "/media/people/p-ef9918c4a7ec-935b4a4310.jpg",
+      "fallback": "/media/people/fallback/p-ef9918c4a7ec.svg",
+      "kind": "wikimedia-commons",
       "publish": true,
-      "checkedAt": "2026-08-31",
-      "error": "HTTP 429"
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Benedict_Cumberbatch_filming_Sherlock_cropped.jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Benedict_Cumberbatch_filming_Sherlock_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "credit": "https://www.flickr.com/photos/bellaphon/4409531705/",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "935b4a43108ab7f6a8f9fe26e18c9dadcebe50db96c27372f60eed47035b19ad",
+      "bytes": 234969,
+      "checkedAt": "2026-08-31"
     },
     {
       "personId": "p-70e2cea9c67b",
@@ -8630,11 +8742,18 @@
     {
       "personId": "p-a759b14de3c5",
       "name": "Benedict Wong",
-      "portrait": "/media/people/fallback/p-a759b14de3c5.svg",
-      "kind": "identity-fallback",
+      "portrait": "/media/people/p-a759b14de3c5-ad7fd3c1f0.jpg",
+      "fallback": "/media/people/fallback/p-a759b14de3c5.svg",
+      "kind": "wikimedia-commons",
       "publish": true,
-      "checkedAt": "2026-08-31",
-      "error": "HTTP 429"
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Benedict_Wong_(28352087500).jpg",
+      "sourceImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Benedict_Wong_%2828352087500%29.jpg/960px-Benedict_Wong_%2828352087500%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Benedict Wong",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "ad7fd3c1f063d471429e1e5921fc0acd000934d479b57c01c9fe0b8176c7bc38",
+      "bytes": 83629,
+      "checkedAt": "2026-08-31"
     },
     {
       "personId": "p-5b724e75fff6",
@@ -10826,11 +10945,18 @@
     {
       "personId": "p-40b817dc528d",
       "name": "Tom Hardy",
-      "portrait": "/media/people/fallback/p-40b817dc528d.svg",
-      "kind": "identity-fallback",
+      "portrait": "/media/people/p-40b817dc528d-c3ed91fd27.jpg",
+      "fallback": "/media/people/fallback/p-40b817dc528d.svg",
+      "kind": "wikimedia-commons",
       "publish": true,
-      "checkedAt": "2026-08-31",
-      "error": "HTTP 429"
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Tom_Hardy.jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/4/45/Tom_Hardy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "credit": "Tom_Hardy_&_Nicolas_Winding_Refn.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "c3ed91fd27cfd0b6bd0fce113b832c2ed774a9796028e015d3fffecb087d38ea",
+      "bytes": 55702,
+      "checkedAt": "2026-08-31"
     },
     {
       "personId": "p-b4f4c3731b1a",
@@ -10871,11 +10997,18 @@
     {
       "personId": "p-77dc11a91e97",
       "name": "Brie Larson",
-      "portrait": "/media/people/fallback/p-77dc11a91e97.svg",
-      "kind": "identity-fallback",
+      "portrait": "/media/people/p-77dc11a91e97-7aa910b84e.jpg",
+      "fallback": "/media/people/fallback/p-77dc11a91e97.svg",
+      "kind": "wikimedia-commons",
       "publish": true,
-      "checkedAt": "2026-08-31",
-      "error": "HTTP 429"
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Brie_Larson_(cropped).jpg",
+      "sourceImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Brie_Larson_%28cropped%29.jpg/960px-Brie_Larson_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "credit": "Brie Larson @ the SXSW premiere of Don Jon",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "7aa910b84e038ba140d92d2bfd1d31bd6e14baeacb8ff976bec754055c6df942",
+      "bytes": 300584,
+      "checkedAt": "2026-08-31"
     },
     {
       "personId": "p-25259cc8fcc3",

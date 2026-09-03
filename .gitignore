@@ -7,3 +7,7 @@ node_modules/
 research-cache/
 test-results/
 .local/
+
+# Local visual-audit candidates. Only the manually approved artwork is copied
+# into public/media/fandom-posters for production.
+public/media/fandom-poster-review/

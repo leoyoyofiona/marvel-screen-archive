@@ -295,6 +295,7 @@ test("every work has a local poster asset with an explicit provenance label", as
   assert.equal(
     data.audit.officialArtworkCount +
       data.audit.wikipediaArtworkCount +
+      data.audit.fandomArtworkCount +
       data.audit.archiveDesignPosterCount,
     data.works.length,
   );
@@ -305,6 +306,7 @@ test("every work has a local poster asset with an explicit provenance label", as
         work.posterCredit &&
         (work.poster?.startsWith("/media/official/") ||
           work.poster?.startsWith("/media/wikipedia-posters/") ||
+          work.poster?.startsWith("/media/fandom-posters/") ||
           work.posterCredit.includes("非官方素材")),
     ),
   );

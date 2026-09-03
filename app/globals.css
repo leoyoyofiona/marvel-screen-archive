@@ -7326,3 +7326,86 @@ html[data-theme="day"] .character-card-back-note { border-color: #c3ced9; }
   .character-card-face { padding: 13px 11px 12px; }
   .character-card-back > strong { font-size: 18px; }
 }
+
+/* Armor revision: let the suit occupy the card, then keep the technical file
+   readable underneath. The image remains `contain` so no helmet or boots are
+   cropped merely to fill the frame. */
+.armor-card {
+  padding: 12px;
+  background: linear-gradient(150deg, #202c3e, #101722 72%);
+}
+.armor-art {
+  height: 268px;
+  flex-basis: 268px;
+  margin: 8px 0 0;
+  border-color: #667b95;
+  background: radial-gradient(circle at 50% 42%, #71849c, #101720 74%);
+}
+.armor-photo {
+  padding: 0;
+  object-fit: contain;
+  filter: saturate(1.14) contrast(1.1) brightness(1.14);
+}
+.armor-card-copy {
+  gap: 8px;
+  padding-top: 11px;
+}
+.armor-card-copy > small {
+  color: #b5c6dc;
+  font-size: 10px;
+  font-weight: 550;
+  line-height: 1.45;
+}
+.armor-card-title-line > strong {
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: .025em;
+}
+.armor-card-title-line .armor-card-note {
+  color: #ffd0d6;
+  font-size: 10px;
+  font-weight: 650;
+}
+.armor-card-facts {
+  gap: 7px;
+  color: #e3edf8;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+.armor-card-facts span {
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: 7px;
+}
+.armor-card-facts i {
+  color: #ffb8c2;
+  font-weight: 700;
+}
+.armor-art-index {
+  color: #f5f9ff;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-shadow: 0 1px 3px #000;
+}
+html[data-theme="day"] .armor-card {
+  background: linear-gradient(150deg, #ffffff, #e7eef6 78%);
+  border-color: #8fa4ba;
+}
+html[data-theme="day"] .armor-art {
+  border-color: #9eb0c2;
+  background: radial-gradient(circle at 50% 42%, #d8e4ee, #aebfcd 85%);
+}
+html[data-theme="day"] .armor-card-copy > small { color: #3b5269; }
+html[data-theme="day"] .armor-card-title-line > strong { color: #142235; }
+html[data-theme="day"] .armor-card-title-line .armor-card-note { color: #a71938; }
+html[data-theme="day"] .armor-card-facts { color: #23394d; }
+html[data-theme="day"] .armor-card-facts i { color: #a71938; }
+@media (max-width: 700px) {
+  .armor-art { height: 226px; flex-basis: 226px; }
+  .armor-card-title-line > strong { font-size: 18px; }
+  .armor-card-copy > small,
+  .armor-card-title-line .armor-card-note,
+  .armor-card-facts { font-size: 9px; }
+}
