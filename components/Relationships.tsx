@@ -478,9 +478,17 @@ function RelationshipGraph({
       .force("charge", forceManyBody().strength(-180))
       .force("center", forceCenter(390, 225))
       .force("collide", forceCollide(62))
-      .on("tick", () =>
-        setLayout({ nodes: nodes.map((n) => ({ ...n })), edges }),
-      );
+      .on("tick", () => {
+        // Keep every expanded avatar and work ticket inside the SVG viewport.
+        // Without a soft boundary, a dense collaboration cluster can drift
+        // far outside the 780x450 viewBox and become impossible to inspect.
+        nodes.forEach((node) => {
+          if (node.kind === "center") return;
+          node.x = Math.max(38, Math.min(742, node.x ?? 390));
+          node.y = Math.max(38, Math.min(412, node.y ?? 225));
+        });
+        setLayout({ nodes: nodes.map((n) => ({ ...n })), edges });
+      });
     simulation.current = sim;
     let settleFrame = 0;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
