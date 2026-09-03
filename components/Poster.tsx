@@ -22,21 +22,25 @@ export function Poster({
   decorative?: boolean;
   comment?: { name: string; body: string };
 }) {
+  const [failedImageKey, setFailedImageKey] = React.useState<string | null>(null);
+  const imageKey = `${work.id}:${work.poster ?? ""}`;
+  const showImage = Boolean(work.poster) && failedImageKey !== imageKey;
   const archiveStyle = {
     "--poster-hue": posterHue(work.id),
   } as CSSProperties;
   return (
     <div
-      className={"poster-frame " + (!work.poster ? "no-art" : "")}
-      style={work.poster ? undefined : archiveStyle}
+      className={"poster-frame " + (!showImage ? "no-art" : "")}
+      style={showImage ? undefined : archiveStyle}
     >
-      {work.poster ? (
+      {showImage ? (
         <img
-          src={work.poster}
+          src={work.poster ?? ""}
           alt={decorative ? "" : work.title + "海报"}
-          loading="lazy"
+          loading={decorative ? "eager" : "lazy"}
           width="400"
           height="600"
+          onError={() => setFailedImageKey(imageKey)}
         />
       ) : (
         <div

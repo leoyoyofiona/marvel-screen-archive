@@ -574,7 +574,7 @@ function RelationshipGraph({
         </div>
       </div>
       <p className="section-description">
-        演员关系图显示演员、导演、配音与创作者；角色关系图显示主角、反派和重要配角。两种关系图都通过作品节点串联，点击节点可展开其已编目作品。节点可拖拽，电影票根可打开作品。
+        演员关系图显示演员、导演、配音与创作者；角色关系图显示主角、反派和重要配角。两种关系图都通过作品节点串联。人物节点默认只呈现头像，点击头像后在右侧显示姓名、身份与作品关系；作品票根可双击打开。
       </p>
       <div className="graph-filters">
         <label className="search-field">
@@ -786,9 +786,11 @@ function RelationshipGraph({
                     svg.current?.setPointerCapture(e.pointerId);
                   }}
                 >
-                  <title>
-                    {n.label} · {n.kind === "person" ? "演员／导演／创作者" : n.kind === "character" ? "剧中角色" : n.kind === "work" ? "作品" : "周星驰关系中心"}
-                  </title>
+                  {(n.kind === "work" || n.kind === "center" || n.id === selected) && (
+                    <title>
+                      {n.label} · {n.kind === "person" ? "演员／导演／创作者" : n.kind === "character" ? "剧中角色" : n.kind === "work" ? "作品" : "周星驰关系中心"}
+                    </title>
+                  )}
                   {n.kind === "center" ? (
                     <>
                       <circle
@@ -806,6 +808,12 @@ function RelationshipGraph({
                           height="96"
                           preserveAspectRatio="xMidYMid slice"
                           clipPath="circle(48px at 48px 48px)"
+                          onError={(event) => {
+                            event.currentTarget.setAttribute(
+                              "href",
+                              mode === "characters" ? rolePortraitFallback : personPortraitFallback,
+                            );
+                          }}
                         />
                       <text
                         textAnchor="middle"
@@ -852,14 +860,19 @@ function RelationshipGraph({
                         height="56"
                         preserveAspectRatio="xMidYMid slice"
                         clipPath="circle(28px at 28px 28px)"
+                        onError={(event) => {
+                          event.currentTarget.setAttribute("href", personPortraitFallback);
+                        }}
                         />
-                    <rect className="node-label-backdrop" x="-58" y="37" width="116" height="30" rx="4" />
-                    <text textAnchor="middle" y="48" fill="#e5e9f0" fontSize="9">
-                      {n.label.length > 12 ? n.label.slice(0, 11) + "…" : n.label}
-                    </text>
-                    <text textAnchor="middle" y="61" fill="#a4adba" fontSize="7.5">
-                      {departmentLabel(people.find((person) => person.id === n.personId)?.departments ?? [])}
-                    </text>
+                    {n.personId === selected && <>
+                      <rect className="node-label-backdrop" x="-58" y="37" width="116" height="30" rx="4" />
+                      <text textAnchor="middle" y="48" fill="#e5e9f0" fontSize="9">
+                        {n.label.length > 12 ? n.label.slice(0, 11) + "…" : n.label}
+                      </text>
+                      <text textAnchor="middle" y="61" fill="#a4adba" fontSize="7.5">
+                        {departmentLabel(people.find((person) => person.id === n.personId)?.departments ?? [])}
+                      </text>
+                    </>}
                   </>
                 ) : n.kind === "character" ? (
                   <>
@@ -883,14 +896,19 @@ function RelationshipGraph({
                         height="56"
                         preserveAspectRatio="xMidYMid slice"
                         clipPath="circle(28px at 28px 28px)"
+                        onError={(event) => {
+                          event.currentTarget.setAttribute("href", rolePortraitFallback);
+                        }}
                         />
-                    <rect className="node-label-backdrop" x="-58" y="37" width="116" height="30" rx="4" />
-                    <text textAnchor="middle" y="48" fill="#e5e9f0" fontSize="9">
-                      {n.label.length > 12 ? n.label.slice(0, 11) + "…" : n.label}
-                    </text>
-                    <text textAnchor="middle" y="61" fill="#a4adba" fontSize="7.5">
-                      {(roleCharacters.find((character) => character.id === n.characterId)?.role ?? "银幕角色").slice(0, 14)}
-                    </text>
+                    {n.characterId === selected && <>
+                      <rect className="node-label-backdrop" x="-58" y="37" width="116" height="30" rx="4" />
+                      <text textAnchor="middle" y="48" fill="#e5e9f0" fontSize="9">
+                        {n.label.length > 12 ? n.label.slice(0, 11) + "…" : n.label}
+                      </text>
+                      <text textAnchor="middle" y="61" fill="#a4adba" fontSize="7.5">
+                        {(roleCharacters.find((character) => character.id === n.characterId)?.role ?? "银幕角色").slice(0, 14)}
+                      </text>
+                    </>}
                   </>
                 ) : (
                     <>
@@ -961,7 +979,7 @@ function RelationshipGraph({
           </div>
           <span className="graph-instruction">
             <Maximize2 size={12} />
-            拖动平移 · 双击票根打开作品
+            点击头像看姓名与简介 · 双击票根打开作品
           </span>
         </div>
         <aside className="relationship-detail">

@@ -137,12 +137,12 @@ export default function Timeline({ works }: { works: WorkPreview[] }) {
         const viewportWidth = typeof window === "undefined" ? 1280 : window.innerWidth;
         const viewportHeight = typeof window === "undefined" ? 900 : window.innerHeight;
         const width = Math.min(560, viewportWidth - 32);
-        const height = 360;
+        const height = Math.min(430, Math.max(300, viewportHeight - 32));
         const left = Math.min(Math.max(16, hovered.rect.left - 30), viewportWidth - width - 16);
         const top = hovered.rect.bottom + 14 + height < viewportHeight
           ? hovered.rect.bottom + 14
           : Math.max(16, hovered.rect.top - height - 14);
-        return <div className="timeline-hover-preview" style={{ left, top, width }} role="status" aria-live="polite">
+        return <div className="timeline-hover-preview" style={{ left, top, width, height }} role="status" aria-live="polite">
           <div className="timeline-hover-poster"><Poster work={hovered.work} decorative /></div>
           <div className="timeline-hover-copy"><span>{hovered.work.year ?? "待定"} · {hovered.work.universe}</span><strong>{hovered.work.title}</strong><p>{hovered.work.kind === "film" ? "电影" : "影视档案"} · 首发年份与海报预览</p></div>
         </div>;

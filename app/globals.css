@@ -5021,7 +5021,22 @@ html[data-theme="day"] .behind-list > a h3 {
     inset: 7px;
   }
   .timeline-hover-preview {
-    display: none;
+    display: grid;
+    left: 12px !important;
+    width: calc(100vw - 24px) !important;
+    grid-template-columns: minmax(0, 3fr) minmax(86px, 1fr);
+    gap: 8px;
+    padding: 10px;
+  }
+  .timeline-hover-poster,
+  .timeline-hover-poster .poster-frame {
+    height: 100%;
+  }
+  .timeline-hover-copy strong {
+    font-size: 16px;
+  }
+  .timeline-hover-copy p {
+    font-size: 9px;
   }
   .time-preview .frame-year {
     top: 10px;
@@ -7124,30 +7139,37 @@ html[data-theme="day"] .armor-card-facts i {
 .year-dot,
 .year-name { cursor: default; }
 .timeline-hover-preview {
-  grid-template-columns: minmax(205px, 240px) minmax(0, 1fr);
-  gap: 22px;
+  grid-template-columns: minmax(0, 4fr) minmax(104px, 1fr);
+  gap: 14px;
   width: min(560px, calc(100vw - 32px)) !important;
-  min-height: 332px;
+  min-height: 0;
+  height: min(430px, calc(100vh - 32px));
   padding: 16px;
 }
 .timeline-hover-poster,
-.timeline-hover-poster .poster-frame { height: 328px; }
+.timeline-hover-poster .poster-frame {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
 .timeline-hover-copy {
-  align-self: center;
-  padding: 0 8px 0 0;
+  align-self: end;
+  min-height: 0;
+  overflow: hidden;
+  padding: 0 2px 2px 0;
 }
 .timeline-hover-copy strong {
-  margin-top: 13px;
+  margin-top: 10px;
   color: #fff;
-  font-size: 30px;
-  line-height: 1.25;
+  font-size: clamp(17px, 2.4vw, 22px);
+  line-height: 1.2;
 }
 .timeline-hover-copy p {
-  max-width: 16em;
-  margin: 12px 0 0;
+  max-width: none;
+  margin: 8px 0 0;
   color: #d3dce7;
-  font-size: 13px;
-  line-height: 1.7;
+  font-size: 10px;
+  line-height: 1.55;
 }
 .power-ranking-card { align-self: start; }
 .character-card,

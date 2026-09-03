@@ -4,7 +4,6 @@ import { useMemo, useState } from "react";
 import { ArrowUpRight, BookOpen, Shield, Sparkles, Swords, X } from "lucide-react";
 import Link from "next/link";
 import type { WorkPreview } from "@/lib/catalogue-types";
-import armorImageManifest from "@/data/armor-image-manifest.json";
 
 type Card = {
   id: string;
@@ -47,8 +46,30 @@ const cards: Card[] = [
   { id: "doctor-doom", name: "维克多·冯·杜姆", alias: "毁灭博士", side: "villain", universe: "漫威多元宇宙", role: "拉脱维亚统治者 / 科学家", power: 97, rank: "科技与魔法", move: "装甲 · 魔法 · 统治意志", intro: "科学和魔法都被他用来证明同一件事：世界应该听命于他。", source: "https://www.marvel.com/characters/doctor-doom-victor-von-doom", workIds: ["fantastic-four-2005-film", "fantastic-four-rise-of-the-silver-surfer-2007-film", "avengers-doomsday-2026-film"] },
 ];
 
-const armorNames = [
-  "Mark I", "Mark II", "Mark III", "Mark IV", "Mark V", "Mark VI", "Mark VII", "Mark VIII", "Mark IX", "Mark X", "Mark XI", "Mark XII", "Mark XIII", "Mark XIV", "Mark XV · Sneaky", "Mark XVI · Nightclub", "Mark XVII · Heartbreaker", "Mark XVIII · Casanova", "Mark XIX · Tiger", "Mark XX · Python", "Mark XXI · Midas", "Mark XXII · Hot Rod", "Mark XXIII · Shades", "Mark XXIV · Tank", "Mark XXV · Striker", "Mark XXVI · Gamma", "Mark XXVII · Disco", "Mark XXVIII · Jack", "Mark XXIX · Fiddler", "Mark XXX · Blue Steel", "Mark XXXI · Piston", "Mark XXXII · Romeo", "Mark XXXIII · Silver Centurion", "Mark XXXIV · Southpaw", "Mark XXXV · Red Snapper", "Mark XXXVI · Peacemaker", "Mark XXXVII · Hammerhead", "Mark XXXVIII · Igor", "Mark XXXIX · Gemini", "Mark XL · Shotgun", "Mark XLI · Bones", "Mark XLII · 吸附式", "Hulkbuster · Veronica", "War Machine", "Iron Patriot", "Rescue · Mark XLIX", "Bleeding Edge", "Model-Prime", "Godkiller", "Thorbuster", "Silver Centurion", "Extremis", "Stealth Armor", "Hydro Armor", "Space Armor", "Deep-Space Armor", "Endo-Sym Armor", "Model 70", "Ironheart Armor" ];
+// Only publish armor images that were checked one by one as a single,
+// front-facing, full-body suit. The previous index reused convention photos
+// for unrelated Mark numbers, so those entries are intentionally withheld
+// until a matching, publishable image is available.
+const verifiedArmorEntries = [
+  {
+    name: "Mark I",
+    photo: "/media/armor/mark-i.jpg",
+    source: "https://commons.wikimedia.org/wiki/File:Iron_Man_Mark_I.jpg",
+    credit: "Iron Man Mark I · Wikimedia Commons",
+  },
+  {
+    name: "Mark III",
+    photo: "/media/armor/mark-iii.jpg",
+    source: "https://commons.wikimedia.org/wiki/File:Iron_Man_Mark_III.jpg",
+    credit: "Iron Man Mark III · Wikimedia Commons",
+  },
+  {
+    name: "Mark XLII · 吸附式",
+    photo: "/media/armor/mark-xlii.jpg",
+    source: "https://commons.wikimedia.org/wiki/File:Ironman_Mk.42_on_CCG2014.jpg",
+    credit: "Iron Man Mark XLII · Wikimedia Commons",
+  },
+] as const;
 
 type ArmorDetail = { time: string; origin: string; feature: string; specs: string };
 const armorDetails: Record<string, ArmorDetail> = {
@@ -206,15 +227,19 @@ function CharacterCard({ card, image, onAvatarClick }: { card: Card; image?: str
   );
 }
 
-function ArmorFigure({ index, name }: { index: number; name: string }) {
-  const image = armorImageManifest[index] ?? armorImageManifest[0];
-  const photo = image.file;
+function ArmorFigure({ index, name, photo, source, credit }: {
+  index: number;
+  name: string;
+  photo: string;
+  source: string;
+  credit: string;
+}) {
   return (
     <div className="armor-art">
-      <img className="armor-photo" src={photo} alt={`${name}单件战甲视觉档案`} />
+      <img className="armor-photo" src={photo} alt={`${name}单件正面全身战甲视觉档案`} />
       <span className="armor-photo-shade" />
       <span className="armor-art-index">ARMOR EVOLUTION / {String(index + 1).padStart(2, "0")}</span>
-      <a className="armor-art-credit" href={image.source} target="_blank" rel="noopener noreferrer">{image.credit} · 图片来源</a>
+      <a className="armor-art-credit" href={source} target="_blank" rel="noopener noreferrer">{credit} · 图片来源</a>
     </div>
   );
 }
@@ -269,8 +294,8 @@ export default function LoreAtlas({ works }: { works: WorkPreview[] }) {
         </ol>}
       </div>
       <div className="armor-atlas">
-        <div className="armor-heading"><div><span className="eyebrow">IRON MAN ARMOR INDEX / 装甲谱</span><h3>钢铁侠装甲：从 Mark I 到纳米时代</h3><p>共收录 {armorNames.length} 套战甲卡片。每张图只突出一件完整战甲，优先采用公开授权的单件实物或单人装甲影像；没有型号级原件照片的条目，会明确标为外观参考，不冒充电影剧照。</p></div><Shield size={29} /></div>
-        <div className="armor-grid">{armorNames.map((name, index) => { const detail = getArmorDetail(name, index); return <article className="armor-card" key={`${name}-${index}`}><span className="card-corner">ARMOR FILE</span><ArmorFigure index={index} name={name} /><span className="armor-card-copy"><small>{detail.time} · {detail.origin}</small><span className="armor-card-title-line"><strong>{name}</strong><small className="armor-card-note">{index < 42 ? "MCU Mark" : "扩展设定"}</small></span><span className="armor-card-facts"><span><i>特点</i>{detail.feature}</span><span><i>参数</i>{detail.specs}</span></span></span></article>; })}</div>
+        <div className="armor-heading"><div><span className="eyebrow">IRON MAN ARMOR INDEX / 装甲谱</span><h3>钢铁侠装甲：从 Mark I 到纳米时代</h3><p>当前只展示 {verifiedArmorEntries.length} 套已逐张核对的正面全身战甲图。其余型号暂不拿不相关的展会照或侧身照冒充，待找到匹配的公开授权图后再补入。</p></div><Shield size={29} /></div>
+        <div className="armor-grid">{verifiedArmorEntries.map((entry, index) => { const detail = getArmorDetail(entry.name, index); return <article className="armor-card" key={entry.name}><span className="card-corner">ARMOR FILE</span><ArmorFigure index={index} name={entry.name} photo={entry.photo} source={entry.source} credit={entry.credit} /><span className="armor-card-copy"><small>{detail.time} · {detail.origin}</small><span className="armor-card-title-line"><strong>{entry.name}</strong><small className="armor-card-note">MCU Mark</small></span><span className="armor-card-facts"><span><i>特点</i>{detail.feature}</span><span><i>参数</i>{detail.specs}</span></span></span></article>; })}</div>
         <a className="text-link" href="https://www.marvel.com/watch/digital-series/earth-s-mightiest-show/all-of-the-armor-worn-by-tony-stark-in-the-mcu" target="_blank" rel="noopener noreferrer">查看 Marvel 官方装甲专题 <ArrowUpRight size={14} /></a>
       </div>
       <div className="storyline-atlas">
