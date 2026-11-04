@@ -281,7 +281,7 @@ export default function Archive({ data }: { data: ArchiveCatalogue }) {
           </div>
           <div className="hero-bottom">
             <span>
-              LEOYOYOFIONA <i>/</i> 非官方影迷项目
+              LEODENG <i>/</i> 非官方影迷项目
             </span>
             <button
               onClick={() => {

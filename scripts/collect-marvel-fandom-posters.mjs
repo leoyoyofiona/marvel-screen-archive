@@ -30,7 +30,7 @@ const extensionFor = (contentType, url) => {
   return /\.png(?:$|\?)/i.test(url) ? "png" : "jpg";
 };
 const run = async (url) => {
-  const response = await fetch(url, { headers: { "user-agent": "LEOYOYOFIONA Marvel fan archive (noncommercial reference)" }, signal: AbortSignal.timeout(20_000) });
+  const response = await fetch(url, { headers: { "user-agent": "LEODENG Marvel fan archive (noncommercial reference)" }, signal: AbortSignal.timeout(20_000) });
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   return response;
 };

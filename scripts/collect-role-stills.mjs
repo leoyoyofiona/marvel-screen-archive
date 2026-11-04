@@ -48,14 +48,14 @@ for (const [id, name] of roles) {
   const preferredTitle = screenPageTitles[id];
   url.search = new URLSearchParams({ action: "query", format: "json", formatversion: "2", ...(preferredTitle ? { titles: preferredTitle } : { generator: "search", gsrnamespace: "0", gsrlimit: "16", gsrsearch: `\"${name}\"` }), prop: "pageimages|info", piprop: "thumbnail|name", pithumbsize: "720", inprop: "url", origin: "*" });
   try {
-    const response = await fetch(url, { headers: { "user-agent": "LEOYOYOFIONA Marvel fan archive role visual audit" }, signal: AbortSignal.timeout(20_000) });
+    const response = await fetch(url, { headers: { "user-agent": "LEODENG Marvel fan archive role visual audit" }, signal: AbortSignal.timeout(20_000) });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     const target = (data.query?.pages ?? [])
       .filter((page) => (preferredTitle || normalize(page.title).includes(normalize(name))) && page.thumbnail?.source)
       .sort((left, right) => rolePageScore(right.title) - rolePageScore(left.title))[0];
     if (!target?.thumbnail?.source) throw new Error("no screen-role image");
-    const image = await fetch(target.thumbnail.source, { headers: { "user-agent": "LEOYOYOFIONA Marvel fan archive role visual audit" }, signal: AbortSignal.timeout(20_000) });
+    const image = await fetch(target.thumbnail.source, { headers: { "user-agent": "LEODENG Marvel fan archive role visual audit" }, signal: AbortSignal.timeout(20_000) });
     const bytes = Buffer.from(await image.arrayBuffer());
     const type = image.headers.get("content-type") ?? "";
     if (!image.ok || !type.startsWith("image/") || bytes.length < 1200) throw new Error("invalid image response");

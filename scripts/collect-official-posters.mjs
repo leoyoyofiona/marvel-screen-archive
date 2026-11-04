@@ -58,7 +58,7 @@ async function collect(item) {
     return { ...item, publish: false, error: "unexpected image host" };
   try {
     const response = await fetch(url, {
-      headers: { "User-Agent": "LEOYOYOFIONA fan archive asset verifier" },
+      headers: { "User-Agent": "LEODENG fan archive asset verifier" },
     });
     if (!response.ok) throw new Error("HTTP " + response.status);
     const buffer = Buffer.from(await response.arrayBuffer());

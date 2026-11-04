@@ -6,7 +6,7 @@
 - Ink #090d15, graphite #151b26, silver #f1f3f7, secondary #a9b1bf, red #ec2638.
 - Modern Chinese sans-serif, wide screen media, rectangular fine-line controls. Desktop gutter clamp(24px,4.5vw,88px). Content max 1600px. Touch targets >=44px.
 - No pricing, promotional claims, fake reviews, fake live visitors or artificial likes.
-- Shared header: full site name, 时间长廊 / 作品档案 / 关系宇宙 / 视听厅 / 影迷现场, creator LEOYOYOFIONA.
+- Shared header: full site name, 时间长廊 / 作品档案 / 关系宇宙 / 视听厅 / 影迷现场, creator LEODENG.
 - Hero allowed headline: 每一个宇宙，都有值得重看的故事。 Supporting copy: 从银幕初见，到多元宇宙。按作品、角色与时间，重新走进漫威。 CTA: 进入时间长廊 / 浏览全部作品.
 - Hero artwork: legally usable true movie media; dark edge fades around rather than color wash over images. Until rights are documented, visibly labelled archival frames are temporary, not completion.
 - Main section order: hero, rights, time corridor, archive, graph, documentaries/behind scenes, listening room, community, footer.

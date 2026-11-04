@@ -20,7 +20,7 @@ const pause = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 async function api(host, params) {
   const url = new URL(`https://${host}/w/api.php`);
   url.search = new URLSearchParams({ action: "query", format: "json", formatversion: "2", origin: "*", ...params });
-  const response = await fetch(url, { headers: { "user-agent": "LEOYOYOFIONA Marvel fan archive portrait verifier (noncommercial)" }, signal: AbortSignal.timeout(20_000) });
+  const response = await fetch(url, { headers: { "user-agent": "LEODENG Marvel fan archive portrait verifier (noncommercial)" }, signal: AbortSignal.timeout(20_000) });
   if (!response.ok) throw new Error(`${host} HTTP ${response.status}`);
   return response.json();
 }
@@ -40,7 +40,7 @@ async function resolve(name) {
   const metadata = info?.extmetadata ?? {};
   const license = strip(metadata.LicenseShortName?.value);
   if (!info?.descriptionurl || !license) return resolveCommonsSearch(name);
-  const imageResponse = await fetch(page.thumbnail.source, { headers: { "user-agent": "LEOYOYOFIONA Marvel fan archive portrait verifier (noncommercial)" }, signal: AbortSignal.timeout(20_000) });
+  const imageResponse = await fetch(page.thumbnail.source, { headers: { "user-agent": "LEODENG Marvel fan archive portrait verifier (noncommercial)" }, signal: AbortSignal.timeout(20_000) });
   const type = imageResponse.headers.get("content-type") ?? "";
   const bytes = Buffer.from(await imageResponse.arrayBuffer());
   if (!imageResponse.ok || !type.startsWith("image/") || bytes.length < 800 || bytes.length > 2_500_000) return resolveCommonsSearch(name);
@@ -73,7 +73,7 @@ async function resolveCommonsSearch(name) {
     const license = strip(metadata.LicenseShortName?.value);
     const imageUrl = info?.thumburl ?? info?.url;
     if (!info?.descriptionurl || !imageUrl || !license) continue;
-    const imageResponse = await fetch(imageUrl, { headers: { "user-agent": "LEOYOYOFIONA Marvel fan archive portrait verifier (noncommercial)" }, signal: AbortSignal.timeout(20_000) });
+    const imageResponse = await fetch(imageUrl, { headers: { "user-agent": "LEODENG Marvel fan archive portrait verifier (noncommercial)" }, signal: AbortSignal.timeout(20_000) });
     const type = imageResponse.headers.get("content-type") ?? "";
     const bytes = Buffer.from(await imageResponse.arrayBuffer());
     if (!imageResponse.ok || !type.startsWith("image/") || bytes.length < 800 || bytes.length > 2_500_000) continue;

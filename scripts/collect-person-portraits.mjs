@@ -116,7 +116,7 @@ async function api(host, params) {
     const response = await fetch(url, {
       headers: {
         "User-Agent":
-          "LEOYOYOFIONA Marvel fan archive portrait verifier (leooelcn@gmail.com)",
+          "LEODENG Marvel fan archive portrait verifier (leooelcn@gmail.com)",
       },
     });
     if (response.status === 429 || response.status === 503) {
@@ -243,7 +243,7 @@ async function collect(person) {
     const response = await fetch(url, {
       headers: {
         "User-Agent":
-          "LEOYOYOFIONA Marvel fan archive portrait verifier (leooelcn@gmail.com)",
+          "LEODENG Marvel fan archive portrait verifier (leooelcn@gmail.com)",
       },
     });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
